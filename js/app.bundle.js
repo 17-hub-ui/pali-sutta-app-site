@@ -17041,6 +17041,45 @@ function isPlainObject(value) {
   return Boolean(value && typeof value === "object" && !Array.isArray(value));
 }
 
+async function requestMicrophoneAccess(mediaDevices) {
+  if (!mediaDevices || typeof mediaDevices.getUserMedia !== "function") {
+    const error = new Error("Microphone access is not supported in this browser.");
+    error.name = "NotSupportedError";
+    throw error;
+  }
+
+  const stream = await mediaDevices.getUserMedia({ audio: true });
+  try {
+    return true;
+  } finally {
+    const tracks = typeof stream?.getTracks === "function" ? stream.getTracks() : [];
+    tracks.forEach((track) => {
+      try {
+        track.stop();
+      } catch {
+        // The permission check is complete even if a browser already ended the track.
+      }
+    });
+  }
+}
+
+function classifyMicrophoneAccessError(error) {
+  const name = String(error?.name || "");
+  if (["NotAllowedError", "PermissionDeniedError", "SecurityError"].includes(name)) {
+    return "denied";
+  }
+  if (["NotFoundError", "DevicesNotFoundError"].includes(name)) {
+    return "not-found";
+  }
+  if (["NotReadableError", "TrackStartError", "AbortError"].includes(name)) {
+    return "unavailable";
+  }
+  if (name === "NotSupportedError") {
+    return "unsupported";
+  }
+  return "unknown";
+}
+
 function renderHome(app, catalog) {
   const totalSections = catalog.suttas.reduce((sum, sutta) => sum + (sutta.sectionCount || 0), 0);
   const list = document.createElement("section");
@@ -17417,6 +17456,8 @@ function renderReading(app, sutta) {
     activeSectionId: sutta.sections[0]?.id || "all",
     recognition: null,
     isRecording: false,
+    isRequestingMicrophone: false,
+    recognitionStarted: false,
     finalTranscript: "",
     interimTranscript: "",
     altSegments: [],
@@ -17462,7 +17503,7 @@ function renderReading(app, sutta) {
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
           <div class="recite-help-actions">
-            <a class="button ghost" data-open-external target="_blank" rel="noreferrer">Chrome/Edgeで開く</a>
+            <a class="button ghost" data-open-external target="_blank" rel="noreferrer">対応ブラウザで開く</a>
             <button class="button ghost" type="button" data-copy-recitation-url>URLをコピー</button>
             <button class="button primary" type="button" data-manual-review>手動で判定する</button>
           </div>
@@ -17643,22 +17684,22 @@ function setupReciteControls(root, sutta, reciteState) {
 
   if (!SpeechRecognition) {
     recordButton.disabled = true;
-    recordButton.textContent = "音声判定不可";
-    showRecitationStatus(root, "このブラウザは音声認識に対応していません。Chrome / Edgeで試してください。", "error");
-    showRecitationHelp(root, "この環境では音声認識を開始できません。Chrome/Edgeでこのページを開くか、手動判定で続けてください。");
+    recordButton.textContent = "音声認識非対応";
+    showRecitationStatus(root, "この環境では音声認識を利用できません。対応ブラウザで開いてください。", "error");
+    showRecitationHelp(root, "AndroidではChrome、iPhone/iPadではSafariで開いてください。iPhone/iPadではSiriも有効にする必要があります。利用できない場合は手動判定で練習を続けられます。");
     showManualRecitationReview(root, sutta, reciteState);
   } else {
     recordButton.addEventListener("click", () => {
-      toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition);
+      void toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition);
     });
   }
 
   copyUrlButton.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(location.href);
-      showRecitationStatus(root, "URLをコピーしました。Chrome/Edgeのアドレスバーに貼り付けて開いてください。", "success");
+      showRecitationStatus(root, "URLをコピーしました。対応ブラウザのアドレスバーに貼り付けて開いてください。", "success");
     } catch {
-      showRecitationStatus(root, `このURLをChrome/Edgeで開いてください: ${location.href}`, "warning");
+      showRecitationStatus(root, `このURLを対応ブラウザで開いてください: ${location.href}`, "warning");
     }
   });
 
@@ -17870,22 +17911,69 @@ function getSpeechRecognitionConstructor() {
 }
 
 function canChangeReciteRange(root, reciteState) {
-  if (!reciteState.isRecording) {
+  if (!reciteState.isRecording && !reciteState.isRequestingMicrophone) {
     return true;
   }
 
-  showRecitationStatus(root, "録音中は範囲を変更できません。先に「停止判定」を押してください。", "warning");
+  const message = reciteState.isRequestingMicrophone
+    ? "マイクの確認中は範囲を変更できません。許可の確認を完了してください。"
+    : "録音中は範囲を変更できません。先に「停止判定」を押してください。";
+  showRecitationStatus(root, message, "warning");
   return false;
 }
 
-function toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition) {
+async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition) {
+  if (reciteState.isRequestingMicrophone) {
+    return;
+  }
+
   if (reciteState.isRecording) {
     requestRecitationStop(reciteState);
     updateRecordingUi(root, reciteState);
     return;
   }
 
-  const recognition = new SpeechRecognition();
+  if (window.isSecureContext === false) {
+    showRecitationStatus(root, "マイクはHTTPSで開いたページからのみ利用できます。公開URLを開き直してください。", "error");
+    showRecitationHelp(root, "このページをHTTPSの公開URLで開くか、手動判定で練習を続けてください。");
+    showManualRecitationReview(root, sutta, reciteState);
+    return;
+  }
+
+  reciteState.isRequestingMicrophone = true;
+  updateRecordingUi(root, reciteState);
+  resetRecitationReview(root);
+  hideRecitationHelp(root);
+  showRecitationStatus(root, "マイクの使用許可を確認しています。端末の確認画面が出たら許可してください。", "recording");
+
+  try {
+    await requestMicrophoneAccess(window.navigator.mediaDevices);
+  } catch (error) {
+    reciteState.isRequestingMicrophone = false;
+    reciteState.lastError = `microphone-${classifyMicrophoneAccessError(error)}`;
+    updateRecordingUi(root, reciteState);
+    showRecitationStatus(root, getMicrophoneAccessErrorMessage(error), "error");
+    showRecitationHelp(root, getMicrophoneAccessHelpMessage(error));
+    showManualRecitationReview(root, sutta, reciteState);
+    return;
+  }
+
+  reciteState.isRequestingMicrophone = false;
+  if (!root.isConnected) {
+    return;
+  }
+
+  let recognition;
+  try {
+    recognition = new SpeechRecognition();
+  } catch {
+    updateRecordingUi(root, reciteState);
+    showRecitationStatus(root, "音声認識を開始できませんでした。対応ブラウザで開くか、手動判定で続けてください。", "error");
+    showRecitationHelp(root, "AndroidではChrome、iPhone/iPadではSafariを利用し、iPhone/iPadではSiriが有効か確認してください。");
+    showManualRecitationReview(root, sutta, reciteState);
+    return;
+  }
+
   const recognitionLang = loadState().settings.recognitionLang || "ja-JP";
   const matcher = getRecitationMatcher(recognitionLang);
   recognition.lang = recognitionLang;
@@ -17895,6 +17983,7 @@ function toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition) 
 
   reciteState.recognition = recognition;
   reciteState.isRecording = true;
+  reciteState.recognitionStarted = false;
   reciteState.finalTranscript = "";
   reciteState.interimTranscript = "";
   reciteState.altSegments = [];
@@ -17913,7 +18002,13 @@ function toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition) 
   updateRecordingUi(root, reciteState);
   resetRecitationReview(root);
   hideRecitationHelp(root);
-  showRecitationStatus(root, "録音中です。一呼吸おいてから唱え始めると先頭の語が認識されやすくなります。読み終えたら「停止判定」を押してください。", "recording");
+  showRecitationStatus(root, "音声認識を開始しています。少しお待ちください。", "recording");
+
+  recognition.addEventListener("start", () => {
+    reciteState.recognitionStarted = true;
+    updateRecordingUi(root, reciteState);
+    showRecitationStatus(root, "録音中です。一呼吸おいてから唱え始めると先頭の語が認識されやすくなります。読み終えたら「停止判定」を押してください。", "recording");
+  });
 
   recognition.addEventListener("result", (event) => {
     // 日本語認識はパーリ語読誦の大半を確定時に捨てたり書き換えたりするため、
@@ -17964,6 +18059,7 @@ function toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition) 
     window.clearTimeout(reciteState.stopTimer);
     window.clearTimeout(reciteState.forceTimer);
     reciteState.isRecording = false;
+    reciteState.recognitionStarted = false;
     reciteState.recognition = null;
     updateRecordingUi(root, reciteState);
 
@@ -18018,20 +18114,29 @@ function toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition) 
     recognition.start();
   } catch {
     reciteState.isRecording = false;
+    reciteState.recognitionStarted = false;
     reciteState.recognition = null;
     updateRecordingUi(root, reciteState);
-    showRecitationStatus(root, "録音を開始できませんでした。Chrome/Edgeで開くか、手動判定で続けてください。", "error");
-    showRecitationHelp(root, "録音開始に失敗しました。このページをChrome/Edgeで開き直すか、手動判定で続けてください。");
+    showRecitationStatus(root, "録音を開始できませんでした。対応ブラウザで開くか、手動判定で続けてください。", "error");
+    showRecitationHelp(root, "AndroidではChrome、iPhone/iPadではSafariで開き直してください。iPhone/iPadではSiriも有効にする必要があります。");
     showManualRecitationReview(root, sutta, reciteState);
   }
 }
 
 function updateRecordingUi(root, reciteState) {
   const recordButton = root.querySelector("[data-recitation-record]");
-  recordButton.textContent = reciteState.isRecording
-    ? (reciteState.stopRequested ? "停止中…" : "停止判定")
-    : "録音開始";
+  if (reciteState.isRequestingMicrophone) {
+    recordButton.textContent = "マイクを確認中…";
+  } else if (reciteState.isRecording) {
+    recordButton.textContent = reciteState.stopRequested
+      ? "停止中…"
+      : (reciteState.recognitionStarted ? "停止判定" : "録音開始中…");
+  } else {
+    recordButton.textContent = "録音開始";
+  }
+  recordButton.disabled = reciteState.isRequestingMicrophone;
   recordButton.dataset.recording = String(reciteState.isRecording);
+  recordButton.dataset.preparing = String(reciteState.isRequestingMicrophone || (reciteState.isRecording && !reciteState.recognitionStarted));
 }
 
 // 停止要求。認識サービスが end を返さない場合に備えて、
@@ -18066,9 +18171,40 @@ function getCurrentTranscript(reciteState) {
   return `${reciteState.finalTranscript} ${reciteState.interimTranscript}`.replace(/\s+/g, " ").trim();
 }
 
+function getMicrophoneAccessErrorMessage(error) {
+  const reason = classifyMicrophoneAccessError(error);
+  if (reason === "denied") {
+    return "マイクの使用が許可されていません。端末またはブラウザの設定を確認してください。";
+  }
+  if (reason === "not-found") {
+    return "利用できるマイクが見つかりません。端末のマイク設定を確認してください。";
+  }
+  if (reason === "unavailable") {
+    return "マイクを開始できませんでした。他のアプリが使用していないか確認してください。";
+  }
+  if (reason === "unsupported") {
+    return "この環境ではマイクの使用許可を確認できません。対応ブラウザで開いてください。";
+  }
+  return "マイクの確認中にエラーが発生しました。端末の設定を確認してください。";
+}
+
+function getMicrophoneAccessHelpMessage(error) {
+  const reason = classifyMicrophoneAccessError(error);
+  if (reason === "denied") {
+    return "このサイトまたはホーム画面アプリのマイクを許可してから、もう一度「録音開始」を押してください。AndroidではChromeと端末のアプリ権限、iPhone/iPadではSafariまたはホーム画面アプリのマイク権限を確認し、Siriも有効にしてください。";
+  }
+  if (reason === "not-found") {
+    return "マイク付きイヤホンを外して端末内蔵マイクを試すか、手動判定で練習を続けてください。";
+  }
+  if (reason === "unavailable") {
+    return "通話・録音などマイクを使う他のアプリを終了してから、もう一度試してください。改善しない場合は端末を再起動するか、手動判定を利用してください。";
+  }
+  return "AndroidではChrome、iPhone/iPadではSafariで公開URLを開いてください。利用できない場合は手動判定で練習を続けられます。";
+}
+
 function getSpeechRecognitionErrorMessage(error) {
   if (error === "not-allowed" || error === "service-not-allowed") {
-    return "マイク権限が使えません。Chrome/Edgeで開くか、下の手動判定で続けてください。";
+    return "音声認識の使用が許可されていません。端末またはブラウザの設定を確認してください。";
   }
   if (error === "no-speech") {
     return "音声を検出できませんでした。マイクに近づけてもう一度録音してください。";
@@ -18091,7 +18227,7 @@ function shouldOfferManualRecitationFallback(error) {
 
 function getSpeechRecognitionHelpMessage(error) {
   if (error === "not-allowed" || error === "service-not-allowed") {
-    return "ブラウザまたは端末側でマイクが許可されていません。許可できない環境では、Chrome/Edgeでこのページを開くか、手動判定で練習を続けてください。";
+    return "このサイトまたはホーム画面アプリのマイクを許可してください。iPhone/iPadではSafariを使用し、Siriも有効にしてください。許可後にもう一度「録音開始」を押すか、手動判定で練習を続けてください。";
   }
   if (error === "audio-capture") {
     return "マイク入力を取得できませんでした。端末のマイク設定を確認するか、手動判定で続けてください。";
@@ -18099,7 +18235,7 @@ function getSpeechRecognitionHelpMessage(error) {
   if (error === "network") {
     return "音声認識サービスに接続できませんでした。通信状態を確認するか、手動判定で続けてください。";
   }
-  return "音声認識を使えませんでした。Chrome/Edgeで開くか、手動判定で続けてください。";
+  return "音声認識を使えませんでした。AndroidではChrome、iPhone/iPadではSafariで開くか、手動判定で続けてください。";
 }
 
 function showRecitationStatus(root, message, tone = "") {
