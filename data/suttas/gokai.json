@@ -1,0 +1,188 @@
+{
+  "id": "gokai",
+  "title": "五戒文",
+  "titlePali": "Pañcasīla",
+  "sections": [
+    {
+      "id": "s1",
+      "lines": [
+        {
+          "id": "s1-l1",
+          "pali": "Pāṇātipātā veramaṇī sikkhā padaṃ samādiyāmi.",
+          "kana": "バーナーティパーター ヴェーラマニー スィッカー パダン サマーディヤーミ",
+          "ja": "「生き物を殺さない」という戒めを私は受けて守ります。",
+          "wordGlosses": [
+            {
+              "pali": "Pāṇātipātā",
+              "kana": "バーナーティパーター",
+              "ja": "生き物を殺すこと"
+            },
+            {
+              "pali": "veramaṇī",
+              "kana": "ヴェーラマニー",
+              "ja": "離れる"
+            },
+            {
+              "pali": "sikkhā",
+              "kana": "スィッカー",
+              "ja": "学"
+            },
+            {
+              "pali": "padaṃ",
+              "kana": "パダン",
+              "ja": "処"
+            },
+            {
+              "pali": "samādiyāmi.",
+              "kana": "サマーディヤーミ",
+              "ja": "受け持ちする"
+            }
+          ]
+        },
+        {
+          "id": "s1-l2",
+          "pali": "Adinnādānā veramaṇī sikkhā padaṃ samādiyāmi.",
+          "kana": "アディンナーダーナー ヴェーラマニー スィッカー パダン サマーディヤーミ",
+          "ja": "「与えられていないものを取らない」という戒めを私は受けて守ります。",
+          "wordGlosses": [
+            {
+              "pali": "Adinnādānā",
+              "kana": "アディンナーダーナー",
+              "ja": "与えられていない物を取ること"
+            },
+            {
+              "pali": "veramaṇī",
+              "kana": "ヴェーラマニー",
+              "ja": "離れる"
+            },
+            {
+              "pali": "sikkhā",
+              "kana": "スィッカー",
+              "ja": "学"
+            },
+            {
+              "pali": "padaṃ",
+              "kana": "パダン",
+              "ja": "処"
+            },
+            {
+              "pali": "samādiyāmi.",
+              "kana": "サマーディヤーミ",
+              "ja": "受け持ちする"
+            }
+          ]
+        },
+        {
+          "id": "s1-l3",
+          "pali": "Kāmesu micchācārā veramaṇī sikkhā padaṃ samādiyāmi.",
+          "kana": "カーメース ミッチャーチャーラー ヴェーラマニー スィッカー パダン サマーディヤーミ",
+          "ja": "「淫らな行為をしない」という戒めを私は受けて守ります。",
+          "wordGlosses": [
+            {
+              "pali": "Kāmesu",
+              "kana": "カーメース",
+              "ja": "欲望"
+            },
+            {
+              "pali": "micchācārā",
+              "kana": "ミッチャーチャーラー",
+              "ja": "邪に行うこと"
+            },
+            {
+              "pali": "veramaṇī",
+              "kana": "ヴェーラマニー",
+              "ja": "離れる"
+            },
+            {
+              "pali": "sikkhā",
+              "kana": "スィッカー",
+              "ja": "学"
+            },
+            {
+              "pali": "padaṃ",
+              "kana": "パダン",
+              "ja": "処"
+            },
+            {
+              "pali": "samādiyāmi.",
+              "kana": "サマーディヤーミ",
+              "ja": "受け持ちする"
+            }
+          ]
+        },
+        {
+          "id": "s1-l4",
+          "pali": "Musāvādā veramaṇī sikkhā padaṃ samādiyāmi.",
+          "kana": "ムサーワーダー ヴェーラマニー スィッカー パダン サマーディヤーミ",
+          "ja": "「いつわりをかたらない」という戒めを私は受けて守ります。",
+          "wordGlosses": [
+            {
+              "pali": "Musāvādā",
+              "kana": "ムサーワーダー",
+              "ja": "偽りの言葉"
+            },
+            {
+              "pali": "veramaṇī",
+              "kana": "ヴェーラマニー",
+              "ja": "離れる"
+            },
+            {
+              "pali": "sikkhā",
+              "kana": "スィッカー",
+              "ja": "学"
+            },
+            {
+              "pali": "padaṃ",
+              "kana": "パダン",
+              "ja": "処"
+            },
+            {
+              "pali": "samādiyāmi.",
+              "kana": "サマーディヤーミ",
+              "ja": "受け持ちする"
+            }
+          ]
+        },
+        {
+          "id": "s1-l5",
+          "pali": "Surāmeraya Majjapamādaṭṭhānā veramaṇī sikkhā padaṃ samādiyāmi.",
+          "kana": "スラーメーラヤ マッジャパマーダッターナー ヴェーラマニー スィッカー パダン サマーディヤーミ",
+          "ja": "「放逸の原因となり、（人を）酔わせる酒類、麻薬などを使用しない」という戒めを私は受けて守ります。",
+          "wordGlosses": [
+            {
+              "pali": "Surāmeraya",
+              "kana": "スラーメーラヤ",
+              "ja": "穀物酒や果実酒"
+            },
+            {
+              "pali": "Majjapamādaṭṭhānā",
+              "kana": "マッジャパマーダッターナー",
+              "ja": "酔わせる放逸の原因となる"
+            },
+            {
+              "pali": "veramaṇī",
+              "kana": "ヴェーラマニー",
+              "ja": "離れる"
+            },
+            {
+              "pali": "sikkhā",
+              "kana": "スィッカー",
+              "ja": "学"
+            },
+            {
+              "pali": "padaṃ",
+              "kana": "パダン",
+              "ja": "処"
+            },
+            {
+              "pali": "samādiyāmi.",
+              "kana": "サマーディヤーミ",
+              "ja": "受け持ちする"
+            }
+          ]
+        }
+      ],
+      "label": "第1節"
+    }
+  ]
+}

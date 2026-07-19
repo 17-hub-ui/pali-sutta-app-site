@@ -1,0 +1,977 @@
+{
+  "id": "metta-sutta",
+  "title": "慈経",
+  "titlePali": "Karaṇīya Mettā Sutta",
+  "sections": [
+    {
+      "id": "s1",
+      "lines": [
+        {
+          "id": "s1-l1",
+          "pali": "Karaṇīyam atthakusalena yan taṃ santaṃ padaṃ abhisamecca;",
+          "kana": "カラニーヤン アッタクサレーナ ヤン タン サンタン パダン アビサメッチャ",
+          "ja": "［解脱という］目的をよくわきまえた人が、静かな場所へ行ってなすべきことがあります。",
+          "wordGlosses": [
+            {
+              "pali": "Karaṇīyam",
+              "kana": "カラニーヤン",
+              "ja": "なすべきこと"
+            },
+            {
+              "pali": "atthakusalena",
+              "kana": "アッタクサレーナ",
+              "ja": "目的をよく知る者によって"
+            },
+            {
+              "pali": "yan",
+              "kana": "ヤン",
+              "ja": "それを"
+            },
+            {
+              "pali": "taṃ",
+              "kana": "タン",
+              "ja": "その"
+            },
+            {
+              "pali": "santaṃ",
+              "kana": "サンタン",
+              "ja": "寂静の"
+            },
+            {
+              "pali": "padaṃ",
+              "kana": "パダン",
+              "ja": "境地を"
+            },
+            {
+              "pali": "abhisamecca;",
+              "kana": "アビサメッチャ",
+              "ja": "体得して"
+            }
+          ]
+        },
+        {
+          "id": "s1-l2",
+          "pali": "Sakko ujū ca sūjū ca suvaco c'assa mudu anatimānī.",
+          "kana": "サッコー ウジュー チャ スージュー チャ スワチョー チャッサ ムドゥ アナティマーニー",
+          "ja": "何事にもすぐれ、しっかりして、まっすぐでしなやかで、人の言葉をよく聞き、柔和で、高慢でない人になるように。",
+          "wordGlosses": [
+            {
+              "pali": "Sakko",
+              "kana": "サッコー",
+              "ja": "有能な"
+            },
+            {
+              "pali": "ujū",
+              "kana": "ウジュー",
+              "ja": "まっすぐな"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "sūjū",
+              "kana": "スージュー",
+              "ja": "よくまっすぐな"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "suvaco",
+              "kana": "スワチョー",
+              "ja": "言葉を受け入れる"
+            },
+            {
+              "pali": "c'assa",
+              "kana": "チャッサ",
+              "ja": "そしてその人は"
+            },
+            {
+              "pali": "mudu",
+              "kana": "ムドゥ",
+              "ja": "柔和な"
+            },
+            {
+              "pali": "anatimānī.",
+              "kana": "アナティマーニー",
+              "ja": "高慢でない"
+            }
+          ]
+        }
+      ],
+      "label": "第1節"
+    },
+    {
+      "id": "s2",
+      "lines": [
+        {
+          "id": "s2-l1",
+          "pali": "Santussako ca subharo ca appakicco ca sallahukavutti;",
+          "kana": "サントゥッサコー チャ スバロー チャ アッパキッチョー チャ サッラフカヴッティ",
+          "ja": "足ることを知り、手が掛からず、雑務少なく、簡素に暮らし、",
+          "wordGlosses": [
+            {
+              "pali": "Santussako",
+              "kana": "サントゥッサコー",
+              "ja": "足ることを知る"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "subharo",
+              "kana": "スバロー",
+              "ja": "養いやすい"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "appakicco",
+              "kana": "アッパキッチョー",
+              "ja": "雑務の少ない"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "sallahukavutti;",
+              "kana": "サッラフカヴッティ",
+              "ja": "簡素に暮らす"
+            }
+          ]
+        },
+        {
+          "id": "s2-l2",
+          "pali": "santindriyo ca nipako ca appagabbho kulesu ananugiddho.",
+          "kana": "サンティンドゥリヨー チャ ニパコー チャ アッパガッボー クレース アナヌギッドー",
+          "ja": "諸々の感覚器官が落ち着いていて、賢明で、裏表がなく、在家に執着しないように。",
+          "wordGlosses": [
+            {
+              "pali": "santindriyo",
+              "kana": "サンティンドゥリヨー",
+              "ja": "諸根の静まった"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "nipako",
+              "kana": "ニパコー",
+              "ja": "賢明な"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "appagabbho",
+              "kana": "アッパガッボー",
+              "ja": "厚かましくない"
+            },
+            {
+              "pali": "kulesu",
+              "kana": "クレース",
+              "ja": "家々に"
+            },
+            {
+              "pali": "ananugiddho.",
+              "kana": "アナヌギッドー",
+              "ja": "執着しない"
+            }
+          ]
+        }
+      ],
+      "label": "第2節"
+    },
+    {
+      "id": "s3",
+      "lines": [
+        {
+          "id": "s3-l1",
+          "pali": "Na ca khuddaṃ samācare kiñci yena viññū pare upavadeyyuṃ;",
+          "kana": "ナ チャ クッダン サマーチャレー キンチ イェーナ ヴィンニュー パレー ウパワデッユン",
+          "ja": "智慧ある識者たちが批判するような、どんな小さな過ちも犯さないように。",
+          "wordGlosses": [
+            {
+              "pali": "Na",
+              "kana": "ナ",
+              "ja": "ない"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "khuddaṃ",
+              "kana": "クッダン",
+              "ja": "小さな"
+            },
+            {
+              "pali": "samācare",
+              "kana": "サマーチャレー",
+              "ja": "行ってはならない"
+            },
+            {
+              "pali": "kiñci",
+              "kana": "キンチ",
+              "ja": "何であれ"
+            },
+            {
+              "pali": "yena",
+              "kana": "イェーナ",
+              "ja": "それによって"
+            },
+            {
+              "pali": "viññū",
+              "kana": "ヴィンニュー",
+              "ja": "賢者が"
+            },
+            {
+              "pali": "pare",
+              "kana": "パレー",
+              "ja": "他の人々が"
+            },
+            {
+              "pali": "upavadeyyuṃ;",
+              "kana": "ウパワデッユン",
+              "ja": "非難するであろう"
+            }
+          ]
+        },
+        {
+          "id": "s3-l2",
+          "pali": "sukhino vā khemino hontu sabbe sattā bhavantu sukhitattā.",
+          "kana": "スキノー ワー ケーミノー ホントゥ サッベー サッター バワントゥ スキタッター",
+          "ja": "幸福で平安でありますように。生きとし生けるものが幸せでありますように。",
+          "wordGlosses": [
+            {
+              "pali": "sukhino",
+              "kana": "スキノー",
+              "ja": "幸せな"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "khemino",
+              "kana": "ケーミノー",
+              "ja": "安穏な"
+            },
+            {
+              "pali": "hontu",
+              "kana": "ホントゥ",
+              "ja": "ありますように"
+            },
+            {
+              "pali": "sabbe",
+              "kana": "サッベー",
+              "ja": "すべての"
+            },
+            {
+              "pali": "sattā",
+              "kana": "サッター",
+              "ja": "生きものは"
+            },
+            {
+              "pali": "bhavantu",
+              "kana": "バワントゥ",
+              "ja": "なりますように"
+            },
+            {
+              "pali": "sukhitattā.",
+              "kana": "スキタッター",
+              "ja": "幸せな心の"
+            }
+          ]
+        }
+      ],
+      "label": "第3節"
+    },
+    {
+      "id": "s4",
+      "lines": [
+        {
+          "id": "s4-l1",
+          "pali": "Ye keci pāṇabhūt'atthi tasā vā thāvarā vā anavasesā;",
+          "kana": "イェー ケーチ パーナブータッティ タサー ワー ターワラー ワー アナワセーサー",
+          "ja": "いかなる生命であろうともことごとく、動き回っているものでも、動き回らないものでも、",
+          "wordGlosses": [
+            {
+              "pali": "Ye",
+              "kana": "イェー",
+              "ja": "それらの"
+            },
+            {
+              "pali": "keci",
+              "kana": "ケーチ",
+              "ja": "何であれ"
+            },
+            {
+              "pali": "pāṇabhūt'atthi",
+              "kana": "パーナブータッティ",
+              "ja": "命あるものがいる"
+            },
+            {
+              "pali": "tasā",
+              "kana": "タサー",
+              "ja": "動くもの"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "thāvarā",
+              "kana": "ターワラー",
+              "ja": "動かないもの"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "anavasesā;",
+              "kana": "アナワセーサー",
+              "ja": "余すところなく"
+            }
+          ]
+        },
+        {
+          "id": "s4-l2",
+          "pali": "dīghā vā ye mahantā vā majjhimā rassakā aṇuka_thūlā.",
+          "kana": "ディーガー ワー イェー マハンター ワー マッジマー ラッサカー アヌカトゥーラー",
+          "ja": "長いものでも、大きなものでも、中くらいのものでも、短いものでも、微細なものでも、巨大なものでも、",
+          "wordGlosses": [
+            {
+              "pali": "dīghā",
+              "kana": "ディーガー",
+              "ja": "長いもの"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "ye",
+              "kana": "イェー",
+              "ja": "それらの"
+            },
+            {
+              "pali": "mahantā",
+              "kana": "マハンター",
+              "ja": "大きなもの"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "majjhimā",
+              "kana": "マッジマー",
+              "ja": "中くらいのもの"
+            },
+            {
+              "pali": "rassakā",
+              "kana": "ラッサカー",
+              "ja": "短いもの"
+            },
+            {
+              "pali": "aṇuka_thūlā.",
+              "kana": "アヌカトゥーラー",
+              "ja": "微細・粗大なもの"
+            }
+          ]
+        }
+      ],
+      "label": "第4節"
+    },
+    {
+      "id": "s5",
+      "lines": [
+        {
+          "id": "s5-l1",
+          "pali": "Diṭṭhā vā ye vā addiṭṭhā ye ca dūre vasanti",
+          "kana": "ディッター ワー イェー ワー アッディッター イェー チャ ドゥーレー ワサンティ",
+          "ja": "見たことがあるものもないものも、遠くに住むものでも、近くに住むものでも、",
+          "wordGlosses": [
+            {
+              "pali": "Diṭṭhā",
+              "kana": "ディッター",
+              "ja": "見られたもの"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "ye",
+              "kana": "イェー",
+              "ja": "それらの"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "addiṭṭhā",
+              "kana": "アッディッター",
+              "ja": "見られていないもの"
+            },
+            {
+              "pali": "ye",
+              "kana": "イェー",
+              "ja": "それらの"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "dūre",
+              "kana": "ドゥーレー",
+              "ja": "遠くに"
+            },
+            {
+              "pali": "vasanti",
+              "kana": "ワサンティ",
+              "ja": "住む"
+            }
+          ]
+        },
+        {
+          "id": "s5-l2",
+          "pali": "bhūtā vā sambhavesī vā sabbe sattā bhavantu sukhitattā.",
+          "kana": "ブーター ワー サンバウェースィー ワー サッベー サッター バワントゥ スキタッター",
+          "ja": "既に生まれているものも、卵など、これから生まれようとしているものも、生きとし生けるものが幸せでありますように。",
+          "wordGlosses": [
+            {
+              "pali": "bhūtā",
+              "kana": "ブーター",
+              "ja": "生まれたもの"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "sambhavesī",
+              "kana": "サンバウェースィー",
+              "ja": "生まれようとするもの"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "sabbe",
+              "kana": "サッベー",
+              "ja": "すべての"
+            },
+            {
+              "pali": "sattā",
+              "kana": "サッター",
+              "ja": "生きものは"
+            },
+            {
+              "pali": "bhavantu",
+              "kana": "バワントゥ",
+              "ja": "なりますように"
+            },
+            {
+              "pali": "sukhitattā.",
+              "kana": "スキタッター",
+              "ja": "幸せな心の"
+            }
+          ]
+        }
+      ],
+      "label": "第5節"
+    },
+    {
+      "id": "s6",
+      "lines": [
+        {
+          "id": "s6-l1",
+          "pali": "Na paro paraṃ nikubbetha nātimaññetha katthacinaṃ kañci;",
+          "kana": "ナ パロー パラン ニクッベータ ナーティマンニェータ カッタチナン カンチ",
+          "ja": "どんな場合でも、ひとを欺いたり、軽んじたりしてはいけません。",
+          "wordGlosses": [
+            {
+              "pali": "Na",
+              "kana": "ナ",
+              "ja": "ない"
+            },
+            {
+              "pali": "paro",
+              "kana": "パロー",
+              "ja": "他人が"
+            },
+            {
+              "pali": "paraṃ",
+              "kana": "パラン",
+              "ja": "他人を"
+            },
+            {
+              "pali": "nikubbetha",
+              "kana": "ニクッベータ",
+              "ja": "欺いてはならない"
+            },
+            {
+              "pali": "nātimaññetha",
+              "kana": "ナーティマンニェータ",
+              "ja": "軽んじてはならない"
+            },
+            {
+              "pali": "katthacinaṃ",
+              "kana": "カッタチナン",
+              "ja": "どこにおいても"
+            },
+            {
+              "pali": "kañci;",
+              "kana": "カンチ",
+              "ja": "誰であれ"
+            }
+          ]
+        },
+        {
+          "id": "s6-l2",
+          "pali": "vyārosanā paṭighasaññā nāññamaññassa dukkham iccheyya.",
+          "kana": "ヴャーローサナー パティガサンニャー ナーンニャマンニャッサ ドゥッカン イッチェッヤ",
+          "ja": "怒鳴ったり、腹を立てたり、お互いにひとの苦しみを望んではいけません。",
+          "wordGlosses": [
+            {
+              "pali": "vyārosanā",
+              "kana": "ヴャーローサナー",
+              "ja": "怒りによって"
+            },
+            {
+              "pali": "paṭighasaññā",
+              "kana": "パティガサンニャー",
+              "ja": "害意の想いによって"
+            },
+            {
+              "pali": "nāññamaññassa",
+              "kana": "ナーンニャマンニャッサ",
+              "ja": "互いに"
+            },
+            {
+              "pali": "dukkham",
+              "kana": "ドゥッカン",
+              "ja": "苦しみを"
+            },
+            {
+              "pali": "iccheyya.",
+              "kana": "イッチェッヤ",
+              "ja": "望むべきでない"
+            }
+          ]
+        }
+      ],
+      "label": "第6節"
+    },
+    {
+      "id": "s7",
+      "lines": [
+        {
+          "id": "s7-l1",
+          "pali": "Mātā yathā niyaṃ puttaṃ āyusā ekaputtam anurakkhe;",
+          "kana": "マーター ヤター ニヤン プッタン アーユサー エーカプッタン アヌラッケー",
+          "ja": "あたかも母が、たった一人の我が子を、命がけで守るように、",
+          "wordGlosses": [
+            {
+              "pali": "Mātā",
+              "kana": "マーター",
+              "ja": "母が"
+            },
+            {
+              "pali": "yathā",
+              "kana": "ヤター",
+              "ja": "ように"
+            },
+            {
+              "pali": "niyaṃ",
+              "kana": "ニヤン",
+              "ja": "自分の"
+            },
+            {
+              "pali": "puttaṃ",
+              "kana": "プッタン",
+              "ja": "子を"
+            },
+            {
+              "pali": "āyusā",
+              "kana": "アーユサー",
+              "ja": "命をもって"
+            },
+            {
+              "pali": "ekaputtam",
+              "kana": "エーカプッタン",
+              "ja": "一人子を"
+            },
+            {
+              "pali": "anurakkhe;",
+              "kana": "アヌラッケー",
+              "ja": "守る"
+            }
+          ]
+        },
+        {
+          "id": "s7-l2",
+          "pali": "evam pi sabbabhūtesu mānasam bhāvaye aparimāṇaṃ.",
+          "kana": "エーワン ピ サッバブーテース マーナサン バーワイェー アパリマーナン",
+          "ja": "そのようにすべての生命に対しても、無量の［慈しみの］心を育ててください。",
+          "wordGlosses": [
+            {
+              "pali": "evam",
+              "kana": "エーワン",
+              "ja": "そのように"
+            },
+            {
+              "pali": "pi",
+              "kana": "ピ",
+              "ja": "も"
+            },
+            {
+              "pali": "sabbabhūtesu",
+              "kana": "サッバブーテース",
+              "ja": "すべての生命に対して"
+            },
+            {
+              "pali": "mānasam",
+              "kana": "マーナサン",
+              "ja": "心を"
+            },
+            {
+              "pali": "bhāvaye",
+              "kana": "バーワイェー",
+              "ja": "育てよ"
+            },
+            {
+              "pali": "aparimāṇaṃ.",
+              "kana": "アパリマーナン",
+              "ja": "無量の"
+            }
+          ]
+        }
+      ],
+      "label": "第7節"
+    },
+    {
+      "id": "s8",
+      "lines": [
+        {
+          "id": "s8-l1",
+          "pali": "Mettañ ca sabbalokasmiṃ mānasam bhāvaye aparimāṇaṃ;",
+          "kana": "メッタン チャ サッバローカスミン マーナサン バーワイェー アパリマーナン",
+          "ja": "慈しみの心を一切世間（すべての生命）に対して、限りなく育ててください。",
+          "wordGlosses": [
+            {
+              "pali": "Mettañ",
+              "kana": "メッタン",
+              "ja": "慈しみを"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "sabbalokasmiṃ",
+              "kana": "サッバローカスミン",
+              "ja": "すべての世界に"
+            },
+            {
+              "pali": "mānasam",
+              "kana": "マーナサン",
+              "ja": "心を"
+            },
+            {
+              "pali": "bhāvaye",
+              "kana": "バーワイェー",
+              "ja": "育てよ"
+            },
+            {
+              "pali": "aparimāṇaṃ;",
+              "kana": "アパリマーナン",
+              "ja": "無量の"
+            }
+          ]
+        },
+        {
+          "id": "s8-l2",
+          "pali": "uddhaṃ adho ca tiriyañ ca asambādhaṃ averaṃ asapattaṃ.",
+          "kana": "ウッダン アドー チャ ティリヤン チャ アサンバーダン アヴェーラン アサパッタン",
+          "ja": "上に、下に、横（周り）に［棲む如何なる生命に対して］も、わだかまりのない、怨みのない、敵意のない心を育ててください。",
+          "wordGlosses": [
+            {
+              "pali": "uddhaṃ",
+              "kana": "ウッダン",
+              "ja": "上に"
+            },
+            {
+              "pali": "adho",
+              "kana": "アドー",
+              "ja": "下に"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "tiriyañ",
+              "kana": "ティリヤン",
+              "ja": "横に"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "asambādhaṃ",
+              "kana": "アサンバーダン",
+              "ja": "障りのない"
+            },
+            {
+              "pali": "averaṃ",
+              "kana": "アヴェーラン",
+              "ja": "怨みのない"
+            },
+            {
+              "pali": "asapattaṃ.",
+              "kana": "アサパッタン",
+              "ja": "敵意のない"
+            }
+          ]
+        }
+      ],
+      "label": "第8節"
+    },
+    {
+      "id": "s9",
+      "lines": [
+        {
+          "id": "s9-l1",
+          "pali": "Tiṭṭhaṃ caraṃ nisinno vā sayāno vā yāvat'assa vigatamiddho;",
+          "kana": "ティッタン チャラン ニスィンノー ワー サヤーノー ワー ヤーワタッサ ヴィガタミッドー",
+          "ja": "立っている時も、歩いている時も、坐っている時も、あるいは横になっていても眠っていない限り、",
+          "wordGlosses": [
+            {
+              "pali": "Tiṭṭhaṃ",
+              "kana": "ティッタン",
+              "ja": "立って"
+            },
+            {
+              "pali": "caraṃ",
+              "kana": "チャラン",
+              "ja": "歩いて"
+            },
+            {
+              "pali": "nisinno",
+              "kana": "ニスィンノー",
+              "ja": "坐って"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "sayāno",
+              "kana": "サヤーノー",
+              "ja": "横たわって"
+            },
+            {
+              "pali": "vā",
+              "kana": "ワー",
+              "ja": "または"
+            },
+            {
+              "pali": "yāvat'assa",
+              "kana": "ヤーワタッサ",
+              "ja": "その限り"
+            },
+            {
+              "pali": "vigatamiddho;",
+              "kana": "ヴィガタミッドー",
+              "ja": "眠気を離れた"
+            }
+          ]
+        },
+        {
+          "id": "s9-l2",
+          "pali": "etaṃ satiṃ adhiṭṭheyya brahmam etaṃ vihāraṃ idham āhu.",
+          "kana": "エータン サティン アディッテッヤ ブラフマン エータン ヴィハーラン イダン アーフ",
+          "ja": "この［慈悲の］念をしっかり 保っていてください。これが梵天（崇高なもの）の生き方であると言われています。",
+          "wordGlosses": [
+            {
+              "pali": "etaṃ",
+              "kana": "エータン",
+              "ja": "この"
+            },
+            {
+              "pali": "satiṃ",
+              "kana": "サティン",
+              "ja": "念を"
+            },
+            {
+              "pali": "adhiṭṭheyya",
+              "kana": "アディッテッヤ",
+              "ja": "確立すべき"
+            },
+            {
+              "pali": "brahmam",
+              "kana": "ブラフマン",
+              "ja": "崇高な"
+            },
+            {
+              "pali": "etaṃ",
+              "kana": "エータン",
+              "ja": "この"
+            },
+            {
+              "pali": "vihāraṃ",
+              "kana": "ヴィハーラン",
+              "ja": "生き方を"
+            },
+            {
+              "pali": "idham",
+              "kana": "イダン",
+              "ja": "ここで"
+            },
+            {
+              "pali": "āhu.",
+              "kana": "アーフ",
+              "ja": "と言われる"
+            }
+          ]
+        }
+      ],
+      "label": "第9節"
+    },
+    {
+      "id": "s10",
+      "lines": [
+        {
+          "id": "s10-l1",
+          "pali": "Diṭṭhiñ ca anupagamma sīlavā dassanena sampanno;",
+          "kana": "ディッティン チャ アヌパガンマ スィーラワー ダッサネーナ サンパンノー",
+          "ja": "［このように実践する人は］ 邪見を乗り越え、常に戒を保ち、正見を得て、",
+          "wordGlosses": [
+            {
+              "pali": "Diṭṭhiñ",
+              "kana": "ディッティン",
+              "ja": "見解を"
+            },
+            {
+              "pali": "ca",
+              "kana": "チャ",
+              "ja": "そして"
+            },
+            {
+              "pali": "anupagamma",
+              "kana": "アヌパガンマ",
+              "ja": "とらわれず"
+            },
+            {
+              "pali": "sīlavā",
+              "kana": "スィーラワー",
+              "ja": "戒を保つ者"
+            },
+            {
+              "pali": "dassanena",
+              "kana": "ダッサネーナ",
+              "ja": "正見によって"
+            },
+            {
+              "pali": "sampanno;",
+              "kana": "サンパンノー",
+              "ja": "具わった"
+            }
+          ]
+        },
+        {
+          "id": "s10-l2",
+          "pali": "kāmesu vineyya gedhaṃ na hi jātu gabbhaseyyaṃ punaretī ti.",
+          "kana": "カーメース ヴィネッヤ ゲーダン ナ ヒ ジャートゥ ガッバセッヤン プナレーティ ティ",
+          "ja": "諸々の欲望に対する執着をなくし、もう二度と母体に宿る（輪廻を繰り返す）ことはありません。",
+          "wordGlosses": [
+            {
+              "pali": "kāmesu",
+              "kana": "カーメース",
+              "ja": "欲望において"
+            },
+            {
+              "pali": "vineyya",
+              "kana": "ヴィネッヤ",
+              "ja": "取り除いて"
+            },
+            {
+              "pali": "gedhaṃ",
+              "kana": "ゲーダン",
+              "ja": "貪りを"
+            },
+            {
+              "pali": "na",
+              "kana": "ナ",
+              "ja": "ない"
+            },
+            {
+              "pali": "hi",
+              "kana": "ヒ",
+              "ja": "まさに"
+            },
+            {
+              "pali": "jātu",
+              "kana": "ジャートゥ",
+              "ja": "決して"
+            },
+            {
+              "pali": "gabbhaseyyaṃ",
+              "kana": "ガッバセッヤン",
+              "ja": "胎内の住まいに"
+            },
+            {
+              "pali": "punaretī",
+              "kana": "プナレーティ",
+              "ja": "再び戻る"
+            },
+            {
+              "pali": "ti.",
+              "kana": "ティ",
+              "ja": "と"
+            }
+          ]
+        }
+      ],
+      "label": "第10節"
+    }
+  ]
+}

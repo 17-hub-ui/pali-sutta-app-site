@@ -1,0 +1,166 @@
+{
+  "version": 3,
+  "suttas": [
+    {
+      "id": "vandana-tisarana",
+      "order": 1,
+      "title": "礼拝・三帰依",
+      "titlePali": "Vandana･Tisaraṇa",
+      "sectionCount": 2
+    },
+    {
+      "id": "pancha-sila",
+      "order": 2,
+      "title": "五戒文",
+      "titlePali": "Pancha Sila",
+      "sectionCount": 1
+    },
+    {
+      "id": "buddha-vandana",
+      "order": 3,
+      "title": "仏陀の九徳",
+      "titlePali": "Buddha vandana",
+      "sectionCount": 1
+    },
+    {
+      "id": "dhamma-vandana",
+      "order": 4,
+      "title": "法の六徳",
+      "titlePali": "Dhamma vandana",
+      "sectionCount": 1
+    },
+    {
+      "id": "sangha-vandana",
+      "order": 5,
+      "title": "僧伽の九徳",
+      "titlePali": "Sangha vabdana",
+      "sectionCount": 1
+    },
+    {
+      "id": "khamayacana",
+      "order": 6,
+      "title": "三宝に対する懺悔",
+      "titlePali": "Khamāyācanā",
+      "sectionCount": 1
+    },
+    {
+      "id": "tisarana-vandana",
+      "order": 7,
+      "title": "三宝に帰依するための偈",
+      "titlePali": "Tisaraṇa vandanā",
+      "sectionCount": 1
+    },
+    {
+      "id": "buddhanasasana",
+      "order": 8,
+      "title": "諸仏の教え",
+      "titlePali": "Buddhanasasana",
+      "sectionCount": 3
+    },
+    {
+      "id": "paticca-samuppado",
+      "order": 9,
+      "title": "因縁の教え 順観・滅観",
+      "titlePali": "Paticca samuppado Anuloman･Paṭilomaṃ",
+      "sectionCount": 2
+    },
+    {
+      "id": "pathama-udana",
+      "order": 10,
+      "title": "歓喜の言葉",
+      "titlePali": "Pathama udana",
+      "sectionCount": 2
+    },
+    {
+      "id": "ratana-sutta-patthana",
+      "order": 11,
+      "title": "宝経・祈願文",
+      "titlePali": "Ratana suttaṃ･Patthana",
+      "sectionCount": 18
+    },
+    {
+      "id": "metta-suttam-patthana-paritta",
+      "order": 12,
+      "title": "慈教・祈願文・護経",
+      "titlePali": "Metta suttam･Patthana･Paritta sutta",
+      "sectionCount": 12
+    },
+    {
+      "id": "vijaya-suttam",
+      "order": 13,
+      "title": "勝利の経",
+      "titlePali": "Vijaya suttam",
+      "sectionCount": 14
+    },
+    {
+      "id": "salla-suttam",
+      "order": 14,
+      "title": "箭経",
+      "titlePali": "Salla suttam",
+      "sectionCount": 20
+    },
+    {
+      "id": "maha-purisa-vitakka",
+      "order": 15,
+      "title": "偉大なる人の思考",
+      "titlePali": "Maha purisa vitakka",
+      "sectionCount": 8
+    },
+    {
+      "id": "mangala-suttam",
+      "order": 16,
+      "title": "吉祥経",
+      "titlePali": "Mangala suttam",
+      "sectionCount": 14
+    },
+    {
+      "id": "sallekha-sutta",
+      "order": 17,
+      "title": "戒め",
+      "titlePali": "Sallekha sutta",
+      "sectionCount": 44
+    },
+    {
+      "id": "bhaddekaratta-gatha",
+      "order": 18,
+      "title": "｢日々是好日｣偈",
+      "titlePali": "Bhaddekaratta gatha",
+      "sectionCount": 1
+    },
+    {
+      "id": "anicca-gatha-metta-bhavana",
+      "order": 19,
+      "title": "無常偈・慈しみの隨念",
+      "titlePali": "Anicca gatha･Metta bhavana",
+      "sectionCount": 2
+    },
+    {
+      "id": "attha-visati-buddha-paritta",
+      "order": 20,
+      "title": "二十八過去佛を念じる護経",
+      "titlePali": "Attha visati Buddha paritta",
+      "sectionCount": 1
+    },
+    {
+      "id": "asimsana",
+      "order": 21,
+      "title": "祝福の偈",
+      "titlePali": "Asimsana",
+      "sectionCount": 1
+    },
+    {
+      "id": "aloka-puppha-sugandha-ahara-puja",
+      "order": 22,
+      "title": "献灯・献花・献香・食事のお供え",
+      "titlePali": "Aloka･Puppha･Sugandha･Āhāra puja",
+      "sectionCount": 5
+    },
+    {
+      "id": "anumodana-nati-puja-panidhana",
+      "order": 23,
+      "title": "回向・先祖供養・誓願",
+      "titlePali": "23_Anumodana･Ñāti pūjā･Paṇidhāna",
+      "sectionCount": 3
+    }
+  ]
+}

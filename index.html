@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#283593">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="no-referrer">
+    <title>パーリ語経典暗記</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16.png?v=80">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png?v=80">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png?v=80">
+    <link rel="manifest" href="./manifest.webmanifest?v=80">
+    <link rel="stylesheet" href="./css/style.css?v=99">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <div>
+            <p class="app-kicker">Pāli Sutta / DAILY RECITATION</p>
+            <h1 id="page-title">パーリ語経典暗記</h1>
+          </div>
+        </div>
+        <p class="top-bar-note">読む、唱える、身につける</p>
+      </header>
+
+      <main id="app" class="app-main" tabindex="-1"></main>
+
+      <nav class="bottom-nav" aria-label="主要ナビゲーション">
+        <a href="#/" data-nav="home" aria-label="ホーム">
+          <span aria-hidden="true">⌂</span>
+          <span>ホーム</span>
+        </a>
+        <a href="#/settings" data-nav="settings" aria-label="設定">
+          <span aria-hidden="true">⚙</span>
+          <span>設定</span>
+        </a>
+      </nav>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script defer src="./js/app.bundle.js?v=116"></script>
+  </body>
+</html>
