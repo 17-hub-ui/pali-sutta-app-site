@@ -2942,3 +2942,61 @@ body {
   font-size: 0.85rem;
   line-height: 1.6;
 }
+
+/* ---------------- 録音・ガイド常設バー (2026-07-19 Android実機フィードバック) ---------------- */
+
+.recite-quickbar {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.6rem 0.4rem;
+  margin: 0 -0.4rem;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.quickbar-main {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.quickbar-main .record-button {
+  flex: 1.7;
+}
+
+.quickbar-main .guide-button {
+  flex: 1.2;
+}
+
+.quickbar-main .next-button {
+  flex: 0.8;
+}
+
+/* 録音中=赤、判定中=琥珀+点滅、準備中=淡い点滅 */
+.record-button[data-recording="true"] {
+  background: var(--warning);
+  color: #ffffff;
+}
+
+.record-button[data-judging="true"] {
+  background: var(--wf-ambiguous);
+  color: #ffffff;
+  animation: recite-pulse 0.9s ease-in-out infinite;
+}
+
+.record-button[data-preparing="true"] {
+  animation: recite-pulse 1.3s ease-in-out infinite;
+}
+
+.guide-button[data-pacing="true"] {
+  background: var(--accent-strong);
+  color: var(--surface);
+}
+
+@keyframes recite-pulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.3); }
+}

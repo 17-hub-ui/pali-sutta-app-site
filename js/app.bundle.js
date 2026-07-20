@@ -16794,11 +16794,14 @@ function getCompletion(summary) {
   const sections = Object.values(progress.sections || {});
   const learned = sections.filter((section) => section.box >= 3).length;
   const masteredSections = sections.filter((section) => section.box >= 5).length;
+  // バーは box 合計ベース (2026-07-19 実機フィードバック): 1回の評価でも進捗が動く。
+  // 「暗記済みN/M節」の数字は従来どおり box3 以上の節数。
+  const boxSum = sections.reduce((sum, section) => sum + Math.min(5, Math.max(0, Number(section.box) || 0)), 0);
   const total = summary.sectionCount || 0;
   return {
     learned,
     total,
-    ratio: total > 0 ? learned / total : 0,
+    ratio: total > 0 ? boxSum / (total * 5) : 0,
     // 完全暗唱: 全節が box 5 (最上位) に到達
     mastered: total > 0 && masteredSections >= total
   };
@@ -17120,8 +17123,8 @@ function renderHome(app, catalog) {
         <span class="sutta-title">${escapeHtml(sutta.title)}${completion.mastered ? '<i class="mastered-leaf" title="完全暗唱" aria-label="完全暗唱"></i>' : ""}</span>
         <span class="sutta-pali">${escapeHtml(sutta.titlePali || "")}</span>
       </span>
-      <span class="progress-block" aria-label="進捗 ${completion.learned} / ${completion.total} 節">
-        <span>${completion.learned}/${completion.total}節</span>
+      <span class="progress-block" aria-label="定着度 ${Math.round(completion.ratio * 100)}パーセント">
+        <span>定着度 ${Math.round(completion.ratio * 100)}%</span>
         <span class="progress-track"><span style="width: ${completion.ratio * 100}%"></span></span>
       </span>
     `;
@@ -17490,16 +17493,19 @@ function renderReading(app, sutta) {
     </div>
 
     <div class="recite-pane">
-      <section class="recite-panel">
-        <div class="recite-quickbar">
-          <div class="toggle-group display-toggles" aria-label="表示切替">
-            <label><input type="checkbox" name="showKana"><span>ルビ</span></label>
-            <label><input type="checkbox" name="showJa"><span>和訳</span></label>
-          </div>
+      <div class="recite-quickbar">
+        <div class="quickbar-main">
           <button class="button primary record-button" type="button" data-recitation-record>録音開始</button>
+          <button class="button primary guide-button" type="button" data-pace-toggle>▶ ガイド</button>
           <button class="button ghost next-button" type="button" data-recitation-next>次へ</button>
         </div>
-        <p class="recite-note" data-recitation-status>録音すると自動判定します。全文表示では単語をタップすると意味が出ます。</p>
+        <div class="toggle-group display-toggles" aria-label="表示切替">
+          <label><input type="checkbox" name="showKana"><span>ルビ</span></label>
+          <label><input type="checkbox" name="showJa"><span>和訳</span></label>
+        </div>
+      </div>
+      <section class="recite-panel">
+        <p class="recite-note" data-recitation-status>録音すると自動判定します（ガイドも連動して始まります）。全文表示では単語タップで意味が出ます。</p>
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
           <div class="recite-help-actions">
@@ -17533,14 +17539,11 @@ function renderReading(app, sutta) {
 
       <div class="memory-controls pace-controls">
         <div>
-          <p class="label">読誦ガイド</p>
-          <div class="pace-row">
-            <button type="button" class="button primary" data-pace-toggle>▶ ガイド開始</button>
-            <div class="level-buttons pace-tempos" aria-label="読誦の速さ">
-              <button type="button" data-pace-tempo="slow" aria-pressed="false">ゆっくり</button>
-              <button type="button" data-pace-tempo="normal" aria-pressed="true">ふつう</button>
-              <button type="button" data-pace-tempo="fast" aria-pressed="false">はやい</button>
-            </div>
+          <p class="label">読誦ガイドの速さ</p>
+          <div class="level-buttons pace-tempos" aria-label="読誦の速さ">
+            <button type="button" data-pace-tempo="slow" aria-pressed="false">ゆっくり</button>
+            <button type="button" data-pace-tempo="normal" aria-pressed="true">ふつう</button>
+            <button type="button" data-pace-tempo="fast" aria-pressed="false">はやい</button>
           </div>
         </div>
       </div>
@@ -17928,6 +17931,8 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
   }
 
   if (reciteState.isRecording) {
+    navigator.vibrate?.(30);
+    stopPacer(root, reciteState);
     requestRecitationStop(reciteState);
     updateRecordingUi(root, reciteState);
     return;
@@ -18008,6 +18013,11 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
     reciteState.recognitionStarted = true;
     updateRecordingUi(root, reciteState);
     showRecitationStatus(root, "録音中です。一呼吸おいてから唱え始めると先頭の語が認識されやすくなります。読み終えたら「停止判定」を押してください。", "recording");
+    // 録音開始と連動して読誦ガイドも始める (2026-07-19 実機フィードバック)。
+    // 認識エンジンの立ち上がり後に開始するので、ガイドと録音の頭が揃う。
+    if (!reciteState.paceRunning) {
+      startPacer(root, sutta, reciteState);
+    }
   });
 
   recognition.addEventListener("result", (event) => {
@@ -18061,6 +18071,7 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
     reciteState.isRecording = false;
     reciteState.recognitionStarted = false;
     reciteState.recognition = null;
+    stopPacer(root, reciteState);
     updateRecordingUi(root, reciteState);
 
     const transcript = getCurrentTranscript(reciteState).trim();
@@ -18129,13 +18140,14 @@ function updateRecordingUi(root, reciteState) {
     recordButton.textContent = "マイクを確認中…";
   } else if (reciteState.isRecording) {
     recordButton.textContent = reciteState.stopRequested
-      ? "停止中…"
+      ? "判定中…"
       : (reciteState.recognitionStarted ? "停止判定" : "録音開始中…");
   } else {
     recordButton.textContent = "録音開始";
   }
   recordButton.disabled = reciteState.isRequestingMicrophone;
-  recordButton.dataset.recording = String(reciteState.isRecording);
+  recordButton.dataset.recording = String(reciteState.isRecording && !reciteState.stopRequested);
+  recordButton.dataset.judging = String(reciteState.isRecording && reciteState.stopRequested);
   recordButton.dataset.preparing = String(reciteState.isRequestingMicrophone || (reciteState.isRecording && !reciteState.recognitionStarted));
 }
 
@@ -19052,25 +19064,40 @@ function startPacer(root, sutta, reciteState) {
   }
 
   const msPerMora = PACE_TEMPO_MS[reciteState.paceTempo] || PACE_TEMPO_MS.normal;
+  // 絶対時刻スケジュール (2026-07-19): 各語の開始時刻を先に確定する。
+  // 逐次setTimeoutの積み上げだと、端末負荷(録音との併用等)で遅延した後に
+  // 「早送り再生」のような不安定な動きになるため。遅延時は現在時刻の語へ跳ぶ。
+  let cursor = 0;
+  for (const step of steps) {
+    step.at = cursor;
+    cursor += step.morae * msPerMora + 60 + (step.lineEnd ? 260 : 0);
+  }
+  const totalDuration = cursor;
+
   const stage = root.querySelector("[data-recitation-stage]");
   reciteState.paceRunning = true;
   updatePaceUi(root, reciteState);
 
-  let index = 0;
+  const origin = performance.now();
+  let pointer = 0;
   let currentLineId = null;
   const tick = () => {
     if (!reciteState.paceRunning || !stage.isConnected) {
       stopPacer(root, reciteState);
       return;
     }
-    clearPaceHighlight(stage);
-    if (index >= steps.length) {
+    const elapsed = performance.now() - origin;
+    if (elapsed >= totalDuration) {
       stopPacer(root, reciteState);
       showRecitationStatus(root, "読誦ガイドを終えました。", "success");
       return;
     }
+    while (pointer + 1 < steps.length && steps[pointer + 1].at <= elapsed) {
+      pointer += 1;
+    }
 
-    const step = steps[index];
+    clearPaceHighlight(stage);
+    const step = steps[pointer];
     const lineElement = stage.querySelector(`.memory-line[data-line-id="${step.lineId}"]`);
     const target = step.wordIndex === null
       ? lineElement
@@ -19079,13 +19106,19 @@ function startPacer(root, sutta, reciteState) {
       target.classList.add("pace-current");
       if (step.lineId !== currentLineId) {
         currentLineId = step.lineId;
-        lineElement?.scrollIntoView({ block: "center", behavior: "smooth" });
+        if (lineElement) {
+          // スクロールは行が画面外に出そうなときだけ・即時スクロールで行う
+          // (録音併用時のsmoothスクロールはAndroidでカクつきの原因になる)
+          const rect = lineElement.getBoundingClientRect();
+          if (rect.top < 96 || rect.bottom > window.innerHeight - 150) {
+            lineElement.scrollIntoView({ block: "center", behavior: "auto" });
+          }
+        }
       }
     }
 
-    const duration = step.morae * msPerMora + 60 + (step.lineEnd ? 260 : 0);
-    index += 1;
-    reciteState.paceTimer = window.setTimeout(tick, duration);
+    const nextAt = pointer + 1 < steps.length ? steps[pointer + 1].at : totalDuration;
+    reciteState.paceTimer = window.setTimeout(tick, Math.max(30, nextAt - (performance.now() - origin)));
   };
   tick();
 }
@@ -19105,7 +19138,8 @@ function clearPaceHighlight(stage) {
 function updatePaceUi(root, reciteState) {
   const toggle = root.querySelector("[data-pace-toggle]");
   if (toggle) {
-    toggle.textContent = reciteState.paceRunning ? "⏸ 停止" : "▶ ガイド開始";
+    toggle.textContent = reciteState.paceRunning ? "⏸ ガイド" : "▶ ガイド";
+    toggle.dataset.pacing = String(reciteState.paceRunning);
   }
   root.querySelectorAll("[data-pace-tempo]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.paceTempo === reciteState.paceTempo));
