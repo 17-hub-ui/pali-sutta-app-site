@@ -17478,7 +17478,8 @@ function renderReading(app, sutta) {
     recordingSectionIds: new Set(),
     reviewSectionIds: null,
     lastAutoResult: null,
-    lastScoreResult: null
+    lastScoreResult: null,
+    savedReviewResult: null
   };
 
   const section = document.createElement("section");
@@ -17533,8 +17534,12 @@ function renderReading(app, sutta) {
 
       <div class="recite-stage" data-recitation-stage aria-live="polite"></div>
 
-      <div class="word-gloss-bar" data-word-gloss hidden>
+      <div class="word-gloss-bar" data-word-gloss data-state="hint" hidden>
         <p class="wg-body">
+          <span class="wg-hint">
+            <strong>単語の意味</strong>
+            <span>パーリ語をタップすると、読み方と意味をここに表示します。</span>
+          </span>
           <span class="wg-kana"></span>
           <strong class="wg-pali"></strong>
           <span class="wg-ja"></span>
@@ -17801,7 +17806,7 @@ function setupReciteControls(root, sutta, reciteState) {
       if (!isFinal && lineIndex === reciteState.tsumiageStep - 1) {
         const pair = event.target.closest("[data-word-index]");
         if (pair) {
-          showWordGlossFromPair(root.querySelector("[data-word-gloss]"), sutta, line.dataset.lineId, pair, recitationStage);
+          showWordGlossFromPair(root.querySelector("[data-word-gloss]"), sutta, line.dataset.lineId, pair, recitationStage, false);
         }
       } else {
         const lineId = line.dataset.lineId;
@@ -17819,7 +17824,7 @@ function setupReciteControls(root, sutta, reciteState) {
       // 全文表示: 単語タップで意味を表示
       const pair = event.target.closest("[data-word-index]");
       if (pair) {
-        showWordGlossFromPair(root.querySelector("[data-word-gloss]"), sutta, line.dataset.lineId, pair, recitationStage);
+        showWordGlossFromPair(root.querySelector("[data-word-gloss]"), sutta, line.dataset.lineId, pair, recitationStage, true);
       }
       return;
     }
@@ -17836,7 +17841,7 @@ function setupReciteControls(root, sutta, reciteState) {
   const glossBar = root.querySelector("[data-word-gloss]");
   glossBar.addEventListener("click", (event) => {
     if (event.target.closest(".wg-close")) {
-      hideWordGlossBar(glossBar, recitationStage);
+      resetWordGlossBar(glossBar, recitationStage, reciteState.level === 0 && !reciteState.tsumiageActive);
     }
   });
 
@@ -17876,7 +17881,7 @@ function startBuildPractice(root, sutta, reciteState, sectionId = sutta.sections
   }
   reciteState.lastAutoResult = null;
   updateReciteChips(root, reciteState);
-  resetRecitationReview(root);
+  resetRecitationReview(root, reciteState);
   hideRecitationHelp(root);
   renderReciteStage(root, sutta, reciteState);
 }
@@ -17893,7 +17898,7 @@ function selectRecitationRange(root, sutta, reciteState, sectionId, options = {}
   reciteState.reviewSectionIds = null;
   reciteState.lastAutoResult = null;
   updateReciteChips(root, reciteState);
-  resetRecitationReview(root);
+  resetRecitationReview(root, reciteState);
   hideRecitationHelp(root);
   renderReciteStage(root, sutta, reciteState);
 }
@@ -17936,7 +17941,7 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
 
   reciteState.isRequestingMicrophone = true;
   updateRecordingUi(root, reciteState);
-  resetRecitationReview(root);
+  resetRecitationReview(root, reciteState);
   hideRecitationHelp(root);
   showRecitationStatus(root, "マイクの使用許可を確認しています。端末の確認画面が出たら許可してください。", "recording");
 
@@ -17996,7 +18001,7 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
   reciteState.reviewSectionIds = null;
   addRecordingSectionIds(sutta, reciteState);
   updateRecordingUi(root, reciteState);
-  resetRecitationReview(root);
+  resetRecitationReview(root, reciteState);
   hideRecitationHelp(root);
   showRecitationStatus(root, "音声認識を開始しています。少しお待ちください。", "recording");
 
@@ -18878,13 +18883,16 @@ function updateReciteLevelButtons(root, reciteState) {
   }
 }
 
-function resetRecitationReview(root) {
+function resetRecitationReview(root, reciteState) {
   const panel = root.querySelector("[data-recitation-review]");
   const note = panel.querySelector("[data-memory-review-note]");
+  reciteState.savedReviewResult = null;
   panel.hidden = true;
   delete panel.dataset.autoResult;
   note.textContent = "録音すると自動判定が表示されます。";
+  markRecitationReviewSuggestion(root, "");
   markRecitationReviewButtons(root, "");
+  setRecitationReviewButtonsDisabled(root, false);
   hideWordFeedback(root);
 }
 
@@ -18946,10 +18954,13 @@ function showRecitationReview(root, sutta, reciteState, scoreResult, reviewResul
   const targetLabel = getReviewTargetLabel(getReviewRecitationSections(sutta, reciteState));
 
   reciteState.lastAutoResult = reviewResult;
+  reciteState.savedReviewResult = null;
   panel.hidden = false;
   panel.dataset.autoResult = reviewResult;
-  markRecitationReviewButtons(root, reviewResult);
-  note.textContent = `${targetLabel}の自動判定は「${getResultLabel(reviewResult)}」です。`;
+  markRecitationReviewSuggestion(root, reviewResult);
+  markRecitationReviewButtons(root, "");
+  setRecitationReviewButtonsDisabled(root, false);
+  note.textContent = `${targetLabel}の自動判定は「${getResultLabel(reviewResult)}」です。記録する評価を1つ選んでください。`;
   renderWordFeedback(root, scoreResult);
 }
 
@@ -18959,9 +18970,12 @@ function showInconclusiveRecitationReview(root, sutta, reciteState, scoreResult)
   const targetLabel = getReviewTargetLabel(getReviewRecitationSections(sutta, reciteState));
 
   reciteState.lastAutoResult = null;
+  reciteState.savedReviewResult = null;
   panel.hidden = false;
   delete panel.dataset.autoResult;
+  markRecitationReviewSuggestion(root, "");
   markRecitationReviewButtons(root, "");
+  setRecitationReviewButtonsDisabled(root, false);
   note.textContent = `${targetLabel}の音声を十分に聞き取れませんでした。下の聞き取り結果は参考程度にして、手動で評価してください。`;
   renderWordFeedback(root, scoreResult);
 }
@@ -18972,14 +18986,20 @@ function showManualRecitationReview(root, sutta, reciteState) {
   const targetLabel = getReviewTargetLabel(getReviewRecitationSections(sutta, reciteState));
 
   reciteState.lastAutoResult = null;
+  reciteState.savedReviewResult = null;
   panel.hidden = false;
   delete panel.dataset.autoResult;
+  markRecitationReviewSuggestion(root, "");
   markRecitationReviewButtons(root, "");
+  setRecitationReviewButtonsDisabled(root, false);
   note.textContent = `${targetLabel}を手動で判定してください。`;
   hideWordFeedback(root);
 }
 
 function saveRecitationReview(root, sutta, reciteState, result) {
+  if (reciteState.savedReviewResult) {
+    return;
+  }
   const targetSections = getReviewRecitationSections(sutta, reciteState);
   if (targetSections.length === 0) {
     return;
@@ -18988,13 +19008,35 @@ function saveRecitationReview(root, sutta, reciteState, result) {
   targetSections.forEach((section) => {
     updateSectionReview(sutta.id, section.id, result);
   });
+  reciteState.savedReviewResult = result;
+  const panel = root.querySelector("[data-recitation-review]");
+  delete panel.dataset.autoResult;
+  markRecitationReviewSuggestion(root, "");
   showMemoryReviewSaved(root, targetSections, result);
   markRecitationReviewButtons(root, result);
+  setRecitationReviewButtonsDisabled(root, true);
+  showRecitationStatus(root, `「${getResultLabel(result)}」で記録しました。`, "success");
+}
+
+function markRecitationReviewSuggestion(root, result) {
+  root.querySelectorAll(".recite-review-panel [data-memory-result]").forEach((button) => {
+    if (button.dataset.memoryResult === result) {
+      button.dataset.autoSuggested = "true";
+    } else {
+      delete button.dataset.autoSuggested;
+    }
+  });
 }
 
 function markRecitationReviewButtons(root, result) {
   root.querySelectorAll(".recite-review-panel [data-memory-result]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.memoryResult === result));
+  });
+}
+
+function setRecitationReviewButtonsDisabled(root, disabled) {
+  root.querySelectorAll(".recite-review-panel [data-memory-result]").forEach((button) => {
+    button.disabled = disabled;
   });
 }
 
@@ -19049,7 +19091,11 @@ function renderReciteStage(root, sutta, reciteState) {
   const recitationStage = root.querySelector("[data-recitation-stage]");
 
   stopPacer(root, reciteState);
-  hideWordGlossBar(root.querySelector("[data-word-gloss]"), recitationStage);
+  resetWordGlossBar(
+    root.querySelector("[data-word-gloss]"),
+    recitationStage,
+    reciteState.level === 0 && !reciteState.tsumiageActive
+  );
   if (reciteState.tsumiageActive) {
     renderTsumiageStage(recitationStage, sections, reciteState);
     return;
@@ -19246,7 +19292,7 @@ function findSuttaLineById(sutta, lineId) {
   return null;
 }
 
-function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage) {
+function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintOnToggle = false) {
   if (!bar) {
     return;
   }
@@ -19265,7 +19311,7 @@ function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage) {
 
   const key = `${lineId}:${index}`;
   if (!bar.hidden && bar.dataset.wordKey === key) {
-    hideWordGlossBar(bar, stage);
+    resetWordGlossBar(bar, stage, showHintOnToggle);
     return;
   }
 
@@ -19273,6 +19319,7 @@ function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage) {
   bar.querySelector(".wg-kana").textContent = gloss?.kana || "";
   bar.querySelector(".wg-pali").textContent = gloss?.pali || paliSurface;
   bar.querySelector(".wg-ja").textContent = gloss?.ja || "（語義未登録）";
+  bar.dataset.state = "gloss";
   bar.hidden = false;
 
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
@@ -19282,10 +19329,15 @@ function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage) {
 }
 
 function hideWordGlossBar(bar, stage) {
+  resetWordGlossBar(bar, stage, false);
+}
+
+function resetWordGlossBar(bar, stage, showHint) {
   if (!bar) {
     return;
   }
-  bar.hidden = true;
+  bar.hidden = !showHint;
+  bar.dataset.state = showHint ? "hint" : "hidden";
   delete bar.dataset.wordKey;
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
     delete element.dataset.wordSelected;
