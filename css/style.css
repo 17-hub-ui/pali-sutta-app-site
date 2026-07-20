@@ -3000,3 +3000,52 @@ body {
   0%, 100% { filter: brightness(1); }
   50% { filter: brightness(1.3); }
 }
+
+/* ---------------- 下部固定の読誦操作ドック (2026-07-21 Android実機フィードバック) ---------------- */
+/* sticky上部バーはスマホで上半分が隠れる不具合があったため、実績のある固定方式
+   (bottom-navと同じ) で下部=親指ゾーンへ移設。 */
+
+.recite-dock {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: calc(84px + env(safe-area-inset-bottom));
+  z-index: 11;
+  display: flex;
+  gap: 0.45rem;
+  width: min(980px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 0.5rem 0.55rem;
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.recite-dock .record-button {
+  flex: 1.9;
+}
+
+.recite-dock .guide-button {
+  flex: 1.25;
+}
+
+.recite-dock .tempo-button {
+  flex: 1;
+  font-size: 0.82rem;
+}
+
+.recite-dock .next-button {
+  flex: 0.85;
+  font-size: 0.85rem;
+}
+
+/* ドックの分だけ本文下部に余白を確保し、意味カードはドックの上に出す */
+.reading-view {
+  padding-bottom: 118px;
+}
+
+.reading-view .word-gloss-bar {
+  bottom: 162px;
+}

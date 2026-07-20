@@ -17493,19 +17493,12 @@ function renderReading(app, sutta) {
     </div>
 
     <div class="recite-pane">
-      <div class="recite-quickbar">
-        <div class="quickbar-main">
-          <button class="button primary record-button" type="button" data-recitation-record>録音開始</button>
-          <button class="button primary guide-button" type="button" data-pace-toggle>▶ ガイド</button>
-          <button class="button ghost next-button" type="button" data-recitation-next>次へ</button>
-        </div>
+      <section class="recite-panel">
         <div class="toggle-group display-toggles" aria-label="表示切替">
           <label><input type="checkbox" name="showKana"><span>ルビ</span></label>
           <label><input type="checkbox" name="showJa"><span>和訳</span></label>
         </div>
-      </div>
-      <section class="recite-panel">
-        <p class="recite-note" data-recitation-status>録音すると自動判定します（ガイドも連動して始まります）。全文表示では単語タップで意味が出ます。</p>
+        <p class="recite-note" data-recitation-status>下の「録音開始」で自動判定します（ガイドも連動して始まります）。全文表示では単語タップで意味が出ます。</p>
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
           <div class="recite-help-actions">
@@ -17537,16 +17530,6 @@ function renderReading(app, sutta) {
         </div>
       </div>
 
-      <div class="memory-controls pace-controls">
-        <div>
-          <p class="label">読誦ガイドの速さ</p>
-          <div class="level-buttons pace-tempos" aria-label="読誦の速さ">
-            <button type="button" data-pace-tempo="slow" aria-pressed="false">ゆっくり</button>
-            <button type="button" data-pace-tempo="normal" aria-pressed="true">ふつう</button>
-            <button type="button" data-pace-tempo="fast" aria-pressed="false">はやい</button>
-          </div>
-        </div>
-      </div>
 
       <div class="recite-stage" data-recitation-stage aria-live="polite"></div>
 
@@ -17572,6 +17555,13 @@ function renderReading(app, sutta) {
             <button type="button" data-memory-result="bad">もう一度どうぞ</button>
           </div>
         </div>
+      </div>
+
+      <div class="recite-dock" role="toolbar" aria-label="読誦操作">
+        <button class="button primary record-button" type="button" data-recitation-record>録音開始</button>
+        <button class="button primary guide-button" type="button" data-pace-toggle>▶ ガイド</button>
+        <button class="button ghost tempo-button" type="button" data-pace-cycle aria-label="読誦ガイドの速さを切替">⏱ ふつう</button>
+        <button class="button ghost next-button" type="button" data-recitation-next>次へ</button>
       </div>
     </div>
   `;
@@ -17732,14 +17722,13 @@ function setupReciteControls(root, sutta, reciteState) {
     }
   });
 
-  root.querySelectorAll("[data-pace-tempo]").forEach((button) => {
-    button.addEventListener("click", () => {
-      reciteState.paceTempo = button.dataset.paceTempo;
-      updatePaceUi(root, reciteState);
-      if (reciteState.paceRunning) {
-        startPacer(root, sutta, reciteState);
-      }
-    });
+  root.querySelector("[data-pace-cycle]").addEventListener("click", () => {
+    const order = ["slow", "normal", "fast"];
+    reciteState.paceTempo = order[(order.indexOf(reciteState.paceTempo) + 1) % order.length];
+    updatePaceUi(root, reciteState);
+    if (reciteState.paceRunning) {
+      startPacer(root, sutta, reciteState);
+    }
   });
 
   root.querySelector("[data-tsumiage-toggle]").addEventListener("click", () => {
@@ -17994,6 +17983,8 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
   reciteState.altSegments = [];
   reciteState.interimSegments = new Map();
   reciteState.interimHistory = new Map();
+  reciteState.preservedInterims = [];
+  reciteState.restartCount = 0;
   reciteState.lastError = "";
   reciteState.lastScoreResult = null;
   reciteState.stopRequested = false;
@@ -18011,12 +18002,15 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
 
   recognition.addEventListener("start", () => {
     reciteState.recognitionStarted = true;
+    reciteState.lastError = "";
     updateRecordingUi(root, reciteState);
-    showRecitationStatus(root, "録音中です。一呼吸おいてから唱え始めると先頭の語が認識されやすくなります。読み終えたら「停止判定」を押してください。", "recording");
-    // 録音開始と連動して読誦ガイドも始める (2026-07-19 実機フィードバック)。
-    // 認識エンジンの立ち上がり後に開始するので、ガイドと録音の頭が揃う。
-    if (!reciteState.paceRunning) {
-      startPacer(root, sutta, reciteState);
+    if (reciteState.restartCount === 0) {
+      showRecitationStatus(root, "録音中です。一呼吸おいてから唱え始めると先頭の語が認識されやすくなります。読み終えたら「停止判定」を押してください。", "recording");
+      // 録音開始と連動して読誦ガイドも始める (2026-07-19 実機フィードバック)。
+      // 認識エンジンの立ち上がり後に開始するので、ガイドと録音の頭が揃う。
+      if (!reciteState.paceRunning) {
+        startPacer(root, sutta, reciteState);
+      }
     }
   });
 
@@ -18051,6 +18045,11 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
     if (reciteState.lastError === "aborted") {
       return;
     }
+    // no-speech は Android の無音区切りで頻発する。録音継続中は自動再開するので
+    // エラー表示を出さない (表示すると読誦のたびに警告が点滅してしまう)。
+    if (reciteState.lastError === "no-speech" && reciteState.isRecording && !reciteState.stopRequested) {
+      return;
+    }
     showRecitationStatus(root, getSpeechRecognitionErrorMessage(reciteState.lastError), "error");
     if (shouldOfferManualRecitationFallback(reciteState.lastError)) {
       showRecitationHelp(root, getSpeechRecognitionHelpMessage(reciteState.lastError));
@@ -18075,7 +18074,8 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
     updateRecordingUi(root, reciteState);
 
     const transcript = getCurrentTranscript(reciteState).trim();
-    if (!transcript && reciteState.lastError && reciteState.lastError !== "no-speech") {
+    const hasAnyCapture = transcript || reciteState.preservedInterims.length > 0;
+    if (!hasAnyCapture && reciteState.lastError && reciteState.lastError !== "no-speech") {
       return;
     }
 
@@ -18085,13 +18085,15 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
 
     const matchPool = [
       transcript,
+      ...reciteState.preservedInterims,
       ...reciteState.altSegments,
       ...reciteState.interimHistory.values()
     ].filter(Boolean).join(" ");
-    // 順序を保った認識候補 (それぞれが読誦の一続きの書き起こし)
+    // 順序を保った認識候補 (それぞれが読誦の一続きの書き起こし)。
+    // preservedInterims は自動再開前のセッションの中間仮説 (時系列順)。
     const orderedCandidates = [
       transcript,
-      Array.from(reciteState.interimHistory.values()).join(" "),
+      [...reciteState.preservedInterims, ...reciteState.interimHistory.values()].join(" "),
       reciteState.altSegments.join(" ")
     ];
     const result = evaluateRecitation(transcript, matchPool, targetSections, matcher, orderedCandidates);
@@ -18100,6 +18102,10 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
     if (result.transcriptionRatio < AUTO_REVIEW_TUNING.minTranscriptRatio) {
       showInconclusiveRecitationReview(root, sutta, reciteState, result);
       showRecitationStatus(root, "音声の大部分を認識できませんでした。判定は参考程度です。節単位で区切って録音すると認識されやすくなります。", "warning");
+      if (reciteState.restartCount > 0) {
+        const note = root.querySelector("[data-memory-review-note]");
+        note.textContent += `（録音は途中${reciteState.restartCount}回つなぎ直されました）`;
+      }
       return;
     }
 
@@ -18116,10 +18122,51 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
         : "もう一度どうぞ。音声を聞き取れませんでした。";
       showRecitationStatus(root, statusMessage, "error");
     }
+
+    // 自動再開が発生した録音は、つなぎ目直後の語が頭切れで未認識になる可能性を明示する
+    if (reciteState.restartCount > 0) {
+      const note = root.querySelector("[data-memory-review-note]");
+      note.textContent += `（録音は途中${reciteState.restartCount}回つなぎ直されました。つなぎ目の語が未認識になることがあります）`;
+    }
   };
 
   reciteState.finalizeRecitation = finalizeRecitation;
-  recognition.addEventListener("end", finalizeRecitation);
+
+  // Android は continuous 指定でも無音や文の区切りで認識が勝手に終了する。
+  // ユーザーが停止していない限り、認識内容を保持したまま自動で繋ぎ直す。
+  const handleRecognitionEnd = () => {
+    if (reciteState.finalized) {
+      return;
+    }
+    const fatal = shouldOfferManualRecitationFallback(reciteState.lastError)
+      || String(reciteState.lastError || "").startsWith("microphone-");
+    if (!reciteState.isRecording || reciteState.stopRequested || fatal || reciteState.restartCount >= 60) {
+      finalizeRecitation();
+      return;
+    }
+
+    reciteState.restartCount += 1;
+    reciteState.preservedInterims.push(...reciteState.interimHistory.values());
+    reciteState.interimSegments = new Map();
+    reciteState.interimHistory = new Map();
+    reciteState.interimTranscript = "";
+    try {
+      recognition.start();
+    } catch {
+      window.setTimeout(() => {
+        if (reciteState.finalized || !reciteState.isRecording || reciteState.stopRequested) {
+          finalizeRecitation();
+          return;
+        }
+        try {
+          recognition.start();
+        } catch {
+          finalizeRecitation();
+        }
+      }, 250);
+    }
+  };
+  recognition.addEventListener("end", handleRecognitionEnd);
 
   try {
     recognition.start();
@@ -19141,9 +19188,11 @@ function updatePaceUi(root, reciteState) {
     toggle.textContent = reciteState.paceRunning ? "⏸ ガイド" : "▶ ガイド";
     toggle.dataset.pacing = String(reciteState.paceRunning);
   }
-  root.querySelectorAll("[data-pace-tempo]").forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.paceTempo === reciteState.paceTempo));
-  });
+  const cycle = root.querySelector("[data-pace-cycle]");
+  if (cycle) {
+    const labels = { slow: "ゆっくり", normal: "ふつう", fast: "はやい" };
+    cycle.textContent = `⏱ ${labels[reciteState.paceTempo] || "ふつう"}`;
+  }
 }
 
 // 積み上げ暗唱 (2026-07-19): 1行ずつ増やしながら唱える。導入済みの行は頭文字(Lv3)、
