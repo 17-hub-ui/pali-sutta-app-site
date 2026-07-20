@@ -1,9 +1,9 @@
-const CACHE_NAME = "pali-sutta-app-v130";
+const CACHE_NAME = "pali-sutta-app-v131";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./css/style.css?v=102",
-  "./js/app.bundle.js?v=122",
+  "./js/app.bundle.js?v=123",
   "./manifest.webmanifest?v=80",
   "./icons/favicon-16.png?v=80",
   "./icons/favicon-32.png?v=80",

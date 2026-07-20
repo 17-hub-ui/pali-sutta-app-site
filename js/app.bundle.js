@@ -18981,12 +18981,14 @@ function showInconclusiveRecitationReview(root, sutta, reciteState, scoreResult)
 }
 
 function showManualRecitationReview(root, sutta, reciteState) {
+  if (reciteState.savedReviewResult) {
+    return;
+  }
   const panel = root.querySelector("[data-recitation-review]");
   const note = panel.querySelector("[data-memory-review-note]");
   const targetLabel = getReviewTargetLabel(getReviewRecitationSections(sutta, reciteState));
 
   reciteState.lastAutoResult = null;
-  reciteState.savedReviewResult = null;
   panel.hidden = false;
   delete panel.dataset.autoResult;
   markRecitationReviewSuggestion(root, "");
