@@ -737,11 +737,53 @@ h3 {
 
 .recite-review-panel {
   margin-bottom: 12px;
+  border: 2px solid var(--accent);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
 .recite-review-panel .evaluation-buttons button[data-auto-suggested="true"] {
-  outline: 2px solid var(--accent-strong);
-  outline-offset: 2px;
+  position: relative;
+  color: #ffffff;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.recite-review-panel .evaluation-buttons button[data-auto-suggested="true"]::before {
+  content: "おすすめ";
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.68rem;
+  line-height: 1;
+}
+
+.recite-review-instruction {
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+  background: var(--accent-soft);
+  border-radius: 8px;
+}
+
+.next-step-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  margin-right: 6px;
+  padding: 0 9px;
+  color: #ffffff;
+  background: var(--accent-strong);
+  border-radius: 999px;
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+}
+
+.recite-review-panel[data-saved="true"] {
+  border-color: #3f7d58;
+}
+
+.recite-review-panel[data-saved="true"] .recite-review-instruction {
+  background: color-mix(in srgb, #3f7d58 14%, var(--surface));
 }
 
 .recite-review-panel .evaluation-buttons button:disabled {
@@ -1016,8 +1058,8 @@ h3 {
 .evaluation-buttons button {
   min-height: 52px;
   color: var(--accent-strong);
-  background: var(--accent-soft);
-  border: 1px solid var(--accent);
+  background: var(--surface);
+  border: 2px solid var(--accent);
   border-radius: 8px;
   cursor: pointer;
   font-weight: 900;
@@ -2444,6 +2486,28 @@ body {
 .rq-actions {
   display: grid;
   gap: 0.6rem;
+}
+
+.rq-self-check {
+  padding: 0.85rem 1rem;
+  background: var(--accent-soft);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+}
+
+.rq-self-check p {
+  margin: 0;
+}
+
+.rq-self-check p + p {
+  margin-top: 0.25rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.rq-record-check {
+  justify-self: center;
+  min-height: 44px;
 }
 
 .rq-skip {

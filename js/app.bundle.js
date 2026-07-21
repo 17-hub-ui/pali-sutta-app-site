@@ -15983,17 +15983,17 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s4-l2",
             "pali": "Pānīyam etaṃ bhagavā paṭigaṇhātu nāyako.",
-            "kana": "パーニーヤン エータン バガワー パティガンハートゥ ナーヤコー",
+            "kana": "パーニーヤ メータン バガワー パティガンハートゥ ナーヤコー",
             "ja": "釈迦牟尼如来に献上し奉る。世尊がお受け取りをなされますように。",
             "wordGlosses": [
               {
                 "pali": "Pānīyam",
-                "kana": "パーニーヤン",
+                "kana": "パーニーヤ",
                 "ja": "飲み水を"
               },
               {
                 "pali": "etaṃ",
-                "kana": "エータン",
+                "kana": "メータン",
                 "ja": "この"
               },
               {
@@ -17548,8 +17548,8 @@ function renderReading(app, sutta) {
       </div>
 
       <div class="memory-review-panel recite-review-panel" data-recitation-review hidden>
-        <div>
-          <p class="label">録音後の判定</p>
+        <div class="recite-review-instruction">
+          <p class="label"><span class="next-step-badge">次の操作</span> 評価を選んで記録</p>
           <p data-memory-review-note>録音すると自動判定が表示されます。</p>
         </div>
         <div class="word-feedback" data-word-feedback hidden></div>
@@ -19012,6 +19012,7 @@ function saveRecitationReview(root, sutta, reciteState, result) {
   });
   reciteState.savedReviewResult = result;
   const panel = root.querySelector("[data-recitation-review]");
+  panel.dataset.saved = "true";
   delete panel.dataset.autoResult;
   markRecitationReviewSuggestion(root, "");
   showMemoryReviewSaved(root, targetSections, result);
@@ -19021,6 +19022,8 @@ function saveRecitationReview(root, sutta, reciteState, result) {
 }
 
 function markRecitationReviewSuggestion(root, result) {
+  const panel = root.querySelector("[data-recitation-review]");
+  delete panel.dataset.saved;
   root.querySelectorAll(".recite-review-panel [data-memory-result]").forEach((button) => {
     if (button.dataset.memoryResult === result) {
       button.dataset.autoSuggested = "true";
@@ -19913,11 +19916,16 @@ async function renderQueueItem(view, queueState) {
       </div>
 
       <div class="rq-actions">
-        <div class="evaluation-buttons memory-evaluation" aria-label="この節の自己評価">
-          <button type="button" data-rq-result="good">よく唱えられています</button>
-          <button type="button" data-rq-result="unsure">一部あいまいでした</button>
-          <button type="button" data-rq-result="bad">もう一度どうぞ</button>
+        <div class="rq-self-check">
+          <p class="label">読誦後の自己評価</p>
+          <p>本文を見ずに唱えてから、最も近いものを選ぶと次の節へ進みます。</p>
         </div>
+        <div class="evaluation-buttons memory-evaluation" aria-label="この節の自己評価">
+          <button type="button" data-rq-result="good">見ずに唱えられた</button>
+          <button type="button" data-rq-result="unsure">一部あいまいだった</button>
+          <button type="button" data-rq-result="bad">本文を見て復習した</button>
+        </div>
+        <a class="button ghost rq-record-check" href="#/sutta/${encodeURIComponent(ref.suttaId)}">🎙 録音して詳しく確認</a>
         ${queueState.queue.length > 1 ? '<button type="button" class="button ghost rq-skip" data-rq-skip>あとで（最後に回す）</button>' : ""}
       </div>
     </article>
@@ -19934,7 +19942,7 @@ function renderQueueDone(queueState) {
     <section class="empty-state rq-done">
       <h2>今日の復習は完了です</h2>
       <p class="rq-done-counts">
-        よく唱えられています ${good}節 ・ 一部あいまい ${unsure}節 ・ もう一度 ${bad}節
+        見ずに唱えられた ${good}節 ・ 一部あいまい ${unsure}節 ・ 本文を見て復習 ${bad}節
       </p>
       ${streakLine}
       <p class="rq-done-note">評価に応じて次回の復習日を調整しました。</p>
