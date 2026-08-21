@@ -3247,3 +3247,33 @@ body {
   min-height: 26px;
   font-size: 0.78rem;
 }
+
+/* 意味バルーンの外枠をさらに縮小 */
+.word-gloss-bar {
+  max-width: min(180px, calc(100vw - 20px));
+  padding: 0.2rem 0.25rem 0.2rem 0.4rem;
+  gap: 0.2rem;
+  border-radius: 8px;
+}
+
+.word-gloss-bar .wg-body {
+  gap: 0 0.25rem;
+}
+
+.word-gloss-bar .wg-kana {
+  font-size: 0.56rem;
+}
+
+.word-gloss-bar .wg-pali {
+  font-size: 0.78rem;
+}
+
+.word-gloss-bar .wg-ja {
+  font-size: 0.7rem;
+}
+
+.word-gloss-bar .wg-close {
+  min-width: 22px;
+  min-height: 22px;
+  font-size: 0.68rem;
+}
