@@ -3311,3 +3311,36 @@ body {
 .memory-word-pair[data-word-selected="true"] {
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 22%, transparent);
 }
+
+/* 参考UIに合わせ、意味表示は文字だけにする */
+.word-gloss-bar {
+  padding: 0;
+  gap: 0.25em;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.word-gloss-bar .wg-pali {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.word-gloss-bar .wg-ja {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.word-gloss-bar .wg-close {
+  min-width: 1.2em;
+  min-height: 1.2em;
+  padding: 0;
+  color: var(--muted);
+  background: transparent;
+}
+
+.memory-word-pair[data-word-selected="true"] {
+  background: transparent;
+  box-shadow: none;
+}
