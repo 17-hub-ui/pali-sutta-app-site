@@ -19389,9 +19389,24 @@ function positionWordGlossBar(bar, pairElement) {
   const gap = 10;
   const viewportPadding = 12;
   const barRect = bar.getBoundingClientRect();
-  const left = Math.min(Math.max(rect.left + rect.width / 2, barRect.width / 2 + viewportPadding), window.innerWidth - barRect.width / 2 - viewportPadding);
+  const centeredLeft = Math.min(Math.max(rect.left + rect.width / 2, barRect.width / 2 + viewportPadding), window.innerWidth - barRect.width / 2 - viewportPadding);
   const above = rect.top - barRect.height - gap;
-  const top = above >= viewportPadding ? above : Math.min(rect.bottom + gap, window.innerHeight - barRect.height - viewportPadding);
+  const below = rect.bottom + gap;
+  let left = centeredLeft;
+  let top;
+
+  if (above >= viewportPadding) {
+    top = above;
+  } else if (below + barRect.height <= window.innerHeight - viewportPadding) {
+    top = below;
+  } else if (rect.right + gap + barRect.width <= window.innerWidth - viewportPadding) {
+    left = rect.right + gap + barRect.width / 2;
+    top = Math.min(Math.max(rect.top, barRect.height / 2 + viewportPadding), window.innerHeight - barRect.height / 2 - viewportPadding);
+  } else {
+    left = Math.max(barRect.width / 2 + viewportPadding, rect.left - gap - barRect.width / 2);
+    top = Math.min(Math.max(rect.top, barRect.height / 2 + viewportPadding), window.innerHeight - barRect.height / 2 - viewportPadding);
+  }
+
   bar.style.left = `${left}px`;
   bar.style.top = `${Math.max(viewportPadding, top)}px`;
 }

@@ -3277,3 +3277,37 @@ body {
   min-height: 22px;
   font-size: 0.68rem;
 }
+
+/* 本文の文字サイズに連動する意味バルーン */
+.word-gloss-bar {
+  max-width: min(24em, calc(100vw - 24px));
+  padding: 0.35em 0.45em 0.35em 0.65em;
+  gap: 0.35em;
+  font-size: 0.9rem;
+}
+
+.word-gloss-bar .wg-body {
+  gap: 0.1em 0.4em;
+}
+
+.word-gloss-bar .wg-kana {
+  font-size: 0.72em;
+}
+
+.word-gloss-bar .wg-pali {
+  font-size: 1em;
+}
+
+.word-gloss-bar .wg-ja {
+  font-size: 0.9em;
+}
+
+.word-gloss-bar .wg-close {
+  min-width: 1.6em;
+  min-height: 1.6em;
+  font-size: 0.8em;
+}
+
+.memory-word-pair[data-word-selected="true"] {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 22%, transparent);
+}
