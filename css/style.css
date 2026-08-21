@@ -3367,3 +3367,50 @@ body {
   transform: none;
   justify-content: center;
 }
+
+/* パーリ語単語に直接ひもづく日本語意味ツールチップ */
+.word-gloss-tooltip {
+  position: fixed;
+  z-index: 40;
+  width: max-content;
+  max-width: min(260px, calc(100vw - 16px));
+  padding: 0.48rem 0.7rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--accent) 52%, var(--border));
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(20, 25, 45, 0.2);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+  pointer-events: none;
+}
+
+.word-gloss-tooltip[hidden] {
+  display: none;
+}
+
+.word-gloss-tooltip::after {
+  content: "";
+  position: absolute;
+  left: var(--gloss-arrow-x, 50%);
+  width: 9px;
+  height: 9px;
+  background: var(--surface);
+  border-right: 1px solid color-mix(in srgb, var(--accent) 52%, var(--border));
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 52%, var(--border));
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.word-gloss-tooltip[data-placement="above"]::after {
+  bottom: -5px;
+}
+
+.word-gloss-tooltip[data-placement="below"]::after {
+  top: -5px;
+  transform: translateX(-50%) rotate(225deg);
+}
+
+.memory-word-pair > .pali {
+  cursor: help;
+}

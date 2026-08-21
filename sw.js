@@ -1,9 +1,9 @@
-﻿const CACHE_NAME = "pali-sutta-app-v144";
+﻿const CACHE_NAME = "pali-sutta-app-v145";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./css/style.css?v=113",
-  "./js/app.bundle.js?v=133",
+  "./css/style.css?v=114",
+  "./js/app.bundle.js?v=134",
   "./manifest.webmanifest?v=80",
   "./icons/favicon-16.png?v=80",
   "./icons/favicon-32.png?v=80",
@@ -87,4 +87,3 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
-

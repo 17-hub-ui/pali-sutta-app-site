@@ -17505,7 +17505,7 @@ function renderReading(app, sutta) {
           <label><input type="checkbox" name="showJa"><span>和訳</span></label>
           <button class="recite-note recite-note-toggle" type="button" data-recitation-info-toggle aria-expanded="false">使い方を表示</button>
         </div>
-        <p class="recite-note recite-note-detail" data-recitation-info hidden>下の「録音開始」で自動判定します（ガイドも連動して始まります）。全文表示では単語タップで意味が出ます。</p>
+        <p class="recite-note recite-note-detail" data-recitation-info hidden>下の「録音開始」で自動判定します（ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
         <p class="recite-note" data-recitation-status hidden></p>
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
@@ -17541,18 +17541,7 @@ function renderReading(app, sutta) {
 
       <div class="recite-stage" data-recitation-stage aria-live="polite"></div>
 
-      <div class="word-gloss-bar" data-word-gloss data-state="hint" hidden>
-        <p class="wg-body">
-          <span class="wg-hint">
-            <strong>単語の意味</strong>
-            <span>パーリ語をタップすると、読み方と意味をここに表示します。</span>
-          </span>
-          <span class="wg-kana"></span>
-          <strong class="wg-pali"></strong>
-          <span class="wg-ja"></span>
-        </p>
-        <button type="button" class="wg-close" aria-label="意味表示を閉じる">✕</button>
-      </div>
+      <div class="word-gloss-tooltip" data-word-gloss role="tooltip" hidden></div>
 
       <div class="memory-review-panel recite-review-panel" data-recitation-review hidden>
         <div class="recite-review-instruction">
@@ -17809,21 +17798,23 @@ function setupReciteControls(root, sutta, reciteState) {
       return;
     }
 
+    // パーリ語のクリックは共通ツールチップ処理に任せ、行の表示切替とは競合させない。
+    if (event.target.closest(".memory-word-pair > .pali")) {
+      return;
+    }
+
     const line = event.target.closest(".memory-line");
     if (!line) {
       return;
     }
 
     if (reciteState.tsumiageActive) {
-      // 積み上げ中: いま覚える行は単語タップで意味、頭文字の行はタップで一時表示
+      // 積み上げ中: パーリ語の意味表示は共通処理、頭文字の行はタップで一時表示
       const stepLines = getTsumiageLines(getActiveRecitationSections(sutta, reciteState));
       const lineIndex = stepLines.findIndex((item) => item.id === line.dataset.lineId);
       const isFinal = reciteState.tsumiageStep >= stepLines.length + 1;
       if (!isFinal && lineIndex === reciteState.tsumiageStep - 1) {
-        const pair = event.target.closest("[data-word-index]");
-        if (pair) {
-          showWordGlossFromPair(root.querySelector("[data-word-gloss]"), sutta, line.dataset.lineId, pair, recitationStage, false);
-        }
+        return;
       } else {
         const lineId = line.dataset.lineId;
         if (reciteState.revealedLineIds.has(lineId)) {
@@ -17837,11 +17828,6 @@ function setupReciteControls(root, sutta, reciteState) {
     }
 
     if (reciteState.level === 0) {
-      // 全文表示: 単語タップで意味を表示
-      const pair = event.target.closest("[data-word-index]");
-      if (pair) {
-        showWordGlossFromPair(root.querySelector("[data-word-gloss]"), sutta, line.dataset.lineId, pair, recitationStage, true);
-      }
       return;
     }
 
@@ -17854,12 +17840,7 @@ function setupReciteControls(root, sutta, reciteState) {
     renderReciteStage(root, sutta, reciteState);
   });
 
-  const glossBar = root.querySelector("[data-word-gloss]");
-  glossBar.addEventListener("click", (event) => {
-    if (event.target.closest(".wg-close")) {
-      resetWordGlossBar(glossBar, recitationStage, reciteState.level === 0 && !reciteState.tsumiageActive);
-    }
-  });
+  setupWordGlossTooltip(recitationStage, root.querySelector("[data-word-gloss]"), () => sutta);
 
   renderReciteStage(root, sutta, reciteState);
 }
@@ -19113,11 +19094,7 @@ function renderReciteStage(root, sutta, reciteState) {
   const recitationStage = root.querySelector("[data-recitation-stage]");
 
   stopPacer(root, reciteState);
-  resetWordGlossBar(
-    root.querySelector("[data-word-gloss]"),
-    recitationStage,
-    reciteState.level === 0 && !reciteState.tsumiageActive
-  );
+  resetWordGlossBar(root.querySelector("[data-word-gloss]"), recitationStage);
   if (reciteState.tsumiageActive) {
     renderTsumiageStage(recitationStage, sections, reciteState);
     return;
@@ -19318,7 +19295,7 @@ function findSuttaLineById(sutta, lineId) {
   return null;
 }
 
-function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintOnToggle = false, toggleOnSame = true, pointerPosition = null) {
+function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, toggleOnSame = true) {
   if (!bar) {
     return;
   }
@@ -19338,17 +19315,19 @@ function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintO
   const key = `${lineId}:${index}`;
   if (!bar.hidden && bar.dataset.wordKey === key) {
     if (toggleOnSame) {
-      resetWordGlossBar(bar, stage, showHintOnToggle);
+      resetWordGlossBar(bar, stage);
     }
     return;
   }
 
   bar.dataset.wordKey = key;
-  bar.querySelector(".wg-kana").textContent = gloss?.kana || "";
-  bar.querySelector(".wg-pali").textContent = gloss?.pali || paliSurface;
-  bar.querySelector(".wg-ja").textContent = gloss?.ja || "（語義未登録）";
-  bar.dataset.state = "gloss";
+  if (!gloss?.ja) {
+    resetWordGlossBar(bar, stage);
+    return;
+  }
+  bar.textContent = gloss.ja;
   bar.hidden = false;
+  positionWordGlossBar(bar, pairElement);
 
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
     delete element.dataset.wordSelected;
@@ -19357,62 +19336,80 @@ function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintO
 }
 
 function hideWordGlossBar(bar, stage) {
-  resetWordGlossBar(bar, stage, false);
+  resetWordGlossBar(bar, stage);
 }
 
-function positionWordGlossBar(bar, pairElement, pointerPosition = null) {
+function positionWordGlossBar(bar, pairElement) {
   const rect = pairElement.getBoundingClientRect();
-  const gap = 10;
-  const viewportPadding = 12;
+  const gap = 11;
+  const viewportPadding = 8;
   const barRect = bar.getBoundingClientRect();
-  if (pointerPosition) {
-    const offset = 14;
-    const preferredLeft = pointerPosition.x + offset;
-    const preferredTop = pointerPosition.y + offset;
-    const left = preferredLeft + barRect.width <= window.innerWidth - viewportPadding
-      ? preferredLeft
-      : pointerPosition.x - barRect.width - offset;
-    const top = preferredTop + barRect.height <= window.innerHeight - viewportPadding
-      ? preferredTop
-      : pointerPosition.y - barRect.height - offset;
-    bar.style.left = `${Math.max(viewportPadding, left)}px`;
-    bar.style.top = `${Math.max(viewportPadding, top)}px`;
-    return;
-  }
-  const centeredLeft = Math.min(Math.max(rect.left + rect.width / 2, barRect.width / 2 + viewportPadding), window.innerWidth - barRect.width / 2 - viewportPadding);
-  const above = rect.top - barRect.height - gap;
-  const below = rect.bottom + gap;
-  let left = centeredLeft;
-  let top;
-
-  if (above >= viewportPadding) {
-    top = above;
-  } else if (below + barRect.height <= window.innerHeight - viewportPadding) {
-    top = below;
-  } else if (rect.right + gap + barRect.width <= window.innerWidth - viewportPadding) {
-    left = rect.right + gap + barRect.width / 2;
-    top = Math.min(Math.max(rect.top, barRect.height / 2 + viewportPadding), window.innerHeight - barRect.height / 2 - viewportPadding);
-  } else {
-    left = Math.max(barRect.width / 2 + viewportPadding, rect.left - gap - barRect.width / 2);
-    top = Math.min(Math.max(rect.top, barRect.height / 2 + viewportPadding), window.innerHeight - barRect.height / 2 - viewportPadding);
-  }
-
+  const targetCenter = rect.left + rect.width / 2;
+  const left = Math.min(Math.max(targetCenter - barRect.width / 2, viewportPadding), window.innerWidth - barRect.width - viewportPadding);
+  const showAbove = rect.top - barRect.height - gap >= viewportPadding;
+  const top = showAbove ? rect.top - barRect.height - gap : rect.bottom + gap;
+  bar.dataset.placement = showAbove ? "above" : "below";
   bar.style.left = `${left}px`;
-  bar.style.top = `${Math.max(viewportPadding, top)}px`;
+  bar.style.top = `${Math.min(top, window.innerHeight - barRect.height - viewportPadding)}px`;
+  bar.style.setProperty("--gloss-arrow-x", `${Math.min(Math.max(targetCenter - left, 12), barRect.width - 12)}px`);
 }
 
-function resetWordGlossBar(bar, stage, showHint) {
+function resetWordGlossBar(bar, stage) {
   if (!bar) {
     return;
   }
-  bar.hidden = !showHint;
-  bar.dataset.state = showHint ? "hint" : "hidden";
+  bar.hidden = true;
   bar.style.removeProperty("left");
   bar.style.removeProperty("top");
+  bar.style.removeProperty("--gloss-arrow-x");
   delete bar.dataset.wordKey;
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
     delete element.dataset.wordSelected;
   });
+}
+
+function setupWordGlossTooltip(container, bar, getSutta) {
+  let openTimer = null;
+  let closeTimer = null;
+  const clearTimers = () => {
+    clearTimeout(openTimer);
+    clearTimeout(closeTimer);
+  };
+  const getTarget = (target) => target.closest?.(".memory-word-pair > .pali");
+  const showFor = (paliElement, toggleOnSame = false) => {
+    const pair = paliElement?.closest("[data-word-index]");
+    const line = paliElement?.closest(".memory-line");
+    const sutta = getSutta();
+    if (pair && line && sutta) {
+      showWordGlossFromPair(bar, sutta, line.dataset.lineId, pair, container, toggleOnSame);
+    }
+  };
+
+  container.addEventListener("pointerover", (event) => {
+    if (event.pointerType === "touch") return;
+    const paliElement = getTarget(event.target);
+    if (!paliElement) return;
+    clearTimers();
+    openTimer = setTimeout(() => showFor(paliElement), 300);
+  });
+  container.addEventListener("pointerout", (event) => {
+    if (!getTarget(event.target)) return;
+    clearTimers();
+    closeTimer = setTimeout(() => hideWordGlossBar(bar, container), 150);
+  });
+  container.addEventListener("click", (event) => {
+    const paliElement = getTarget(event.target);
+    if (!paliElement) return;
+    event.stopPropagation();
+    clearTimers();
+    showFor(paliElement, true);
+  });
+  document.addEventListener("pointerdown", (event) => {
+    if (!bar.hidden && !event.target.closest?.(".memory-word-pair > .pali")) {
+      hideWordGlossBar(bar, container);
+    }
+  });
+  window.addEventListener("scroll", () => hideWordGlossBar(bar, container), { passive: true });
 }
 
 function renderReciteStageInto(stage, sections, reciteState, emptyMessage) {
@@ -19851,23 +19848,12 @@ async function renderReview(app, catalog) {
       <span class="rq-progress" data-rq-progress></span>
     </div>
     <div data-rq-body></div>
-    <div class="word-gloss-bar" data-word-gloss hidden>
-      <p class="wg-body">
-        <span class="wg-kana"></span>
-        <strong class="wg-pali"></strong>
-        <span class="wg-ja"></span>
-      </p>
-      <button type="button" class="wg-close" aria-label="意味表示を閉じる">✕</button>
-    </div>
+    <div class="word-gloss-tooltip" data-word-gloss role="tooltip" hidden></div>
   `;
   app.append(view);
+  setupWordGlossTooltip(view, view.querySelector("[data-word-gloss]"), () => queueState.currentSutta);
 
   view.addEventListener("click", (event) => {
-    if (event.target.closest(".wg-close")) {
-      hideWordGlossBar(view.querySelector("[data-word-gloss]"), view);
-      return;
-    }
-
     const levelButton = event.target.closest("[data-rq-level]");
     if (levelButton) {
       queueState.level = Number(levelButton.dataset.rqLevel);
@@ -19876,15 +19862,11 @@ async function renderReview(app, catalog) {
       return;
     }
 
-    const memoryLine = event.target.closest(".memory-line");
-    if (memoryLine && queueState.level === 0 && queueState.currentSutta) {
-      const pair = event.target.closest("[data-word-index]");
-      if (pair) {
-        showWordGlossFromPair(view.querySelector("[data-word-gloss]"), queueState.currentSutta, memoryLine.dataset.lineId, pair, view);
-      }
+    if (event.target.closest(".memory-word-pair > .pali")) {
       return;
     }
 
+    const memoryLine = event.target.closest(".memory-line");
     if (memoryLine && queueState.level >= 1) {
       const lineId = memoryLine.dataset.lineId;
       if (queueState.revealedLineIds.has(lineId)) {
