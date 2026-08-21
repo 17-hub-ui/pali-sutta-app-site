@@ -17503,8 +17503,8 @@ function renderReading(app, sutta) {
         <div class="toggle-group display-toggles" aria-label="表示切替">
           <label><input type="checkbox" name="showKana"><span>ルビ</span></label>
           <label><input type="checkbox" name="showJa"><span>和訳</span></label>
+          <button class="recite-note recite-note-toggle" type="button" data-recitation-info-toggle aria-expanded="false">使い方を表示</button>
         </div>
-        <button class="recite-note recite-note-toggle" type="button" data-recitation-info-toggle aria-expanded="false">使い方を表示</button>
         <p class="recite-note recite-note-detail" data-recitation-info hidden>下の「録音開始」で自動判定します（ガイドも連動して始まります）。全文表示では単語タップで意味が出ます。</p>
         <p class="recite-note" data-recitation-status hidden></p>
         <div class="recite-help" data-recitation-help hidden>

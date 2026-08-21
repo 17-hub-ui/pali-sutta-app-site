@@ -3192,3 +3192,16 @@ body {
   margin-top: 0.5rem;
   padding: 0 0.25rem;
 }
+
+.display-toggles .recite-note-toggle {
+  width: auto;
+  min-height: 34px;
+  padding: 0 8px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  font-size: 0.84rem;
+  line-height: 1;
+  text-align: center;
+}
