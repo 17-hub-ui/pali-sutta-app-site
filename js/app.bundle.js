@@ -17432,8 +17432,6 @@ function showStatus(section, message, tone = "") {
   }, tone === "error" ? 2400 : 1200);
 }
 
-import { loadSutta } from "../data.js?v=57";
-
 async function renderSutta(app, catalog, suttaId, setTitle) {
   const summary = catalog.suttas.find((item) => item.id === suttaId);
   if (!summary) {
