@@ -6100,8 +6100,8 @@ const EMBEDDED_SUTTAS = {
         "lines": [
           {
             "id": "s5-l1",
-            "pali": "Diṭṭhā vā ye vā addiṭṭhā ye ca dūre vasanti",
-            "kana": "ディッター ワー イェー ワー アッディッター イェー チャ ドゥーレー ワサンティ",
+            "pali": "Diṭṭhā vā ye vā addiṭṭhā ye ca dūre vasanti avidūre;",
+            "kana": "ディッター ワー イェー ワー アッディッター イェー チャ ドゥーレー ワサンティ アヴィデゥーレー",
             "ja": "見たことがあるものもないものも、遠くに住むものでも、近くに住むものでも、",
             "wordGlosses": [
               {
@@ -6148,6 +6148,11 @@ const EMBEDDED_SUTTAS = {
                 "pali": "vasanti",
                 "kana": "ワサンティ",
                 "ja": "住む"
+              },
+              {
+                "pali": "avidūre;",
+                "kana": "アヴィデゥーレー",
+                "ja": "近いところに"
               }
             ]
           },
@@ -11252,7 +11257,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s1-l1",
             "pali": "Idha kho pana vo Cunda sallekho karaṇīyo:",
-            "kana": "イダ コー パナ ヴォー チュンダ サッレーコー カラニーヨー",
+            "kana": "イダ コー パナ ウォー チュンダ サッレーコー カラニーヨー",
             "ja": "それではチュンダよ、このように戒めるべきです。",
             "wordGlosses": [
               {
@@ -11272,7 +11277,7 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "vo",
-                "kana": "ヴォー",
+                "kana": "ウォー",
                 "ja": "あなた方に"
               },
               {
@@ -14240,7 +14245,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s1-l5",
             "pali": "Ajjeva kiccaṃ ātappaṃ, ko jaññā maraṇaṃ suve",
-            "kana": "アッジェーワ キッチャン アータッパン コー ジャンニャー マラナン スヴェー",
+            "kana": "アッジェーワ キッチャン アータッパン コー ジャンニャー マラナン スウェー",
             "ja": "今日こそ努め励むべきなり 誰が明日の死を知ろう",
             "wordGlosses": [
               {
@@ -14275,7 +14280,7 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "suve",
-                "kana": "スヴェー",
+                "kana": "スウェー",
                 "ja": "明日に"
               }
             ]
@@ -14359,7 +14364,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s1-l8",
             "pali": "Taṃ ve bhaddekarattoti, santo ācikkhate munīti.",
-            "kana": "タン ヴェー バッデーカラットーティ サントー アーチッカテー ムニーティ",
+            "kana": "タン ウェー バッデーカラットーティ サントー アーチッカテー ムニーティ",
             "ja": "こはまさに「日々是好日」と 寂静者なる 牟尼は説く",
             "wordGlosses": [
               {
@@ -14369,7 +14374,7 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "ve",
-                "kana": "ヴェー",
+                "kana": "ウェー",
                 "ja": "まさに"
               },
               {
@@ -17667,7 +17672,7 @@ function setupReciteControls(root, sutta, reciteState) {
     chip.type = "button";
     chip.textContent = label;
     chip.dataset.recitationSection = sectionId;
-    chip.setAttribute("aria-pressed", String(!reciteState.sequenceMode && sectionId === reciteState.activeSectionId));
+    chip.setAttribute("aria-pressed", String(sectionId === reciteState.activeSectionId));
     chip.addEventListener("click", () => {
       selectRecitationRange(root, sutta, reciteState, sectionId);
     });
@@ -17884,6 +17889,7 @@ function startBuildPractice(root, sutta, reciteState, sectionId = sutta.sections
   resetRecitationReview(root, reciteState);
   hideRecitationHelp(root);
   renderReciteStage(root, sutta, reciteState);
+  focusRecitationStage(root);
 }
 
 function selectRecitationRange(root, sutta, reciteState, sectionId, options = {}) {
@@ -17901,6 +17907,7 @@ function selectRecitationRange(root, sutta, reciteState, sectionId, options = {}
   resetRecitationReview(root, reciteState);
   hideRecitationHelp(root);
   renderReciteStage(root, sutta, reciteState);
+  focusRecitationStage(root);
 }
 
 function getSpeechRecognitionConstructor() {
@@ -18867,9 +18874,7 @@ function updateReciteChips(root, reciteState) {
     chip.setAttribute("aria-pressed", String(reciteState.sequenceMode));
   });
   root.querySelectorAll("[data-recitation-section]").forEach((chip) => {
-    chip.setAttribute("aria-pressed", String(
-      !reciteState.sequenceMode && chip.dataset.recitationSection === reciteState.activeSectionId
-    ));
+    chip.setAttribute("aria-pressed", String(chip.dataset.recitationSection === reciteState.activeSectionId));
   });
 }
 
@@ -19106,6 +19111,10 @@ function renderReciteStage(root, sutta, reciteState) {
     return;
   }
   renderReciteStageInto(recitationStage, sections, reciteState, "音読・暗記する節がありません。");
+}
+
+function focusRecitationStage(root) {
+  root.querySelector("[data-recitation-stage]")?.scrollIntoView({ block: "start", behavior: "auto" });
 }
 
 // ---- 読誦ペースメーカー (2026-07-19) ----
