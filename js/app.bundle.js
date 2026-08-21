@@ -17855,6 +17855,28 @@ function setupReciteControls(root, sutta, reciteState) {
   });
 
   const glossBar = root.querySelector("[data-word-gloss]");
+  const repositionGloss = () => {
+    if (!glossBar.hidden && glossBar._anchorElement?.isConnected) {
+      positionWordGlossBar(glossBar, glossBar._anchorElement);
+    }
+  };
+  window.addEventListener("resize", repositionGloss);
+  window.addEventListener("scroll", repositionGloss, true);
+  recitationStage.addEventListener("mouseover", (event) => {
+    const pair = event.target.closest("[data-word-index]");
+    if (!pair || (reciteState.level !== 0 && !reciteState.tsumiageActive)) {
+      return;
+    }
+    if (pair.contains(event.relatedTarget)) {
+      return;
+    }
+    const line = pair.closest(".memory-line");
+    if (line) {
+      showWordGlossFromPair(glossBar, sutta, line.dataset.lineId, pair, recitationStage, false, false);
+    }
+  });
+
+
   glossBar.addEventListener("click", (event) => {
     if (event.target.closest(".wg-close")) {
       resetWordGlossBar(glossBar, recitationStage, reciteState.level === 0 && !reciteState.tsumiageActive);
@@ -19318,7 +19340,7 @@ function findSuttaLineById(sutta, lineId) {
   return null;
 }
 
-function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintOnToggle = false) {
+function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintOnToggle = false, toggleOnSame = true) {
   if (!bar) {
     return;
   }
@@ -19337,7 +19359,9 @@ function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintO
 
   const key = `${lineId}:${index}`;
   if (!bar.hidden && bar.dataset.wordKey === key) {
-    resetWordGlossBar(bar, stage, showHintOnToggle);
+    if (toggleOnSame) {
+      resetWordGlossBar(bar, stage, showHintOnToggle);
+    }
     return;
   }
 
@@ -19347,6 +19371,8 @@ function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintO
   bar.querySelector(".wg-ja").textContent = gloss?.ja || "（語義未登録）";
   bar.dataset.state = "gloss";
   bar.hidden = false;
+  bar._anchorElement = pairElement;
+  positionWordGlossBar(bar, pairElement);
 
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
     delete element.dataset.wordSelected;
@@ -19358,12 +19384,27 @@ function hideWordGlossBar(bar, stage) {
   resetWordGlossBar(bar, stage, false);
 }
 
+function positionWordGlossBar(bar, pairElement) {
+  const rect = pairElement.getBoundingClientRect();
+  const gap = 10;
+  const viewportPadding = 12;
+  const barRect = bar.getBoundingClientRect();
+  const left = Math.min(Math.max(rect.left + rect.width / 2, barRect.width / 2 + viewportPadding), window.innerWidth - barRect.width / 2 - viewportPadding);
+  const above = rect.top - barRect.height - gap;
+  const top = above >= viewportPadding ? above : Math.min(rect.bottom + gap, window.innerHeight - barRect.height - viewportPadding);
+  bar.style.left = `${left}px`;
+  bar.style.top = `${Math.max(viewportPadding, top)}px`;
+}
+
 function resetWordGlossBar(bar, stage, showHint) {
   if (!bar) {
     return;
   }
   bar.hidden = !showHint;
   bar.dataset.state = showHint ? "hint" : "hidden";
+  bar.style.removeProperty("left");
+  bar.style.removeProperty("top");
+  bar._anchorElement = null;
   delete bar.dataset.wordKey;
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
     delete element.dataset.wordSelected;

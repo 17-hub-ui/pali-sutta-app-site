@@ -3205,3 +3205,15 @@ body {
   line-height: 1;
   text-align: center;
 }
+
+/* 単語の近くに追随する意味バルーン */
+.word-gloss-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  z-index: 30;
+  width: max-content;
+  max-width: min(320px, calc(100vw - 24px));
+  transform: translateX(-50%);
+}
