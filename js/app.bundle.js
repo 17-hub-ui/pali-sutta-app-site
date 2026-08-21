@@ -17432,6 +17432,8 @@ function showStatus(section, message, tone = "") {
   }, tone === "error" ? 2400 : 1200);
 }
 
+import { loadSutta } from "../data.js?v=57";
+
 async function renderSutta(app, catalog, suttaId, setTitle) {
   const summary = catalog.suttas.find((item) => item.id === suttaId);
   if (!summary) {
@@ -17504,7 +17506,9 @@ function renderReading(app, sutta) {
           <label><input type="checkbox" name="showKana"><span>ルビ</span></label>
           <label><input type="checkbox" name="showJa"><span>和訳</span></label>
         </div>
-        <p class="recite-note" data-recitation-status>下の「録音開始」で自動判定します（ガイドも連動して始まります）。全文表示では単語タップで意味が出ます。</p>
+        <button class="recite-note recite-note-toggle" type="button" data-recitation-info-toggle aria-expanded="false">使い方を表示</button>
+        <p class="recite-note recite-note-detail" data-recitation-info hidden>下の「録音開始」で自動判定します（ガイドも連動して始まります）。全文表示では単語タップで意味が出ます。</p>
+        <p class="recite-note" data-recitation-status hidden></p>
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
           <div class="recite-help-actions">
@@ -17663,8 +17667,17 @@ function setupReciteControls(root, sutta, reciteState) {
   const openExternalLink = root.querySelector("[data-open-external]");
   const copyUrlButton = root.querySelector("[data-copy-recitation-url]");
   const manualReviewButton = root.querySelector("[data-manual-review]");
+  const infoToggle = root.querySelector("[data-recitation-info-toggle]");
+  const infoDetail = root.querySelector("[data-recitation-info]");
 
   openExternalLink.href = location.href;
+
+  infoToggle.addEventListener("click", () => {
+    const expanded = infoToggle.getAttribute("aria-expanded") === "true";
+    infoToggle.setAttribute("aria-expanded", String(!expanded));
+    infoToggle.textContent = expanded ? "使い方を表示" : "使い方を閉じる";
+    infoDetail.hidden = expanded;
+  });
 
 
   const createChip = (label, sectionId) => {
@@ -18311,6 +18324,7 @@ function getSpeechRecognitionHelpMessage(error) {
 
 function showRecitationStatus(root, message, tone = "") {
   const status = root.querySelector("[data-recitation-status]");
+  status.hidden = false;
   status.textContent = message;
   if (tone) {
     status.dataset.tone = tone;
