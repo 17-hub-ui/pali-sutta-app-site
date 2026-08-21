@@ -3354,3 +3354,16 @@ body {
   background: var(--surface);
   box-shadow: 0 8px 20px rgba(20, 25, 45, 0.18);
 }
+
+/* ホバーを使わず、意味表示を画面下部に固定 */
+.word-gloss-bar {
+  position: fixed;
+  top: auto;
+  right: 12px;
+  bottom: 162px;
+  left: 12px;
+  width: auto;
+  max-width: none;
+  transform: none;
+  justify-content: center;
+}

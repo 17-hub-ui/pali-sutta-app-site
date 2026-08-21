@@ -17784,15 +17784,6 @@ function setupReciteControls(root, sutta, reciteState) {
     saveRecitationReview(root, sutta, reciteState, resultButton.dataset.memoryResult);
   });
 
-  recitationStage.addEventListener("mousemove", (event) => {
-    const pair = event.target.closest("[data-word-index]");
-    if (pair && !glossBar.hidden && glossBar._anchorElement === pair) {
-      const pointerPosition = { x: event.clientX, y: event.clientY };
-      glossBar._pointerPosition = pointerPosition;
-      positionWordGlossBar(glossBar, pair, pointerPosition);
-    }
-  });
-
   recitationStage.addEventListener("click", (event) => {
     if (event.target.closest("[data-tsumiage-next]")) {
       const stepLines = getTsumiageLines(getActiveRecitationSections(sutta, reciteState));
@@ -17864,28 +17855,6 @@ function setupReciteControls(root, sutta, reciteState) {
   });
 
   const glossBar = root.querySelector("[data-word-gloss]");
-  const repositionGloss = () => {
-    if (!glossBar.hidden && glossBar._anchorElement?.isConnected) {
-      positionWordGlossBar(glossBar, glossBar._anchorElement, glossBar._pointerPosition);
-    }
-  };
-  window.addEventListener("resize", repositionGloss);
-  window.addEventListener("scroll", repositionGloss, true);
-  recitationStage.addEventListener("mouseover", (event) => {
-    const pair = event.target.closest("[data-word-index]");
-    if (!pair || (reciteState.level !== 0 && !reciteState.tsumiageActive)) {
-      return;
-    }
-    if (pair.contains(event.relatedTarget)) {
-      return;
-    }
-    const line = pair.closest(".memory-line");
-    if (line) {
-      showWordGlossFromPair(glossBar, sutta, line.dataset.lineId, pair, recitationStage, false, false, { x: event.clientX, y: event.clientY });
-    }
-  });
-
-
   glossBar.addEventListener("click", (event) => {
     if (event.target.closest(".wg-close")) {
       resetWordGlossBar(glossBar, recitationStage, reciteState.level === 0 && !reciteState.tsumiageActive);
@@ -19380,9 +19349,6 @@ function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintO
   bar.querySelector(".wg-ja").textContent = gloss?.ja || "（語義未登録）";
   bar.dataset.state = "gloss";
   bar.hidden = false;
-  bar._anchorElement = pairElement;
-  bar._pointerPosition = pointerPosition;
-  positionWordGlossBar(bar, pairElement, pointerPosition);
 
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
     delete element.dataset.wordSelected;
@@ -19443,8 +19409,6 @@ function resetWordGlossBar(bar, stage, showHint) {
   bar.dataset.state = showHint ? "hint" : "hidden";
   bar.style.removeProperty("left");
   bar.style.removeProperty("top");
-  bar._anchorElement = null;
-  bar._pointerPosition = null;
   delete bar.dataset.wordKey;
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
     delete element.dataset.wordSelected;
