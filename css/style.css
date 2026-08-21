@@ -3344,3 +3344,13 @@ body {
   background: transparent;
   box-shadow: none;
 }
+
+/* カーソル付近に表示する吹き出し */
+.word-gloss-bar {
+  padding: 0.35em 0.45em 0.35em 0.65em;
+  gap: 0.35em;
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--border));
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 8px 20px rgba(20, 25, 45, 0.18);
+}

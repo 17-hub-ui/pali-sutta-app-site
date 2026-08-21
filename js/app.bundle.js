@@ -17784,6 +17784,15 @@ function setupReciteControls(root, sutta, reciteState) {
     saveRecitationReview(root, sutta, reciteState, resultButton.dataset.memoryResult);
   });
 
+  recitationStage.addEventListener("mousemove", (event) => {
+    const pair = event.target.closest("[data-word-index]");
+    if (pair && !glossBar.hidden && glossBar._anchorElement === pair) {
+      const pointerPosition = { x: event.clientX, y: event.clientY };
+      glossBar._pointerPosition = pointerPosition;
+      positionWordGlossBar(glossBar, pair, pointerPosition);
+    }
+  });
+
   recitationStage.addEventListener("click", (event) => {
     if (event.target.closest("[data-tsumiage-next]")) {
       const stepLines = getTsumiageLines(getActiveRecitationSections(sutta, reciteState));
@@ -17857,7 +17866,7 @@ function setupReciteControls(root, sutta, reciteState) {
   const glossBar = root.querySelector("[data-word-gloss]");
   const repositionGloss = () => {
     if (!glossBar.hidden && glossBar._anchorElement?.isConnected) {
-      positionWordGlossBar(glossBar, glossBar._anchorElement);
+      positionWordGlossBar(glossBar, glossBar._anchorElement, glossBar._pointerPosition);
     }
   };
   window.addEventListener("resize", repositionGloss);
@@ -17872,7 +17881,7 @@ function setupReciteControls(root, sutta, reciteState) {
     }
     const line = pair.closest(".memory-line");
     if (line) {
-      showWordGlossFromPair(glossBar, sutta, line.dataset.lineId, pair, recitationStage, false, false);
+      showWordGlossFromPair(glossBar, sutta, line.dataset.lineId, pair, recitationStage, false, false, { x: event.clientX, y: event.clientY });
     }
   });
 
@@ -19340,7 +19349,7 @@ function findSuttaLineById(sutta, lineId) {
   return null;
 }
 
-function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintOnToggle = false, toggleOnSame = true) {
+function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintOnToggle = false, toggleOnSame = true, pointerPosition = null) {
   if (!bar) {
     return;
   }
@@ -19372,7 +19381,8 @@ function showWordGlossFromPair(bar, sutta, lineId, pairElement, stage, showHintO
   bar.dataset.state = "gloss";
   bar.hidden = false;
   bar._anchorElement = pairElement;
-  positionWordGlossBar(bar, pairElement);
+  bar._pointerPosition = pointerPosition;
+  positionWordGlossBar(bar, pairElement, pointerPosition);
 
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
     delete element.dataset.wordSelected;
@@ -19384,11 +19394,25 @@ function hideWordGlossBar(bar, stage) {
   resetWordGlossBar(bar, stage, false);
 }
 
-function positionWordGlossBar(bar, pairElement) {
+function positionWordGlossBar(bar, pairElement, pointerPosition = null) {
   const rect = pairElement.getBoundingClientRect();
   const gap = 10;
   const viewportPadding = 12;
   const barRect = bar.getBoundingClientRect();
+  if (pointerPosition) {
+    const offset = 14;
+    const preferredLeft = pointerPosition.x + offset;
+    const preferredTop = pointerPosition.y + offset;
+    const left = preferredLeft + barRect.width <= window.innerWidth - viewportPadding
+      ? preferredLeft
+      : pointerPosition.x - barRect.width - offset;
+    const top = preferredTop + barRect.height <= window.innerHeight - viewportPadding
+      ? preferredTop
+      : pointerPosition.y - barRect.height - offset;
+    bar.style.left = `${Math.max(viewportPadding, left)}px`;
+    bar.style.top = `${Math.max(viewportPadding, top)}px`;
+    return;
+  }
   const centeredLeft = Math.min(Math.max(rect.left + rect.width / 2, barRect.width / 2 + viewportPadding), window.innerWidth - barRect.width / 2 - viewportPadding);
   const above = rect.top - barRect.height - gap;
   const below = rect.bottom + gap;
@@ -19420,6 +19444,7 @@ function resetWordGlossBar(bar, stage, showHint) {
   bar.style.removeProperty("left");
   bar.style.removeProperty("top");
   bar._anchorElement = null;
+  bar._pointerPosition = null;
   delete bar.dataset.wordKey;
   stage?.querySelectorAll('[data-word-selected="true"]').forEach((element) => {
     delete element.dataset.wordSelected;
