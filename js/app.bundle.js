@@ -3,168 +3,191 @@
 "use strict";
 
 const EMBEDDED_CATALOG = {
-  "version": 3,
+  "version": 4,
   "suttas": [
     {
       "id": "vandana-tisarana",
       "order": 1,
       "title": "礼拝・三帰依",
-      "titlePali": "Vandana･Tisaraṇa",
-      "sectionCount": 2
+      "titlePali": "Vandanā・Tisaraṇa",
+      "bodySectionCount": 2,
+      "sectionCount": 3
     },
     {
       "id": "pancha-sila",
       "order": 2,
       "title": "五戒文",
-      "titlePali": "Pancha Sila",
-      "sectionCount": 1
+      "titlePali": "Pañca Sīla",
+      "bodySectionCount": 1,
+      "sectionCount": 2
     },
     {
       "id": "buddha-vandana",
       "order": 3,
       "title": "仏陀の九徳",
-      "titlePali": "Buddha vandana",
-      "sectionCount": 1
+      "titlePali": "Buddha vandanā",
+      "bodySectionCount": 1,
+      "sectionCount": 2
     },
     {
       "id": "dhamma-vandana",
       "order": 4,
       "title": "法の六徳",
-      "titlePali": "Dhamma vandana",
-      "sectionCount": 1
+      "titlePali": "Dhamma vandanā",
+      "bodySectionCount": 1,
+      "sectionCount": 2
     },
     {
       "id": "sangha-vandana",
       "order": 5,
       "title": "僧伽の九徳",
-      "titlePali": "Sangha vabdana",
-      "sectionCount": 1
+      "titlePali": "Saṅgha vabdanā",
+      "bodySectionCount": 1,
+      "sectionCount": 2
     },
     {
       "id": "khamayacana",
       "order": 6,
       "title": "三宝に対する懺悔",
       "titlePali": "Khamāyācanā",
-      "sectionCount": 1
+      "bodySectionCount": 1,
+      "sectionCount": 2
     },
     {
       "id": "tisarana-vandana",
       "order": 7,
       "title": "三宝に帰依するための偈",
       "titlePali": "Tisaraṇa vandanā",
-      "sectionCount": 1
+      "bodySectionCount": 3,
+      "sectionCount": 4
     },
     {
       "id": "buddhanasasana",
       "order": 8,
       "title": "諸仏の教え",
       "titlePali": "Buddhanasasana",
-      "sectionCount": 3
+      "bodySectionCount": 3,
+      "sectionCount": 4
     },
     {
       "id": "paticca-samuppado",
       "order": 9,
       "title": "因縁の教え 順観・滅観",
       "titlePali": "Paticca samuppado Anuloman･Paṭilomaṃ",
-      "sectionCount": 2
+      "bodySectionCount": 2,
+      "sectionCount": 3
     },
     {
       "id": "pathama-udana",
       "order": 10,
       "title": "歓喜の言葉",
       "titlePali": "Pathama udana",
-      "sectionCount": 2
+      "bodySectionCount": 2,
+      "sectionCount": 3
     },
     {
       "id": "ratana-sutta-patthana",
       "order": 11,
       "title": "宝経・祈願文",
-      "titlePali": "Ratana suttaṃ･Patthana",
-      "sectionCount": 18
+      "titlePali": "Ratana suttaṃ･Patthanā",
+      "bodySectionCount": 18,
+      "sectionCount": 19
     },
     {
       "id": "metta-suttam-patthana-paritta",
       "order": 12,
       "title": "慈教・祈願文・護経",
-      "titlePali": "Metta suttam･Patthana･Paritta sutta",
-      "sectionCount": 12
+      "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ",
+      "bodySectionCount": 12,
+      "sectionCount": 13
     },
     {
       "id": "vijaya-suttam",
       "order": 13,
       "title": "勝利の経",
-      "titlePali": "Vijaya suttam",
-      "sectionCount": 14
+      "titlePali": "Vijayasuttaṃ",
+      "bodySectionCount": 14,
+      "sectionCount": 15
     },
     {
       "id": "salla-suttam",
       "order": 14,
       "title": "箭経",
-      "titlePali": "Salla suttam",
-      "sectionCount": 20
+      "titlePali": "Salla suttaṃ",
+      "bodySectionCount": 20,
+      "sectionCount": 21
     },
     {
       "id": "maha-purisa-vitakka",
       "order": 15,
       "title": "偉大なる人の思考",
-      "titlePali": "Maha purisa vitakka",
-      "sectionCount": 8
+      "titlePali": "Mahā purisa vitakka",
+      "bodySectionCount": 8,
+      "sectionCount": 9
     },
     {
       "id": "mangala-suttam",
       "order": 16,
       "title": "吉祥経",
-      "titlePali": "Mangala suttam",
+      "titlePali": "Mangala suttaṃ",
+      "bodySectionCount": 13,
       "sectionCount": 14
     },
     {
       "id": "sallekha-sutta",
       "order": 17,
       "title": "戒め",
-      "titlePali": "Sallekha sutta",
-      "sectionCount": 44
+      "titlePali": "Sallekha suttaṃ",
+      "bodySectionCount": 44,
+      "sectionCount": 45
     },
     {
       "id": "bhaddekaratta-gatha",
       "order": 18,
       "title": "｢日々是好日｣偈",
-      "titlePali": "Bhaddekaratta gatha",
-      "sectionCount": 1
+      "titlePali": "Bhaddekaratta gāthā",
+      "bodySectionCount": 1,
+      "sectionCount": 2
     },
     {
       "id": "anicca-gatha-metta-bhavana",
       "order": 19,
       "title": "無常偈・慈しみの隨念",
-      "titlePali": "Anicca gatha･Metta bhavana",
-      "sectionCount": 2
+      "titlePali": "Anicca gāthā･Metta bhāvanā",
+      "bodySectionCount": 2,
+      "sectionCount": 3
     },
     {
       "id": "attha-visati-buddha-paritta",
       "order": 20,
       "title": "二十八過去佛を念じる護経",
-      "titlePali": "Attha visati Buddha paritta",
-      "sectionCount": 1
+      "titlePali": "Aṭṭha vīsati Buddha paritta",
+      "bodySectionCount": 1,
+      "sectionCount": 2
     },
     {
       "id": "asimsana",
       "order": 21,
       "title": "祝福の偈",
-      "titlePali": "Asimsana",
-      "sectionCount": 1
+      "titlePali": "Āsiṃsanā",
+      "bodySectionCount": 1,
+      "sectionCount": 2
     },
     {
       "id": "aloka-puppha-sugandha-ahara-puja",
       "order": 22,
       "title": "献灯・献花・献香・食事のお供え",
-      "titlePali": "Aloka･Puppha･Sugandha･Āhāra puja",
-      "sectionCount": 5
+      "titlePali": "Āloka･Puppha･Sugandha･Āhāra pūjā",
+      "bodySectionCount": 5,
+      "sectionCount": 6
     },
     {
       "id": "anumodana-nati-puja-panidhana",
       "order": 23,
       "title": "回向・先祖供養・誓願",
-      "titlePali": "23_Anumodana･Ñāti pūjā･Paṇidhāna",
-      "sectionCount": 3
+      "titlePali": "Anumodanā･Ñāti pūjā･Paṇidhāna",
+      "bodySectionCount": 3,
+      "sectionCount": 4
     }
   ]
 };
@@ -173,8 +196,45 @@ const EMBEDDED_SUTTAS = {
   "vandana-tisarana": {
     "id": "vandana-tisarana",
     "title": "礼拝・三帰依",
-    "titlePali": "Vandana･Tisaraṇa",
+    "titlePali": "Vandanā・Tisaraṇa",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Vandanā",
+            "kana": "ワンダナー",
+            "ja": "礼拝",
+            "wordGlosses": [
+              {
+                "pali": "Vandanā",
+                "kana": "ワンダナー",
+                "ja": "礼拝"
+              }
+            ]
+          },
+          {
+            "id": "title-l2",
+            "pali": "Ti saraṇa",
+            "kana": "ティ サラナ",
+            "ja": "三帰依",
+            "wordGlosses": [
+              {
+                "pali": "Ti",
+                "kana": "ティ",
+                "ja": "三"
+              },
+              {
+                "pali": "saraṇa",
+                "kana": "サラナ",
+                "ja": "帰依"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -221,7 +281,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l1",
             "pali": "Buddhaṃ saraṇaṃ gacchāmi.",
             "kana": "ブッダン サラナン ガッチャーミ",
-            "ja": "私は仏陀に帰依いたします。",
+            "ja": "私は仏陀(覚者)に帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Buddhaṃ",
@@ -290,7 +350,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l4",
             "pali": "Dutiyaṃ pi Buddhaṃ saraṇaṃ gacchāmi.",
             "kana": "ドゥティヤン ピ ブッダン サラナン ガッチャーミ",
-            "ja": "二度目にも、私は仏陀に帰依いたします。",
+            "ja": "二度目にも、私は仏陀(覚者)に帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Dutiyaṃ",
@@ -389,7 +449,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l7",
             "pali": "Tatiyaṃ pi Buddhaṃ saraṇaṃ gacchāmi.",
             "kana": "タティヤン ピ ブッダン サラナン ガッチャーミ",
-            "ja": "三度目にも、私は仏陀に帰依いたします。",
+            "ja": "三度目にも、私は仏陀(覚者)に帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Tatiyaṃ",
@@ -492,8 +552,32 @@ const EMBEDDED_SUTTAS = {
   "pancha-sila": {
     "id": "pancha-sila",
     "title": "五戒文",
-    "titlePali": "Pancha Sila",
+    "titlePali": "Pañca Sīla",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Pañca Sīla",
+            "kana": "パンチャ スィーラ",
+            "ja": "五戒文",
+            "wordGlosses": [
+              {
+                "pali": "Pañca",
+                "kana": "パンチャ",
+                "ja": "五"
+              },
+              {
+                "pali": "Sīla",
+                "kana": "スィーラ",
+                "ja": "戒文"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -680,8 +764,32 @@ const EMBEDDED_SUTTAS = {
   "buddha-vandana": {
     "id": "buddha-vandana",
     "title": "仏陀の九徳",
-    "titlePali": "Buddha vandana",
+    "titlePali": "Buddha vandanā",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Buddha vandanā",
+            "kana": "ブッダ ワンダナー",
+            "ja": "仏陀礼拝",
+            "wordGlosses": [
+              {
+                "pali": "Buddha",
+                "kana": "ブッダ",
+                "ja": "仏陀"
+              },
+              {
+                "pali": "vandanā",
+                "kana": "ワンダナー",
+                "ja": "礼拝"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -906,8 +1014,32 @@ const EMBEDDED_SUTTAS = {
   "dhamma-vandana": {
     "id": "dhamma-vandana",
     "title": "法の六徳",
-    "titlePali": "Dhamma vandana",
+    "titlePali": "Dhamma vandanā",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Dhamma vandanā",
+            "kana": "ダンマ ワンダナー",
+            "ja": "法礼拝",
+            "wordGlosses": [
+              {
+                "pali": "Dhamma",
+                "kana": "ダンマ",
+                "ja": "法"
+              },
+              {
+                "pali": "vandanā",
+                "kana": "ワンダナー",
+                "ja": "礼拝"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -1055,8 +1187,32 @@ const EMBEDDED_SUTTAS = {
   "sangha-vandana": {
     "id": "sangha-vandana",
     "title": "僧伽の九徳",
-    "titlePali": "Sangha vabdana",
+    "titlePali": "Saṅgha vabdanā",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Saṅgha vandanā",
+            "kana": "サンガ ワンダナー",
+            "ja": "僧伽礼拝",
+            "wordGlosses": [
+              {
+                "pali": "Saṅgha",
+                "kana": "サンガ",
+                "ja": "僧伽"
+              },
+              {
+                "pali": "vandanā",
+                "kana": "ワンダナー",
+                "ja": "礼拝"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -1342,6 +1498,30 @@ const EMBEDDED_SUTTAS = {
     "titlePali": "Khamāyācanā",
     "sections": [
       {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Khamā yācanā",
+            "kana": "カマー ヤーチャナー",
+            "ja": "忍耐懇願",
+            "wordGlosses": [
+              {
+                "pali": "Khamā",
+                "kana": "カマー",
+                "ja": "忍耐"
+              },
+              {
+                "pali": "yācanā",
+                "kana": "ヤーチャナー",
+                "ja": "懇願"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "s1",
         "lines": [
           {
@@ -1549,7 +1729,7 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "三宝に対する懺悔"
+        "label": "忍耐懇願"
       }
     ]
   },
@@ -1558,6 +1738,30 @@ const EMBEDDED_SUTTAS = {
     "title": "三宝に帰依するための偈",
     "titlePali": "Tisaraṇa vandanā",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Tisaraṇa vandanā",
+            "kana": "ティサラナ ワンダナー",
+            "ja": "三帰依（三宝）礼拝",
+            "wordGlosses": [
+              {
+                "pali": "Tisaraṇa",
+                "kana": "ティサラナ",
+                "ja": "三帰依（三宝）"
+              },
+              {
+                "pali": "vandanā",
+                "kana": "ワンダナー",
+                "ja": "礼拝"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -1677,9 +1881,15 @@ const EMBEDDED_SUTTAS = {
                 "ja": "また"
               }
             ]
-          },
+          }
+        ],
+        "label": "第1節"
+      },
+      {
+        "id": "s2",
+        "lines": [
           {
-            "id": "s1-l5",
+            "id": "s2-l1",
             "pali": "Namāmi Dhammaṃ sugatena desitaṃ,",
             "kana": "ナマーミ ダンマン スガテーナ デースィタン",
             "ja": "善逝（世尊）の説かれた、ダンマ（法）に礼拝いたします。〔仏陀の教えに帰依奉らん〕",
@@ -1707,7 +1917,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s1-l6",
+            "id": "s2-l2",
             "pali": "Sattā sadā hontu sukhī averā;",
             "kana": "サッター サダー ホントゥ スキー アヴェーラー",
             "ja": "生きとし生けるものが、いつも幸福・安穏に暮らせますように。〔すべての衆生に幸あれと　安穏あれと願（ねご）うなり〕",
@@ -1740,7 +1950,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s1-l7",
+            "id": "s2-l3",
             "pali": "Kāyo jiguccho sakalo dugandho,",
             "kana": "カーヨー ジグッチョー サカロー ドゥガンドー",
             "ja": "この体は厭わしい、身の毛もよだつ悪臭のする汚物です。〔この肉の身は不浄にて　骨の髄までおぞましき〕",
@@ -1768,129 +1978,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s1-l8",
-            "pali": "Gacchanti sabbe maraṇaṃ ahañ ca.",
-            "kana": "ガッチャンティ サッベー マラナン アハン チャ",
-            "ja": "すべての生命が死にゆくように、私も必ず死ぬべき存在です。〔生命（しょう）あるものは崩れ果て　われも確かに死に至らん〕",
-            "wordGlosses": [
-              {
-                "pali": "Gacchanti",
-                "kana": "ガッチャンティ",
-                "ja": "行く"
-              },
-              {
-                "pali": "sabbe",
-                "kana": "サッベー",
-                "ja": "一切の（有情は）"
-              },
-              {
-                "pali": "maraṇaṃ",
-                "kana": "マラナン",
-                "ja": "死へ"
-              },
-              {
-                "pali": "ahañ",
-                "kana": "アハン",
-                "ja": "私も"
-              },
-              {
-                "pali": "ca.",
-                "kana": "チャ",
-                "ja": "また"
-              }
-            ]
-          },
-          {
-            "id": "s1-l9",
-            "pali": "Namāmi Saṅghaṃ munirāja sāvakaṃ,",
-            "kana": "ナマーミ サンガン ムニラージャ サーワカン",
-            "ja": "牟尼王（世尊）の弟子たる、サンガ（僧）に礼拝いたします。〔仏弟子聖者に帰依奉らん〕",
-            "wordGlosses": [
-              {
-                "pali": "Namāmi",
-                "kana": "ナマーミ",
-                "ja": "礼拝します"
-              },
-              {
-                "pali": "Saṅghaṃ",
-                "kana": "サンガン",
-                "ja": "僧団に"
-              },
-              {
-                "pali": "munirāja",
-                "kana": "ムニラージャ",
-                "ja": "牟尼王の"
-              },
-              {
-                "pali": "sāvakaṃ,",
-                "kana": "サーワカン",
-                "ja": "弟子である"
-              }
-            ]
-          },
-          {
-            "id": "s1-l10",
-            "pali": "Sattā sadā hontu sukhī averā;",
-            "kana": "サッター サダー ホントゥ スキー アヴェーラー",
-            "ja": "生きとし生けるものが、いつも幸福・安穏に暮らせますように。",
-            "wordGlosses": [
-              {
-                "pali": "Sattā",
-                "kana": "サッター",
-                "ja": "衆生は"
-              },
-              {
-                "pali": "sadā",
-                "kana": "サダー",
-                "ja": "常に"
-              },
-              {
-                "pali": "hontu",
-                "kana": "ホントゥ",
-                "ja": "ありますように"
-              },
-              {
-                "pali": "sukhī",
-                "kana": "スキー",
-                "ja": "幸福な"
-              },
-              {
-                "pali": "averā;",
-                "kana": "アヴェーラー",
-                "ja": "怨みのない"
-              }
-            ]
-          },
-          {
-            "id": "s1-l11",
-            "pali": "Kāyo jiguccho sakalo dugandho,",
-            "kana": "カーヨー ジグッチョー サカロー ドゥガンドー",
-            "ja": "この体は厭わしい、身の毛もよだつ悪臭のする汚物です。〔この肉の身は不浄にて　骨の髄までおぞましき〕",
-            "wordGlosses": [
-              {
-                "pali": "Kāyo",
-                "kana": "カーヨー",
-                "ja": "身体は"
-              },
-              {
-                "pali": "jiguccho",
-                "kana": "ジグッチョー",
-                "ja": "厭うべき"
-              },
-              {
-                "pali": "sakalo",
-                "kana": "サカロー",
-                "ja": "すべて"
-              },
-              {
-                "pali": "dugandho,",
-                "kana": "ドゥガンドー",
-                "ja": "悪臭ある"
-              }
-            ]
-          },
-          {
-            "id": "s1-l12",
+            "id": "s2-l4",
             "pali": "Gacchanti sabbe maraṇaṃ ahañ ca.",
             "kana": "ガッチャンティ サッベー マラナン アハン チャ",
             "ja": "すべての生命が死にゆくように、私も必ず死ぬべき存在です。〔生命（しょう）あるものは崩れ果て　われも確かに死に至らん〕",
@@ -1923,7 +2011,135 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "三帰依（三宝）礼拝"
+        "label": "第2節"
+      },
+      {
+        "id": "s3",
+        "lines": [
+          {
+            "id": "s3-l1",
+            "pali": "Namāmi Saṅghaṃ munirāja sāvakaṃ,",
+            "kana": "ナマーミ サンガン ムニラージャ サーワカン",
+            "ja": "牟尼王（世尊）の弟子たる、サンガ（僧）に礼拝いたします。〔仏弟子聖者に帰依奉らん〕",
+            "wordGlosses": [
+              {
+                "pali": "Namāmi",
+                "kana": "ナマーミ",
+                "ja": "礼拝します"
+              },
+              {
+                "pali": "Saṅghaṃ",
+                "kana": "サンガン",
+                "ja": "僧団に"
+              },
+              {
+                "pali": "munirāja",
+                "kana": "ムニラージャ",
+                "ja": "牟尼王の"
+              },
+              {
+                "pali": "sāvakaṃ,",
+                "kana": "サーワカン",
+                "ja": "弟子である"
+              }
+            ]
+          },
+          {
+            "id": "s3-l2",
+            "pali": "Sattā sadā hontu sukhī averā;",
+            "kana": "サッター サダー ホントゥ スキー アヴェーラー",
+            "ja": "生きとし生けるものが、いつも幸福・安穏に暮らせますように。",
+            "wordGlosses": [
+              {
+                "pali": "Sattā",
+                "kana": "サッター",
+                "ja": "衆生は"
+              },
+              {
+                "pali": "sadā",
+                "kana": "サダー",
+                "ja": "常に"
+              },
+              {
+                "pali": "hontu",
+                "kana": "ホントゥ",
+                "ja": "ありますように"
+              },
+              {
+                "pali": "sukhī",
+                "kana": "スキー",
+                "ja": "幸福な"
+              },
+              {
+                "pali": "averā;",
+                "kana": "アヴェーラー",
+                "ja": "怨みのない"
+              }
+            ]
+          },
+          {
+            "id": "s3-l3",
+            "pali": "Kāyo jiguccho sakalo dugandho,",
+            "kana": "カーヨー ジグッチョー サカロー ドゥガンドー",
+            "ja": "この体は厭わしい、身の毛もよだつ悪臭のする汚物です。〔この肉の身は不浄にて　骨の髄までおぞましき〕",
+            "wordGlosses": [
+              {
+                "pali": "Kāyo",
+                "kana": "カーヨー",
+                "ja": "身体は"
+              },
+              {
+                "pali": "jiguccho",
+                "kana": "ジグッチョー",
+                "ja": "厭うべき"
+              },
+              {
+                "pali": "sakalo",
+                "kana": "サカロー",
+                "ja": "すべて"
+              },
+              {
+                "pali": "dugandho,",
+                "kana": "ドゥガンドー",
+                "ja": "悪臭ある"
+              }
+            ]
+          },
+          {
+            "id": "s3-l4",
+            "pali": "Gacchanti sabbe maraṇaṃ ahañ ca.",
+            "kana": "ガッチャンティ サッベー マラナン アハン チャ",
+            "ja": "すべての生命が死にゆくように、私も必ず死ぬべき存在です。〔生命（しょう）あるものは崩れ果て　われも確かに死に至らん〕",
+            "wordGlosses": [
+              {
+                "pali": "Gacchanti",
+                "kana": "ガッチャンティ",
+                "ja": "行く"
+              },
+              {
+                "pali": "sabbe",
+                "kana": "サッベー",
+                "ja": "一切の（有情は）"
+              },
+              {
+                "pali": "maraṇaṃ",
+                "kana": "マラナン",
+                "ja": "死へ"
+              },
+              {
+                "pali": "ahañ",
+                "kana": "アハン",
+                "ja": "私も"
+              },
+              {
+                "pali": "ca.",
+                "kana": "チャ",
+                "ja": "また"
+              }
+            ]
+          }
+        ],
+        "label": "第3節"
       }
     ]
   },
@@ -1932,6 +2148,30 @@ const EMBEDDED_SUTTAS = {
     "title": "諸仏の教え",
     "titlePali": "Buddhanasasana",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Buddhāna sāsanaṃ",
+            "kana": "ブッダーナ サーサナン",
+            "ja": "諸仏の教え",
+            "wordGlosses": [
+              {
+                "pali": "Buddhāna",
+                "kana": "ブッダーナ",
+                "ja": "諸仏の"
+              },
+              {
+                "pali": "sāsanaṃ",
+                "kana": "サーサナン",
+                "ja": "教え"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -2244,6 +2484,58 @@ const EMBEDDED_SUTTAS = {
     "title": "因縁の教え 順観・滅観",
     "titlePali": "Paticca samuppado Anuloman･Paṭilomaṃ",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Paticca samuppādo Anulomaṃ",
+            "kana": "パティッチャ サムッパードー アヌローマン",
+            "ja": "縁による生起順観",
+            "wordGlosses": [
+              {
+                "pali": "Paticca",
+                "kana": "パティッチャ",
+                "ja": "縁による"
+              },
+              {
+                "pali": "samuppādo",
+                "kana": "サムッパードー",
+                "ja": "生起"
+              },
+              {
+                "pali": "Anulomaṃ",
+                "kana": "アヌローマン",
+                "ja": "順観"
+              }
+            ]
+          },
+          {
+            "id": "title-l2",
+            "pali": "Paticca Samuppādo Paṭilomaṃ",
+            "kana": "パティッチャ サムッパードー パティローマン",
+            "ja": "縁による生起逆観",
+            "wordGlosses": [
+              {
+                "pali": "Paticca",
+                "kana": "パティッチャ",
+                "ja": "縁による"
+              },
+              {
+                "pali": "Samuppādo",
+                "kana": "サムッパードー",
+                "ja": "生起"
+              },
+              {
+                "pali": "Paṭilomaṃ",
+                "kana": "パティローマン",
+                "ja": "逆観"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -3007,6 +3299,30 @@ const EMBEDDED_SUTTAS = {
     "titlePali": "Pathama udana",
     "sections": [
       {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Paṭhama udāna",
+            "kana": "パタマ ウダーナ",
+            "ja": "第一の歓喜の言葉",
+            "wordGlosses": [
+              {
+                "pali": "Paṭhama",
+                "kana": "パタマ",
+                "ja": "第一の"
+              },
+              {
+                "pali": "udāna",
+                "kana": "ウダーナ",
+                "ja": "歓喜の言葉"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "s1",
         "lines": [
           {
@@ -3208,8 +3524,45 @@ const EMBEDDED_SUTTAS = {
   "ratana-sutta-patthana": {
     "id": "ratana-sutta-patthana",
     "title": "宝経・祈願文",
-    "titlePali": "Ratana suttaṃ･Patthana",
+    "titlePali": "Ratana suttaṃ･Patthanā",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Ratana Suttaṃ",
+            "kana": "ラタナ スッタン",
+            "ja": "宝経",
+            "wordGlosses": [
+              {
+                "pali": "Ratana",
+                "kana": "ラタナ",
+                "ja": "宝"
+              },
+              {
+                "pali": "Suttaṃ",
+                "kana": "スッタン",
+                "ja": "経"
+              }
+            ]
+          },
+          {
+            "id": "title-l2",
+            "pali": "Patthanā",
+            "kana": "パッタナー",
+            "ja": "祈願文",
+            "wordGlosses": [
+              {
+                "pali": "Patthanā",
+                "kana": "パッタナー",
+                "ja": "祈願文"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -5690,8 +6043,63 @@ const EMBEDDED_SUTTAS = {
   "metta-suttam-patthana-paritta": {
     "id": "metta-suttam-patthana-paritta",
     "title": "慈教・祈願文・護経",
-    "titlePali": "Metta suttam･Patthana･Paritta sutta",
+    "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Metta Suttaṃ",
+            "kana": "メッタ スッタン",
+            "ja": "慈経",
+            "wordGlosses": [
+              {
+                "pali": "Metta",
+                "kana": "メッタ",
+                "ja": "慈"
+              },
+              {
+                "pali": "Suttaṃ",
+                "kana": "スッタン",
+                "ja": "経"
+              }
+            ]
+          },
+          {
+            "id": "title-l2",
+            "pali": "Patthanā",
+            "kana": "パッタナー",
+            "ja": "祈願文",
+            "wordGlosses": [
+              {
+                "pali": "Patthanā",
+                "kana": "パッタナー",
+                "ja": "祈願文"
+              }
+            ]
+          },
+          {
+            "id": "title-l3",
+            "pali": "Paritta Suttaṃ",
+            "kana": "パリッタ 経",
+            "ja": "護経",
+            "wordGlosses": [
+              {
+                "pali": "Paritta",
+                "kana": "パリッタ",
+                "ja": "護経"
+              },
+              {
+                "pali": "Suttaṃ",
+                "kana": "経",
+                "ja": ""
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -6846,8 +7254,32 @@ const EMBEDDED_SUTTAS = {
   "vijaya-suttam": {
     "id": "vijaya-suttam",
     "title": "勝利の経",
-    "titlePali": "Vijaya suttam",
+    "titlePali": "Vijayasuttaṃ",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Vijaya suttaṃ",
+            "kana": "ヴィジャヤ スッタン",
+            "ja": "勝利の経",
+            "wordGlosses": [
+              {
+                "pali": "Vijaya",
+                "kana": "ヴィジャヤ",
+                "ja": "勝利"
+              },
+              {
+                "pali": "suttaṃ",
+                "kana": "スッタン",
+                "ja": "の経"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -7946,8 +8378,32 @@ const EMBEDDED_SUTTAS = {
   "salla-suttam": {
     "id": "salla-suttam",
     "title": "箭経",
-    "titlePali": "Salla suttam",
+    "titlePali": "Salla suttaṃ",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Salla suttaṃ",
+            "kana": "サッラ スッタン",
+            "ja": "箭(矢)経",
+            "wordGlosses": [
+              {
+                "pali": "Salla",
+                "kana": "サッラ",
+                "ja": "箭(矢)"
+              },
+              {
+                "pali": "suttaṃ",
+                "kana": "スッタン",
+                "ja": "経"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -9701,8 +10157,37 @@ const EMBEDDED_SUTTAS = {
   "maha-purisa-vitakka": {
     "id": "maha-purisa-vitakka",
     "title": "偉大なる人の思考",
-    "titlePali": "Maha purisa vitakka",
+    "titlePali": "Mahā purisa vitakka",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Mahā purisa vitakka",
+            "kana": "マハー プリサ ヴィタッカ",
+            "ja": "偉大なる人の思考",
+            "wordGlosses": [
+              {
+                "pali": "Mahā",
+                "kana": "マハー",
+                "ja": "偉大なる"
+              },
+              {
+                "pali": "purisa",
+                "kana": "プリサ",
+                "ja": "人の"
+              },
+              {
+                "pali": "vitakka",
+                "kana": "ヴィタッカ",
+                "ja": "思考"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -10048,8 +10533,32 @@ const EMBEDDED_SUTTAS = {
   "mangala-suttam": {
     "id": "mangala-suttam",
     "title": "吉祥経",
-    "titlePali": "Mangala suttam",
+    "titlePali": "Mangala suttaṃ",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Mangala suttaṃ",
+            "kana": "マンガラ スッタン",
+            "ja": "吉祥経",
+            "wordGlosses": [
+              {
+                "pali": "Mangala",
+                "kana": "マンガラ",
+                "ja": "吉祥"
+              },
+              {
+                "pali": "suttaṃ",
+                "kana": "スッタン",
+                "ja": "経"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -10123,15 +10632,9 @@ const EMBEDDED_SUTTAS = {
                 "ja": "園に"
               }
             ]
-          }
-        ],
-        "label": "第1節"
-      },
-      {
-        "id": "s2",
-        "lines": [
+          },
           {
-            "id": "s2-l1",
+            "id": "s1-l3",
             "pali": "Atha kho aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā",
             "kana": "アタ コー アンニャタラー デーワター アビッカンターヤ ラッティヤー アビッカンタワンナー",
             "ja": "その時、一人の容色麗しい天人が夜半過ぎに、",
@@ -10174,7 +10677,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s2-l2",
+            "id": "s1-l4",
             "pali": "kevalakappaṃ Jetavanaṃ obhāsetvā yena Bhagavā ten' upasaṃkami,",
             "kana": "ケーワラカッパン ジェータワナン オーバーセトゥワー イェーナ バガワー テーン ウパサンカミ",
             "ja": "祇園を隈無くまな く照らして世尊のおられる処に近付きました。",
@@ -10217,7 +10720,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s2-l3",
+            "id": "s1-l5",
             "pali": "upasaṃkamitvā Bhagavantaṃ abhivādetvā ekamantaṃ aṭṭhāsi.",
             "kana": "ウパサンカミトゥワー バガワンタン アビワーデトゥワー エーカマンタン アッタースィ",
             "ja": "近付いて、世尊に礼拝して、一方に立ちました。",
@@ -10250,7 +10753,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s2-l4",
+            "id": "s1-l6",
             "pali": "Ekamantaṃ ṭhitā kho sā devatā Bhagavantam gāthāya ajjhabhāsi:",
             "kana": "エーカマンタン ティター コー サー デーワター バガワンタン ガーターヤ アッジャバースィ",
             "ja": "さて、一方に立ったその天人は、世尊に 詩偈によって申し上げました：",
@@ -10298,13 +10801,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第2節"
+        "label": "吉祥経"
       },
       {
-        "id": "s3",
+        "id": "s2",
         "lines": [
           {
-            "id": "s3-l1",
+            "id": "s2-l1",
             "pali": "Bahū devā manussā ca maṅgalāni acintayuṃ",
             "kana": "バフー デーワー マヌッサー チャ マンガラーニ アチンタユン",
             "ja": "たくさんの天人や人々が、幸福を願って 吉祥なものごとを考えてきました。",
@@ -10342,7 +10845,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s3-l2",
+            "id": "s2-l2",
             "pali": "ākaṅkhamānā sotthānaṃ, brūhi maṅgalam uttamaṃ.",
             "kana": "アーカンカマーナー ソッターナン ブルーヒ マンガラン ウッタマン",
             "ja": "最上の吉祥をお説きください。",
@@ -10375,13 +10878,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第3節"
+        "label": "第1節"
       },
       {
-        "id": "s4",
+        "id": "s3",
         "lines": [
           {
-            "id": "s4-l1",
+            "id": "s3-l1",
             "pali": "Asevanā ca bālānaṃ paṇḍitānañ ca sevanā",
             "kana": "アセーワナー チャ バーラーナン パンディターナン チャ セーワナー",
             "ja": "愚者たちに親近せず、賢者たちに親近すること、",
@@ -10419,7 +10922,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s4-l2",
+            "id": "s3-l2",
             "pali": "Pūjā ca pūjaneyyānaṃ, etaṃ maṅgalam uttamaṃ.",
             "kana": "プージャー チャ プージャネイヤーナン エータン マンガラン ウッタマン",
             "ja": "供養するに 相応 ふさわ しい人々を供養すること、これが最上の吉祥です。",
@@ -10457,13 +10960,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第4節"
+        "label": "第2節"
       },
       {
-        "id": "s5",
+        "id": "s4",
         "lines": [
           {
-            "id": "s5-l1",
+            "id": "s4-l1",
             "pali": "Paṭirūpa-desa-vāso ca pubbe ca katapuññatā",
             "kana": "パティルーパデーサワーソー チャ プッベー チャ カタプンニャター",
             "ja": "適切な処に住むこと、以前に為された 福業 (善行為）、",
@@ -10496,7 +10999,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s5-l2",
+            "id": "s4-l2",
             "pali": "Attasammāpaṇidhi ca, etaṃ maṅgalam uttamaṃ.",
             "kana": "アッタサンマーパニディ チャ エータン マンガラン ウッタマン",
             "ja": "自己について正しく志向すること、これが最上の吉祥です。",
@@ -10529,13 +11032,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第5節"
+        "label": "第3節"
       },
       {
-        "id": "s6",
+        "id": "s5",
         "lines": [
           {
-            "id": "s6-l1",
+            "id": "s5-l1",
             "pali": "Bāhusaccañ ca sippañ ca vinayo ca susikkhito",
             "kana": "バーフサッチャン チャ スィッパン チャ ヴィナヨー チャ ススィッキトー",
             "ja": "たくさん聞き学ぶこと、技芸、善く身についている 躾 、",
@@ -10578,7 +11081,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s6-l2",
+            "id": "s5-l2",
             "pali": "Subhāsitā ca yā vācā, etaṃ maṅgalam uttamaṃ.",
             "kana": "スバースィター チャ ヤー ワーチャー エータン マンガラン ウッタマン",
             "ja": "言葉が善く語られること、これが最上の吉祥です。",
@@ -10621,13 +11124,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第6節"
+        "label": "第4節"
       },
       {
-        "id": "s7",
+        "id": "s6",
         "lines": [
           {
-            "id": "s7-l1",
+            "id": "s6-l1",
             "pali": "Mātāpitu-upaṭṭānaṃ puttadārassa saṅgaho",
             "kana": "マーターピトゥウパッターナン プッタダーラッサ サンガホー",
             "ja": "父母に孝行すること、妻子への責任を果たすこと、",
@@ -10650,7 +11153,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s7-l2",
+            "id": "s6-l2",
             "pali": "Anākulā ca kammantā, etaṃ maṅgalam uttamaṃ.",
             "kana": "アナークラー チャ カンマンター エータン マンガラン ウッタマン",
             "ja": "混乱のない仕事をすること、これが最上の吉祥です。",
@@ -10688,13 +11191,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第7節"
+        "label": "第5節"
       },
       {
-        "id": "s8",
+        "id": "s7",
         "lines": [
           {
-            "id": "s8-l1",
+            "id": "s7-l1",
             "pali": "Dānañ ca dhammacariyā ca ñātakānañ ca saṅgaho",
             "kana": "ダーナン チャ ダンマチャリヤー チャ ニャータカーナン チャ サンガホー",
             "ja": "布施、教法に適う行い、親族への責任を果たすこと、",
@@ -10737,7 +11240,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s8-l2",
+            "id": "s7-l2",
             "pali": "Anavajjāni kammāni, etaṃ maṅgalam uttamaṃ.",
             "kana": "アナワッジャーニ カンマーニ エータン マンガラン ウッタマン",
             "ja": "咎のない行為、これが最上の吉祥です。",
@@ -10770,13 +11273,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第8節"
+        "label": "第6節"
       },
       {
-        "id": "s9",
+        "id": "s8",
         "lines": [
           {
-            "id": "s9-l1",
+            "id": "s8-l1",
             "pali": "Ārati virati pāpā majjapānā ca saññamo",
             "kana": "アーラティ ヴィラティ パーパー マッジャパーナー チャ サンニャモー",
             "ja": "悪法から離れ去ること、飲酒を自制すること、",
@@ -10814,7 +11317,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s9-l2",
+            "id": "s8-l2",
             "pali": "Appamādo ca dhammesu, etaṃ maṅgalam uttamaṃ.",
             "kana": "アッパマードー チャ ダンメース エータン マンガラン ウッタマン",
             "ja": "教法において怠けないこと、これが最上の吉祥です。",
@@ -10852,13 +11355,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第9節"
+        "label": "第7節"
       },
       {
-        "id": "s10",
+        "id": "s9",
         "lines": [
           {
-            "id": "s10-l1",
+            "id": "s9-l1",
             "pali": "Gāravo ca nivāto ca santuṭṭhī ca kataññutā",
             "kana": "ガーラヴォー チャ ニワートー チャ サントゥッティー チャ カタンニュター",
             "ja": "尊敬、謙譲、足るを知ること、恩を知ること、",
@@ -10901,7 +11404,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s10-l2",
+            "id": "s9-l2",
             "pali": "Kālena dhammasavanaṃ etaṃ maṅgalam uttamaṃ.",
             "kana": "カーレーナ ダンマサワナン エータン マンガラン ウッタマン",
             "ja": "適時に教法を聞くこと、これが最上の吉祥です。",
@@ -10934,13 +11437,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第10節"
+        "label": "第8節"
       },
       {
-        "id": "s11",
+        "id": "s10",
         "lines": [
           {
-            "id": "s11-l1",
+            "id": "s10-l1",
             "pali": "Khantī ca sovacassatā samaṇānañ ca dassanaṃ",
             "kana": "カンティー チャ ソーワチャッサター サマナーナン チャ ダッサナン",
             "ja": "耐え忍ぶこと、素直に聞き入れること、沙門たちを見習うこと、",
@@ -10978,7 +11481,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s11-l2",
+            "id": "s10-l2",
             "pali": "Kālena dhammasākacchā, etaṃ maṅgalam uttamaṃ.",
             "kana": "カーレーナ ダンマサーカッチャー エータン マンガラン ウッタマン",
             "ja": "適時に教法について話し合うこと、これが最上の吉祥です。",
@@ -11011,13 +11514,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第11節"
+        "label": "第9節"
       },
       {
-        "id": "s12",
+        "id": "s11",
         "lines": [
           {
-            "id": "s12-l1",
+            "id": "s11-l1",
             "pali": "Tapo ca brahmacariyañ ca ariyasaccāna dassanaṃ",
             "kana": "タポー チャ ブラフマチャリヤン チャ アリヤサッチャーナ ダッサナン",
             "ja": "修行をすること、聖者に相応しい行為、［四］聖諦を観ること、",
@@ -11055,7 +11558,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s12-l2",
+            "id": "s11-l2",
             "pali": "Nibbānasacchikiriyā ca, etaṃ maṅgalam uttamaṃ.",
             "kana": "ニッバーナサッチキリヤー チャ エータン マンガラン ウッタマン",
             "ja": "涅槃をありありと覚ること、これが最上の吉祥です。",
@@ -11088,13 +11591,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第12節"
+        "label": "第10節"
       },
       {
-        "id": "s13",
+        "id": "s12",
         "lines": [
           {
-            "id": "s13-l1",
+            "id": "s12-l1",
             "pali": "Phuṭṭhassa lokadhammehi cittaṃ yassa na kampati",
             "kana": "プッタッサ ローカダンメーヒ チッタン ヤッサ ナ カンパティ",
             "ja": "世間のものごとに触れても、心が動揺しないこと、",
@@ -11132,7 +11635,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s13-l2",
+            "id": "s12-l2",
             "pali": "Asokaṃ virajaṃ khemaṃ, etaṃ maṅgalam uttamaṃ.",
             "kana": "アソーカン ヴィラジャン ケーマン エータン マンガラン ウッタマン",
             "ja": "憂いがなく、汚れがなく、安らかであること、これが最上の吉祥です。",
@@ -11170,13 +11673,13 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第13節"
+        "label": "第11節"
       },
       {
-        "id": "s14",
+        "id": "s13",
         "lines": [
           {
-            "id": "s14-l1",
+            "id": "s13-l1",
             "pali": "Etādisāni katvāna sabbattha-m-aparājitā",
             "kana": "エーターディサーニ カトゥワーナ サッバッタマパラージター",
             "ja": "以上のように行って、如何なる処でも打ち負かされず、",
@@ -11199,7 +11702,7 @@ const EMBEDDED_SUTTAS = {
             ]
           },
           {
-            "id": "s14-l2",
+            "id": "s13-l2",
             "pali": "Sabbattha sotthiṃ gacchanti, taṃ tesaṃ maṅgalam uttamaṃ.",
             "kana": "サッバッタ ソッティン ガッチャンティ タン テーサン マンガラン ウッタマン",
             "ja": "あらゆる処で平安を得る、それが彼ら［人・天］にとっての最上の吉祥です。",
@@ -11242,15 +11745,39 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "第14節"
+        "label": "第12節"
       }
     ]
   },
   "sallekha-sutta": {
     "id": "sallekha-sutta",
     "title": "戒め",
-    "titlePali": "Sallekha sutta",
+    "titlePali": "Sallekha suttaṃ",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Sallekha Suttaṃ",
+            "kana": "サッレーカ スッタン",
+            "ja": "戒め経",
+            "wordGlosses": [
+              {
+                "pali": "Sallekha",
+                "kana": "サッレーカ",
+                "ja": "戒め"
+              },
+              {
+                "pali": "Suttaṃ",
+                "kana": "スッタン",
+                "ja": "経"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -14090,8 +14617,32 @@ const EMBEDDED_SUTTAS = {
   "bhaddekaratta-gatha": {
     "id": "bhaddekaratta-gatha",
     "title": "｢日々是好日｣偈",
-    "titlePali": "Bhaddekaratta gatha",
+    "titlePali": "Bhaddekaratta gāthā",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Bhaddekaratta gāthā",
+            "kana": "バッデーカラッタ ガーター",
+            "ja": "賢善一喜偈",
+            "wordGlosses": [
+              {
+                "pali": "Bhaddekaratta",
+                "kana": "バッデーカラッタ",
+                "ja": "賢善一喜"
+              },
+              {
+                "pali": "gāthā",
+                "kana": "ガーター",
+                "ja": "偈"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -14400,15 +14951,57 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "「日々是好日」偈"
+        "label": "賢善一喜偈"
       }
     ]
   },
   "anicca-gatha-metta-bhavana": {
     "id": "anicca-gatha-metta-bhavana",
     "title": "無常偈・慈しみの隨念",
-    "titlePali": "Anicca gatha･Metta bhavana",
+    "titlePali": "Anicca gāthā･Metta bhāvanā",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Anicca gāthā",
+            "kana": "アニッチャ ガーター",
+            "ja": "無常偈",
+            "wordGlosses": [
+              {
+                "pali": "Anicca",
+                "kana": "アニッチャ",
+                "ja": "無常"
+              },
+              {
+                "pali": "gāthā",
+                "kana": "ガーター",
+                "ja": "偈"
+              }
+            ]
+          },
+          {
+            "id": "title-l2",
+            "pali": "Metta bhāvanā",
+            "kana": "メッター バーワナー",
+            "ja": "慈しみ修習・随念",
+            "wordGlosses": [
+              {
+                "pali": "Metta",
+                "kana": "メッター",
+                "ja": "慈しみ"
+              },
+              {
+                "pali": "bhāvanā",
+                "kana": "バーワナー",
+                "ja": "修習・随念"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -14609,8 +15202,42 @@ const EMBEDDED_SUTTAS = {
   "attha-visati-buddha-paritta": {
     "id": "attha-visati-buddha-paritta",
     "title": "二十八過去佛を念じる護経",
-    "titlePali": "Attha visati Buddha paritta",
+    "titlePali": "Aṭṭha vīsati Buddha paritta",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Aṭṭha vīsati Buddha paritta",
+            "kana": "アッタ ヴィーサティ ブッダ パリッタ",
+            "ja": "八二十佛護経",
+            "wordGlosses": [
+              {
+                "pali": "Aṭṭha",
+                "kana": "アッタ",
+                "ja": "八"
+              },
+              {
+                "pali": "vīsati",
+                "kana": "ヴィーサティ",
+                "ja": "二十"
+              },
+              {
+                "pali": "Buddha",
+                "kana": "ブッダ",
+                "ja": "佛"
+              },
+              {
+                "pali": "paritta",
+                "kana": "パリッタ",
+                "ja": "護経"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -15213,8 +15840,27 @@ const EMBEDDED_SUTTAS = {
   "asimsana": {
     "id": "asimsana",
     "title": "祝福の偈",
-    "titlePali": "Asimsana",
+    "titlePali": "Āsiṃsanā",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Āsiṃsanā",
+            "kana": "アーシンサナー",
+            "ja": "願い・希望・祝福",
+            "wordGlosses": [
+              {
+                "pali": "Āsiṃsanā",
+                "kana": "アーシンサナー",
+                "ja": "願い・希望・祝福"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -15602,15 +16248,98 @@ const EMBEDDED_SUTTAS = {
             ]
           }
         ],
-        "label": "祝福の偈"
+        "label": "願い・希望・祝福"
       }
     ]
   },
   "aloka-puppha-sugandha-ahara-puja": {
     "id": "aloka-puppha-sugandha-ahara-puja",
     "title": "献灯・献花・献香・食事のお供え",
-    "titlePali": "Aloka･Puppha･Sugandha･Āhāra puja",
+    "titlePali": "Āloka･Puppha･Sugandha･Āhāra pūjā",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Āloka pūjā",
+            "kana": "アーローカ プージャー",
+            "ja": "灯明供養",
+            "wordGlosses": [
+              {
+                "pali": "Āloka",
+                "kana": "アーローカ",
+                "ja": "灯明"
+              },
+              {
+                "pali": "pūjā",
+                "kana": "プージャー",
+                "ja": "供養"
+              }
+            ]
+          },
+          {
+            "id": "title-l2",
+            "pali": "Puppha pūjā",
+            "kana": "プッパ プージャー",
+            "ja": "花供養・献花",
+            "wordGlosses": [
+              {
+                "pali": "Puppha",
+                "kana": "プッパ",
+                "ja": "花"
+              },
+              {
+                "pali": "pūjā",
+                "kana": "プージャー",
+                "ja": "供養・献花"
+              }
+            ]
+          },
+          {
+            "id": "title-l3",
+            "pali": "Sugandha pūjā",
+            "kana": "スガンダ プージャー",
+            "ja": "香供養・献香",
+            "wordGlosses": [
+              {
+                "pali": "Sugandha",
+                "kana": "スガンダ",
+                "ja": "香"
+              },
+              {
+                "pali": "pūjā",
+                "kana": "プージャー",
+                "ja": "供養・献香"
+              }
+            ]
+          },
+          {
+            "id": "title-l4",
+            "pali": "Āhāra pūjā",
+            "kana": "アーハーラ プージャー",
+            "ja": "食物・食事供養・お供え飲み水",
+            "wordGlosses": [
+              {
+                "pali": "Āhāra",
+                "kana": "アーハーラ",
+                "ja": "食物・食事"
+              },
+              {
+                "pali": "pūjā",
+                "kana": "プージャー",
+                "ja": "供養・お供え"
+              },
+              {
+                "pali": "",
+                "kana": "",
+                "ja": "飲み水"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -16220,8 +16949,58 @@ const EMBEDDED_SUTTAS = {
   "anumodana-nati-puja-panidhana": {
     "id": "anumodana-nati-puja-panidhana",
     "title": "回向・先祖供養・誓願",
-    "titlePali": "23_Anumodana･Ñāti pūjā･Paṇidhāna",
+    "titlePali": "Anumodanā･Ñāti pūjā･Paṇidhāna",
     "sections": [
+      {
+        "id": "title",
+        "label": "経典名",
+        "lines": [
+          {
+            "id": "title-l1",
+            "pali": "Anumodanā",
+            "kana": "アヌモーダナー",
+            "ja": "随喜・祝福",
+            "wordGlosses": [
+              {
+                "pali": "Anumodanā",
+                "kana": "アヌモーダナー",
+                "ja": "随喜・祝福"
+              }
+            ]
+          },
+          {
+            "id": "title-l2",
+            "pali": "Ñāti pūjā",
+            "kana": "ニャーティ プージャー",
+            "ja": "親族・先祖供養",
+            "wordGlosses": [
+              {
+                "pali": "Ñāti",
+                "kana": "ニャーティ",
+                "ja": "親族・先祖"
+              },
+              {
+                "pali": "pūjā",
+                "kana": "プージャー",
+                "ja": "供養"
+              }
+            ]
+          },
+          {
+            "id": "title-l3",
+            "pali": "Paṇidhāna",
+            "kana": "パニダーナ",
+            "ja": "誓願",
+            "wordGlosses": [
+              {
+                "pali": "Paṇidhāna",
+                "kana": "パニダーナ",
+                "ja": "誓願"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "s1",
         "lines": [
@@ -17089,7 +17868,8 @@ function classifyMicrophoneAccessError(error) {
 }
 
 function renderHome(app, catalog) {
-  const totalSections = catalog.suttas.reduce((sum, sutta) => sum + (sutta.sectionCount || 0), 0);
+  const titleItems = catalog.suttas.length;
+  const bodySections = catalog.suttas.reduce((sum, sutta) => sum + (sutta.bodySectionCount ?? Math.max(0, (sutta.sectionCount || 0) - 1)), 0);
   const list = document.createElement("section");
   list.className = "stack home-screen";
   list.innerHTML = `
@@ -17110,7 +17890,7 @@ function renderHome(app, catalog) {
         <p class="label">LIBRARY / ${catalog.suttas.length} TEXTS</p>
         <h2>学習する経典</h2>
       </div>
-      <span class="section-counter">読誦${catalog.suttas.length}経典 / ${totalSections}セクション</span>
+      <span class="section-counter">読誦${catalog.suttas.length}経典 / 本文${bodySections}節＋経典名${titleItems}件</span>
     </div>
     <div class="sutta-list"></div>
   `;
@@ -17152,7 +17932,7 @@ function renderReviewCta(catalog) {
       <section class="review-cta" data-state="due" aria-label="今日の復習">
         <div class="review-cta-copy">
           <p class="label">TODAY / REVIEW</p>
-          <h2>今日の復習 <strong>${stats.dueToday}</strong> 節</h2>
+          <h2>今日の復習 <strong>${stats.dueToday}</strong> 項目</h2>
           <p>${suttaCount}経典から順に出題します。</p>
         </div>
         <a class="button primary review-cta-start" href="#/review">はじめる</a>
@@ -17161,7 +17941,7 @@ function renderReviewCta(catalog) {
   }
 
   const upcoming = getUpcomingReviewRefs(catalog, 1)[0];
-  const nextText = upcoming ? `次回は ${formatShortDate(upcoming.nextReview)}${stats.dueTomorrow > 0 ? `（${stats.dueTomorrow}節）` : ""}` : "";
+  const nextText = upcoming ? `次回は ${formatShortDate(upcoming.nextReview)}${stats.dueTomorrow > 0 ? `（${stats.dueTomorrow}項目）` : ""}` : "";
   return `
     <section class="review-cta" data-state="clear" aria-label="今日の復習">
       <div class="review-cta-copy">
@@ -19084,7 +19864,7 @@ function getReviewTargetLabel(sections) {
     return sections[0].label;
   }
 
-  return `${sections.length}節`;
+  return `${sections.length}項目`;
 }
 
 function renderReciteStage(root, sutta, reciteState) {
@@ -19099,7 +19879,7 @@ function renderReciteStage(root, sutta, reciteState) {
     renderTsumiageStage(recitationStage, sections, reciteState);
     return;
   }
-  renderReciteStageInto(recitationStage, sections, reciteState, "音読・暗記する節がありません。");
+  renderReciteStageInto(recitationStage, sections, reciteState, "音読・暗記する項目がありません。");
 }
 
 function focusRecitationStage(root) {
@@ -19254,7 +20034,7 @@ function renderTsumiageStage(stage, sections, reciteState) {
   const lines = getTsumiageLines(sections);
   const total = lines.length;
   if (total === 0) {
-    stage.innerHTML = '<section class="empty-state"><p>音読・暗記する節がありません。</p></section>';
+    stage.innerHTML = '<section class="empty-state"><p>音読・暗記する項目がありません。</p></section>';
     return;
   }
 
@@ -19264,7 +20044,7 @@ function renderTsumiageStage(stage, sections, reciteState) {
   const isFinal = step === maxStep;
   const visibleLines = lines.slice(0, isFinal ? total : step);
   const progressLabel = isFinal ? "仕上げ: 全行を頭文字で" : `行 ${step} / ${total}`;
-  const sectionLabel = sections.length === 1 ? sections[0].label : `${sections.length}節`;
+  const sectionLabel = sections.length === 1 ? sections[0].label : `${sections.length}項目`;
 
   stage.innerHTML = `
     <div class="tsumiage-bar">
@@ -19966,9 +20746,9 @@ async function renderQueueItem(view, queueState) {
       <div class="rq-actions">
         <div class="rq-self-check">
           <p class="label">読誦後の自己評価</p>
-          <p>本文を見ずに唱えてから、最も近いものを選ぶと次の節へ進みます。</p>
+          <p>経典名・本文を見ずに唱えてから、最も近いものを選ぶと次の項目へ進みます。</p>
         </div>
-        <div class="evaluation-buttons memory-evaluation" aria-label="この節の自己評価">
+        <div class="evaluation-buttons memory-evaluation" aria-label="この項目の自己評価">
           <button type="button" data-rq-result="good">見ずに唱えられた</button>
           <button type="button" data-rq-result="unsure">一部あいまいだった</button>
           <button type="button" data-rq-result="bad">本文を見て復習した</button>
@@ -19990,7 +20770,7 @@ function renderQueueDone(queueState) {
     <section class="empty-state rq-done">
       <h2>今日の復習は完了です</h2>
       <p class="rq-done-counts">
-        見ずに唱えられた ${good}節 ・ 一部あいまい ${unsure}節 ・ 本文を見て復習 ${bad}節
+        見ずに唱えられた ${good}項目 ・ 一部あいまい ${unsure}項目 ・ 本文を見て復習 ${bad}項目
       </p>
       ${streakLine}
       <p class="rq-done-note">評価に応じて次回の復習日を調整しました。</p>
@@ -20005,7 +20785,7 @@ function renderQueueEmpty(catalog) {
   const nextLine = upcoming
     ? `<p>次回の復習は ${escapeHtml(formatReviewDate(upcoming.nextReview))} です。</p>`
     : stats.scheduledSections === 0
-      ? "<p>経典画面で節を評価すると、ここに復習が並びます。</p>"
+      ? "<p>経典画面で学習項目を評価すると、ここに復習が並びます。</p>"
       : "";
   return `
     <section class="empty-state rq-done">
