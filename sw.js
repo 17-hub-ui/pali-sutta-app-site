@@ -1,9 +1,9 @@
-﻿const CACHE_NAME = "pali-sutta-app-v146";
+const CACHE_NAME = "pali-sutta-app-v148";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./css/style.css?v=114",
-  "./js/app.bundle.js?v=135",
+  "./css/style.css?v=115",
+  "./js/app.bundle.js?v=137",
   "./manifest.webmanifest?v=80",
   "./icons/favicon-16.png?v=80",
   "./icons/favicon-32.png?v=80",
@@ -17,9 +17,7 @@ const APP_SHELL = [
 ];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL))
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
   self.skipWaiting();
 });
 
@@ -33,15 +31,15 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET") {
-    return;
-  }
+  if (event.request.method !== "GET") return;
 
-  // キャッシュ対象は同一オリジンの正常応答のみ (404/500の固定化と他オリジン混入を防ぐ)
+  // MP3はRangeリクエストを含むストリーミングを優先し、大容量音声を
+  // Service Workerのアプリキャッシュへ保存しない。
+  const requestUrl = new URL(event.request.url);
+  if (requestUrl.origin === self.location.origin && requestUrl.pathname.includes("/audio/")) return;
+
   const isCacheable = (request, response) => {
-    if (!response || !response.ok) {
-      return false;
-    }
+    if (!response || !response.ok) return false;
     try {
       return new URL(request.url).origin === self.location.origin;
     } catch {
@@ -49,8 +47,7 @@ self.addEventListener("fetch", (event) => {
     }
   };
 
-  // ページ本体はネットワーク優先。キャッシュ優先だと更新直後の1回目のロードで
-  // 旧バージョンが表示され続けるため (オフライン時のみキャッシュへフォールバック)。
+  // ページ本体はネットワーク優先。オフライン時だけキャッシュへフォールバックする。
   if (event.request.mode === "navigate") {
     event.respondWith(
       fetch(event.request).then((response) => {
@@ -59,31 +56,21 @@ self.addEventListener("fetch", (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
         }
         return response;
-      }).catch(() =>
-        caches.match(event.request).then((cached) => cached || caches.match("./index.html"))
-      )
+      }).catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html")))
     );
     return;
   }
 
   event.respondWith(
     caches.match(event.request).then((cached) => {
-      if (cached) {
-        return cached;
-      }
-
+      if (cached) return cached;
       return fetch(event.request).then((response) => {
         if (isCacheable(event.request, response)) {
           const copy = response.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
         }
         return response;
-      }).catch(() => {
-        return new Response("", {
-          status: 503,
-          statusText: "Offline"
-        });
-      });
+      }).catch(() => new Response("", { status: 503, statusText: "Offline" }));
     })
   );
 });

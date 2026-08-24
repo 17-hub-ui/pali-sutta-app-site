@@ -197,6 +197,23 @@ const EMBEDDED_SUTTAS = {
     "id": "vandana-tisarana",
     "title": "礼拝・三帰依",
     "titlePali": "Vandanā・Tisaraṇa",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 1,
+          "title": "Vandanā",
+          "src": "./audio/disc1/track-01.mp3"
+        },
+        {
+          "disc": 1,
+          "track": 2,
+          "title": "Ti saraṇa",
+          "src": "./audio/disc1/track-02.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -553,6 +570,17 @@ const EMBEDDED_SUTTAS = {
     "id": "pancha-sila",
     "title": "五戒文",
     "titlePali": "Pañca Sīla",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 3,
+          "title": "Pañca Sīla",
+          "src": "./audio/disc1/track-03.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -765,6 +793,17 @@ const EMBEDDED_SUTTAS = {
     "id": "buddha-vandana",
     "title": "仏陀の九徳",
     "titlePali": "Buddha vandanā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 4,
+          "title": "Buddha vandanā",
+          "src": "./audio/disc1/track-04.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -1015,6 +1054,17 @@ const EMBEDDED_SUTTAS = {
     "id": "dhamma-vandana",
     "title": "法の六徳",
     "titlePali": "Dhamma vandanā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 5,
+          "title": "Dhamma vandanā",
+          "src": "./audio/disc1/track-05.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -1188,6 +1238,17 @@ const EMBEDDED_SUTTAS = {
     "id": "sangha-vandana",
     "title": "僧伽の九徳",
     "titlePali": "Saṅgha vabdanā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 6,
+          "title": "Saṅgha vandanā",
+          "src": "./audio/disc1/track-06.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -1496,6 +1557,17 @@ const EMBEDDED_SUTTAS = {
     "id": "khamayacana",
     "title": "三宝に対する懺悔",
     "titlePali": "Khamāyācanā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 7,
+          "title": "Khamā yācanā",
+          "src": "./audio/disc1/track-07.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -1737,6 +1809,17 @@ const EMBEDDED_SUTTAS = {
     "id": "tisarana-vandana",
     "title": "三宝に帰依するための偈",
     "titlePali": "Tisaraṇa vandanā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 8,
+          "title": "Tisaraṇa vandanā",
+          "src": "./audio/disc1/track-08.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -2147,6 +2230,17 @@ const EMBEDDED_SUTTAS = {
     "id": "buddhanasasana",
     "title": "諸仏の教え",
     "titlePali": "Buddhanasasana",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 9,
+          "title": "Buddhāna sāsanaṃ",
+          "src": "./audio/disc1/track-09.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -2483,6 +2577,23 @@ const EMBEDDED_SUTTAS = {
     "id": "paticca-samuppado",
     "title": "因縁の教え 順観・滅観",
     "titlePali": "Paticca samuppado Anuloman･Paṭilomaṃ",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 10,
+          "title": "Paticca samuppādo Anulomaṃ",
+          "src": "./audio/disc1/track-10.mp3"
+        },
+        {
+          "disc": 1,
+          "track": 11,
+          "title": "Paticca Samuppādo Paṭilomaṃ",
+          "src": "./audio/disc1/track-11.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -3297,6 +3408,17 @@ const EMBEDDED_SUTTAS = {
     "id": "pathama-udana",
     "title": "歓喜の言葉",
     "titlePali": "Pathama udana",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 12,
+          "title": "Paṭhama udāna",
+          "src": "./audio/disc1/track-12.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -3306,17 +3428,17 @@ const EMBEDDED_SUTTAS = {
             "id": "title-l1",
             "pali": "Paṭhama udāna",
             "kana": "パタマ ウダーナ",
-            "ja": "第一の歓喜の言葉",
+            "ja": "最初の自説",
             "wordGlosses": [
               {
                 "pali": "Paṭhama",
                 "kana": "パタマ",
-                "ja": "第一の"
+                "ja": "最初の"
               },
               {
                 "pali": "udāna",
                 "kana": "ウダーナ",
-                "ja": "歓喜の言葉"
+                "ja": "自説"
               }
             ]
           }
@@ -3525,6 +3647,23 @@ const EMBEDDED_SUTTAS = {
     "id": "ratana-sutta-patthana",
     "title": "宝経・祈願文",
     "titlePali": "Ratana suttaṃ･Patthanā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 13,
+          "title": "Ratana Suttaṃ",
+          "src": "./audio/disc1/track-13.mp3"
+        },
+        {
+          "disc": 1,
+          "track": 14,
+          "title": "Patthanā",
+          "src": "./audio/disc1/track-14.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -6044,6 +6183,23 @@ const EMBEDDED_SUTTAS = {
     "id": "metta-suttam-patthana-paritta",
     "title": "慈教・祈願文・護経",
     "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 15,
+          "title": "Metta Suttaṃ",
+          "src": "./audio/disc1/track-15.mp3"
+        },
+        {
+          "disc": 1,
+          "track": 16,
+          "title": "Patthanā",
+          "src": "./audio/disc1/track-16.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -7255,6 +7411,17 @@ const EMBEDDED_SUTTAS = {
     "id": "vijaya-suttam",
     "title": "勝利の経",
     "titlePali": "Vijayasuttaṃ",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 17,
+          "title": "Vijaya suttaṃ",
+          "src": "./audio/disc1/track-17.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -8379,6 +8546,17 @@ const EMBEDDED_SUTTAS = {
     "id": "salla-suttam",
     "title": "箭経",
     "titlePali": "Salla suttaṃ",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 18,
+          "title": "Salla suttaṃ",
+          "src": "./audio/disc1/track-18.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -10158,6 +10336,17 @@ const EMBEDDED_SUTTAS = {
     "id": "maha-purisa-vitakka",
     "title": "偉大なる人の思考",
     "titlePali": "Mahā purisa vitakka",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 1,
+          "track": 19,
+          "title": "Mahā purisa vitakka",
+          "src": "./audio/disc1/track-19.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -10534,6 +10723,17 @@ const EMBEDDED_SUTTAS = {
     "id": "mangala-suttam",
     "title": "吉祥経",
     "titlePali": "Mangala suttaṃ",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 2,
+          "track": 1,
+          "title": "Mangala suttaṃ",
+          "src": "./audio/disc2/track-01.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -11753,6 +11953,17 @@ const EMBEDDED_SUTTAS = {
     "id": "sallekha-sutta",
     "title": "戒め",
     "titlePali": "Sallekha suttaṃ",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 2,
+          "track": 2,
+          "title": "Sallekha Suttaṃ",
+          "src": "./audio/disc2/track-02.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -14618,6 +14829,17 @@ const EMBEDDED_SUTTAS = {
     "id": "bhaddekaratta-gatha",
     "title": "｢日々是好日｣偈",
     "titlePali": "Bhaddekaratta gāthā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 2,
+          "track": 3,
+          "title": "Bhaddekaratta gāthā",
+          "src": "./audio/disc2/track-03.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -14959,6 +15181,23 @@ const EMBEDDED_SUTTAS = {
     "id": "anicca-gatha-metta-bhavana",
     "title": "無常偈・慈しみの隨念",
     "titlePali": "Anicca gāthā･Metta bhāvanā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 2,
+          "track": 4,
+          "title": "Anicca gāthā",
+          "src": "./audio/disc2/track-04.mp3"
+        },
+        {
+          "disc": 2,
+          "track": 5,
+          "title": "Metta bhāvanā",
+          "src": "./audio/disc2/track-05.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -15203,6 +15442,17 @@ const EMBEDDED_SUTTAS = {
     "id": "attha-visati-buddha-paritta",
     "title": "二十八過去佛を念じる護経",
     "titlePali": "Aṭṭha vīsati Buddha paritta",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 2,
+          "track": 6,
+          "title": "Aṭṭha vīsati Buddha paritta",
+          "src": "./audio/disc2/track-06.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -15841,6 +16091,17 @@ const EMBEDDED_SUTTAS = {
     "id": "asimsana",
     "title": "祝福の偈",
     "titlePali": "Āsiṃsanā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 2,
+          "track": 7,
+          "title": "Āsiṃsanā",
+          "src": "./audio/disc2/track-07.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -16256,6 +16517,35 @@ const EMBEDDED_SUTTAS = {
     "id": "aloka-puppha-sugandha-ahara-puja",
     "title": "献灯・献花・献香・食事のお供え",
     "titlePali": "Āloka･Puppha･Sugandha･Āhāra pūjā",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 2,
+          "track": 10,
+          "title": "Āloka pūjā",
+          "src": "./audio/disc2/track-10.mp3"
+        },
+        {
+          "disc": 2,
+          "track": 11,
+          "title": "Puppha pūjā",
+          "src": "./audio/disc2/track-11.mp3"
+        },
+        {
+          "disc": 2,
+          "track": 12,
+          "title": "Sugandha pūjā",
+          "src": "./audio/disc2/track-12.mp3"
+        },
+        {
+          "disc": 2,
+          "track": 13,
+          "title": "Āhāra pūjā",
+          "src": "./audio/disc2/track-13.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -16950,6 +17240,29 @@ const EMBEDDED_SUTTAS = {
     "id": "anumodana-nati-puja-panidhana",
     "title": "回向・先祖供養・誓願",
     "titlePali": "Anumodanā･Ñāti pūjā･Paṇidhāna",
+    "audio": {
+      "collection": "ブッダの日常読誦経典",
+      "tracks": [
+        {
+          "disc": 2,
+          "track": 15,
+          "title": "Anumodanā",
+          "src": "./audio/disc2/track-15.mp3"
+        },
+        {
+          "disc": 2,
+          "track": 16,
+          "title": "Ñāti pūjā",
+          "src": "./audio/disc2/track-16.mp3"
+        },
+        {
+          "disc": 2,
+          "track": 17,
+          "title": "Paṇidhāna",
+          "src": "./audio/disc2/track-17.mp3"
+        }
+      ]
+    },
     "sections": [
       {
         "id": "title",
@@ -18212,6 +18525,8 @@ function showStatus(section, message, tone = "") {
   }, tone === "error" ? 2400 : 1200);
 }
 
+let activeGuideAudio = null;
+
 async function renderSutta(app, catalog, suttaId, setTitle) {
   const summary = catalog.suttas.find((item) => item.id === suttaId);
   if (!summary) {
@@ -18238,6 +18553,7 @@ async function renderSutta(app, catalog, suttaId, setTitle) {
 }
 
 function renderReading(app, sutta) {
+  stopActiveGuideAudio();
   const settings = loadState().settings;
   app.innerHTML = "";
   const reciteState = {
@@ -18264,7 +18580,11 @@ function renderReading(app, sutta) {
     reviewSectionIds: null,
     lastAutoResult: null,
     lastScoreResult: null,
-    savedReviewResult: null
+    savedReviewResult: null,
+    titleCompleted: false,
+    guideAudio: null,
+    guideAudioTrackIndex: 0,
+    guideAudioStarted: false
   };
 
   const section = document.createElement("section");
@@ -18285,7 +18605,7 @@ function renderReading(app, sutta) {
           <label><input type="checkbox" name="showJa"><span>和訳</span></label>
           <button class="recite-note recite-note-toggle" type="button" data-recitation-info-toggle aria-expanded="false">使い方を表示</button>
         </div>
-        <p class="recite-note recite-note-detail" data-recitation-info hidden>下の「録音開始」で自動判定します（ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
+        <p class="recite-note recite-note-detail" data-recitation-info hidden>最初に経典名を唱え、「次へ」で本文へ進みます。「音声再生」はお手本を聞きながら唱えるためのガイド音声です。「録音開始」で自動判定します（文字ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
         <p class="recite-note" data-recitation-status hidden></p>
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
@@ -18323,6 +18643,8 @@ function renderReading(app, sutta) {
 
       <div class="word-gloss-tooltip" data-word-gloss role="tooltip" hidden></div>
 
+      <p class="guide-audio-meta" data-guide-audio-status aria-live="polite"></p>
+
       <div class="memory-review-panel recite-review-panel" data-recitation-review hidden>
         <div class="recite-review-instruction">
           <p class="label"><span class="next-step-badge">次の操作</span> 評価を選んで記録</p>
@@ -18339,8 +18661,9 @@ function renderReading(app, sutta) {
       </div>
 
       <div class="recite-dock" role="toolbar" aria-label="読誦操作">
+        <button class="button primary audio-guide-button" type="button" data-guide-audio-toggle>🔊 音声再生</button>
         <button class="button primary record-button" type="button" data-recitation-record>録音開始</button>
-        <button class="button primary guide-button" type="button" data-pace-toggle>▶ ガイド</button>
+        <button class="button primary guide-button" type="button" data-pace-toggle>▶ 文字ガイド</button>
         <button class="button ghost tempo-button" type="button" data-pace-cycle aria-label="読誦ガイドの速さを切替">⏱ ふつう</button>
         <button class="button ghost next-button" type="button" data-recitation-next>次へ</button>
       </div>
@@ -18437,6 +18760,8 @@ function setupReciteControls(root, sutta, reciteState) {
   const infoToggle = root.querySelector("[data-recitation-info-toggle]");
   const infoDetail = root.querySelector("[data-recitation-info]");
 
+  setupGuideAudio(root, sutta, reciteState);
+
   openExternalLink.href = location.href;
 
   infoToggle.addEventListener("click", () => {
@@ -18460,10 +18785,11 @@ function setupReciteControls(root, sutta, reciteState) {
   };
 
   chipGroups.forEach((chips) => {
-    sutta.sections.forEach((section) => {
+    sutta.sections.filter((section) => section.id !== "title").forEach((section) => {
       chips.append(createChip(section.label, section.id));
     });
   });
+  updateReciteChips(root, reciteState);
 
   if (!SpeechRecognition) {
     recordButton.disabled = true;
@@ -18623,6 +18949,9 @@ function setupReciteControls(root, sutta, reciteState) {
   setupWordGlossTooltip(recitationStage, root.querySelector("[data-word-gloss]"), () => sutta);
 
   renderReciteStage(root, sutta, reciteState);
+  if (SpeechRecognition) {
+    showRecitationStatus(root, "まず経典名を唱えましょう。唱えたら「次へ」で本文に進みます。", "recording");
+  }
 }
 
 function goToNextRecitationSection(root, sutta, reciteState) {
@@ -18632,6 +18961,10 @@ function goToNextRecitationSection(root, sutta, reciteState) {
 
   const sectionIds = sutta.sections.map((section) => section.id);
   const currentIndex = sectionIds.indexOf(reciteState.activeSectionId);
+  const completedTitle = reciteState.activeSectionId === "title";
+  if (completedTitle) {
+    reciteState.titleCompleted = true;
+  }
   const nextSectionId = currentIndex === -1 || currentIndex >= sectionIds.length - 1
     ? sectionIds[0]
     : sectionIds[currentIndex + 1];
@@ -18639,6 +18972,9 @@ function goToNextRecitationSection(root, sutta, reciteState) {
     startBuildPractice(root, sutta, reciteState, nextSectionId, { skipRecordingCheck: true });
   } else {
     selectRecitationRange(root, sutta, reciteState, nextSectionId, { skipRecordingCheck: true });
+  }
+  if (completedTitle) {
+    showRecitationStatus(root, "経典名を確認しました。本文をガイド音声に合わせて唱えましょう。", "success");
   }
 }
 
@@ -18665,6 +19001,10 @@ function startBuildPractice(root, sutta, reciteState, sectionId = sutta.sections
 }
 
 function selectRecitationRange(root, sutta, reciteState, sectionId, options = {}) {
+  if (!reciteState.titleCompleted && sectionId !== "title") {
+    showRecitationStatus(root, "本文の前に、経典名を唱えて「次へ」を押してください。", "warning");
+    return;
+  }
   if (!options.skipRecordingCheck && !canChangeReciteRange(root, reciteState)) {
     return;
   }
@@ -18698,6 +19038,106 @@ function canChangeReciteRange(root, reciteState) {
   return false;
 }
 
+function stopActiveGuideAudio() {
+  if (!activeGuideAudio) return;
+  activeGuideAudio.pause();
+  activeGuideAudio.removeAttribute("src");
+  activeGuideAudio.load();
+  activeGuideAudio = null;
+}
+
+function setupGuideAudio(root, sutta, reciteState) {
+  const button = root.querySelector("[data-guide-audio-toggle]");
+  const status = root.querySelector("[data-guide-audio-status]");
+  const tracks = sutta.audio?.tracks || [];
+  if (tracks.length === 0) {
+    button.disabled = true;
+    button.textContent = "音声なし";
+    status.textContent = "この経典のガイド音声はありません。";
+    return;
+  }
+
+  const audio = new Audio();
+  audio.preload = "metadata";
+  reciteState.guideAudio = audio;
+  activeGuideAudio = audio;
+
+  const currentTrack = () => tracks[reciteState.guideAudioTrackIndex] || tracks[0];
+  const trackLabel = () => {
+    const track = currentTrack();
+    return `Disc ${track.disc}・Track ${String(track.track).padStart(2, "0")} ${track.title}`;
+  };
+  const formatTime = (seconds) => {
+    if (!Number.isFinite(seconds)) return "--:--";
+    const value = Math.max(0, Math.floor(seconds));
+    return `${Math.floor(value / 60)}:${String(value % 60).padStart(2, "0")}`;
+  };
+  const updateUi = (message = "") => {
+    const playing = !audio.paused && !audio.ended;
+    button.dataset.playing = String(playing);
+    button.textContent = playing
+      ? "⏸ 一時停止"
+      : reciteState.guideAudioStarted ? "▶ 続きから" : "🔊 音声再生";
+    const progress = reciteState.guideAudioStarted
+      ? ` ${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`
+      : "";
+    status.textContent = message || `${trackLabel()}${progress}（全${tracks.length}トラック）`;
+  };
+  const loadTrack = (index) => {
+    reciteState.guideAudioTrackIndex = Math.min(Math.max(0, index), tracks.length - 1);
+    audio.src = new URL(currentTrack().src, document.baseURI).href;
+    audio.load();
+    updateUi();
+  };
+  const play = async () => {
+    try {
+      if (!audio.src) loadTrack(reciteState.guideAudioTrackIndex);
+      await audio.play();
+      reciteState.guideAudioStarted = true;
+      updateUi();
+    } catch {
+      updateUi(`${trackLabel()} の音声を再生できませんでした。通信状態を確認してください。`);
+      showRecitationStatus(root, "ガイド音声を再生できませんでした。通信状態を確認してください。", "warning");
+    }
+  };
+
+  button.addEventListener("click", () => {
+    if (!audio.paused) {
+      audio.pause();
+      updateUi();
+      return;
+    }
+    void play();
+  });
+  audio.addEventListener("play", () => updateUi());
+  audio.addEventListener("pause", () => updateUi());
+  audio.addEventListener("loadedmetadata", () => updateUi());
+  audio.addEventListener("timeupdate", () => updateUi());
+  audio.addEventListener("ended", () => {
+    if (reciteState.guideAudioTrackIndex < tracks.length - 1) {
+      loadTrack(reciteState.guideAudioTrackIndex + 1);
+      void play();
+      return;
+    }
+    reciteState.guideAudioTrackIndex = 0;
+    reciteState.guideAudioStarted = false;
+    audio.removeAttribute("src");
+    updateUi("ガイド音声を最後まで再生しました。もう一度聞く場合は「音声再生」を押してください。");
+  });
+  audio.addEventListener("error", () => {
+    if (audio.src) updateUi(`${trackLabel()} の読み込みに失敗しました。`);
+  });
+
+  loadTrack(0);
+}
+
+function pauseGuideAudio(root, reciteState) {
+  const audio = reciteState.guideAudio;
+  if (!audio || audio.paused) return;
+  audio.pause();
+  showRecitationStatus(root, "録音への混入を防ぐため、ガイド音声を一時停止しました。", "warning");
+}
+
 async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition) {
   if (reciteState.isRequestingMicrophone) {
     return;
@@ -18710,6 +19150,8 @@ async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecogni
     updateRecordingUi(root, reciteState);
     return;
   }
+
+  pauseGuideAudio(root, reciteState);
 
   if (window.isSecureContext === false) {
     showRecitationStatus(root, "マイクはHTTPSで開いたページからのみ利用できます。公開URLを開き直してください。", "error");
@@ -19648,6 +20090,8 @@ function updateReciteChips(root, reciteState) {
   });
   root.querySelectorAll("[data-recitation-section]").forEach((chip) => {
     chip.setAttribute("aria-pressed", String(chip.dataset.recitationSection === reciteState.activeSectionId));
+    chip.disabled = !reciteState.titleCompleted;
+    chip.title = reciteState.titleCompleted ? "" : "経典名を唱えて「次へ」を押すと選べます";
   });
 }
 
@@ -19872,14 +20316,46 @@ function renderReciteStage(root, sutta, reciteState) {
     ? sutta.sections
     : sutta.sections.filter((section) => section.id === reciteState.activeSectionId);
   const recitationStage = root.querySelector("[data-recitation-stage]");
+  const titleSection = sutta.sections.find((section) => section.id === "title");
+  const titleIsActive = reciteState.activeSectionId === "title";
+  const bodySections = sections.filter((section) => section.id !== "title");
 
   stopPacer(root, reciteState);
   resetWordGlossBar(root.querySelector("[data-word-gloss]"), recitationStage);
   if (reciteState.tsumiageActive) {
-    renderTsumiageStage(recitationStage, sections, reciteState);
+    if (titleIsActive && titleSection) {
+      recitationStage.innerHTML = renderTitleCard(titleSection, reciteState, true);
+      return;
+    }
+    renderTsumiageStage(recitationStage, bodySections, reciteState);
+    if (titleSection) {
+      recitationStage.insertAdjacentHTML("afterbegin", renderTitleCard(titleSection, reciteState, false));
+    }
     return;
   }
-  renderReciteStageInto(recitationStage, sections, reciteState, "音読・暗記する項目がありません。");
+  const titleMarkup = titleSection ? renderTitleCard(titleSection, reciteState, titleIsActive) : "";
+  if (titleIsActive) {
+    recitationStage.innerHTML = titleMarkup;
+    return;
+  }
+  renderReciteStageInto(recitationStage, bodySections, reciteState, "音読・暗記する本文がありません。");
+  recitationStage.insertAdjacentHTML("afterbegin", titleMarkup);
+}
+
+function renderTitleCard(titleSection, reciteState, isActive) {
+  const displayState = isActive ? reciteState : { ...reciteState, level: 0 };
+  return `
+    <article class="sutta-title-card" data-title-active="${isActive}">
+      <div class="sutta-title-card-head">
+        <span class="title-step-badge">${isActive ? "STEP 1" : "経典名"}</span>
+        <strong>${isActive ? "まず経典名を唱える" : "経典名"}</strong>
+      </div>
+      <div class="sutta-title-card-lines">
+        ${titleSection.lines.map((line) => renderMemoryLine(line, displayState)).join("")}
+      </div>
+      ${isActive ? '<p class="sutta-title-card-guide">経典名を唱えたら、下の「次へ」で本文の学習へ進みます。</p>' : ""}
+    </article>
+  `;
 }
 
 function focusRecitationStage(root) {
@@ -20014,7 +20490,7 @@ function clearPaceHighlight(stage) {
 function updatePaceUi(root, reciteState) {
   const toggle = root.querySelector("[data-pace-toggle]");
   if (toggle) {
-    toggle.textContent = reciteState.paceRunning ? "⏸ ガイド" : "▶ ガイド";
+    toggle.textContent = reciteState.paceRunning ? "⏸ 文字ガイド" : "▶ 文字ガイド";
     toggle.dataset.pacing = String(reciteState.paceRunning);
   }
   const cycle = root.querySelector("[data-pace-cycle]");

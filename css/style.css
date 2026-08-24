@@ -731,6 +731,73 @@ h3 {
   gap: 12px;
 }
 
+.sutta-title-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  background: linear-gradient(145deg, var(--accent-soft), var(--surface));
+  border: 2px solid color-mix(in srgb, var(--accent) 58%, var(--border));
+  border-radius: 14px;
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 13%, transparent);
+}
+
+.sutta-title-card[data-title-active="true"] {
+  border-color: var(--accent-strong);
+}
+
+.sutta-title-card-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.title-step-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 0 9px;
+  color: #ffffff;
+  background: var(--accent-strong);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.sutta-title-card-lines {
+  display: grid;
+  gap: 9px;
+}
+
+.sutta-title-card .memory-line {
+  padding: 14px;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+}
+
+.sutta-title-card-guide {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.recite-section-chips button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.35);
+  opacity: 0.48;
+}
+
+.guide-audio-meta {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .recite-review-panel[hidden] {
   display: none;
 }
@@ -3139,6 +3206,15 @@ body {
   flex: 1.9;
 }
 
+.recite-dock .audio-guide-button {
+  flex: 1.55;
+}
+
+.audio-guide-button[data-playing="true"] {
+  background: var(--accent-strong);
+  color: var(--surface);
+}
+
 .recite-dock .guide-button {
   flex: 1.25;
 }
@@ -3155,7 +3231,28 @@ body {
 
 /* ドックの分だけ本文下部に余白を確保し、意味カードはドックの上に出す */
 .reading-view {
-  padding-bottom: 118px;
+  padding-bottom: 126px;
+}
+
+@media (max-width: 720px) {
+  .recite-dock {
+    flex-wrap: wrap;
+  }
+
+  .recite-dock .audio-guide-button,
+  .recite-dock .record-button {
+    flex: 1 1 calc(50% - 0.25rem);
+  }
+
+  .recite-dock .guide-button,
+  .recite-dock .tempo-button,
+  .recite-dock .next-button {
+    flex: 1 1 calc(33.333% - 0.35rem);
+  }
+
+  .reading-view {
+    padding-bottom: 178px;
+  }
 }
 
 .reading-view .word-gloss-bar {
