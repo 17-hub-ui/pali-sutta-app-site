@@ -2840,12 +2840,12 @@ const EMBEDDED_SUTTAS = {
             {
               "lineId": "s3-l2",
               "start": 92.974,
-              "end": 108.463,
+              "end": 100.718,
               "kind": "body"
             },
             {
               "lineId": "s3-l3",
-              "start": 108.463,
+              "start": 100.718,
               "end": 120.773,
               "kind": "body"
             }
