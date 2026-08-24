@@ -25000,6 +25000,767 @@ function formatReviewDate(dateKey) {
   return month && day ? `${month}月${day}日` : dateKey || "";
 }
 
+const CALIBRATION_STORAGE_KEY = "psma:audio-calibration:v1";
+const CALIBRATION_SCHEMA = "pali-sutta-audio-calibration";
+const DEFAULT_REACTION_OFFSET = 0.15;
+
+async function renderCalibration(app, catalog) {
+  const suttas = await Promise.all(catalog.suttas.map((summary) => loadSutta(summary.id)));
+  const tracks = buildCalibrationTracks(catalog, suttas);
+  const stored = loadCalibrationState(tracks);
+  let activeTrack = null;
+  let selectedCueIndex = 0;
+  let history = [];
+  let audio = null;
+  let waveformResizeHandler = null;
+  let detailClickHandler = null;
+
+  const root = document.createElement("section");
+  root.className = "calibration-screen stack";
+  app.append(root);
+
+  const save = () => {
+    try {
+      saveCalibrationState(stored);
+      return true;
+    } catch {
+      showNotice("ブラウザへ保存できませんでした。空き容量またはプライベートブラウズ設定を確認してください。", "warning");
+      return false;
+    }
+  };
+  const showNotice = (message, tone = "") => {
+    const notice = root.querySelector("[data-calibration-notice]");
+    if (!notice) return;
+    notice.textContent = message;
+    notice.dataset.tone = tone;
+    notice.hidden = !message;
+  };
+
+  const stopAudio = () => {
+    if (audio) {
+      audio.pause();
+      audio.removeAttribute("src");
+      audio.load();
+      audio = null;
+    }
+    if (waveformResizeHandler) {
+      window.removeEventListener("resize", waveformResizeHandler);
+      waveformResizeHandler = null;
+    }
+    if (detailClickHandler) {
+      root.removeEventListener("click", detailClickHandler);
+      detailClickHandler = null;
+    }
+  };
+
+  const getTrackState = (track) => {
+    if (!stored.tracks[track.key]) {
+      stored.tracks[track.key] = makeEmptyTrackState(track);
+    }
+    return stored.tracks[track.key];
+  };
+
+  const renderOverview = () => {
+    stopAudio();
+    activeTrack = null;
+    history = [];
+    const totals = getCalibrationTotals(tracks, stored);
+    root.innerHTML = `
+      <div class="calibration-heading">
+        <div>
+          <p class="app-kicker">AUDIO / LINE CALIBRATION</p>
+          <h2>音声と行の校正</h2>
+          <p>音声で各行の最初の音が聞こえた瞬間に、スペースキーを押します。</p>
+        </div>
+        <a class="button ghost" href="#/">← アプリへ戻る</a>
+      </div>
+
+      <section class="calibration-summary" aria-label="校正の進捗">
+        <div><strong>${totals.completed}</strong><span>完了トラック</span></div>
+        <div><strong>${totals.recorded}</strong><span>記録済み行頭</span></div>
+        <div><strong>${totals.total}</strong><span>全行頭</span></div>
+        <div><strong>${Math.round(totals.recorded / Math.max(1, totals.total) * 100)}%</strong><span>進捗</span></div>
+      </section>
+
+      <section class="calibration-instructions">
+        <h3>操作方法</h3>
+        <ol>
+          <li>トラックを開き、「再生」を押します。</li>
+          <li>画面に表示された行の最初の音が聞こえた瞬間に、スペースキーを押します。</li>
+          <li>最後まで記録したら「このトラックを完了」にします。</li>
+          <li>作業後にJSONをダウンロードし、アプリ管理者へ渡します。</li>
+        </ol>
+        <p>結果はこのブラウザだけに自動保存されます。本番アプリへ直接送信・反映されることはありません。</p>
+      </section>
+
+      <div class="calibration-toolbar">
+        <label class="calibration-offset">
+          <span>反応時間の自動補正</span>
+          <select data-reaction-offset>
+            ${[0, 0.1, 0.15, 0.2, 0.25].map((value) => `<option value="${value}"${stored.settings.reactionOffset === value ? " selected" : ""}>${value.toFixed(2)}秒</option>`).join("")}
+          </select>
+        </label>
+        <button class="button primary" type="button" data-export-calibration>校正JSONをダウンロード</button>
+        <button class="button ghost" type="button" data-copy-calibration>JSONをコピー</button>
+        <label class="button ghost calibration-import">
+          JSONを読み込む
+          <input type="file" accept="application/json,.json" data-import-calibration hidden>
+        </label>
+      </div>
+      <p class="calibration-notice" data-calibration-notice role="status" aria-live="polite" hidden></p>
+
+      <div class="calibration-track-groups">
+        ${[1, 2].map((disc) => renderTrackGroup(disc, tracks, stored)).join("")}
+      </div>
+    `;
+
+    root.querySelector("[data-reaction-offset]").addEventListener("change", (event) => {
+      stored.settings.reactionOffset = Number(event.target.value);
+      save();
+      showNotice(`反応時間の補正を${stored.settings.reactionOffset.toFixed(2)}秒に設定しました。`, "success");
+    });
+    root.querySelector("[data-export-calibration]").addEventListener("click", () => {
+      const payload = buildCalibrationExport(catalog, tracks, stored);
+      downloadCalibration(payload);
+      showNotice("校正JSONをダウンロードしました。このファイルをアプリ管理者へ渡してください。", "success");
+    });
+    root.querySelector("[data-copy-calibration]").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(JSON.stringify(buildCalibrationExport(catalog, tracks, stored), null, 2));
+        showNotice("校正JSONをクリップボードへコピーしました。", "success");
+      } catch {
+        showNotice("コピーできませんでした。「校正JSONをダウンロード」を使用してください。", "warning");
+      }
+    });
+    root.querySelector("[data-import-calibration]").addEventListener("change", async (event) => {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      try {
+        const payload = JSON.parse(await file.text());
+        const imported = importCalibration(payload, tracks, stored);
+        save();
+        renderOverview();
+        showNotice(`${imported}トラックの校正データを読み込みました。`, "success");
+      } catch (error) {
+        showNotice(error.message || "校正JSONを読み込めませんでした。", "warning");
+      } finally {
+        event.target.value = "";
+      }
+    });
+    root.querySelectorAll("[data-open-track]").forEach((button) => {
+      button.addEventListener("click", () => showTrack(button.dataset.openTrack));
+    });
+  };
+
+  const showTrack = (trackKey) => {
+    const track = tracks.find((item) => item.key === trackKey);
+    if (!track) return;
+    stopAudio();
+    activeTrack = track;
+    history = [];
+    const working = getTrackState(track);
+    selectedCueIndex = getResumeCueIndex(working);
+    root.innerHTML = `
+      <div class="calibration-heading">
+        <div>
+          <p class="app-kicker">DISC ${track.disc} / TRACK ${String(track.track).padStart(2, "0")}</p>
+          <h2>${escapeCalibrationHtml(track.suttaTitle)}</h2>
+          <p>${escapeCalibrationHtml(track.title)}・${track.cues.length}行頭</p>
+        </div>
+        <button class="button ghost" type="button" data-back-to-tracks>← トラック一覧</button>
+      </div>
+
+      <section class="calibration-player">
+        <audio controls preload="metadata" data-calibration-audio></audio>
+        <div class="calibration-waveform-wrap">
+          <canvas class="calibration-waveform" data-calibration-waveform height="120" aria-label="音声タイムライン。クリックで再生位置を移動"></canvas>
+        </div>
+        <div class="calibration-player-meta">
+          <strong data-player-time>0:00.000</strong>
+          <span>反応補正 −${stored.settings.reactionOffset.toFixed(2)}秒</span>
+          <label>速度
+            <select data-playback-rate>
+              <option value="0.75">0.75×</option>
+              <option value="1" selected>1.00×</option>
+              <option value="1.25">1.25×</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="calibration-target" data-calibration-target aria-live="polite"></section>
+
+      <div class="calibration-primary-actions">
+        <button class="button ghost" type="button" data-action="toggle-play">▶ 再生 / 一時停止 <kbd>Enter</kbd></button>
+        <button class="button primary calibration-mark-button" type="button" data-action="mark">この行の開始を記録して次へ <kbd>Space</kbd></button>
+      </div>
+      <div class="calibration-secondary-actions">
+        <button class="button ghost" type="button" data-action="seek-back">−3秒 <kbd>←</kbd></button>
+        <button class="button ghost" type="button" data-action="seek-forward">＋3秒 <kbd>→</kbd></button>
+        <button class="button ghost" type="button" data-action="replay">選択行の2秒前から</button>
+        <button class="button ghost" type="button" data-action="undo">取り消す <kbd>Ctrl+Z</kbd></button>
+        <button class="button ghost" type="button" data-action="skip-title" hidden>経典名は音声にない</button>
+      </div>
+      <div class="calibration-nudge-actions" aria-label="選択した行頭の微調整">
+        <span>選択行を微調整</span>
+        ${[-0.5, -0.1, 0.1, 0.5].map((amount) => `<button class="button ghost" type="button" data-nudge="${amount}">${amount > 0 ? "+" : ""}${amount.toFixed(1)}秒</button>`).join("")}
+      </div>
+      <p class="calibration-notice" data-calibration-notice role="status" aria-live="polite" hidden></p>
+
+      <section class="calibration-cue-panel">
+        <div class="calibration-cue-head">
+          <div>
+            <h3>行頭一覧</h3>
+            <p data-track-progress></p>
+          </div>
+          <div class="calibration-finish-actions">
+            <button class="button primary" type="button" data-action="complete-track">このトラックを完了</button>
+            <button class="button ghost" type="button" data-action="reset-track">このトラックをやり直す</button>
+          </div>
+        </div>
+        <div class="calibration-cue-list" data-calibration-cues></div>
+      </section>
+    `;
+
+    const trackAudio = root.querySelector("[data-calibration-audio]");
+    audio = trackAudio;
+    trackAudio.src = new URL(track.src, document.baseURI).href;
+    trackAudio.playbackRate = 1;
+    const waveform = root.querySelector("[data-calibration-waveform]");
+
+    const update = () => updateTrackView(root, track, working, selectedCueIndex, trackAudio, stored.settings.reactionOffset);
+    const draw = () => drawCalibrationWaveform(waveform, track, working, selectedCueIndex, trackAudio.currentTime);
+    const commit = () => {
+      working.updatedAt = new Date().toISOString();
+      working.completed = false;
+      save();
+      update();
+      draw();
+    };
+    const remember = () => history.push({
+      markers: [...working.markers],
+      skipped: [...working.skipped],
+      completed: working.completed,
+      selectedCueIndex
+    });
+
+    const markSelected = () => {
+      const rawTime = trackAudio.currentTime - stored.settings.reactionOffset;
+      const time = roundCalibrationTime(Math.max(0, rawTime));
+      const previous = findPreviousMarker(working, selectedCueIndex);
+      const next = findNextMarker(working, selectedCueIndex);
+      if (previous !== null && time <= previous + 0.02) {
+        showNotice("直前の行頭より後の位置で記録してください。", "warning");
+        return;
+      }
+      if (next !== null && time >= next - 0.02) {
+        showNotice("次の記録済み行頭より前の位置で記録してください。", "warning");
+        return;
+      }
+      remember();
+      working.markers[selectedCueIndex] = time;
+      working.skipped[selectedCueIndex] = false;
+      const nextIncomplete = working.markers.findIndex((value, index) => index > selectedCueIndex && value === null && !working.skipped[index]);
+      selectedCueIndex = nextIncomplete >= 0 ? nextIncomplete : Math.min(selectedCueIndex + 1, track.cues.length - 1);
+      commit();
+      showNotice(`${formatCalibrationTime(time)} を記録しました。`, "success");
+    };
+
+    const nudgeSelected = (amount) => {
+      const current = working.markers[selectedCueIndex];
+      if (!Number.isFinite(current)) {
+        showNotice("先に選択行の開始時刻を記録してください。", "warning");
+        return;
+      }
+      const candidate = roundCalibrationTime(Math.max(0, Math.min(track.duration, current + amount)));
+      const previous = findPreviousMarker(working, selectedCueIndex);
+      const next = findNextMarker(working, selectedCueIndex);
+      if ((previous !== null && candidate <= previous + 0.02) || (next !== null && candidate >= next - 0.02)) {
+        showNotice("前後の行頭を越える調整はできません。", "warning");
+        return;
+      }
+      remember();
+      working.markers[selectedCueIndex] = candidate;
+      commit();
+      trackAudio.currentTime = Math.max(0, candidate - 1);
+      showNotice(`${formatCalibrationTime(candidate)} に調整しました。`, "success");
+    };
+
+    const undo = () => {
+      const previous = history.pop();
+      if (!previous) {
+        showNotice("この画面を開いてからの変更はありません。", "warning");
+        return;
+      }
+      working.markers = previous.markers;
+      working.skipped = previous.skipped;
+      working.completed = previous.completed;
+      selectedCueIndex = previous.selectedCueIndex;
+      save();
+      update();
+      draw();
+      showNotice("直前の変更を取り消しました。", "success");
+    };
+
+    const togglePlay = async () => {
+      if (trackAudio.paused) {
+        try {
+          await trackAudio.play();
+        } catch {
+          showNotice("音声を再生できませんでした。通信状態を確認してください。", "warning");
+        }
+      } else {
+        trackAudio.pause();
+      }
+      update();
+    };
+
+    root.querySelector("[data-back-to-tracks]").addEventListener("click", renderOverview);
+    root.querySelector("[data-playback-rate]").addEventListener("change", (event) => {
+      trackAudio.playbackRate = Number(event.target.value);
+    });
+    detailClickHandler = (event) => {
+      const cueButton = event.target.closest("[data-cue-index]");
+      if (cueButton) {
+        selectedCueIndex = Number(cueButton.dataset.cueIndex);
+        update();
+        draw();
+        return;
+      }
+      const nudge = event.target.closest("[data-nudge]");
+      if (nudge) {
+        nudgeSelected(Number(nudge.dataset.nudge));
+        return;
+      }
+      const action = event.target.closest("[data-action]")?.dataset.action;
+      if (!action) return;
+      if (action === "toggle-play") void togglePlay();
+      if (action === "mark") markSelected();
+      if (action === "seek-back") trackAudio.currentTime = Math.max(0, trackAudio.currentTime - 3);
+      if (action === "seek-forward") trackAudio.currentTime = Math.min(trackAudio.duration || track.duration, trackAudio.currentTime + 3);
+      if (action === "replay") {
+        const marker = working.markers[selectedCueIndex];
+        const anchor = Number.isFinite(marker) ? marker : track.cues[selectedCueIndex].start;
+        trackAudio.currentTime = Math.max(0, anchor - 2);
+        void trackAudio.play();
+      }
+      if (action === "undo") undo();
+      if (action === "skip-title") {
+        if (track.cues[selectedCueIndex].kind !== "title") return;
+        remember();
+        working.markers[selectedCueIndex] = null;
+        working.skipped[selectedCueIndex] = true;
+        const nextIncomplete = working.markers.findIndex((value, index) => index > selectedCueIndex && value === null && !working.skipped[index]);
+        selectedCueIndex = nextIncomplete >= 0 ? nextIncomplete : Math.min(selectedCueIndex + 1, track.cues.length - 1);
+        commit();
+        showNotice("経典名を『音声に含まれない』として記録しました。", "success");
+      }
+      if (action === "complete-track") {
+        if (!isTrackFullyMarked(working)) {
+          showNotice("未記録の行頭があります。すべて記録してから完了してください。", "warning");
+          return;
+        }
+        working.completed = !working.completed;
+        working.updatedAt = new Date().toISOString();
+        save();
+        update();
+        showNotice(working.completed ? "このトラックを完了にしました。" : "完了状態を解除しました。", "success");
+      }
+      if (action === "reset-track") {
+        if (!window.confirm(`${track.label} の校正記録をすべて消して、やり直しますか？`)) return;
+        remember();
+        Object.assign(working, makeEmptyTrackState(track));
+        selectedCueIndex = 0;
+        save();
+        update();
+        draw();
+        showNotice("このトラックの記録をリセットしました。", "success");
+      }
+    };
+    root.addEventListener("click", detailClickHandler);
+    trackAudio.addEventListener("loadedmetadata", () => {
+      if (audio !== trackAudio) return;
+      const resume = working.markers[selectedCueIndex];
+      const estimate = track.cues[selectedCueIndex]?.start || 0;
+      trackAudio.currentTime = Math.max(0, (Number.isFinite(resume) ? resume : estimate) - 2);
+      update();
+      draw();
+    });
+    trackAudio.addEventListener("timeupdate", () => {
+      if (audio !== trackAudio) return;
+      root.querySelector("[data-player-time]").textContent = formatCalibrationTime(trackAudio.currentTime);
+      draw();
+    });
+    trackAudio.addEventListener("play", () => {
+      if (audio === trackAudio) update();
+    });
+    trackAudio.addEventListener("pause", () => {
+      if (audio === trackAudio) update();
+    });
+    waveform.addEventListener("click", (event) => {
+      const rect = waveform.getBoundingClientRect();
+      trackAudio.currentTime = Math.max(0, Math.min(track.duration, (event.clientX - rect.left) / rect.width * track.duration));
+    });
+    waveformResizeHandler = () => draw();
+    window.addEventListener("resize", waveformResizeHandler);
+    update();
+    draw();
+  };
+
+  const keyHandler = (event) => {
+    if (!activeTrack || !root.isConnected || event.target.closest?.("input, select, textarea")) return;
+    if (event.code === "Space") {
+      event.preventDefault();
+      root.querySelector('[data-action="mark"]')?.click();
+    } else if (event.code === "Enter") {
+      event.preventDefault();
+      root.querySelector('[data-action="toggle-play"]')?.click();
+    } else if (event.code === "ArrowLeft") {
+      event.preventDefault();
+      root.querySelector('[data-action="seek-back"]')?.click();
+    } else if (event.code === "ArrowRight") {
+      event.preventDefault();
+      root.querySelector('[data-action="seek-forward"]')?.click();
+    } else if (event.ctrlKey && event.key.toLowerCase() === "z") {
+      event.preventDefault();
+      root.querySelector('[data-action="undo"]')?.click();
+    }
+  };
+  window.addEventListener("keydown", keyHandler);
+  window.addEventListener("hashchange", () => {
+    if (location.hash === "#/calibrate") return;
+    stopAudio();
+    window.removeEventListener("keydown", keyHandler);
+    if (waveformResizeHandler) window.removeEventListener("resize", waveformResizeHandler);
+  }, { once: true });
+
+  renderOverview();
+}
+
+function buildCalibrationTracks(catalog, suttas) {
+  const summaryById = new Map(catalog.suttas.map((summary) => [summary.id, summary]));
+  return suttas.flatMap((sutta) => {
+    const lineMap = new Map();
+    sutta.sections.forEach((section) => section.lines.forEach((line) => lineMap.set(line.id, { ...line, sectionLabel: section.label })));
+    return (sutta.audio?.tracks || []).map((track) => {
+      const occurrences = new Map();
+      const cues = (track.cues || []).map((cue, index) => {
+        const count = (occurrences.get(cue.lineId) || 0) + 1;
+        occurrences.set(cue.lineId, count);
+        const line = lineMap.get(cue.lineId) || {};
+        return { ...cue, index, occurrence: count, line };
+      });
+      return {
+        ...track,
+        suttaId: sutta.id,
+        suttaTitle: summaryById.get(sutta.id)?.title || sutta.title,
+        label: `Disc ${track.disc} Track ${String(track.track).padStart(2, "0")}`,
+        cues
+      };
+    });
+  }).sort((left, right) => left.disc - right.disc || left.track - right.track);
+}
+
+function makeEmptyTrackState(track) {
+  return {
+    markers: new Array(track.cues.length).fill(null),
+    skipped: new Array(track.cues.length).fill(false),
+    completed: false,
+    updatedAt: null
+  };
+}
+
+function loadCalibrationState(tracks) {
+  let parsed = {};
+  try {
+    parsed = JSON.parse(localStorage.getItem(CALIBRATION_STORAGE_KEY) || "{}");
+  } catch {
+    parsed = {};
+  }
+  const state = {
+    version: 1,
+    settings: {
+      reactionOffset: [0, 0.1, 0.15, 0.2, 0.25].includes(Number(parsed.settings?.reactionOffset))
+        ? Number(parsed.settings.reactionOffset)
+        : DEFAULT_REACTION_OFFSET
+    },
+    tracks: {}
+  };
+  tracks.forEach((track) => {
+    const raw = parsed.tracks?.[track.key];
+    const empty = makeEmptyTrackState(track);
+    if (!raw) {
+      state.tracks[track.key] = empty;
+      return;
+    }
+    state.tracks[track.key] = {
+      markers: empty.markers.map((_, index) => Number.isFinite(raw.markers?.[index]) ? roundCalibrationTime(raw.markers[index]) : null),
+      skipped: empty.skipped.map((_, index) => Boolean(raw.skipped?.[index])),
+      completed: Boolean(raw.completed),
+      updatedAt: typeof raw.updatedAt === "string" ? raw.updatedAt : null
+    };
+  });
+  return state;
+}
+
+function saveCalibrationState(state) {
+  localStorage.setItem(CALIBRATION_STORAGE_KEY, JSON.stringify(state));
+}
+
+function renderTrackGroup(disc, tracks, stored) {
+  const items = tracks.filter((track) => track.disc === disc);
+  return `
+    <section class="calibration-track-group">
+      <h3>Disc ${disc}</h3>
+      <div class="calibration-track-list">
+        ${items.map((track) => {
+          const state = stored.tracks[track.key] || makeEmptyTrackState(track);
+          const marked = countMarked(state);
+          const status = state.completed ? "完了" : marked > 0 ? `${marked}/${track.cues.length}` : "未着手";
+          return `
+            <button class="calibration-track-card" type="button" data-open-track="${track.key}" data-completed="${state.completed}">
+              <span class="calibration-track-number">${String(track.track).padStart(2, "0")}</span>
+              <span class="calibration-track-name"><strong>${escapeCalibrationHtml(track.suttaTitle)}</strong><small>${escapeCalibrationHtml(track.title)}</small></span>
+              <span class="calibration-track-status">${status}</span>
+            </button>
+          `;
+        }).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function updateTrackView(root, track, working, selectedCueIndex, audio, reactionOffset) {
+  const cue = track.cues[selectedCueIndex];
+  const marker = working.markers[selectedCueIndex];
+  const target = root.querySelector("[data-calibration-target]");
+  const repeated = cue.occurrence > 1 ? `（${cue.occurrence}回目）` : "";
+  target.innerHTML = `
+    <div class="calibration-target-step">次に記録する行 ${selectedCueIndex + 1} / ${track.cues.length}</div>
+    <div class="calibration-target-kana">${escapeCalibrationHtml(cue.line.kana || "")}</div>
+    <div class="calibration-target-pali">${escapeCalibrationHtml(cue.line.pali || cue.lineId)}${repeated}</div>
+    <div class="calibration-target-ja">${escapeCalibrationHtml(cue.line.ja || "")}</div>
+    <div class="calibration-target-times">
+      <span>自動推定 ${formatCalibrationTime(cue.start)}</span>
+      <strong>${Number.isFinite(marker) ? `記録 ${formatCalibrationTime(marker)}` : "未記録"}</strong>
+      <span>補正 −${reactionOffset.toFixed(2)}秒</span>
+    </div>
+  `;
+  const marked = countMarked(working);
+  root.querySelector("[data-track-progress]").textContent = `${marked}/${track.cues.length}行頭を記録${working.completed ? "・完了済み" : ""}`;
+  const completeButton = root.querySelector('[data-action="complete-track"]');
+  completeButton.disabled = !isTrackFullyMarked(working);
+  completeButton.textContent = working.completed ? "完了状態を解除" : "このトラックを完了";
+  const playButton = root.querySelector('[data-action="toggle-play"]');
+  playButton.firstChild.textContent = audio && !audio.paused ? "⏸ 一時停止 " : "▶ 再生 ";
+  const markButton = root.querySelector('[data-action="mark"]');
+  markButton.firstChild.textContent = Number.isFinite(marker) ? "選択行を記録し直す " : "この行の開始を記録して次へ ";
+  const skipTitleButton = root.querySelector('[data-action="skip-title"]');
+  skipTitleButton.hidden = cue.kind !== "title";
+  root.querySelector("[data-calibration-cues]").innerHTML = track.cues.map((item, index) => {
+    const value = working.markers[index];
+    const isMarked = Number.isFinite(value) || working.skipped[index];
+    const delta = Number.isFinite(value) ? value - item.start : null;
+    return `
+      <button class="calibration-cue-row" type="button" data-cue-index="${index}" data-selected="${index === selectedCueIndex}" data-marked="${isMarked}">
+        <span class="calibration-cue-order">${index + 1}</span>
+        <span class="calibration-cue-text"><strong>${escapeCalibrationHtml(item.line.pali || item.lineId)}</strong><small>${escapeCalibrationHtml(item.line.kana || "")}</small></span>
+        <span class="calibration-cue-time">${Number.isFinite(value) ? formatCalibrationTime(value) : "未記録"}${delta === null ? "" : `<small>${delta >= 0 ? "+" : ""}${delta.toFixed(3)}秒</small>`}</span>
+      </button>
+    `;
+  }).join("");
+}
+
+function drawCalibrationWaveform(canvas, track, working, selectedCueIndex, currentTime) {
+  if (!canvas) return;
+  const rect = canvas.getBoundingClientRect();
+  const ratio = window.devicePixelRatio || 1;
+  const width = Math.max(1, Math.round(rect.width * ratio));
+  const height = Math.max(1, Math.round(rect.height * ratio));
+  if (canvas.width !== width || canvas.height !== height) {
+    canvas.width = width;
+    canvas.height = height;
+  }
+  const context = canvas.getContext("2d");
+  const styles = getComputedStyle(document.documentElement);
+  const text = styles.getPropertyValue("--text").trim() || "#1c1e21";
+  const muted = styles.getPropertyValue("--muted").trim() || "#667085";
+  const accent = styles.getPropertyValue("--accent").trim() || "#283593";
+  const heard = styles.getPropertyValue("--wf-heard").trim() || "#2e7d32";
+  context.clearRect(0, 0, width, height);
+  context.fillStyle = "rgba(127,127,127,0.08)";
+  context.fillRect(0, 0, width, height);
+  context.strokeStyle = muted;
+  context.globalAlpha = 0.7;
+  context.beginPath();
+  context.moveTo(0, height / 2);
+  context.lineTo(width, height / 2);
+  context.stroke();
+  context.globalAlpha = 1;
+  track.cues.forEach((cue, index) => {
+    const marker = working.markers[index];
+    const at = Number.isFinite(marker) ? marker : cue.start;
+    const x = Math.max(0, Math.min(width, at / track.duration * width));
+    context.strokeStyle = Number.isFinite(marker) ? heard : muted;
+    context.lineWidth = index === selectedCueIndex ? 3 * ratio : 1 * ratio;
+    if (index === selectedCueIndex) context.strokeStyle = text;
+    context.beginPath();
+    context.moveTo(x, 0);
+    context.lineTo(x, height);
+    context.stroke();
+  });
+  const playhead = Math.max(0, Math.min(width, currentTime / track.duration * width));
+  context.strokeStyle = accent;
+  context.lineWidth = 2 * ratio;
+  context.beginPath();
+  context.moveTo(playhead, 0);
+  context.lineTo(playhead, height);
+  context.stroke();
+}
+
+function getResumeCueIndex(state) {
+  const firstIncomplete = state.markers.findIndex((value, index) => value === null && !state.skipped[index]);
+  return firstIncomplete >= 0 ? firstIncomplete : Math.max(0, state.markers.length - 1);
+}
+
+function countMarked(state) {
+  return state.markers.reduce((count, value, index) => count + (Number.isFinite(value) || state.skipped[index] ? 1 : 0), 0);
+}
+
+function isTrackFullyMarked(state) {
+  return countMarked(state) === state.markers.length;
+}
+
+function getCalibrationTotals(tracks, stored) {
+  return tracks.reduce((totals, track) => {
+    const state = stored.tracks[track.key] || makeEmptyTrackState(track);
+    totals.total += track.cues.length;
+    totals.recorded += countMarked(state);
+    totals.completed += state.completed ? 1 : 0;
+    return totals;
+  }, { total: 0, recorded: 0, completed: 0 });
+}
+
+function findPreviousMarker(state, index) {
+  for (let cursor = index - 1; cursor >= 0; cursor -= 1) {
+    if (Number.isFinite(state.markers[cursor])) return state.markers[cursor];
+  }
+  return null;
+}
+
+function findNextMarker(state, index) {
+  for (let cursor = index + 1; cursor < state.markers.length; cursor += 1) {
+    if (Number.isFinite(state.markers[cursor])) return state.markers[cursor];
+  }
+  return null;
+}
+
+function buildCalibrationExport(catalog, tracks, stored) {
+  return {
+    schema: CALIBRATION_SCHEMA,
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    catalogVersion: catalog.version,
+    reactionOffset: stored.settings.reactionOffset,
+    summary: getCalibrationTotals(tracks, stored),
+    tracks: tracks.filter((track) => {
+      const state = stored.tracks[track.key];
+      return state && (countMarked(state) > 0 || state.completed);
+    }).map((track) => {
+      const state = stored.tracks[track.key];
+      return {
+        key: track.key,
+        suttaId: track.suttaId,
+        suttaTitle: track.suttaTitle,
+        disc: track.disc,
+        track: track.track,
+        duration: track.duration,
+        completed: state.completed,
+        updatedAt: state.updatedAt,
+        cues: track.cues.map((cue, index) => ({
+          index,
+          lineId: cue.lineId,
+          kind: cue.kind,
+          pali: cue.line.pali || "",
+          autoStart: cue.start,
+          start: state.markers[index],
+          audible: !state.skipped[index],
+          delta: Number.isFinite(state.markers[index]) ? roundCalibrationTime(state.markers[index] - cue.start) : null
+        }))
+      };
+    })
+  };
+}
+
+function downloadCalibration(payload) {
+  const date = new Date().toISOString().slice(0, 10);
+  const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = `pali-sutta-audio-calibration-${date}.json`;
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function importCalibration(payload, tracks, stored) {
+  if (payload?.schema !== CALIBRATION_SCHEMA || payload?.version !== 1 || !Array.isArray(payload.tracks)) {
+    throw new Error("このファイルは対応する校正JSONではありません。");
+  }
+  const byKey = new Map(tracks.map((track) => [track.key, track]));
+  let imported = 0;
+  payload.tracks.forEach((incoming) => {
+    const track = byKey.get(incoming.key);
+    if (!track || !Array.isArray(incoming.cues) || incoming.cues.length !== track.cues.length) return;
+    const state = makeEmptyTrackState(track);
+    incoming.cues.forEach((cue, index) => {
+      if (cue.lineId !== track.cues[index].lineId) {
+        throw new Error(`${track.key} の行順が現在のデータと一致しません。`);
+      }
+      if (cue.audible === false && track.cues[index].kind === "title") {
+        state.skipped[index] = true;
+      } else if (Number.isFinite(cue.start) && cue.start >= 0 && cue.start <= track.duration) {
+        state.markers[index] = roundCalibrationTime(cue.start);
+      }
+    });
+    let previous = -1;
+    state.markers.forEach((marker, index) => {
+      if (!Number.isFinite(marker)) return;
+      if (marker <= previous) throw new Error(`${track.key} の${index + 1}行目が時刻順になっていません。`);
+      previous = marker;
+    });
+    state.completed = Boolean(incoming.completed) && isTrackFullyMarked(state);
+    state.updatedAt = typeof incoming.updatedAt === "string" ? incoming.updatedAt : new Date().toISOString();
+    stored.tracks[track.key] = state;
+    imported += 1;
+  });
+  if (imported === 0) throw new Error("現在の33トラックに一致する校正データがありませんでした。");
+  return imported;
+}
+
+function formatCalibrationTime(seconds) {
+  if (!Number.isFinite(seconds)) return "--:--.---";
+  const safe = Math.max(0, seconds);
+  const minutes = Math.floor(safe / 60);
+  const remainder = safe - minutes * 60;
+  return `${minutes}:${remainder.toFixed(3).padStart(6, "0")}`;
+}
+
+function roundCalibrationTime(value) {
+  return Math.round(Number(value) * 1000) / 1000;
+}
+
+function escapeCalibrationHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 function createRouter({ app, catalog, pageTitle, navLinks }) {
   function setTitle(title) {
     pageTitle.textContent = title;
@@ -25034,6 +25795,13 @@ function createRouter({ app, catalog, pageTitle, navLinks }) {
       setTitle("設定");
       setActiveNav("settings");
       renderSettings(app);
+      return;
+    }
+
+    if (hash === "#/calibrate") {
+      setTitle("音声と行の校正");
+      setActiveNav("");
+      await renderCalibration(app, catalog);
       return;
     }
 

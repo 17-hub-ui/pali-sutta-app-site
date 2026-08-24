@@ -3303,6 +3303,458 @@ body {
   text-align: center;
 }
 
+/* ---------------- 音声と行の校正画面 ---------------- */
+
+.calibration-screen {
+  padding-bottom: 2rem;
+}
+
+.calibration-heading,
+.calibration-cue-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.calibration-heading p,
+.calibration-cue-head p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.calibration-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.calibration-summary > div {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.calibration-summary strong {
+  color: var(--accent-strong);
+  font-size: 1.7rem;
+}
+
+.calibration-summary span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.calibration-instructions,
+.calibration-player,
+.calibration-cue-panel {
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.calibration-instructions ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.calibration-instructions p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.calibration-toolbar,
+.calibration-primary-actions,
+.calibration-secondary-actions,
+.calibration-nudge-actions,
+.calibration-finish-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.calibration-offset {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: auto;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.calibration-offset select,
+.calibration-player-meta select {
+  min-height: 38px;
+  padding: 0 0.55rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.calibration-import {
+  cursor: pointer;
+}
+
+.calibration-notice {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.calibration-notice[data-tone="warning"] {
+  color: var(--warning);
+  background: color-mix(in srgb, var(--warning) 10%, var(--surface));
+  border-color: color-mix(in srgb, var(--warning) 35%, var(--border));
+}
+
+.calibration-track-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.calibration-track-group {
+  min-width: 0;
+}
+
+.calibration-track-group > h3 {
+  margin-bottom: 0.7rem;
+  color: var(--accent-strong);
+}
+
+.calibration-track-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.calibration-track-card {
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem;
+  color: var(--text);
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 5%, transparent);
+  cursor: pointer;
+}
+
+.calibration-track-card:hover,
+.calibration-track-card:focus-visible {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  transform: translateY(-1px);
+}
+
+.calibration-track-card[data-completed="true"] {
+  border-color: color-mix(in srgb, var(--wf-heard) 50%, var(--border));
+}
+
+.calibration-track-number {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  aspect-ratio: 1;
+  color: var(--surface);
+  background: var(--accent);
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.calibration-track-name {
+  display: grid;
+  min-width: 0;
+  gap: 0.15rem;
+}
+
+.calibration-track-name strong,
+.calibration-track-name small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.calibration-track-name small,
+.calibration-track-status {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.calibration-track-status {
+  min-width: 3.8rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.calibration-player {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.calibration-player audio {
+  width: 100%;
+}
+
+.calibration-waveform-wrap {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: crosshair;
+}
+
+.calibration-waveform {
+  display: block;
+  width: 100%;
+  height: 92px;
+}
+
+.calibration-player-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+
+.calibration-player-meta strong {
+  margin-right: auto;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  font-size: 1rem;
+}
+
+.calibration-player-meta label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.calibration-target {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.35rem;
+  text-align: center;
+  background: var(--surface-metal);
+  border: 2px solid color-mix(in srgb, var(--accent) 52%, var(--border));
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.calibration-target-step {
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.calibration-target-kana {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.calibration-target-pali {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.calibration-target-ja {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.calibration-target-times {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.calibration-target-times strong {
+  color: var(--accent-strong);
+}
+
+.calibration-primary-actions > .button {
+  flex: 1;
+  min-height: 52px;
+}
+
+.calibration-mark-button {
+  font-size: 1.02rem;
+}
+
+kbd {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.1rem 0.35rem;
+  color: inherit;
+  background: color-mix(in srgb, var(--surface) 60%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  border-radius: 5px;
+  font-size: 0.72em;
+  font-family: inherit;
+}
+
+.calibration-nudge-actions {
+  padding: 0.75rem;
+  background: var(--surface-muted);
+  border-radius: 10px;
+}
+
+.calibration-nudge-actions > span {
+  margin-right: auto;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.calibration-cue-panel {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.calibration-cue-list {
+  display: grid;
+  gap: 0.35rem;
+  max-height: 34rem;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+}
+
+.calibration-cue-row {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) 7rem;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.65rem;
+  color: var(--text);
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.calibration-cue-row[data-selected="true"] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.calibration-cue-row[data-marked="true"] .calibration-cue-order {
+  color: var(--surface);
+  background: var(--wf-heard);
+}
+
+.calibration-cue-order {
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  color: var(--muted);
+  background: var(--surface-muted);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.calibration-cue-text,
+.calibration-cue-time {
+  display: grid;
+  min-width: 0;
+  gap: 0.15rem;
+}
+
+.calibration-cue-text strong,
+.calibration-cue-text small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.calibration-cue-text small,
+.calibration-cue-time small {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.calibration-cue-time {
+  text-align: right;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 720px) {
+  .calibration-heading,
+  .calibration-cue-head {
+    display: grid;
+  }
+
+  .calibration-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calibration-track-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .calibration-toolbar > .button,
+  .calibration-toolbar > label.button {
+    flex: 1 1 calc(50% - 0.3rem);
+  }
+
+  .calibration-offset {
+    flex: 1 1 100%;
+  }
+
+  .calibration-player-meta,
+  .calibration-target-times {
+    flex-wrap: wrap;
+  }
+
+  .calibration-primary-actions {
+    display: grid;
+  }
+
+  .calibration-cue-row {
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+  }
+
+  .calibration-cue-time {
+    grid-column: 2;
+    text-align: left;
+  }
+}
+
 /* 単語の近くに追随する意味バルーン */
 .word-gloss-bar {
   position: fixed;
