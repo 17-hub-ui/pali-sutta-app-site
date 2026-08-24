@@ -201,16 +201,124 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T1",
           "disc": 1,
           "track": 1,
           "title": "Vandanā",
-          "src": "./audio/disc1/track-01.mp3"
+          "src": "./audio/disc1/track-01.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1"
+          ],
+          "duration": 45.21,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 1.67,
+              "end": 2.564,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.911,
+              "end": 15.769,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 15.769,
+              "end": 28.035,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 28.035,
+              "end": 41.622,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D1T2",
           "disc": 1,
           "track": 2,
           "title": "Ti saraṇa",
-          "src": "./audio/disc1/track-02.mp3"
+          "src": "./audio/disc1/track-02.mp3",
+          "lineIds": [
+            "title-l2",
+            "s2-l1",
+            "s2-l2",
+            "s2-l3",
+            "s2-l4",
+            "s2-l5",
+            "s2-l6",
+            "s2-l7",
+            "s2-l8",
+            "s2-l9"
+          ],
+          "duration": 81.59,
+          "cues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.481,
+              "end": 1.311,
+              "kind": "title"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 3.712,
+              "end": 10.293,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 10.293,
+              "end": 17.278,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 17.278,
+              "end": 24.443,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 24.443,
+              "end": 33.268,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l5",
+              "start": 33.268,
+              "end": 42.31,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l6",
+              "start": 42.31,
+              "end": 51.451,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l7",
+              "start": 51.451,
+              "end": 61.117,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l8",
+              "start": 61.117,
+              "end": 69.716,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l9",
+              "start": 69.716,
+              "end": 78.685,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -574,10 +682,58 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T3",
           "disc": 1,
           "track": 3,
           "title": "Pañca Sīla",
-          "src": "./audio/disc1/track-03.mp3"
+          "src": "./audio/disc1/track-03.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5"
+          ],
+          "duration": 78.41,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.295,
+              "end": 1.438,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.324,
+              "end": 17.182,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 17.182,
+              "end": 30.1,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 30.1,
+              "end": 44.658,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 44.658,
+              "end": 56.942,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 56.942,
+              "end": 75.328,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -797,10 +953,100 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T4",
           "disc": 1,
           "track": 4,
           "title": "Buddha vandanā",
-          "src": "./audio/disc1/track-04.mp3"
+          "src": "./audio/disc1/track-04.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5",
+            "s1-l6",
+            "s1-l7",
+            "s1-l8",
+            "s1-l9",
+            "s1-l10",
+            "s1-l11"
+          ],
+          "duration": 93.83,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.411,
+              "end": 2.037,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.971,
+              "end": 14.327,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 14.327,
+              "end": 16.193,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 16.193,
+              "end": 25.28,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 25.28,
+              "end": 32.067,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 32.067,
+              "end": 38.3,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 38.3,
+              "end": 47.956,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 47.956,
+              "end": 57.817,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 57.817,
+              "end": 65.595,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 65.595,
+              "end": 76.438,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 76.438,
+              "end": 78.592,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l11",
+              "start": 78.592,
+              "end": 90.443,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -1058,10 +1304,72 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T5",
           "disc": 1,
           "track": 5,
           "title": "Dhamma vandanā",
-          "src": "./audio/disc1/track-05.mp3"
+          "src": "./audio/disc1/track-05.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5",
+            "s1-l6",
+            "s1-l7"
+          ],
+          "duration": 53.32,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.35,
+              "end": 1.641,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.526,
+              "end": 17.609,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 17.609,
+              "end": 19.487,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 19.487,
+              "end": 25.629,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 25.629,
+              "end": 27.704,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 27.704,
+              "end": 29.582,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 29.582,
+              "end": 36.22,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 36.22,
+              "end": 49.868,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -1242,10 +1550,107 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T6",
           "disc": 1,
           "track": 6,
           "title": "Saṅgha vandanā",
-          "src": "./audio/disc1/track-06.mp3"
+          "src": "./audio/disc1/track-06.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5",
+            "s1-l6",
+            "s1-l7",
+            "s1-l8",
+            "s1-l9",
+            "s1-l10",
+            "s1-l11",
+            "s1-l12"
+          ],
+          "duration": 114.77,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.473,
+              "end": 2.019,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.675,
+              "end": 12.938,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 12.938,
+              "end": 23.105,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 23.105,
+              "end": 33.903,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 33.903,
+              "end": 45.868,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 45.868,
+              "end": 67.635,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 67.635,
+              "end": 71.475,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 71.475,
+              "end": 74.936,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 74.936,
+              "end": 83.851,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 83.851,
+              "end": 85.823,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 85.823,
+              "end": 96.017,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l11",
+              "start": 96.017,
+              "end": 100.687,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l12",
+              "start": 100.687,
+              "end": 111.605,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -1561,10 +1966,44 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T7",
           "disc": 1,
           "track": 7,
           "title": "Khamā yācanā",
-          "src": "./audio/disc1/track-07.mp3"
+          "src": "./audio/disc1/track-07.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3"
+          ],
+          "duration": 92.13,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.398,
+              "end": 2.064,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.739,
+              "end": 29.176,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 29.176,
+              "end": 56.578,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 56.578,
+              "end": 88.576,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -1813,10 +2252,107 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T8",
           "disc": 1,
           "track": 8,
           "title": "Tisaraṇa vandanā",
-          "src": "./audio/disc1/track-08.mp3"
+          "src": "./audio/disc1/track-08.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s2-l1",
+            "s2-l2",
+            "s2-l3",
+            "s2-l4",
+            "s3-l1",
+            "s3-l2",
+            "s3-l3",
+            "s3-l4"
+          ],
+          "duration": 126.35,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.314,
+              "end": 2.28,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.375,
+              "end": 12.95,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 12.95,
+              "end": 21.788,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 21.788,
+              "end": 31.033,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 31.033,
+              "end": 40.125,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 40.125,
+              "end": 50.099,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 50.099,
+              "end": 59.955,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 59.955,
+              "end": 69.92,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 69.92,
+              "end": 79.978,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 79.978,
+              "end": 90.632,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 90.632,
+              "end": 100.931,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l3",
+              "start": 100.931,
+              "end": 111.247,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l4",
+              "start": 111.247,
+              "end": 123.327,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -2234,10 +2770,86 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T9",
           "disc": 1,
           "track": 9,
           "title": "Buddhāna sāsanaṃ",
-          "src": "./audio/disc1/track-09.mp3"
+          "src": "./audio/disc1/track-09.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s2-l1",
+            "s2-l2",
+            "s2-l3",
+            "s2-l4",
+            "s3-l1",
+            "s3-l2",
+            "s3-l3"
+          ],
+          "duration": 123.9,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.425,
+              "end": 3.053,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 5.241,
+              "end": 16.945,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 16.945,
+              "end": 32.236,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 32.236,
+              "end": 41.077,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 41.077,
+              "end": 59.029,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 59.029,
+              "end": 68.683,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 68.683,
+              "end": 78.131,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 78.131,
+              "end": 92.974,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 92.974,
+              "end": 108.463,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l3",
+              "start": 108.463,
+              "end": 120.773,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -2581,16 +3193,224 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T10",
           "disc": 1,
           "track": 10,
           "title": "Paticca samuppādo Anulomaṃ",
-          "src": "./audio/disc1/track-10.mp3"
+          "src": "./audio/disc1/track-10.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5",
+            "s1-l6",
+            "s1-l7",
+            "s1-l8",
+            "s1-l9",
+            "s1-l10",
+            "s1-l11",
+            "s1-l12",
+            "s1-l13"
+          ],
+          "duration": 117.43,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.442,
+              "end": 2.815,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.384,
+              "end": 11.37,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 11.37,
+              "end": 19.86,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 19.86,
+              "end": 27.188,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 27.188,
+              "end": 35.541,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 35.541,
+              "end": 48.397,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 48.397,
+              "end": 51.408,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 51.408,
+              "end": 62.689,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 62.689,
+              "end": 66.282,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 66.282,
+              "end": 75.321,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 75.321,
+              "end": 82.543,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l11",
+              "start": 82.543,
+              "end": 86.05,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l12",
+              "start": 86.05,
+              "end": 97.083,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l13",
+              "start": 97.083,
+              "end": 114.54,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D1T11",
           "disc": 1,
           "track": 11,
           "title": "Paticca Samuppādo Paṭilomaṃ",
-          "src": "./audio/disc1/track-11.mp3"
+          "src": "./audio/disc1/track-11.mp3",
+          "lineIds": [
+            "title-l2",
+            "s2-l1",
+            "s2-l2",
+            "s2-l3",
+            "s2-l4",
+            "s2-l5",
+            "s2-l6",
+            "s2-l7",
+            "s2-l8",
+            "s2-l9",
+            "s2-l10",
+            "s2-l11",
+            "s2-l12",
+            "s2-l13"
+          ],
+          "duration": 144.01,
+          "cues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.496,
+              "end": 2.339,
+              "kind": "title"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 2.902,
+              "end": 19.033,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 19.033,
+              "end": 28.066,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 28.066,
+              "end": 37.549,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 37.549,
+              "end": 47.197,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l5",
+              "start": 47.197,
+              "end": 56.27,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l6",
+              "start": 56.27,
+              "end": 65.121,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l7",
+              "start": 65.121,
+              "end": 74.487,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l8",
+              "start": 74.487,
+              "end": 84.113,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l9",
+              "start": 84.113,
+              "end": 92.964,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l10",
+              "start": 92.964,
+              "end": 101.086,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l11",
+              "start": 101.086,
+              "end": 108.324,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l12",
+              "start": 108.324,
+              "end": 122.36,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l13",
+              "start": 122.36,
+              "end": 140.08,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -3412,10 +4232,58 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T12",
           "disc": 1,
           "track": 12,
           "title": "Paṭhama udāna",
-          "src": "./audio/disc1/track-12.mp3"
+          "src": "./audio/disc1/track-12.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s2-l1",
+            "s2-l2",
+            "s2-l3"
+          ],
+          "duration": 80.79,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.227,
+              "end": 1.928,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.612,
+              "end": 17.033,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 17.033,
+              "end": 31.66,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 31.66,
+              "end": 44.262,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 44.262,
+              "end": 59.239,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 59.239,
+              "end": 77.697,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -3651,16 +4519,385 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T13",
           "disc": 1,
           "track": 13,
           "title": "Ratana Suttaṃ",
-          "src": "./audio/disc1/track-13.mp3"
+          "src": "./audio/disc1/track-13.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s2-l1",
+            "s2-l2",
+            "s3-l1",
+            "s3-l2",
+            "s3-l3",
+            "s4-l1",
+            "s4-l2",
+            "s4-l3",
+            "s5-l1",
+            "s5-l2",
+            "s5-l3",
+            "s6-l1",
+            "s6-l2",
+            "s6-l3",
+            "s7-l1",
+            "s7-l2",
+            "s7-l3",
+            "s8-l1",
+            "s8-l2",
+            "s8-l3",
+            "s9-l1",
+            "s9-l2",
+            "s9-l3",
+            "s10-l1",
+            "s10-l2",
+            "s10-l3",
+            "s10-l4",
+            "s11-l1",
+            "s11-l2",
+            "s11-l3",
+            "s12-l1",
+            "s12-l2",
+            "s12-l3",
+            "s13-l1",
+            "s13-l2",
+            "s14-l1",
+            "s14-l2",
+            "s14-l3",
+            "s15-l1",
+            "s15-l2",
+            "s16-l1",
+            "s16-l2",
+            "s17-l1",
+            "s17-l2"
+          ],
+          "duration": 711.9,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.397,
+              "end": 1.807,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.136,
+              "end": 19.001,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 19.001,
+              "end": 30.063,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 30.063,
+              "end": 51.922,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 51.922,
+              "end": 74.965,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 74.965,
+              "end": 88.199,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 88.199,
+              "end": 96.423,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l3",
+              "start": 96.423,
+              "end": 103.832,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 103.832,
+              "end": 125.239,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 125.239,
+              "end": 133.523,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l3",
+              "start": 133.523,
+              "end": 148.774,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 148.774,
+              "end": 162.003,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 162.003,
+              "end": 170.249,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l3",
+              "start": 170.249,
+              "end": 185.687,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 185.687,
+              "end": 201.534,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 201.534,
+              "end": 216.71,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l3",
+              "start": 216.71,
+              "end": 232.908,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 232.908,
+              "end": 249.1,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 249.1,
+              "end": 265.62,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l3",
+              "start": 265.62,
+              "end": 281.964,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 281.964,
+              "end": 296.63,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 296.63,
+              "end": 312.736,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l3",
+              "start": 312.736,
+              "end": 329.127,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 329.127,
+              "end": 344.679,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 344.679,
+              "end": 359.701,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l3",
+              "start": 359.701,
+              "end": 375.024,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 375.024,
+              "end": 390.093,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 390.093,
+              "end": 405.915,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l3",
+              "start": 405.915,
+              "end": 421.716,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l4",
+              "start": 421.716,
+              "end": 431.044,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 431.044,
+              "end": 453.704,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 453.704,
+              "end": 471.643,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l3",
+              "start": 471.643,
+              "end": 488.493,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 488.493,
+              "end": 504.356,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 504.356,
+              "end": 519.612,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l3",
+              "start": 519.612,
+              "end": 534.845,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 534.845,
+              "end": 551.277,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 551.277,
+              "end": 570.432,
+              "kind": "body"
+            },
+            {
+              "lineId": "s14-l1",
+              "start": 570.432,
+              "end": 588.115,
+              "kind": "body"
+            },
+            {
+              "lineId": "s14-l2",
+              "start": 588.115,
+              "end": 605.911,
+              "kind": "body"
+            },
+            {
+              "lineId": "s14-l3",
+              "start": 605.911,
+              "end": 614.607,
+              "kind": "body"
+            },
+            {
+              "lineId": "s15-l1",
+              "start": 614.607,
+              "end": 638.563,
+              "kind": "body"
+            },
+            {
+              "lineId": "s15-l2",
+              "start": 638.563,
+              "end": 647.258,
+              "kind": "body"
+            },
+            {
+              "lineId": "s16-l1",
+              "start": 647.258,
+              "end": 663.753,
+              "kind": "body"
+            },
+            {
+              "lineId": "s16-l2",
+              "start": 663.753,
+              "end": 672.907,
+              "kind": "body"
+            },
+            {
+              "lineId": "s17-l1",
+              "start": 672.907,
+              "end": 698.438,
+              "kind": "body"
+            },
+            {
+              "lineId": "s17-l2",
+              "start": 698.438,
+              "end": 710.507,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D1T14",
           "disc": 1,
           "track": 14,
           "title": "Patthanā",
-          "src": "./audio/disc1/track-14.mp3"
+          "src": "./audio/disc1/track-14.mp3",
+          "lineIds": [
+            "title-l2",
+            "s18-l1",
+            "s18-l2",
+            "s18-l3"
+          ],
+          "duration": 47.45,
+          "cues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.386,
+              "end": 1.063,
+              "kind": "title"
+            },
+            {
+              "lineId": "s18-l1",
+              "start": 3.12,
+              "end": 15.368,
+              "kind": "body"
+            },
+            {
+              "lineId": "s18-l2",
+              "start": 15.368,
+              "end": 27.989,
+              "kind": "body"
+            },
+            {
+              "lineId": "s18-l3",
+              "start": 27.989,
+              "end": 43.495,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -6187,16 +7424,211 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T15",
           "disc": 1,
           "track": 15,
           "title": "Metta Suttaṃ",
-          "src": "./audio/disc1/track-15.mp3"
+          "src": "./audio/disc1/track-15.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s2-l1",
+            "s2-l2",
+            "s3-l1",
+            "s3-l2",
+            "s4-l1",
+            "s4-l2",
+            "s5-l1",
+            "s5-l2",
+            "s6-l1",
+            "s6-l2",
+            "s7-l1",
+            "s7-l2",
+            "s8-l1",
+            "s8-l2",
+            "s9-l1",
+            "s9-l2",
+            "s10-l1",
+            "s10-l2"
+          ],
+          "duration": 296.49,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.192,
+              "end": 1.554,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.827,
+              "end": 27.348,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 27.348,
+              "end": 40.173,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 40.173,
+              "end": 53.662,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 53.662,
+              "end": 67.119,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 67.119,
+              "end": 82.667,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 82.667,
+              "end": 97.456,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 97.456,
+              "end": 111.725,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 111.725,
+              "end": 125.755,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 125.755,
+              "end": 142.265,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 142.265,
+              "end": 157.219,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 157.219,
+              "end": 171.372,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 171.372,
+              "end": 185.441,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 185.441,
+              "end": 199.14,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 199.14,
+              "end": 205.551,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 205.551,
+              "end": 227.544,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 227.544,
+              "end": 242.827,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 242.827,
+              "end": 258.269,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 258.269,
+              "end": 272.647,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 272.647,
+              "end": 279.379,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 279.379,
+              "end": 293.724,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D1T16",
           "disc": 1,
           "track": 16,
           "title": "Patthanā",
-          "src": "./audio/disc1/track-16.mp3"
+          "src": "./audio/disc1/track-16.mp3",
+          "lineIds": [
+            "title-l2",
+            "title-l3",
+            "s11-l1",
+            "s11-l2",
+            "s11-l3",
+            "s12-l1"
+          ],
+          "duration": 48.62,
+          "cues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.393,
+              "end": 1.114,
+              "kind": "title"
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 2.707,
+              "end": 15.479,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 15.479,
+              "end": 22.4,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l3",
+              "start": 22.4,
+              "end": 35.681,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 35.681,
+              "end": 45.515,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -7415,10 +8847,219 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T17",
           "disc": 1,
           "track": 17,
           "title": "Vijaya suttaṃ",
-          "src": "./audio/disc1/track-17.mp3"
+          "src": "./audio/disc1/track-17.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s2-l1",
+            "s2-l2",
+            "s3-l1",
+            "s3-l2",
+            "s4-l1",
+            "s4-l2",
+            "s5-l1",
+            "s5-l2",
+            "s6-l1",
+            "s6-l2",
+            "s7-l1",
+            "s7-l2",
+            "s8-l1",
+            "s8-l2",
+            "s9-l1",
+            "s9-l2",
+            "s10-l1",
+            "s10-l2",
+            "s11-l1",
+            "s11-l2",
+            "s12-l1",
+            "s12-l2",
+            "s13-l1",
+            "s13-l2",
+            "s14-l1",
+            "s14-l2"
+          ],
+          "duration": 282.17,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.391,
+              "end": 2.015,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.14,
+              "end": 20.227,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 20.227,
+              "end": 24.919,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 24.919,
+              "end": 38.024,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 38.024,
+              "end": 43.789,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 43.789,
+              "end": 56.037,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 56.037,
+              "end": 65.338,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 65.338,
+              "end": 74.405,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 74.405,
+              "end": 83.163,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 83.163,
+              "end": 93.736,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 93.736,
+              "end": 101.052,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 101.052,
+              "end": 112.983,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 112.983,
+              "end": 120.494,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 120.494,
+              "end": 131.241,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 131.241,
+              "end": 140.288,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 140.288,
+              "end": 150.243,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 150.243,
+              "end": 159.638,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 159.638,
+              "end": 170.729,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 170.729,
+              "end": 180.938,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 180.938,
+              "end": 190.728,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 190.728,
+              "end": 201.335,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 201.335,
+              "end": 212.013,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 212.013,
+              "end": 220.527,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 220.527,
+              "end": 231.017,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 231.017,
+              "end": 240.29,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 240.29,
+              "end": 250.183,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 250.183,
+              "end": 262.411,
+              "kind": "body"
+            },
+            {
+              "lineId": "s14-l1",
+              "start": 262.411,
+              "end": 269.483,
+              "kind": "body"
+            },
+            {
+              "lineId": "s14-l2",
+              "start": 269.483,
+              "end": 279.204,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -8550,10 +10191,310 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T18",
           "disc": 1,
           "track": 18,
           "title": "Salla suttaṃ",
-          "src": "./audio/disc1/track-18.mp3"
+          "src": "./audio/disc1/track-18.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s2-l1",
+            "s2-l2",
+            "s3-l1",
+            "s3-l2",
+            "s4-l1",
+            "s4-l2",
+            "s5-l1",
+            "s5-l2",
+            "s6-l1",
+            "s6-l2",
+            "s7-l1",
+            "s7-l2",
+            "s8-l1",
+            "s8-l2",
+            "s9-l1",
+            "s9-l2",
+            "s10-l1",
+            "s10-l2",
+            "s11-l1",
+            "s11-l2",
+            "s12-l1",
+            "s12-l2",
+            "s13-l1",
+            "s13-l2",
+            "s14-l1",
+            "s14-l2",
+            "s15-l1",
+            "s15-l2",
+            "s16-l1",
+            "s16-l2",
+            "s17-l1",
+            "s17-l2",
+            "s18-l1",
+            "s18-l2",
+            "s18-l3",
+            "s19-l1",
+            "s19-l2",
+            "s20-l1",
+            "s20-l2"
+          ],
+          "duration": 448.87,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.442,
+              "end": 1.97,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.402,
+              "end": 19.806,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 19.806,
+              "end": 29.32,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 29.32,
+              "end": 38.585,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 38.585,
+              "end": 47.203,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 47.203,
+              "end": 56.776,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 56.776,
+              "end": 66.577,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 66.577,
+              "end": 76.775,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 76.775,
+              "end": 86.855,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 86.855,
+              "end": 97.699,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 97.699,
+              "end": 107.435,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 107.435,
+              "end": 117.441,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 117.441,
+              "end": 127.101,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 127.101,
+              "end": 137.174,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 137.174,
+              "end": 147.307,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 147.307,
+              "end": 159.556,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 159.556,
+              "end": 178.616,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 178.616,
+              "end": 188.942,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 188.942,
+              "end": 200.901,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 200.901,
+              "end": 211.948,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 211.948,
+              "end": 223.62,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 223.62,
+              "end": 228.463,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 228.463,
+              "end": 243.565,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 243.565,
+              "end": 250.65,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 250.65,
+              "end": 264.331,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 264.331,
+              "end": 273.766,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 273.766,
+              "end": 283.948,
+              "kind": "body"
+            },
+            {
+              "lineId": "s14-l1",
+              "start": 283.948,
+              "end": 293.142,
+              "kind": "body"
+            },
+            {
+              "lineId": "s14-l2",
+              "start": 293.142,
+              "end": 305.991,
+              "kind": "body"
+            },
+            {
+              "lineId": "s15-l1",
+              "start": 305.991,
+              "end": 316.802,
+              "kind": "body"
+            },
+            {
+              "lineId": "s15-l2",
+              "start": 316.802,
+              "end": 327.464,
+              "kind": "body"
+            },
+            {
+              "lineId": "s16-l1",
+              "start": 327.464,
+              "end": 337.574,
+              "kind": "body"
+            },
+            {
+              "lineId": "s16-l2",
+              "start": 337.574,
+              "end": 350.854,
+              "kind": "body"
+            },
+            {
+              "lineId": "s17-l1",
+              "start": 350.854,
+              "end": 361.514,
+              "kind": "body"
+            },
+            {
+              "lineId": "s17-l2",
+              "start": 361.514,
+              "end": 373.46,
+              "kind": "body"
+            },
+            {
+              "lineId": "s18-l1",
+              "start": 373.46,
+              "end": 386.04,
+              "kind": "body"
+            },
+            {
+              "lineId": "s18-l2",
+              "start": 386.04,
+              "end": 397.363,
+              "kind": "body"
+            },
+            {
+              "lineId": "s18-l3",
+              "start": 397.363,
+              "end": 409.039,
+              "kind": "body"
+            },
+            {
+              "lineId": "s19-l1",
+              "start": 409.039,
+              "end": 413.692,
+              "kind": "body"
+            },
+            {
+              "lineId": "s19-l2",
+              "start": 413.692,
+              "end": 421.321,
+              "kind": "body"
+            },
+            {
+              "lineId": "s20-l1",
+              "start": 421.321,
+              "end": 433.594,
+              "kind": "body"
+            },
+            {
+              "lineId": "s20-l2",
+              "start": 433.594,
+              "end": 445.063,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -10340,10 +12281,86 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D1T19",
           "disc": 1,
           "track": 19,
           "title": "Mahā purisa vitakka",
-          "src": "./audio/disc1/track-19.mp3"
+          "src": "./audio/disc1/track-19.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s2-l1",
+            "s3-l1",
+            "s4-l1",
+            "s5-l1",
+            "s6-l1",
+            "s7-l1",
+            "s8-l1",
+            "s8-l2"
+          ],
+          "duration": 111.43,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.222,
+              "end": 2.066,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.218,
+              "end": 12.169,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 12.169,
+              "end": 28.079,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 28.079,
+              "end": 41.946,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 41.946,
+              "end": 53.878,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 53.878,
+              "end": 65.837,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 65.837,
+              "end": 77.712,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 77.712,
+              "end": 84.301,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 84.301,
+              "end": 95.664,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 95.664,
+              "end": 109.72,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -10727,10 +12744,233 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D2T1",
           "disc": 2,
           "track": 1,
           "title": "Mangala suttaṃ",
-          "src": "./audio/disc2/track-01.mp3"
+          "src": "./audio/disc2/track-01.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5",
+            "s1-l6",
+            "s2-l1",
+            "s2-l2",
+            "s3-l1",
+            "s3-l2",
+            "s4-l1",
+            "s4-l2",
+            "s5-l1",
+            "s5-l2",
+            "s6-l1",
+            "s6-l2",
+            "s7-l1",
+            "s7-l2",
+            "s8-l1",
+            "s8-l2",
+            "s9-l1",
+            "s9-l2",
+            "s10-l1",
+            "s10-l2",
+            "s11-l1",
+            "s11-l2",
+            "s12-l1",
+            "s12-l2",
+            "s13-l1",
+            "s13-l2"
+          ],
+          "duration": 310.81,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.361,
+              "end": 1.728,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.728,
+              "end": 7.543,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 7.543,
+              "end": 19.674,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 19.674,
+              "end": 38.69,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 38.69,
+              "end": 51.308,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 51.308,
+              "end": 70.53,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 70.53,
+              "end": 79.084,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 79.084,
+              "end": 83.621,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 83.621,
+              "end": 98.185,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 98.185,
+              "end": 106.796,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 106.796,
+              "end": 116.457,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 116.457,
+              "end": 124.762,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 124.762,
+              "end": 132.785,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 132.785,
+              "end": 142.417,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 142.417,
+              "end": 152.367,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 152.367,
+              "end": 160.727,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 160.727,
+              "end": 170.801,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 170.801,
+              "end": 180.589,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 180.589,
+              "end": 189.487,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 189.487,
+              "end": 199.78,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 199.78,
+              "end": 209.342,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 209.342,
+              "end": 217.897,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 217.897,
+              "end": 226.544,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 226.544,
+              "end": 235.725,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 235.725,
+              "end": 245.495,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 245.495,
+              "end": 255.477,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 255.477,
+              "end": 265.628,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 265.628,
+              "end": 275.352,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 275.352,
+              "end": 291.039,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 291.039,
+              "end": 295.145,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 295.145,
+              "end": 303.977,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -11957,10 +14197,653 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D2T2",
           "disc": 2,
           "track": 2,
           "title": "Sallekha Suttaṃ",
-          "src": "./audio/disc2/track-02.mp3"
+          "src": "./audio/disc2/track-02.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s2-l1",
+            "s2-l2",
+            "s3-l1",
+            "s3-l2",
+            "s4-l1",
+            "s4-l2",
+            "s5-l1",
+            "s5-l2",
+            "s6-l1",
+            "s6-l2",
+            "s7-l1",
+            "s7-l2",
+            "s8-l1",
+            "s8-l2",
+            "s9-l1",
+            "s9-l2",
+            "s10-l1",
+            "s10-l2",
+            "s11-l1",
+            "s11-l2",
+            "s12-l1",
+            "s12-l2",
+            "s13-l1",
+            "s13-l2",
+            "s14-l1",
+            "s14-l2",
+            "s15-l1",
+            "s15-l2",
+            "s16-l1",
+            "s16-l2",
+            "s17-l1",
+            "s17-l2",
+            "s18-l1",
+            "s18-l2",
+            "s19-l1",
+            "s19-l2",
+            "s20-l1",
+            "s20-l2",
+            "s21-l1",
+            "s21-l2",
+            "s22-l1",
+            "s22-l2",
+            "s23-l1",
+            "s23-l2",
+            "s24-l1",
+            "s24-l2",
+            "s25-l1",
+            "s25-l2",
+            "s26-l1",
+            "s26-l2",
+            "s27-l1",
+            "s27-l2",
+            "s28-l1",
+            "s28-l2",
+            "s29-l1",
+            "s29-l2",
+            "s30-l1",
+            "s30-l2",
+            "s31-l1",
+            "s31-l2",
+            "s32-l1",
+            "s32-l2",
+            "s33-l1",
+            "s33-l2",
+            "s34-l1",
+            "s34-l2",
+            "s35-l1",
+            "s35-l2",
+            "s36-l1",
+            "s36-l2",
+            "s37-l1",
+            "s37-l2",
+            "s38-l1",
+            "s38-l2",
+            "s39-l1",
+            "s39-l2",
+            "s40-l1",
+            "s40-l2",
+            "s41-l1",
+            "s41-l2",
+            "s42-l1",
+            "s42-l2",
+            "s43-l1",
+            "s43-l2",
+            "s44-l1",
+            "s44-l2",
+            "s44-l3"
+          ],
+          "duration": 699.64,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.526,
+              "end": 2.05,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.695,
+              "end": 11.8,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 11.8,
+              "end": 22.298,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 22.298,
+              "end": 26.806,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 26.806,
+              "end": 37.732,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 37.732,
+              "end": 42.457,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 42.457,
+              "end": 53.253,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 53.253,
+              "end": 58.12,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 58.12,
+              "end": 68.449,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 68.449,
+              "end": 83.521,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 83.521,
+              "end": 88.097,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 88.097,
+              "end": 99.363,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 99.363,
+              "end": 104.714,
+              "kind": "body"
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 104.714,
+              "end": 114.982,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 114.982,
+              "end": 121.709,
+              "kind": "body"
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 121.709,
+              "end": 131.681,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 131.681,
+              "end": 136.204,
+              "kind": "body"
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 136.204,
+              "end": 145.692,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 145.692,
+              "end": 150.764,
+              "kind": "body"
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 150.764,
+              "end": 162.118,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 162.118,
+              "end": 167.343,
+              "kind": "body"
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 167.343,
+              "end": 176.376,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 176.376,
+              "end": 191.455,
+              "kind": "body"
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 191.455,
+              "end": 196.201,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 196.201,
+              "end": 205.9,
+              "kind": "body"
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 205.9,
+              "end": 208.721,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 208.721,
+              "end": 221.216,
+              "kind": "body"
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 221.216,
+              "end": 224.037,
+              "kind": "body"
+            },
+            {
+              "lineId": "s14-l1",
+              "start": 224.037,
+              "end": 232.645,
+              "kind": "body"
+            },
+            {
+              "lineId": "s14-l2",
+              "start": 232.645,
+              "end": 237.299,
+              "kind": "body"
+            },
+            {
+              "lineId": "s15-l1",
+              "start": 237.299,
+              "end": 249.582,
+              "kind": "body"
+            },
+            {
+              "lineId": "s15-l2",
+              "start": 249.582,
+              "end": 256.036,
+              "kind": "body"
+            },
+            {
+              "lineId": "s16-l1",
+              "start": 256.036,
+              "end": 270.537,
+              "kind": "body"
+            },
+            {
+              "lineId": "s16-l2",
+              "start": 270.537,
+              "end": 273.358,
+              "kind": "body"
+            },
+            {
+              "lineId": "s17-l1",
+              "start": 273.358,
+              "end": 286.656,
+              "kind": "body"
+            },
+            {
+              "lineId": "s17-l2",
+              "start": 286.656,
+              "end": 289.477,
+              "kind": "body"
+            },
+            {
+              "lineId": "s18-l1",
+              "start": 289.477,
+              "end": 302.09,
+              "kind": "body"
+            },
+            {
+              "lineId": "s18-l2",
+              "start": 302.09,
+              "end": 304.91,
+              "kind": "body"
+            },
+            {
+              "lineId": "s19-l1",
+              "start": 304.91,
+              "end": 317.846,
+              "kind": "body"
+            },
+            {
+              "lineId": "s19-l2",
+              "start": 317.846,
+              "end": 320.667,
+              "kind": "body"
+            },
+            {
+              "lineId": "s20-l1",
+              "start": 320.667,
+              "end": 328.711,
+              "kind": "body"
+            },
+            {
+              "lineId": "s20-l2",
+              "start": 328.711,
+              "end": 336.199,
+              "kind": "body"
+            },
+            {
+              "lineId": "s21-l1",
+              "start": 336.199,
+              "end": 351.919,
+              "kind": "body"
+            },
+            {
+              "lineId": "s21-l2",
+              "start": 351.919,
+              "end": 354.74,
+              "kind": "body"
+            },
+            {
+              "lineId": "s22-l1",
+              "start": 354.74,
+              "end": 359.914,
+              "kind": "body"
+            },
+            {
+              "lineId": "s22-l2",
+              "start": 359.914,
+              "end": 367.297,
+              "kind": "body"
+            },
+            {
+              "lineId": "s23-l1",
+              "start": 367.297,
+              "end": 371.621,
+              "kind": "body"
+            },
+            {
+              "lineId": "s23-l2",
+              "start": 371.621,
+              "end": 381.448,
+              "kind": "body"
+            },
+            {
+              "lineId": "s24-l1",
+              "start": 381.448,
+              "end": 389.446,
+              "kind": "body"
+            },
+            {
+              "lineId": "s24-l2",
+              "start": 389.446,
+              "end": 396.356,
+              "kind": "body"
+            },
+            {
+              "lineId": "s25-l1",
+              "start": 396.356,
+              "end": 409.409,
+              "kind": "body"
+            },
+            {
+              "lineId": "s25-l2",
+              "start": 409.409,
+              "end": 412.23,
+              "kind": "body"
+            },
+            {
+              "lineId": "s26-l1",
+              "start": 412.23,
+              "end": 423.816,
+              "kind": "body"
+            },
+            {
+              "lineId": "s26-l2",
+              "start": 423.816,
+              "end": 426.637,
+              "kind": "body"
+            },
+            {
+              "lineId": "s27-l1",
+              "start": 426.637,
+              "end": 431.237,
+              "kind": "body"
+            },
+            {
+              "lineId": "s27-l2",
+              "start": 431.237,
+              "end": 438.731,
+              "kind": "body"
+            },
+            {
+              "lineId": "s28-l1",
+              "start": 438.731,
+              "end": 451.653,
+              "kind": "body"
+            },
+            {
+              "lineId": "s28-l2",
+              "start": 451.653,
+              "end": 454.474,
+              "kind": "body"
+            },
+            {
+              "lineId": "s29-l1",
+              "start": 454.474,
+              "end": 463.22,
+              "kind": "body"
+            },
+            {
+              "lineId": "s29-l2",
+              "start": 463.22,
+              "end": 466.04,
+              "kind": "body"
+            },
+            {
+              "lineId": "s30-l1",
+              "start": 466.04,
+              "end": 477.423,
+              "kind": "body"
+            },
+            {
+              "lineId": "s30-l2",
+              "start": 477.423,
+              "end": 480.244,
+              "kind": "body"
+            },
+            {
+              "lineId": "s31-l1",
+              "start": 480.244,
+              "end": 491.035,
+              "kind": "body"
+            },
+            {
+              "lineId": "s31-l2",
+              "start": 491.035,
+              "end": 493.855,
+              "kind": "body"
+            },
+            {
+              "lineId": "s32-l1",
+              "start": 493.855,
+              "end": 505.013,
+              "kind": "body"
+            },
+            {
+              "lineId": "s32-l2",
+              "start": 505.013,
+              "end": 507.833,
+              "kind": "body"
+            },
+            {
+              "lineId": "s33-l1",
+              "start": 507.833,
+              "end": 519.087,
+              "kind": "body"
+            },
+            {
+              "lineId": "s33-l2",
+              "start": 519.087,
+              "end": 521.908,
+              "kind": "body"
+            },
+            {
+              "lineId": "s34-l1",
+              "start": 521.908,
+              "end": 533.917,
+              "kind": "body"
+            },
+            {
+              "lineId": "s34-l2",
+              "start": 533.917,
+              "end": 538.205,
+              "kind": "body"
+            },
+            {
+              "lineId": "s35-l1",
+              "start": 538.205,
+              "end": 547.777,
+              "kind": "body"
+            },
+            {
+              "lineId": "s35-l2",
+              "start": 547.777,
+              "end": 550.598,
+              "kind": "body"
+            },
+            {
+              "lineId": "s36-l1",
+              "start": 550.598,
+              "end": 561.187,
+              "kind": "body"
+            },
+            {
+              "lineId": "s36-l2",
+              "start": 561.187,
+              "end": 564.27,
+              "kind": "body"
+            },
+            {
+              "lineId": "s37-l1",
+              "start": 564.27,
+              "end": 574.669,
+              "kind": "body"
+            },
+            {
+              "lineId": "s37-l2",
+              "start": 574.669,
+              "end": 580.541,
+              "kind": "body"
+            },
+            {
+              "lineId": "s38-l1",
+              "start": 580.541,
+              "end": 590.209,
+              "kind": "body"
+            },
+            {
+              "lineId": "s38-l2",
+              "start": 590.209,
+              "end": 593.03,
+              "kind": "body"
+            },
+            {
+              "lineId": "s39-l1",
+              "start": 593.03,
+              "end": 605.582,
+              "kind": "body"
+            },
+            {
+              "lineId": "s39-l2",
+              "start": 605.582,
+              "end": 608.402,
+              "kind": "body"
+            },
+            {
+              "lineId": "s40-l1",
+              "start": 608.402,
+              "end": 620.9,
+              "kind": "body"
+            },
+            {
+              "lineId": "s40-l2",
+              "start": 620.9,
+              "end": 625.391,
+              "kind": "body"
+            },
+            {
+              "lineId": "s41-l1",
+              "start": 625.391,
+              "end": 629.215,
+              "kind": "body"
+            },
+            {
+              "lineId": "s41-l2",
+              "start": 629.215,
+              "end": 636.084,
+              "kind": "body"
+            },
+            {
+              "lineId": "s42-l1",
+              "start": 636.084,
+              "end": 644.09,
+              "kind": "body"
+            },
+            {
+              "lineId": "s42-l2",
+              "start": 644.09,
+              "end": 653.554,
+              "kind": "body"
+            },
+            {
+              "lineId": "s43-l1",
+              "start": 653.554,
+              "end": 659.413,
+              "kind": "body"
+            },
+            {
+              "lineId": "s43-l2",
+              "start": 659.413,
+              "end": 667.088,
+              "kind": "body"
+            },
+            {
+              "lineId": "s44-l1",
+              "start": 667.088,
+              "end": 681.962,
+              "kind": "body"
+            },
+            {
+              "lineId": "s44-l2",
+              "start": 681.962,
+              "end": 688.805,
+              "kind": "body"
+            },
+            {
+              "lineId": "s44-l3",
+              "start": 688.805,
+              "end": 695.074,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -14833,10 +17716,79 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D2T3",
           "disc": 2,
           "track": 3,
           "title": "Bhaddekaratta gāthā",
-          "src": "./audio/disc2/track-03.mp3"
+          "src": "./audio/disc2/track-03.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5",
+            "s1-l6",
+            "s1-l7",
+            "s1-l8"
+          ],
+          "duration": 99.25,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.278,
+              "end": 2.333,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.335,
+              "end": 14.445,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 14.445,
+              "end": 24.89,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 24.89,
+              "end": 35.133,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 35.133,
+              "end": 46.189,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 46.189,
+              "end": 57.01,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 57.01,
+              "end": 67.587,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 67.587,
+              "end": 85.623,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 85.623,
+              "end": 95.043,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -15185,16 +18137,84 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D2T4",
           "disc": 2,
           "track": 4,
           "title": "Anicca gāthā",
-          "src": "./audio/disc2/track-04.mp3"
+          "src": "./audio/disc2/track-04.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2"
+          ],
+          "duration": 54.55,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.338,
+              "end": 1.737,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.946,
+              "end": 25.108,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 25.108,
+              "end": 51.502,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D2T5",
           "disc": 2,
           "track": 5,
           "title": "Metta bhāvanā",
-          "src": "./audio/disc2/track-05.mp3"
+          "src": "./audio/disc2/track-05.mp3",
+          "lineIds": [
+            "title-l2",
+            "s2-l1",
+            "s2-l2",
+            "s2-l3",
+            "s2-l4"
+          ],
+          "duration": 126.07,
+          "cues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.348,
+              "end": 1.464,
+              "kind": "title"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 2.921,
+              "end": 37.836,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 37.836,
+              "end": 56.604,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 56.604,
+              "end": 98.262,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 98.262,
+              "end": 121.13,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -15446,10 +18466,142 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D2T6",
           "disc": 2,
           "track": 6,
           "title": "Aṭṭha vīsati Buddha paritta",
-          "src": "./audio/disc2/track-06.mp3"
+          "src": "./audio/disc2/track-06.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5",
+            "s1-l6",
+            "s1-l7",
+            "s1-l8",
+            "s1-l9",
+            "s1-l10",
+            "s1-l11",
+            "s1-l12",
+            "s1-l13",
+            "s1-l14",
+            "s1-l15",
+            "s1-l16",
+            "s1-l17"
+          ],
+          "duration": 150.04,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.254,
+              "end": 2.637,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 5.347,
+              "end": 20.136,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 20.136,
+              "end": 27.792,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 27.792,
+              "end": 35.311,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 35.311,
+              "end": 38.796,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 38.796,
+              "end": 51.922,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 51.922,
+              "end": 55.539,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 55.539,
+              "end": 69.328,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 69.328,
+              "end": 73.076,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 73.076,
+              "end": 86.897,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 86.897,
+              "end": 95.968,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l11",
+              "start": 95.968,
+              "end": 99.584,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l12",
+              "start": 99.584,
+              "end": 104.776,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l13",
+              "start": 104.776,
+              "end": 114.082,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l14",
+              "start": 114.082,
+              "end": 123.709,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l15",
+              "start": 123.709,
+              "end": 132.989,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l16",
+              "start": 132.989,
+              "end": 137.724,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l17",
+              "start": 137.724,
+              "end": 146.052,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -16095,10 +19247,100 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D2T7",
           "disc": 2,
           "track": 7,
           "title": "Āsiṃsanā",
-          "src": "./audio/disc2/track-07.mp3"
+          "src": "./audio/disc2/track-07.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5",
+            "s1-l6",
+            "s1-l7",
+            "s1-l8",
+            "s1-l9",
+            "s1-l10",
+            "s1-l11"
+          ],
+          "duration": 145.29,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.364,
+              "end": 1.688,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.528,
+              "end": 15.154,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 15.154,
+              "end": 28.01,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 28.01,
+              "end": 51.333,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 51.333,
+              "end": 62.438,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 62.438,
+              "end": 75.509,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 75.509,
+              "end": 82.257,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 82.257,
+              "end": 88.507,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 88.507,
+              "end": 109.329,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 109.329,
+              "end": 125.148,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 125.148,
+              "end": 135.413,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l11",
+              "start": 135.413,
+              "end": 140.869,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -16521,28 +19763,206 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D2T10",
           "disc": 2,
           "track": 10,
           "title": "Āloka pūjā",
-          "src": "./audio/disc2/track-10.mp3"
+          "src": "./audio/disc2/track-10.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2"
+          ],
+          "duration": 29.79,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.43,
+              "end": 1.811,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.002,
+              "end": 13.677,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 13.677,
+              "end": 26.873,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D2T11",
           "disc": 2,
           "track": 11,
           "title": "Puppha pūjā",
-          "src": "./audio/disc2/track-11.mp3"
+          "src": "./audio/disc2/track-11.mp3",
+          "lineIds": [
+            "title-l2",
+            "s2-l1",
+            "s2-l2",
+            "s2-l3",
+            "s2-l4",
+            "s2-l5",
+            "s2-l6"
+          ],
+          "duration": 69.1,
+          "cues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.51,
+              "end": 1.585,
+              "kind": "title"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 3.538,
+              "end": 15.741,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 15.741,
+              "end": 28.65,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 28.65,
+              "end": 37.312,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 37.312,
+              "end": 47.106,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l5",
+              "start": 47.106,
+              "end": 55.775,
+              "kind": "body"
+            },
+            {
+              "lineId": "s2-l6",
+              "start": 55.775,
+              "end": 66.167,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D2T12",
           "disc": 2,
           "track": 12,
           "title": "Sugandha pūjā",
-          "src": "./audio/disc2/track-12.mp3"
+          "src": "./audio/disc2/track-12.mp3",
+          "lineIds": [
+            "title-l3",
+            "s3-l1",
+            "s3-l2"
+          ],
+          "duration": 29.82,
+          "cues": [
+            {
+              "lineId": "title-l3",
+              "start": 0.655,
+              "end": 2.058,
+              "kind": "title"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 3.625,
+              "end": 13.727,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 13.727,
+              "end": 27.044,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D2T13",
           "disc": 2,
           "track": 13,
           "title": "Āhāra pūjā",
-          "src": "./audio/disc2/track-13.mp3"
+          "src": "./audio/disc2/track-13.mp3",
+          "lineIds": [
+            "title-l4",
+            "s4-l1",
+            "s4-l2",
+            "s5-l1",
+            "s5-l2",
+            "s5-l3",
+            "s5-l4",
+            "s5-l5",
+            "s5-l6"
+          ],
+          "duration": 118.14,
+          "cues": [
+            {
+              "lineId": "title-l4",
+              "start": 0.44,
+              "end": 1.649,
+              "kind": "title"
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 2.958,
+              "end": 15.155,
+              "kind": "body"
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 15.155,
+              "end": 29.054,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 29.054,
+              "end": 47.356,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 47.356,
+              "end": 54.195,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l3",
+              "start": 54.195,
+              "end": 67.806,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l4",
+              "start": 67.806,
+              "end": 88.908,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l5",
+              "start": 88.908,
+              "end": 104.974,
+              "kind": "body"
+            },
+            {
+              "lineId": "s5-l6",
+              "start": 104.974,
+              "end": 115.426,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -17244,22 +20664,124 @@ const EMBEDDED_SUTTAS = {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
         {
+          "key": "D2T15",
           "disc": 2,
           "track": 15,
           "title": "Anumodanā",
-          "src": "./audio/disc2/track-15.mp3"
+          "src": "./audio/disc2/track-15.mp3",
+          "lineIds": [
+            "title-l1",
+            "s1-l1",
+            "s1-l2",
+            "s1-l3",
+            "s1-l4",
+            "s1-l5",
+            "s1-l6"
+          ],
+          "duration": 86.78,
+          "cues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.283,
+              "end": 1.41,
+              "kind": "title"
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 2.512,
+              "end": 16.888,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 16.888,
+              "end": 29.665,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 29.665,
+              "end": 41.686,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 41.686,
+              "end": 55.452,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 55.452,
+              "end": 68.392,
+              "kind": "body"
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 68.392,
+              "end": 84.306,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D2T16",
           "disc": 2,
           "track": 16,
           "title": "Ñāti pūjā",
-          "src": "./audio/disc2/track-16.mp3"
+          "src": "./audio/disc2/track-16.mp3",
+          "lineIds": [
+            "title-l2",
+            "s2-l1"
+          ],
+          "duration": 51.31,
+          "cues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.54,
+              "end": 2.118,
+              "kind": "title"
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 3.652,
+              "end": 48.295,
+              "kind": "body"
+            }
+          ]
         },
         {
+          "key": "D2T17",
           "disc": 2,
           "track": 17,
           "title": "Paṇidhāna",
-          "src": "./audio/disc2/track-17.mp3"
+          "src": "./audio/disc2/track-17.mp3",
+          "lineIds": [
+            "title-l3",
+            "s3-l1",
+            "s3-l2"
+          ],
+          "duration": 56.03,
+          "cues": [
+            {
+              "lineId": "title-l3",
+              "start": 0.553,
+              "end": 1.311,
+              "kind": "title"
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 3.715,
+              "end": 38.619,
+              "kind": "body"
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 38.619,
+              "end": 54.011,
+              "kind": "body"
+            }
+          ]
         }
       ]
     },
@@ -18584,7 +22106,11 @@ function renderReading(app, sutta) {
     titleCompleted: false,
     guideAudio: null,
     guideAudioTrackIndex: 0,
-    guideAudioStarted: false
+    guideAudioStarted: false,
+    guideAudioController: null,
+    audioSyncFrame: null,
+    audioSyncCueKey: "",
+    audioSyncLineId: ""
   };
 
   const section = document.createElement("section");
@@ -18605,7 +22131,7 @@ function renderReading(app, sutta) {
           <label><input type="checkbox" name="showJa"><span>和訳</span></label>
           <button class="recite-note recite-note-toggle" type="button" data-recitation-info-toggle aria-expanded="false">使い方を表示</button>
         </div>
-        <p class="recite-note recite-note-detail" data-recitation-info hidden>最初に経典名を唱え、「次へ」で本文へ進みます。「音声再生」はお手本を聞きながら唱えるためのガイド音声です。「録音開始」で自動判定します（文字ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
+        <p class="recite-note recite-note-detail" data-recitation-info hidden>最初に経典名を唱え、「次へ」で本文へ進みます。「音声同期」は録音音声に合わせて節・行・単語を自動で進めます。「録音開始」で自動判定します（音声とは別の文字ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
         <p class="recite-note" data-recitation-status hidden></p>
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
@@ -18661,7 +22187,7 @@ function renderReading(app, sutta) {
       </div>
 
       <div class="recite-dock" role="toolbar" aria-label="読誦操作">
-        <button class="button primary audio-guide-button" type="button" data-guide-audio-toggle>🔊 音声再生</button>
+        <button class="button primary audio-guide-button" type="button" data-guide-audio-toggle>🔊 音声同期</button>
         <button class="button primary record-button" type="button" data-recitation-record>録音開始</button>
         <button class="button primary guide-button" type="button" data-pace-toggle>▶ 文字ガイド</button>
         <button class="button ghost tempo-button" type="button" data-pace-cycle aria-label="読誦ガイドの速さを切替">⏱ ふつう</button>
@@ -18834,6 +22360,7 @@ function setupReciteControls(root, sutta, reciteState) {
     if (reciteState.paceRunning) {
       stopPacer(root, reciteState);
     } else {
+      pauseGuideAudio(root, reciteState, "manual-guide");
       startPacer(root, sutta, reciteState);
     }
   });
@@ -18997,6 +22524,9 @@ function startBuildPractice(root, sutta, reciteState, sectionId = sutta.sections
   resetRecitationReview(root, reciteState);
   hideRecitationHelp(root);
   renderReciteStage(root, sutta, reciteState);
+  if (!options.fromAudio) {
+    reciteState.guideAudioController?.selectSection(sectionId);
+  }
   focusRecitationStage(root);
 }
 
@@ -19019,6 +22549,9 @@ function selectRecitationRange(root, sutta, reciteState, sectionId, options = {}
   resetRecitationReview(root, reciteState);
   hideRecitationHelp(root);
   renderReciteStage(root, sutta, reciteState);
+  if (!options.fromAudio) {
+    reciteState.guideAudioController?.selectSection(sectionId);
+  }
   focusRecitationStage(root);
 }
 
@@ -19061,6 +22594,8 @@ function setupGuideAudio(root, sutta, reciteState) {
   audio.preload = "metadata";
   reciteState.guideAudio = audio;
   activeGuideAudio = audio;
+  let pendingSeek = null;
+  let pendingAutoplay = false;
 
   const currentTrack = () => tracks[reciteState.guideAudioTrackIndex] || tracks[0];
   const trackLabel = () => {
@@ -19076,15 +22611,18 @@ function setupGuideAudio(root, sutta, reciteState) {
     const playing = !audio.paused && !audio.ended;
     button.dataset.playing = String(playing);
     button.textContent = playing
-      ? "⏸ 一時停止"
-      : reciteState.guideAudioStarted ? "▶ 続きから" : "🔊 音声再生";
+      ? "⏸ 同期停止"
+      : reciteState.guideAudioStarted ? "▶ 同期を再開" : "🔊 音声同期";
     const progress = reciteState.guideAudioStarted
       ? ` ${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`
       : "";
-    status.textContent = message || `${trackLabel()}${progress}（全${tracks.length}トラック）`;
+    const syncLabel = playing ? "・文字同期中" : "";
+    status.textContent = message || `${trackLabel()}${progress}${syncLabel}（全${tracks.length}トラック）`;
   };
-  const loadTrack = (index) => {
+  const loadTrack = (index, options = {}) => {
     reciteState.guideAudioTrackIndex = Math.min(Math.max(0, index), tracks.length - 1);
+    pendingSeek = Number.isFinite(options.seek) ? Math.max(0, options.seek) : null;
+    pendingAutoplay = Boolean(options.autoplay);
     audio.src = new URL(currentTrack().src, document.baseURI).href;
     audio.load();
     updateUi();
@@ -19109,33 +22647,174 @@ function setupGuideAudio(root, sutta, reciteState) {
     }
     void play();
   });
-  audio.addEventListener("play", () => updateUi());
-  audio.addEventListener("pause", () => updateUi());
-  audio.addEventListener("loadedmetadata", () => updateUi());
-  audio.addEventListener("timeupdate", () => updateUi());
+  audio.addEventListener("play", () => {
+    stopPacer(root, reciteState);
+    startAudioSyncedGuide(root, sutta, reciteState);
+    updateUi();
+  });
+  audio.addEventListener("pause", () => {
+    stopAudioSyncedGuide(root, reciteState, { clear: !reciteState.paceRunning });
+    updateUi();
+  });
+  audio.addEventListener("loadedmetadata", () => {
+    if (pendingSeek !== null) {
+      audio.currentTime = Math.min(pendingSeek, Math.max(0, audio.duration - 0.05));
+      pendingSeek = null;
+    }
+    const shouldPlay = pendingAutoplay;
+    pendingAutoplay = false;
+    updateUi();
+    syncGuideToAudio(root, sutta, reciteState);
+    if (shouldPlay) void play();
+  });
+  audio.addEventListener("timeupdate", () => {
+    updateUi();
+    syncGuideToAudio(root, sutta, reciteState);
+  });
+  audio.addEventListener("seeked", () => syncGuideToAudio(root, sutta, reciteState));
   audio.addEventListener("ended", () => {
+    stopAudioSyncedGuide(root, reciteState);
     if (reciteState.guideAudioTrackIndex < tracks.length - 1) {
-      loadTrack(reciteState.guideAudioTrackIndex + 1);
-      void play();
+      loadTrack(reciteState.guideAudioTrackIndex + 1, { autoplay: true });
       return;
     }
     reciteState.guideAudioTrackIndex = 0;
     reciteState.guideAudioStarted = false;
     audio.removeAttribute("src");
-    updateUi("ガイド音声を最後まで再生しました。もう一度聞く場合は「音声再生」を押してください。");
+    updateUi("ガイド音声と文字同期を最後まで再生しました。もう一度聞く場合は「音声同期」を押してください。");
   });
   audio.addEventListener("error", () => {
     if (audio.src) updateUi(`${trackLabel()} の読み込みに失敗しました。`);
   });
 
+  reciteState.guideAudioController = {
+    selectSection(sectionId) {
+      const section = sutta.sections.find((item) => item.id === sectionId);
+      if (!section) return;
+      const lineIds = new Set(section.lines.map((line) => line.id));
+      const trackIndex = tracks.findIndex((track) =>
+        track.lineIds?.some((lineId) => lineIds.has(lineId)) ||
+        track.cues?.some((cue) => lineIds.has(cue.lineId))
+      );
+      if (trackIndex < 0) return;
+      const cue = tracks[trackIndex].cues?.find((item) => lineIds.has(item.lineId));
+      const seek = cue?.start || 0;
+      const autoplay = !audio.paused;
+      if (trackIndex !== reciteState.guideAudioTrackIndex || !audio.src) {
+        loadTrack(trackIndex, { seek, autoplay });
+      } else if (audio.readyState >= 1) {
+        audio.currentTime = seek;
+        syncGuideToAudio(root, sutta, reciteState);
+      } else {
+        pendingSeek = seek;
+      }
+    }
+  };
+
   loadTrack(0);
 }
 
-function pauseGuideAudio(root, reciteState) {
+function pauseGuideAudio(root, reciteState, reason = "recording") {
   const audio = reciteState.guideAudio;
   if (!audio || audio.paused) return;
   audio.pause();
-  showRecitationStatus(root, "録音への混入を防ぐため、ガイド音声を一時停止しました。", "warning");
+  const message = reason === "manual-guide"
+    ? "音声同期を一時停止し、独立した文字ガイドを開始します。"
+    : "録音への混入を防ぐため、ガイド音声を一時停止しました。";
+  showRecitationStatus(root, message, "warning");
+}
+
+function startAudioSyncedGuide(root, sutta, reciteState) {
+  stopAudioSyncedGuide(root, reciteState, { clear: false });
+  const tick = () => {
+    const audio = reciteState.guideAudio;
+    if (!audio || audio.paused || audio.ended || !root.isConnected) {
+      stopAudioSyncedGuide(root, reciteState);
+      return;
+    }
+    syncGuideToAudio(root, sutta, reciteState);
+    reciteState.audioSyncFrame = window.requestAnimationFrame(tick);
+  };
+  tick();
+}
+
+function stopAudioSyncedGuide(root, reciteState, options = {}) {
+  if (reciteState.audioSyncFrame !== null) {
+    window.cancelAnimationFrame(reciteState.audioSyncFrame);
+  }
+  reciteState.audioSyncFrame = null;
+  reciteState.audioSyncCueKey = "";
+  reciteState.audioSyncLineId = "";
+  if (options.clear !== false) {
+    clearPaceHighlight(root.querySelector("[data-recitation-stage]"));
+  }
+}
+
+function syncGuideToAudio(root, sutta, reciteState) {
+  const audio = reciteState.guideAudio;
+  const track = sutta.audio?.tracks?.[reciteState.guideAudioTrackIndex];
+  if (!audio || !track?.cues?.length) return;
+  const currentTime = audio.currentTime;
+  const cueIndex = track.cues.findIndex((cue) => currentTime >= cue.start && currentTime < cue.end);
+  if (cueIndex < 0) {
+    clearPaceHighlight(root.querySelector("[data-recitation-stage]"));
+    reciteState.audioSyncCueKey = "";
+    return;
+  }
+
+  const cue = track.cues[cueIndex];
+  const section = sutta.sections.find((item) => item.lines.some((line) => line.id === cue.lineId));
+  if (!section) return;
+  if (section.id !== reciteState.activeSectionId) {
+    reciteState.activeSectionId = section.id;
+    if (section.id !== "title") reciteState.titleCompleted = true;
+    reciteState.sequenceMode = true;
+    reciteState.revealedLineIds.clear();
+    reciteState.tsumiageActive = false;
+    reciteState.tsumiageStep = 1;
+    reciteState.reviewSectionIds = null;
+    reciteState.lastAutoResult = null;
+    updateReciteChips(root, reciteState);
+    resetRecitationReview(root, reciteState);
+    hideRecitationHelp(root);
+    renderReciteStage(root, sutta, reciteState);
+  }
+
+  const line = findSuttaLineById(sutta, cue.lineId);
+  const wordIndex = getAudioSyncedWordIndex(line, cue, currentTime);
+  const cueKey = `${track.key || reciteState.guideAudioTrackIndex}:${cueIndex}:${wordIndex ?? "line"}`;
+  if (cueKey === reciteState.audioSyncCueKey) return;
+  reciteState.audioSyncCueKey = cueKey;
+
+  const stage = root.querySelector("[data-recitation-stage]");
+  clearPaceHighlight(stage);
+  const lineElement = stage?.querySelector(`.memory-line[data-line-id="${cue.lineId}"]`);
+  const target = wordIndex === null
+    ? lineElement
+    : lineElement?.querySelector(`[data-word-index="${wordIndex}"]`);
+  target?.classList.add("pace-current");
+  if (lineElement && cue.lineId !== reciteState.audioSyncLineId) {
+    reciteState.audioSyncLineId = cue.lineId;
+    const rect = lineElement.getBoundingClientRect();
+    if (rect.top < 96 || rect.bottom > window.innerHeight - 150) {
+      lineElement.scrollIntoView({ block: "center", behavior: "auto" });
+    }
+  }
+}
+
+function getAudioSyncedWordIndex(line, cue, currentTime) {
+  const pairs = line ? getAlignedWordPairs(line) : null;
+  if (!pairs?.length) return null;
+  const duration = Math.max(0.05, cue.end - cue.start);
+  const ratio = Math.min(0.999999, Math.max(0, (currentTime - cue.start) / duration));
+  const weights = pairs.map((pair) => countMorae(pair.kana));
+  const target = ratio * weights.reduce((sum, weight) => sum + weight, 0);
+  let cursor = 0;
+  for (let index = 0; index < weights.length; index += 1) {
+    cursor += weights[index];
+    if (target < cursor) return index;
+  }
+  return weights.length - 1;
 }
 
 async function toggleRecitationRecording(root, sutta, reciteState, SpeechRecognition) {
@@ -20321,6 +24000,7 @@ function renderReciteStage(root, sutta, reciteState) {
   const bodySections = sections.filter((section) => section.id !== "title");
 
   stopPacer(root, reciteState);
+  reciteState.audioSyncCueKey = "";
   resetWordGlossBar(root.querySelector("[data-word-gloss]"), recitationStage);
   if (reciteState.tsumiageActive) {
     if (titleIsActive && titleSection) {
