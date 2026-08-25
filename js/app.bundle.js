@@ -214,27 +214,31 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 1.67,
-              "end": 2.564,
-              "kind": "title"
+              "start": 1.46,
+              "end": 3.85,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.911,
-              "end": 15.769,
-              "kind": "body"
+              "start": 3.85,
+              "end": 15.735,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 15.769,
-              "end": 28.035,
-              "kind": "body"
+              "start": 15.735,
+              "end": 28.362,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 28.035,
+              "start": 28.362,
               "end": 41.622,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -260,63 +264,73 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l2",
-              "start": 0.481,
-              "end": 1.311,
-              "kind": "title"
+              "start": 0.452,
+              "end": 3.973,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 3.712,
-              "end": 10.293,
-              "kind": "body"
+              "start": 3.973,
+              "end": 10.684,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 10.293,
-              "end": 17.278,
-              "kind": "body"
+              "start": 10.684,
+              "end": 18.009,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l3",
-              "start": 17.278,
-              "end": 24.443,
-              "kind": "body"
+              "start": 18.009,
+              "end": 25.697,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l4",
-              "start": 24.443,
-              "end": 33.268,
-              "kind": "body"
+              "start": 25.697,
+              "end": 34.443,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l5",
-              "start": 33.268,
-              "end": 42.31,
-              "kind": "body"
+              "start": 34.443,
+              "end": 43.311,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l6",
-              "start": 42.31,
-              "end": 51.451,
-              "kind": "body"
+              "start": 43.311,
+              "end": 52.409,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l7",
-              "start": 51.451,
-              "end": 61.117,
-              "kind": "body"
+              "start": 52.409,
+              "end": 61.45,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l8",
-              "start": 61.117,
-              "end": 69.716,
-              "kind": "body"
+              "start": 61.45,
+              "end": 70.21,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l9",
-              "start": 69.716,
+              "start": 70.21,
               "end": 78.685,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -699,39 +713,45 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.295,
-              "end": 1.438,
-              "kind": "title"
+              "start": 0,
+              "end": 4.379,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 4.324,
-              "end": 17.182,
-              "kind": "body"
+              "start": 4.379,
+              "end": 17.015,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 17.182,
-              "end": 30.1,
-              "kind": "body"
+              "start": 17.015,
+              "end": 29.986,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 30.1,
-              "end": 44.658,
-              "kind": "body"
+              "start": 29.986,
+              "end": 44.641,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 44.658,
-              "end": 56.942,
-              "kind": "body"
+              "start": 44.641,
+              "end": 56.895,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 56.942,
+              "start": 56.895,
               "end": 75.328,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -976,75 +996,87 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.411,
-              "end": 2.037,
-              "kind": "title"
+              "start": 0.555,
+              "end": 38.54,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.971,
-              "end": 14.327,
-              "kind": "body"
+              "start": 38.54,
+              "end": 41.979,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 14.327,
-              "end": 16.193,
-              "kind": "body"
+              "start": 41.979,
+              "end": 43.675,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 16.193,
-              "end": 25.28,
-              "kind": "body"
+              "start": 43.675,
+              "end": 47.839,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 25.28,
-              "end": 32.067,
-              "kind": "body"
+              "start": 47.839,
+              "end": 53.132,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 32.067,
-              "end": 38.3,
-              "kind": "body"
+              "start": 53.132,
+              "end": 54.531,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 38.3,
-              "end": 47.956,
-              "kind": "body"
+              "start": 54.531,
+              "end": 58.064,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l7",
-              "start": 47.956,
-              "end": 57.817,
-              "kind": "body"
+              "start": 58.064,
+              "end": 65.685,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l8",
-              "start": 57.817,
-              "end": 65.595,
-              "kind": "body"
+              "start": 65.685,
+              "end": 71.863,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l9",
-              "start": 65.595,
-              "end": 76.438,
-              "kind": "body"
+              "start": 71.863,
+              "end": 73.391,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l10",
-              "start": 76.438,
-              "end": 78.592,
-              "kind": "body"
+              "start": 73.391,
+              "end": 77.091,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l11",
-              "start": 78.592,
+              "start": 77.091,
               "end": 90.443,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -1323,51 +1355,59 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.35,
-              "end": 1.641,
-              "kind": "title"
+              "start": 0.428,
+              "end": 3.543,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.526,
-              "end": 17.609,
-              "kind": "body"
+              "start": 3.543,
+              "end": 10.977,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 17.609,
-              "end": 19.487,
-              "kind": "body"
+              "start": 10.977,
+              "end": 14.143,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 19.487,
-              "end": 25.629,
-              "kind": "body"
+              "start": 14.143,
+              "end": 17.813,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 25.629,
-              "end": 27.704,
-              "kind": "body"
+              "start": 17.813,
+              "end": 21.588,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 27.704,
-              "end": 29.582,
-              "kind": "body"
+              "start": 21.588,
+              "end": 25.752,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 29.582,
-              "end": 36.22,
-              "kind": "body"
+              "start": 25.752,
+              "end": 36.781,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l7",
-              "start": 36.22,
+              "start": 36.781,
               "end": 49.868,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -1574,81 +1614,94 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.473,
-              "end": 2.019,
-              "kind": "title"
+              "start": 0.555,
+              "end": 4.946,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.675,
-              "end": 12.938,
-              "kind": "body"
+              "start": 4.946,
+              "end": 13.116,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 12.938,
-              "end": 23.105,
-              "kind": "body"
+              "start": 13.116,
+              "end": 23.213,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 23.105,
-              "end": 33.903,
-              "kind": "body"
+              "start": 23.213,
+              "end": 34.11,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 33.903,
-              "end": 45.868,
-              "kind": "body"
+              "start": 34.11,
+              "end": 46.139,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 45.868,
-              "end": 67.635,
-              "kind": "body"
+              "start": 46.139,
+              "end": 59.195,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 67.635,
-              "end": 71.475,
-              "kind": "body"
+              "start": 59.195,
+              "end": 67.528,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l7",
-              "start": 71.475,
-              "end": 74.936,
-              "kind": "body"
+              "start": 67.528,
+              "end": 71.409,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l8",
-              "start": 74.936,
-              "end": 83.851,
-              "kind": "body"
+              "start": 71.409,
+              "end": 74.909,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l9",
-              "start": 83.851,
-              "end": 85.823,
-              "kind": "body"
+              "start": 74.909,
+              "end": 78.653,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l10",
-              "start": 85.823,
-              "end": 96.017,
-              "kind": "body"
+              "start": 78.653,
+              "end": 84.138,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l11",
-              "start": 96.017,
-              "end": 100.687,
-              "kind": "body"
+              "start": 84.138,
+              "end": 96.556,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l12",
-              "start": 100.687,
+              "start": 96.556,
               "end": 111.605,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -1981,27 +2034,31 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.398,
-              "end": 2.064,
-              "kind": "title"
+              "start": 0.458,
+              "end": 3.862,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.739,
-              "end": 29.176,
-              "kind": "body"
+              "start": 3.862,
+              "end": 29.571,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 29.176,
-              "end": 56.578,
-              "kind": "body"
+              "start": 29.571,
+              "end": 56.914,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 56.578,
+              "start": 56.914,
               "end": 88.576,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -2276,81 +2333,94 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.314,
-              "end": 2.28,
-              "kind": "title"
+              "start": 0.389,
+              "end": 4.581,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 4.375,
-              "end": 12.95,
-              "kind": "body"
+              "start": 4.581,
+              "end": 13.057,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 12.95,
-              "end": 21.788,
-              "kind": "body"
+              "start": 13.057,
+              "end": 22.17,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 21.788,
-              "end": 31.033,
-              "kind": "body"
+              "start": 22.17,
+              "end": 31.322,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 31.033,
-              "end": 40.125,
-              "kind": "body"
+              "start": 31.322,
+              "end": 40.49,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 40.125,
-              "end": 50.099,
-              "kind": "body"
+              "start": 40.49,
+              "end": 50.525,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 50.099,
-              "end": 59.955,
-              "kind": "body"
+              "start": 50.525,
+              "end": 60.351,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l3",
-              "start": 59.955,
-              "end": 69.92,
-              "kind": "body"
+              "start": 60.351,
+              "end": 70.014,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l4",
-              "start": 69.92,
-              "end": 79.978,
-              "kind": "body"
+              "start": 70.014,
+              "end": 80.478,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 79.978,
-              "end": 90.632,
-              "kind": "body"
+              "start": 80.478,
+              "end": 90.908,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 90.632,
-              "end": 100.931,
-              "kind": "body"
+              "start": 90.908,
+              "end": 101.296,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l3",
-              "start": 100.931,
-              "end": 111.247,
-              "kind": "body"
+              "start": 101.296,
+              "end": 111.508,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l4",
-              "start": 111.247,
+              "start": 111.508,
               "end": 123.327,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -2791,63 +2861,73 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.425,
-              "end": 3.053,
-              "kind": "title"
+              "start": 0.555,
+              "end": 5.367,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 5.241,
-              "end": 16.945,
-              "kind": "body"
+              "start": 5.367,
+              "end": 16.889,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 16.945,
-              "end": 32.236,
-              "kind": "body"
+              "start": 16.889,
+              "end": 32.852,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 32.236,
-              "end": 41.077,
-              "kind": "body"
+              "start": 32.852,
+              "end": 41.261,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 41.077,
-              "end": 59.029,
-              "kind": "body"
+              "start": 41.261,
+              "end": 50.44,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l3",
-              "start": 59.029,
-              "end": 68.683,
-              "kind": "body"
+              "start": 50.44,
+              "end": 59.43,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l4",
-              "start": 68.683,
-              "end": 78.131,
-              "kind": "body"
+              "start": 59.43,
+              "end": 69.551,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 78.131,
-              "end": 92.974,
-              "kind": "body"
+              "start": 69.551,
+              "end": 85.896,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 92.974,
-              "end": 100.718,
-              "kind": "body"
+              "start": 85.896,
+              "end": 101.01,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l3",
-              "start": 100.718,
+              "start": 101.01,
               "end": 120.773,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -3218,87 +3298,101 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.442,
-              "end": 2.815,
-              "kind": "title"
+              "start": 0.538,
+              "end": 6.692,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.384,
-              "end": 11.37,
-              "kind": "body"
+              "start": 6.692,
+              "end": 13.128,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 11.37,
-              "end": 19.86,
-              "kind": "body"
+              "start": 13.128,
+              "end": 20.217,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 19.86,
-              "end": 27.188,
-              "kind": "body"
+              "start": 20.217,
+              "end": 27.399,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 27.188,
-              "end": 35.541,
-              "kind": "body"
+              "start": 27.399,
+              "end": 35.585,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 35.541,
-              "end": 48.397,
-              "kind": "body"
+              "start": 35.585,
+              "end": 42.489,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 48.397,
-              "end": 51.408,
-              "kind": "body"
+              "start": 42.489,
+              "end": 48.805,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l7",
-              "start": 51.408,
-              "end": 62.689,
-              "kind": "body"
+              "start": 48.805,
+              "end": 54.934,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l8",
-              "start": 62.689,
-              "end": 66.282,
-              "kind": "body"
+              "start": 54.934,
+              "end": 62.699,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l9",
-              "start": 66.282,
-              "end": 75.321,
-              "kind": "body"
+              "start": 62.699,
+              "end": 69.447,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l10",
-              "start": 75.321,
-              "end": 82.543,
-              "kind": "body"
+              "start": 69.447,
+              "end": 76.107,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l11",
-              "start": 82.543,
-              "end": 86.05,
-              "kind": "body"
+              "start": 76.107,
+              "end": 82.791,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l12",
-              "start": 86.05,
-              "end": 97.083,
-              "kind": "body"
+              "start": 82.791,
+              "end": 97.477,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l13",
-              "start": 97.083,
+              "start": 97.477,
               "end": 114.54,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -3328,87 +3422,101 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l2",
-              "start": 0.496,
-              "end": 2.339,
-              "kind": "title"
+              "start": 0.297,
+              "end": 5.638,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 2.902,
-              "end": 19.033,
-              "kind": "body"
+              "start": 5.638,
+              "end": 19.172,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 19.033,
-              "end": 28.066,
-              "kind": "body"
+              "start": 19.172,
+              "end": 28.156,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l3",
-              "start": 28.066,
-              "end": 37.549,
-              "kind": "body"
+              "start": 28.156,
+              "end": 37.682,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l4",
-              "start": 37.549,
-              "end": 47.197,
-              "kind": "body"
+              "start": 37.682,
+              "end": 47.337,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l5",
-              "start": 47.197,
-              "end": 56.27,
-              "kind": "body"
+              "start": 47.337,
+              "end": 56.472,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l6",
-              "start": 56.27,
-              "end": 65.121,
-              "kind": "body"
+              "start": 56.472,
+              "end": 65.128,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l7",
-              "start": 65.121,
-              "end": 74.487,
-              "kind": "body"
+              "start": 65.128,
+              "end": 74.673,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l8",
-              "start": 74.487,
-              "end": 84.113,
-              "kind": "body"
+              "start": 74.673,
+              "end": 84.191,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l9",
-              "start": 84.113,
-              "end": 92.964,
-              "kind": "body"
+              "start": 84.191,
+              "end": 92.972,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l10",
-              "start": 92.964,
-              "end": 101.086,
-              "kind": "body"
+              "start": 92.972,
+              "end": 100.724,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l11",
-              "start": 101.086,
-              "end": 108.324,
-              "kind": "body"
+              "start": 100.724,
+              "end": 108.583,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l12",
-              "start": 108.324,
-              "end": 122.36,
-              "kind": "body"
+              "start": 108.583,
+              "end": 122.725,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l13",
-              "start": 122.36,
+              "start": 122.725,
               "end": 140.08,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -4249,39 +4357,45 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.227,
-              "end": 1.928,
-              "kind": "title"
+              "start": 0.324,
+              "end": 4.389,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.612,
-              "end": 17.033,
-              "kind": "body"
+              "start": 4.389,
+              "end": 17.137,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 17.033,
-              "end": 31.66,
-              "kind": "body"
+              "start": 17.137,
+              "end": 32.149,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 31.66,
-              "end": 44.262,
-              "kind": "body"
+              "start": 32.149,
+              "end": 44.504,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 44.262,
-              "end": 59.239,
-              "kind": "body"
+              "start": 44.504,
+              "end": 59.513,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l3",
-              "start": 59.239,
+              "start": 59.513,
               "end": 77.697,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -4577,285 +4691,332 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.397,
-              "end": 1.807,
-              "kind": "title"
+              "start": 0.546,
+              "end": 3.263,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.136,
-              "end": 19.001,
-              "kind": "body"
+              "start": 3.263,
+              "end": 16.177,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 19.001,
-              "end": 30.063,
-              "kind": "body"
+              "start": 16.177,
+              "end": 30.179,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 30.063,
-              "end": 51.922,
-              "kind": "body"
+              "start": 30.179,
+              "end": 44.827,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 51.922,
-              "end": 74.965,
-              "kind": "body"
+              "start": 44.827,
+              "end": 60.674,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 74.965,
-              "end": 88.199,
-              "kind": "body"
+              "start": 60.674,
+              "end": 75.217,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 88.199,
-              "end": 96.423,
-              "kind": "body"
+              "start": 75.217,
+              "end": 81.849,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l3",
-              "start": 96.423,
-              "end": 103.832,
-              "kind": "body"
+              "start": 81.849,
+              "end": 97.297,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l1",
-              "start": 103.832,
-              "end": 125.239,
-              "kind": "body"
+              "start": 97.297,
+              "end": 111.299,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l2",
-              "start": 125.239,
-              "end": 133.523,
-              "kind": "body"
+              "start": 111.299,
+              "end": 118.831,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l3",
-              "start": 133.523,
-              "end": 148.774,
-              "kind": "body"
+              "start": 118.831,
+              "end": 134.211,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l1",
-              "start": 148.774,
-              "end": 162.003,
-              "kind": "body"
+              "start": 134.211,
+              "end": 148.992,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l2",
-              "start": 162.003,
-              "end": 170.249,
-              "kind": "body"
+              "start": 148.992,
+              "end": 155.694,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l3",
-              "start": 170.249,
-              "end": 185.687,
-              "kind": "body"
+              "start": 155.694,
+              "end": 170.703,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l1",
-              "start": 185.687,
-              "end": 201.534,
-              "kind": "body"
+              "start": 170.703,
+              "end": 186.048,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l2",
-              "start": 201.534,
-              "end": 216.71,
-              "kind": "body"
+              "start": 186.048,
+              "end": 201.593,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l3",
-              "start": 216.71,
-              "end": 232.908,
-              "kind": "body"
+              "start": 201.593,
+              "end": 217.082,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l1",
-              "start": 232.908,
-              "end": 249.1,
-              "kind": "body"
+              "start": 217.082,
+              "end": 233.115,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l2",
-              "start": 249.1,
-              "end": 265.62,
-              "kind": "body"
+              "start": 233.115,
+              "end": 249.194,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l3",
-              "start": 265.62,
-              "end": 281.964,
-              "kind": "body"
+              "start": 249.194,
+              "end": 266.507,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l1",
-              "start": 281.964,
-              "end": 296.63,
-              "kind": "body"
+              "start": 266.507,
+              "end": 282.196,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l2",
-              "start": 296.63,
-              "end": 312.736,
-              "kind": "body"
+              "start": 282.196,
+              "end": 296.732,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l3",
-              "start": 312.736,
-              "end": 329.127,
-              "kind": "body"
+              "start": 296.732,
+              "end": 313.613,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l1",
-              "start": 329.127,
-              "end": 344.679,
-              "kind": "body"
+              "start": 313.613,
+              "end": 329.364,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l2",
-              "start": 344.679,
-              "end": 359.701,
-              "kind": "body"
+              "start": 329.364,
+              "end": 344.72,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l3",
-              "start": 359.701,
-              "end": 375.024,
-              "kind": "body"
+              "start": 344.72,
+              "end": 360.27,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l1",
-              "start": 375.024,
-              "end": 390.093,
-              "kind": "body"
+              "start": 360.27,
+              "end": 375.219,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l2",
-              "start": 390.093,
-              "end": 405.915,
-              "kind": "body"
+              "start": 375.219,
+              "end": 390.305,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l3",
-              "start": 405.915,
-              "end": 421.716,
-              "kind": "body"
+              "start": 390.305,
+              "end": 405.92,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l4",
-              "start": 421.716,
-              "end": 431.044,
-              "kind": "body"
+              "start": 405.92,
+              "end": 422.628,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l1",
-              "start": 431.044,
-              "end": 453.704,
-              "kind": "body"
+              "start": 422.628,
+              "end": 439.129,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l2",
-              "start": 453.704,
-              "end": 471.643,
-              "kind": "body"
+              "start": 439.129,
+              "end": 454.841,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l3",
-              "start": 471.643,
-              "end": 488.493,
-              "kind": "body"
+              "start": 454.841,
+              "end": 472.659,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l1",
-              "start": 488.493,
-              "end": 504.356,
-              "kind": "body"
+              "start": 472.659,
+              "end": 488.684,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l2",
-              "start": 504.356,
-              "end": 519.612,
-              "kind": "body"
+              "start": 488.684,
+              "end": 504.433,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l3",
-              "start": 519.612,
-              "end": 534.845,
-              "kind": "body"
+              "start": 504.433,
+              "end": 519.908,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l1",
-              "start": 534.845,
-              "end": 551.277,
-              "kind": "body"
+              "start": 519.908,
+              "end": 535.046,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l2",
-              "start": 551.277,
-              "end": 570.432,
-              "kind": "body"
+              "start": 535.046,
+              "end": 552.257,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s14-l1",
-              "start": 570.432,
-              "end": 588.115,
-              "kind": "body"
+              "start": 552.257,
+              "end": 570.685,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s14-l2",
-              "start": 588.115,
-              "end": 605.911,
-              "kind": "body"
+              "start": 570.685,
+              "end": 588.18,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s14-l3",
-              "start": 605.911,
-              "end": 614.607,
-              "kind": "body"
+              "start": 588.18,
+              "end": 606.688,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s15-l1",
-              "start": 614.607,
-              "end": 638.563,
-              "kind": "body"
+              "start": 606.688,
+              "end": 622.83,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s15-l2",
-              "start": 638.563,
-              "end": 647.258,
-              "kind": "body"
+              "start": 622.83,
+              "end": 639.109,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s16-l1",
-              "start": 647.258,
-              "end": 663.753,
-              "kind": "body"
+              "start": 639.109,
+              "end": 655.601,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s16-l2",
-              "start": 663.753,
-              "end": 672.907,
-              "kind": "body"
+              "start": 655.601,
+              "end": 673.285,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s17-l1",
-              "start": 672.907,
-              "end": 698.438,
-              "kind": "body"
+              "start": 673.285,
+              "end": 690.013,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s17-l2",
-              "start": 698.438,
+              "start": 690.013,
               "end": 710.507,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -4875,27 +5036,31 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l2",
-              "start": 0.386,
-              "end": 1.063,
-              "kind": "title"
+              "start": 0.321,
+              "end": 3.199,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s18-l1",
-              "start": 3.12,
-              "end": 15.368,
-              "kind": "body"
+              "start": 3.199,
+              "end": 15.576,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s18-l2",
-              "start": 15.368,
-              "end": 27.989,
-              "kind": "body"
+              "start": 15.576,
+              "end": 28.3,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s18-l3",
-              "start": 27.989,
+              "start": 28.3,
               "end": 43.495,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -7456,129 +7621,150 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.192,
-              "end": 1.554,
-              "kind": "title"
+              "start": 0.221,
+              "end": 4.398,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.827,
-              "end": 27.348,
-              "kind": "body"
+              "start": 4.398,
+              "end": 15.518,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 27.348,
-              "end": 40.173,
-              "kind": "body"
+              "start": 15.518,
+              "end": 28.314,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 40.173,
-              "end": 53.662,
-              "kind": "body"
+              "start": 28.314,
+              "end": 40.296,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 53.662,
-              "end": 67.119,
-              "kind": "body"
+              "start": 40.296,
+              "end": 53.903,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 67.119,
-              "end": 82.667,
-              "kind": "body"
+              "start": 53.903,
+              "end": 67.049,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 82.667,
-              "end": 97.456,
-              "kind": "body"
+              "start": 67.049,
+              "end": 83.272,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l1",
-              "start": 97.456,
-              "end": 111.725,
-              "kind": "body"
+              "start": 83.272,
+              "end": 97.833,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l2",
-              "start": 111.725,
-              "end": 125.755,
-              "kind": "body"
+              "start": 97.833,
+              "end": 112.186,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l1",
-              "start": 125.755,
-              "end": 142.265,
-              "kind": "body"
+              "start": 112.186,
+              "end": 126.078,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l2",
-              "start": 142.265,
-              "end": 157.219,
-              "kind": "body"
+              "start": 126.078,
+              "end": 143.148,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l1",
-              "start": 157.219,
-              "end": 171.372,
-              "kind": "body"
+              "start": 143.148,
+              "end": 157.526,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l2",
-              "start": 171.372,
-              "end": 185.441,
-              "kind": "body"
+              "start": 157.526,
+              "end": 172.058,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l1",
-              "start": 185.441,
-              "end": 199.14,
-              "kind": "body"
+              "start": 172.058,
+              "end": 185.41,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l2",
-              "start": 199.14,
-              "end": 205.551,
-              "kind": "body"
+              "start": 185.41,
+              "end": 199.674,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l1",
-              "start": 205.551,
-              "end": 227.544,
-              "kind": "body"
+              "start": 199.674,
+              "end": 213.183,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l2",
-              "start": 227.544,
-              "end": 242.827,
-              "kind": "body"
+              "start": 213.183,
+              "end": 228.236,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l1",
-              "start": 242.827,
-              "end": 258.269,
-              "kind": "body"
+              "start": 228.236,
+              "end": 243.226,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l2",
-              "start": 258.269,
-              "end": 272.647,
-              "kind": "body"
+              "start": 243.226,
+              "end": 258.707,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l1",
-              "start": 272.647,
-              "end": 279.379,
-              "kind": "body"
+              "start": 258.707,
+              "end": 272.875,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l2",
-              "start": 279.379,
+              "start": 272.875,
               "end": 293.724,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -7600,33 +7786,36 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l2",
-              "start": 0.393,
-              "end": 1.114,
-              "kind": "title"
+              "start": 0.31,
+              "end": 2.798,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s11-l1",
-              "start": 2.707,
-              "end": 15.479,
-              "kind": "body"
+              "start": 2.798,
+              "end": 15.813,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l2",
-              "start": 15.479,
-              "end": 22.4,
-              "kind": "body"
+              "start": 15.813,
+              "end": 29.164,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l3",
-              "start": 22.4,
-              "end": 35.681,
-              "kind": "body"
+              "start": 29.164,
+              "end": 45.515,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l1",
-              "start": 35.681,
-              "end": 45.515,
-              "kind": "body"
+              "kind": "body",
+              "audible": false
             }
           ]
         }
@@ -8887,177 +9076,206 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.391,
-              "end": 2.015,
-              "kind": "title"
+              "start": 0.178,
+              "end": 3.181,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.14,
-              "end": 20.227,
-              "kind": "body"
+              "start": 3.181,
+              "end": 10.836,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 20.227,
-              "end": 24.919,
-              "kind": "body"
+              "start": 10.836,
+              "end": 19.825,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 24.919,
-              "end": 38.024,
-              "kind": "body"
+              "start": 19.825,
+              "end": 28.766,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 38.024,
-              "end": 43.789,
-              "kind": "body"
+              "start": 28.766,
+              "end": 38.749,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 43.789,
-              "end": 56.037,
-              "kind": "body"
+              "start": 38.749,
+              "end": 47.257,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 56.037,
-              "end": 65.338,
-              "kind": "body"
+              "start": 47.257,
+              "end": 56.282,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l1",
-              "start": 65.338,
-              "end": 74.405,
-              "kind": "body"
+              "start": 56.282,
+              "end": 65.522,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l2",
-              "start": 74.405,
-              "end": 83.163,
-              "kind": "body"
+              "start": 65.522,
+              "end": 74.604,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l1",
-              "start": 83.163,
-              "end": 93.736,
-              "kind": "body"
+              "start": 74.604,
+              "end": 83.256,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l2",
-              "start": 93.736,
-              "end": 101.052,
-              "kind": "body"
+              "start": 83.256,
+              "end": 94.544,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l1",
-              "start": 101.052,
-              "end": 112.983,
-              "kind": "body"
+              "start": 94.544,
+              "end": 103.132,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l2",
-              "start": 112.983,
-              "end": 120.494,
-              "kind": "body"
+              "start": 103.132,
+              "end": 113.12,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l1",
-              "start": 120.494,
-              "end": 131.241,
-              "kind": "body"
+              "start": 113.12,
+              "end": 121.512,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l2",
-              "start": 131.241,
-              "end": 140.288,
-              "kind": "body"
+              "start": 121.512,
+              "end": 131.554,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l1",
-              "start": 140.288,
-              "end": 150.243,
-              "kind": "body"
+              "start": 131.554,
+              "end": 140.296,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l2",
-              "start": 150.243,
-              "end": 159.638,
-              "kind": "body"
+              "start": 140.296,
+              "end": 150.488,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l1",
-              "start": 159.638,
-              "end": 170.729,
-              "kind": "body"
+              "start": 150.488,
+              "end": 159.776,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l2",
-              "start": 170.729,
-              "end": 180.938,
-              "kind": "body"
+              "start": 159.776,
+              "end": 171.405,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l1",
-              "start": 180.938,
-              "end": 190.728,
-              "kind": "body"
+              "start": 171.405,
+              "end": 179.894,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l2",
-              "start": 190.728,
-              "end": 201.335,
-              "kind": "body"
+              "start": 179.894,
+              "end": 191.654,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l1",
-              "start": 201.335,
-              "end": 212.013,
-              "kind": "body"
+              "start": 191.654,
+              "end": 200.97,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l2",
-              "start": 212.013,
-              "end": 220.527,
-              "kind": "body"
+              "start": 200.97,
+              "end": 212.426,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l1",
-              "start": 220.527,
-              "end": 231.017,
-              "kind": "body"
+              "start": 212.426,
+              "end": 221.916,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l2",
-              "start": 231.017,
-              "end": 240.29,
-              "kind": "body"
+              "start": 221.916,
+              "end": 230.952,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l1",
-              "start": 240.29,
-              "end": 250.183,
-              "kind": "body"
+              "start": 230.952,
+              "end": 240.161,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l2",
-              "start": 250.183,
-              "end": 262.411,
-              "kind": "body"
+              "start": 240.161,
+              "end": 250.163,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s14-l1",
-              "start": 262.411,
-              "end": 269.483,
-              "kind": "body"
+              "start": 250.163,
+              "end": 262.302,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s14-l2",
-              "start": 269.483,
+              "start": 262.302,
               "end": 279.204,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -10244,255 +10462,297 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.442,
-              "end": 1.97,
-              "kind": "title"
+              "start": 0.286,
+              "end": 3.456,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.402,
-              "end": 19.806,
-              "kind": "body"
+              "start": 3.456,
+              "end": 11.214,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 19.806,
-              "end": 29.32,
-              "kind": "body"
+              "start": 11.214,
+              "end": 20.357,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 29.32,
-              "end": 38.585,
-              "kind": "body"
+              "start": 20.357,
+              "end": 29.556,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 38.585,
-              "end": 47.203,
-              "kind": "body"
+              "start": 29.556,
+              "end": 38.818,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 47.203,
-              "end": 56.776,
-              "kind": "body"
+              "start": 38.818,
+              "end": 47.364,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 56.776,
-              "end": 66.577,
-              "kind": "body"
+              "start": 47.364,
+              "end": 57.467,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l1",
-              "start": 66.577,
-              "end": 76.775,
-              "kind": "body"
+              "start": 57.467,
+              "end": 66.593,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l2",
-              "start": 76.775,
-              "end": 86.855,
-              "kind": "body"
+              "start": 66.593,
+              "end": 77.795,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l1",
-              "start": 86.855,
-              "end": 97.699,
-              "kind": "body"
+              "start": 77.795,
+              "end": 87.294,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l2",
-              "start": 97.699,
-              "end": 107.435,
-              "kind": "body"
+              "start": 87.294,
+              "end": 98.41,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l1",
-              "start": 107.435,
-              "end": 117.441,
-              "kind": "body"
+              "start": 98.41,
+              "end": 107.49,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l2",
-              "start": 117.441,
-              "end": 127.101,
-              "kind": "body"
+              "start": 107.49,
+              "end": 117.73,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l1",
-              "start": 127.101,
-              "end": 137.174,
-              "kind": "body"
+              "start": 117.73,
+              "end": 127.234,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l2",
-              "start": 137.174,
-              "end": 147.307,
-              "kind": "body"
+              "start": 127.234,
+              "end": 137.491,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l1",
-              "start": 147.307,
-              "end": 159.556,
-              "kind": "body"
+              "start": 137.491,
+              "end": 147.434,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l2",
-              "start": 159.556,
-              "end": 178.616,
-              "kind": "body"
+              "start": 147.434,
+              "end": 159.834,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l1",
-              "start": 178.616,
-              "end": 188.942,
-              "kind": "body"
+              "start": 159.834,
+              "end": 169.448,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l2",
-              "start": 188.942,
-              "end": 200.901,
-              "kind": "body"
+              "start": 169.448,
+              "end": 179.574,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l1",
-              "start": 200.901,
-              "end": 211.948,
-              "kind": "body"
+              "start": 179.574,
+              "end": 189.15,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l2",
-              "start": 211.948,
-              "end": 223.62,
-              "kind": "body"
+              "start": 189.15,
+              "end": 201.752,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l1",
-              "start": 223.62,
-              "end": 228.463,
-              "kind": "body"
+              "start": 201.752,
+              "end": 212.086,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l2",
-              "start": 228.463,
-              "end": 243.565,
-              "kind": "body"
+              "start": 212.086,
+              "end": 224.626,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l1",
-              "start": 243.565,
-              "end": 250.65,
-              "kind": "body"
+              "start": 224.626,
+              "end": 233.409,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l2",
-              "start": 250.65,
-              "end": 264.331,
-              "kind": "body"
+              "start": 233.409,
+              "end": 243.791,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l1",
-              "start": 264.331,
-              "end": 273.766,
-              "kind": "body"
+              "start": 243.791,
+              "end": 253.74,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l2",
-              "start": 273.766,
-              "end": 283.948,
-              "kind": "body"
+              "start": 253.74,
+              "end": 264.576,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s14-l1",
-              "start": 283.948,
-              "end": 293.142,
-              "kind": "body"
+              "start": 264.576,
+              "end": 273.922,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s14-l2",
-              "start": 293.142,
-              "end": 305.991,
-              "kind": "body"
+              "start": 273.922,
+              "end": 284.253,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s15-l1",
-              "start": 305.991,
-              "end": 316.802,
-              "kind": "body"
+              "start": 284.253,
+              "end": 294.467,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s15-l2",
-              "start": 316.802,
-              "end": 327.464,
-              "kind": "body"
+              "start": 294.467,
+              "end": 306.403,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s16-l1",
-              "start": 327.464,
-              "end": 337.574,
-              "kind": "body"
+              "start": 306.403,
+              "end": 316.421,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s16-l2",
-              "start": 337.574,
-              "end": 350.854,
-              "kind": "body"
+              "start": 316.421,
+              "end": 326.758,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s17-l1",
-              "start": 350.854,
-              "end": 361.514,
-              "kind": "body"
+              "start": 326.758,
+              "end": 337.293,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s17-l2",
-              "start": 361.514,
-              "end": 373.46,
-              "kind": "body"
+              "start": 337.293,
+              "end": 351.521,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s18-l1",
-              "start": 373.46,
-              "end": 386.04,
-              "kind": "body"
+              "start": 351.521,
+              "end": 361.254,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s18-l2",
-              "start": 386.04,
-              "end": 397.363,
-              "kind": "body"
+              "start": 361.254,
+              "end": 373.221,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s18-l3",
-              "start": 397.363,
-              "end": 409.039,
-              "kind": "body"
+              "start": 373.221,
+              "end": 386.837,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s19-l1",
-              "start": 409.039,
-              "end": 413.692,
-              "kind": "body"
+              "start": 386.837,
+              "end": 397.545,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s19-l2",
-              "start": 413.692,
-              "end": 421.321,
-              "kind": "body"
+              "start": 397.545,
+              "end": 408.861,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s20-l1",
-              "start": 421.321,
-              "end": 433.594,
-              "kind": "body"
+              "start": 408.861,
+              "end": 421.09,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s20-l2",
-              "start": 433.594,
+              "start": 421.09,
               "end": 445.063,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -12302,63 +12562,73 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.222,
-              "end": 2.066,
-              "kind": "title"
+              "start": 0.078,
+              "end": 3.107,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.218,
-              "end": 12.169,
-              "kind": "body"
+              "start": 3.107,
+              "end": 12.455,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 12.169,
-              "end": 28.079,
-              "kind": "body"
+              "start": 12.455,
+              "end": 23.286,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 28.079,
-              "end": 41.946,
-              "kind": "body"
+              "start": 23.286,
+              "end": 35.951,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l1",
-              "start": 41.946,
-              "end": 53.878,
-              "kind": "body"
+              "start": 35.951,
+              "end": 48.155,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l1",
-              "start": 53.878,
-              "end": 65.837,
-              "kind": "body"
+              "start": 48.155,
+              "end": 60.735,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l1",
-              "start": 65.837,
-              "end": 77.712,
-              "kind": "body"
+              "start": 60.735,
+              "end": 72.668,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l1",
-              "start": 77.712,
-              "end": 84.301,
-              "kind": "body"
+              "start": 72.668,
+              "end": 84.575,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l1",
-              "start": 84.301,
-              "end": 95.664,
-              "kind": "body"
+              "start": 84.575,
+              "end": 95.926,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l2",
-              "start": 95.664,
+              "start": 95.926,
               "end": 109.72,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -12786,189 +13056,220 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.361,
-              "end": 1.728,
-              "kind": "title"
+              "start": 0.432,
+              "end": 3.764,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.728,
-              "end": 7.543,
-              "kind": "body"
+              "start": 3.764,
+              "end": 6.433,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 7.543,
-              "end": 19.674,
-              "kind": "body"
+              "start": 6.433,
+              "end": 19.876,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 19.674,
-              "end": 38.69,
-              "kind": "body"
+              "start": 19.876,
+              "end": 31.569,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 38.69,
-              "end": 51.308,
-              "kind": "body"
+              "start": 31.569,
+              "end": 43.965,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 51.308,
-              "end": 70.53,
-              "kind": "body"
+              "start": 43.965,
+              "end": 56.661,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 70.53,
-              "end": 79.084,
-              "kind": "body"
+              "start": 56.661,
+              "end": 71.697,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 79.084,
-              "end": 83.621,
-              "kind": "body"
+              "start": 71.697,
+              "end": 79.259,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 83.621,
-              "end": 98.185,
-              "kind": "body"
+              "start": 79.259,
+              "end": 90.405,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 98.185,
-              "end": 106.796,
-              "kind": "body"
+              "start": 90.405,
+              "end": 98.373,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 106.796,
-              "end": 116.457,
-              "kind": "body"
+              "start": 98.373,
+              "end": 107.553,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l1",
-              "start": 116.457,
-              "end": 124.762,
-              "kind": "body"
+              "start": 107.553,
+              "end": 116.588,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l2",
-              "start": 124.762,
-              "end": 132.785,
-              "kind": "body"
+              "start": 116.588,
+              "end": 125.275,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l1",
-              "start": 132.785,
-              "end": 142.417,
-              "kind": "body"
+              "start": 125.275,
+              "end": 133.677,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l2",
-              "start": 142.417,
-              "end": 152.367,
-              "kind": "body"
+              "start": 133.677,
+              "end": 143.452,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l1",
-              "start": 152.367,
-              "end": 160.727,
-              "kind": "body"
+              "start": 143.452,
+              "end": 152.549,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l2",
-              "start": 160.727,
-              "end": 170.801,
-              "kind": "body"
+              "start": 152.549,
+              "end": 161.743,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l1",
-              "start": 170.801,
-              "end": 180.589,
-              "kind": "body"
+              "start": 161.743,
+              "end": 170.873,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l2",
-              "start": 180.589,
-              "end": 189.487,
-              "kind": "body"
+              "start": 170.873,
+              "end": 181.639,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l1",
-              "start": 189.487,
-              "end": 199.78,
-              "kind": "body"
+              "start": 181.639,
+              "end": 189.645,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l2",
-              "start": 199.78,
-              "end": 209.342,
-              "kind": "body"
+              "start": 189.645,
+              "end": 200.772,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l1",
-              "start": 209.342,
-              "end": 217.897,
-              "kind": "body"
+              "start": 200.772,
+              "end": 209.522,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l2",
-              "start": 217.897,
-              "end": 226.544,
-              "kind": "body"
+              "start": 209.522,
+              "end": 218.061,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l1",
-              "start": 226.544,
-              "end": 235.725,
-              "kind": "body"
+              "start": 218.061,
+              "end": 226.713,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l2",
-              "start": 235.725,
-              "end": 245.495,
-              "kind": "body"
+              "start": 226.713,
+              "end": 236.543,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l1",
-              "start": 245.495,
-              "end": 255.477,
-              "kind": "body"
+              "start": 236.543,
+              "end": 245.761,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l2",
-              "start": 255.477,
-              "end": 265.628,
-              "kind": "body"
+              "start": 245.761,
+              "end": 256.337,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l1",
-              "start": 265.628,
-              "end": 275.352,
-              "kind": "body"
+              "start": 256.337,
+              "end": 265.734,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l2",
-              "start": 275.352,
-              "end": 291.039,
-              "kind": "body"
+              "start": 265.734,
+              "end": 275.481,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l1",
-              "start": 291.039,
-              "end": 295.145,
-              "kind": "body"
+              "start": 275.481,
+              "end": 285.167,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l2",
-              "start": 295.145,
+              "start": 285.167,
               "end": 303.977,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -14299,549 +14600,640 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.526,
-              "end": 2.05,
-              "kind": "title"
+              "start": 0.121,
+              "end": 4.728,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 4.695,
-              "end": 11.8,
-              "kind": "body"
+              "start": 4.728,
+              "end": 10.522,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 11.8,
-              "end": 22.298,
-              "kind": "body"
+              "start": 10.522,
+              "end": 17.165,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 22.298,
-              "end": 26.806,
-              "kind": "body"
+              "start": 17.165,
+              "end": 22.246,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 26.806,
-              "end": 37.732,
-              "kind": "body"
+              "start": 22.246,
+              "end": 31.716,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 37.732,
-              "end": 42.457,
-              "kind": "body"
+              "start": 31.716,
+              "end": 37.852,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 42.457,
-              "end": 53.253,
-              "kind": "body"
+              "start": 37.852,
+              "end": 47.611,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 53.253,
-              "end": 58.12,
-              "kind": "body"
+              "start": 47.611,
+              "end": 53.18,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l1",
-              "start": 58.12,
-              "end": 68.449,
-              "kind": "body"
+              "start": 53.18,
+              "end": 61.26,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l2",
-              "start": 68.449,
-              "end": 83.521,
-              "kind": "body"
+              "start": 61.26,
+              "end": 69.297,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l1",
-              "start": 83.521,
-              "end": 88.097,
-              "kind": "body"
+              "start": 69.297,
+              "end": 77.733,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l2",
-              "start": 88.097,
-              "end": 99.363,
-              "kind": "body"
+              "start": 77.733,
+              "end": 83.559,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l1",
-              "start": 99.363,
-              "end": 104.714,
-              "kind": "body"
+              "start": 83.559,
+              "end": 93.167,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s6-l2",
-              "start": 104.714,
-              "end": 114.982,
-              "kind": "body"
+              "start": 93.167,
+              "end": 99.614,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l1",
-              "start": 114.982,
-              "end": 121.709,
-              "kind": "body"
+              "start": 99.614,
+              "end": 108.746,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s7-l2",
-              "start": 121.709,
-              "end": 131.681,
-              "kind": "body"
+              "start": 108.746,
+              "end": 115.548,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l1",
-              "start": 131.681,
-              "end": 136.204,
-              "kind": "body"
+              "start": 115.548,
+              "end": 124.229,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s8-l2",
-              "start": 136.204,
-              "end": 145.692,
-              "kind": "body"
+              "start": 124.229,
+              "end": 132.097,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l1",
-              "start": 145.692,
-              "end": 150.764,
-              "kind": "body"
+              "start": 132.097,
+              "end": 139.495,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s9-l2",
-              "start": 150.764,
-              "end": 162.118,
-              "kind": "body"
+              "start": 139.495,
+              "end": 146.004,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l1",
-              "start": 162.118,
-              "end": 167.343,
-              "kind": "body"
+              "start": 146.004,
+              "end": 154.855,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s10-l2",
-              "start": 167.343,
-              "end": 176.376,
-              "kind": "body"
+              "start": 154.855,
+              "end": 162.924,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l1",
-              "start": 176.376,
-              "end": 191.455,
-              "kind": "body"
+              "start": 162.924,
+              "end": 170.448,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s11-l2",
-              "start": 191.455,
-              "end": 196.201,
-              "kind": "body"
+              "start": 170.448,
+              "end": 176.329,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l1",
-              "start": 196.201,
-              "end": 205.9,
-              "kind": "body"
+              "start": 176.329,
+              "end": 185.025,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s12-l2",
-              "start": 205.9,
-              "end": 208.721,
-              "kind": "body"
+              "start": 185.025,
+              "end": 191.465,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l1",
-              "start": 208.721,
-              "end": 221.216,
-              "kind": "body"
+              "start": 191.465,
+              "end": 199.46,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s13-l2",
-              "start": 221.216,
-              "end": 224.037,
-              "kind": "body"
+              "start": 199.46,
+              "end": 205.83,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s14-l1",
-              "start": 224.037,
-              "end": 232.645,
-              "kind": "body"
+              "start": 205.83,
+              "end": 212.773,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s14-l2",
-              "start": 232.645,
-              "end": 237.299,
-              "kind": "body"
+              "start": 212.773,
+              "end": 221.19,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s15-l1",
-              "start": 237.299,
-              "end": 249.582,
-              "kind": "body"
+              "start": 221.19,
+              "end": 229.458,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s15-l2",
-              "start": 249.582,
-              "end": 256.036,
-              "kind": "body"
+              "start": 229.458,
+              "end": 237.794,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s16-l1",
-              "start": 256.036,
-              "end": 270.537,
-              "kind": "body"
+              "start": 237.794,
+              "end": 246.698,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s16-l2",
-              "start": 270.537,
-              "end": 273.358,
-              "kind": "body"
+              "start": 246.698,
+              "end": 256.658,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s17-l1",
-              "start": 273.358,
-              "end": 286.656,
-              "kind": "body"
+              "start": 256.658,
+              "end": 263.615,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s17-l2",
-              "start": 286.656,
-              "end": 289.477,
-              "kind": "body"
+              "start": 263.615,
+              "end": 270.792,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s18-l1",
-              "start": 289.477,
-              "end": 302.09,
-              "kind": "body"
+              "start": 270.792,
+              "end": 279.528,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s18-l2",
-              "start": 302.09,
-              "end": 304.91,
-              "kind": "body"
+              "start": 279.528,
+              "end": 286.884,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s19-l1",
-              "start": 304.91,
-              "end": 317.846,
-              "kind": "body"
+              "start": 286.884,
+              "end": 295.051,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s19-l2",
-              "start": 317.846,
-              "end": 320.667,
-              "kind": "body"
+              "start": 295.051,
+              "end": 302.335,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s20-l1",
-              "start": 320.667,
-              "end": 328.711,
-              "kind": "body"
+              "start": 302.335,
+              "end": 310.789,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s20-l2",
-              "start": 328.711,
-              "end": 336.199,
-              "kind": "body"
+              "start": 310.789,
+              "end": 319.155,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s21-l1",
-              "start": 336.199,
-              "end": 351.919,
-              "kind": "body"
+              "start": 319.155,
+              "end": 329.558,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s21-l2",
-              "start": 351.919,
-              "end": 354.74,
-              "kind": "body"
+              "start": 329.558,
+              "end": 336.12,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s22-l1",
-              "start": 354.74,
-              "end": 359.914,
-              "kind": "body"
+              "start": 336.12,
+              "end": 342.957,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s22-l2",
-              "start": 359.914,
-              "end": 367.297,
-              "kind": "body"
+              "start": 342.957,
+              "end": 352.884,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s23-l1",
-              "start": 367.297,
-              "end": 371.621,
-              "kind": "body"
+              "start": 352.884,
+              "end": 360.791,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s23-l2",
-              "start": 371.621,
-              "end": 381.448,
-              "kind": "body"
+              "start": 360.791,
+              "end": 367.207,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s24-l1",
-              "start": 381.448,
-              "end": 389.446,
-              "kind": "body"
+              "start": 367.207,
+              "end": 374.927,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s24-l2",
-              "start": 389.446,
-              "end": 396.356,
-              "kind": "body"
+              "start": 374.927,
+              "end": 381.691,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s25-l1",
-              "start": 396.356,
-              "end": 409.409,
-              "kind": "body"
+              "start": 381.691,
+              "end": 389.556,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s25-l2",
-              "start": 409.409,
-              "end": 412.23,
-              "kind": "body"
+              "start": 389.556,
+              "end": 396.512,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s26-l1",
-              "start": 412.23,
-              "end": 423.816,
-              "kind": "body"
+              "start": 396.512,
+              "end": 402.621,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s26-l2",
-              "start": 423.816,
-              "end": 426.637,
-              "kind": "body"
+              "start": 402.621,
+              "end": 410.534,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s27-l1",
-              "start": 426.637,
-              "end": 431.237,
-              "kind": "body"
+              "start": 410.534,
+              "end": 417.061,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s27-l2",
-              "start": 431.237,
-              "end": 438.731,
-              "kind": "body"
+              "start": 417.061,
+              "end": 424.099,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s28-l1",
-              "start": 438.731,
-              "end": 451.653,
-              "kind": "body"
+              "start": 424.099,
+              "end": 430.176,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s28-l2",
-              "start": 451.653,
-              "end": 454.474,
-              "kind": "body"
+              "start": 430.176,
+              "end": 439.371,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s29-l1",
-              "start": 454.474,
-              "end": 463.22,
-              "kind": "body"
+              "start": 439.371,
+              "end": 445.356,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s29-l2",
-              "start": 463.22,
-              "end": 466.04,
-              "kind": "body"
+              "start": 445.356,
+              "end": 451.8,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s30-l1",
-              "start": 466.04,
-              "end": 477.423,
-              "kind": "body"
+              "start": 451.8,
+              "end": 456.919,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s30-l2",
-              "start": 477.423,
-              "end": 480.244,
-              "kind": "body"
+              "start": 456.919,
+              "end": 463.38,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s31-l1",
-              "start": 480.244,
-              "end": 491.035,
-              "kind": "body"
+              "start": 463.38,
+              "end": 470.196,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s31-l2",
-              "start": 491.035,
-              "end": 493.855,
-              "kind": "body"
+              "start": 470.196,
+              "end": 477.729,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s32-l1",
-              "start": 493.855,
-              "end": 505.013,
-              "kind": "body"
+              "start": 477.729,
+              "end": 484.352,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s32-l2",
-              "start": 505.013,
-              "end": 507.833,
-              "kind": "body"
+              "start": 484.352,
+              "end": 491.647,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s33-l1",
-              "start": 507.833,
-              "end": 519.087,
-              "kind": "body"
+              "start": 491.647,
+              "end": 498.681,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s33-l2",
-              "start": 519.087,
-              "end": 521.908,
-              "kind": "body"
+              "start": 498.681,
+              "end": 505.199,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s34-l1",
-              "start": 521.908,
-              "end": 533.917,
-              "kind": "body"
+              "start": 505.199,
+              "end": 511.451,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s34-l2",
-              "start": 533.917,
-              "end": 538.205,
-              "kind": "body"
+              "start": 511.451,
+              "end": 519.625,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s35-l1",
-              "start": 538.205,
-              "end": 547.777,
-              "kind": "body"
+              "start": 519.625,
+              "end": 526.98,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s35-l2",
-              "start": 547.777,
-              "end": 550.598,
-              "kind": "body"
+              "start": 526.98,
+              "end": 534.059,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s36-l1",
-              "start": 550.598,
-              "end": 561.187,
-              "kind": "body"
+              "start": 534.059,
+              "end": 541.082,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s36-l2",
-              "start": 561.187,
-              "end": 564.27,
-              "kind": "body"
+              "start": 541.082,
+              "end": 547.99,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s37-l1",
-              "start": 564.27,
-              "end": 574.669,
-              "kind": "body"
+              "start": 547.99,
+              "end": 554.572,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s37-l2",
-              "start": 574.669,
-              "end": 580.541,
-              "kind": "body"
+              "start": 554.572,
+              "end": 561.371,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s38-l1",
-              "start": 580.541,
-              "end": 590.209,
-              "kind": "body"
+              "start": 561.371,
+              "end": 567.913,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s38-l2",
-              "start": 590.209,
-              "end": 593.03,
-              "kind": "body"
+              "start": 567.913,
+              "end": 575.895,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s39-l1",
-              "start": 593.03,
-              "end": 605.582,
-              "kind": "body"
+              "start": 575.895,
+              "end": 583.566,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s39-l2",
-              "start": 605.582,
-              "end": 608.402,
-              "kind": "body"
+              "start": 583.566,
+              "end": 590.715,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s40-l1",
-              "start": 608.402,
-              "end": 620.9,
-              "kind": "body"
+              "start": 590.715,
+              "end": 597.66,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s40-l2",
-              "start": 620.9,
-              "end": 625.391,
-              "kind": "body"
+              "start": 597.66,
+              "end": 606.403,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s41-l1",
-              "start": 625.391,
-              "end": 629.215,
-              "kind": "body"
+              "start": 606.403,
+              "end": 614.083,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s41-l2",
-              "start": 629.215,
-              "end": 636.084,
-              "kind": "body"
+              "start": 614.083,
+              "end": 621.055,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s42-l1",
-              "start": 636.084,
-              "end": 644.09,
-              "kind": "body"
+              "start": 621.055,
+              "end": 629.011,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s42-l2",
-              "start": 644.09,
-              "end": 653.554,
-              "kind": "body"
+              "start": 629.011,
+              "end": 636.352,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s43-l1",
-              "start": 653.554,
-              "end": 659.413,
-              "kind": "body"
+              "start": 636.352,
+              "end": 644.617,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s43-l2",
-              "start": 659.413,
-              "end": 667.088,
-              "kind": "body"
+              "start": 644.617,
+              "end": 654.483,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s44-l1",
-              "start": 667.088,
-              "end": 681.962,
-              "kind": "body"
+              "start": 654.483,
+              "end": 667.255,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s44-l2",
-              "start": 681.962,
-              "end": 688.805,
-              "kind": "body"
+              "start": 667.255,
+              "end": 678.264,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s44-l3",
-              "start": 688.805,
+              "start": 678.264,
               "end": 695.074,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -17736,57 +18128,66 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.278,
-              "end": 2.333,
-              "kind": "title"
+              "start": 0.284,
+              "end": 4.455,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 4.335,
-              "end": 14.445,
-              "kind": "body"
+              "start": 4.455,
+              "end": 14.612,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 14.445,
-              "end": 24.89,
-              "kind": "body"
+              "start": 14.612,
+              "end": 25.144,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 24.89,
-              "end": 35.133,
-              "kind": "body"
+              "start": 25.144,
+              "end": 35.365,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 35.133,
-              "end": 46.189,
-              "kind": "body"
+              "start": 35.365,
+              "end": 46.67,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 46.189,
-              "end": 57.01,
-              "kind": "body"
+              "start": 46.67,
+              "end": 57.195,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 57.01,
-              "end": 67.587,
-              "kind": "body"
+              "start": 57.195,
+              "end": 67.543,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l7",
-              "start": 67.587,
-              "end": 85.623,
-              "kind": "body"
+              "start": 67.543,
+              "end": 79.223,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l8",
-              "start": 85.623,
+              "start": 79.223,
               "end": 95.043,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -18151,21 +18552,24 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.338,
-              "end": 1.737,
-              "kind": "title"
+              "start": 0.169,
+              "end": 5.313,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 4.946,
-              "end": 25.108,
-              "kind": "body"
+              "start": 5.313,
+              "end": 25.487,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 25.108,
+              "start": 25.487,
               "end": 51.502,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -18186,33 +18590,38 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l2",
-              "start": 0.348,
-              "end": 1.464,
-              "kind": "title"
+              "start": 0.398,
+              "end": 3.017,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 2.921,
-              "end": 37.836,
-              "kind": "body"
+              "start": 3.017,
+              "end": 13.668,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 37.836,
-              "end": 56.604,
-              "kind": "body"
+              "start": 13.668,
+              "end": 58.078,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l3",
-              "start": 56.604,
-              "end": 98.262,
-              "kind": "body"
+              "start": 58.078,
+              "end": 70.951,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l4",
-              "start": 98.262,
+              "start": 70.951,
               "end": 121.13,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -18495,111 +18904,127 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.254,
-              "end": 2.637,
-              "kind": "title"
+              "start": 0.271,
+              "end": 5.536,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 5.347,
-              "end": 20.136,
-              "kind": "body"
+              "start": 5.536,
+              "end": 12.733,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 20.136,
-              "end": 27.792,
-              "kind": "body"
+              "start": 12.733,
+              "end": 20.115,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 27.792,
-              "end": 35.311,
-              "kind": "body"
+              "start": 20.115,
+              "end": 27.949,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 35.311,
-              "end": 38.796,
-              "kind": "body"
+              "start": 27.949,
+              "end": 35.597,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 38.796,
-              "end": 51.922,
-              "kind": "body"
+              "start": 35.597,
+              "end": 43.654,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 51.922,
-              "end": 55.539,
-              "kind": "body"
+              "start": 43.654,
+              "end": 51.927,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l7",
-              "start": 55.539,
-              "end": 69.328,
-              "kind": "body"
+              "start": 51.927,
+              "end": 60.599,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l8",
-              "start": 69.328,
-              "end": 73.076,
-              "kind": "body"
+              "start": 60.599,
+              "end": 69.623,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l9",
-              "start": 73.076,
-              "end": 86.897,
-              "kind": "body"
+              "start": 69.623,
+              "end": 78.063,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l10",
-              "start": 86.897,
-              "end": 95.968,
-              "kind": "body"
+              "start": 78.063,
+              "end": 88.005,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l11",
-              "start": 95.968,
-              "end": 99.584,
-              "kind": "body"
+              "start": 88.005,
+              "end": 96.166,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l12",
-              "start": 99.584,
-              "end": 104.776,
-              "kind": "body"
+              "start": 96.166,
+              "end": 104.769,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l13",
-              "start": 104.776,
-              "end": 114.082,
-              "kind": "body"
+              "start": 104.769,
+              "end": 114.331,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l14",
-              "start": 114.082,
-              "end": 123.709,
-              "kind": "body"
+              "start": 114.331,
+              "end": 123.974,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l15",
-              "start": 123.709,
-              "end": 132.989,
-              "kind": "body"
+              "start": 123.974,
+              "end": 133.203,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l16",
-              "start": 132.989,
-              "end": 137.724,
-              "kind": "body"
+              "start": 133.203,
+              "end": 146.052,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l17",
-              "start": 137.724,
-              "end": 146.052,
-              "kind": "body"
+              "kind": "body",
+              "audible": false
             }
           ]
         }
@@ -19270,75 +19695,85 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.364,
-              "end": 1.688,
-              "kind": "title"
+              "start": 0.073,
+              "end": 3.704,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.528,
-              "end": 15.154,
-              "kind": "body"
+              "start": 3.704,
+              "end": 15.343,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 15.154,
-              "end": 28.01,
-              "kind": "body"
+              "start": 15.343,
+              "end": 28.309,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 28.01,
-              "end": 51.333,
-              "kind": "body"
+              "start": 28.309,
+              "end": 38.581,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 51.333,
-              "end": 62.438,
-              "kind": "body"
+              "start": 38.581,
+              "end": 51.559,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 62.438,
-              "end": 75.509,
-              "kind": "body"
+              "start": 51.559,
+              "end": 62.708,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 75.509,
-              "end": 82.257,
-              "kind": "body"
+              "start": 62.708,
+              "end": 77.045,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l7",
-              "start": 82.257,
-              "end": 88.507,
-              "kind": "body"
+              "start": 77.045,
+              "end": 88.657,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l8",
-              "start": 88.507,
-              "end": 109.329,
-              "kind": "body"
+              "start": 88.657,
+              "end": 102.889,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l9",
-              "start": 109.329,
-              "end": 125.148,
-              "kind": "body"
+              "start": 102.889,
+              "end": 116.838,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l10",
-              "start": 125.148,
-              "end": 135.413,
-              "kind": "body"
+              "start": 116.838,
+              "end": 140.869,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l11",
-              "start": 135.413,
-              "end": 140.869,
-              "kind": "body"
+              "kind": "body",
+              "audible": false
             }
           ]
         }
@@ -19777,21 +20212,24 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.43,
-              "end": 1.811,
-              "kind": "title"
+              "start": 0,
+              "end": 3.111,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 3.002,
-              "end": 13.677,
-              "kind": "body"
+              "start": 3.111,
+              "end": 13.757,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 13.677,
+              "start": 13.757,
               "end": 26.873,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -19814,45 +20252,52 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l2",
-              "start": 0.51,
-              "end": 1.585,
-              "kind": "title"
+              "start": 0.207,
+              "end": 3.588,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 3.538,
-              "end": 15.741,
-              "kind": "body"
+              "start": 3.588,
+              "end": 15.916,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l2",
-              "start": 15.741,
-              "end": 28.65,
-              "kind": "body"
+              "start": 15.916,
+              "end": 29.004,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l3",
-              "start": 28.65,
-              "end": 37.312,
-              "kind": "body"
+              "start": 29.004,
+              "end": 37.528,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l4",
-              "start": 37.312,
-              "end": 47.106,
-              "kind": "body"
+              "start": 37.528,
+              "end": 47.357,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l5",
-              "start": 47.106,
-              "end": 55.775,
-              "kind": "body"
+              "start": 47.357,
+              "end": 55.959,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s2-l6",
-              "start": 55.775,
+              "start": 55.959,
               "end": 66.167,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -19871,21 +20316,24 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l3",
-              "start": 0.655,
-              "end": 2.058,
-              "kind": "title"
+              "start": 0.026,
+              "end": 3.745,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 3.625,
-              "end": 13.727,
-              "kind": "body"
+              "start": 3.745,
+              "end": 13.863,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 13.727,
+              "start": 13.863,
               "end": 27.044,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -19910,57 +20358,66 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l4",
-              "start": 0.44,
-              "end": 1.649,
-              "kind": "title"
+              "start": 0.179,
+              "end": 3.038,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s4-l1",
-              "start": 2.958,
-              "end": 15.155,
-              "kind": "body"
+              "start": 3.038,
+              "end": 15.433,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s4-l2",
-              "start": 15.155,
-              "end": 29.054,
-              "kind": "body"
+              "start": 15.433,
+              "end": 29.449,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l1",
-              "start": 29.054,
-              "end": 47.356,
-              "kind": "body"
+              "start": 29.449,
+              "end": 41.064,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l2",
-              "start": 47.356,
-              "end": 54.195,
-              "kind": "body"
+              "start": 41.064,
+              "end": 54.487,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l3",
-              "start": 54.195,
-              "end": 67.806,
-              "kind": "body"
+              "start": 54.487,
+              "end": 67.972,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l4",
-              "start": 67.806,
-              "end": 88.908,
-              "kind": "body"
+              "start": 67.972,
+              "end": 82.132,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l5",
-              "start": 88.908,
-              "end": 104.974,
-              "kind": "body"
+              "start": 82.132,
+              "end": 97.062,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s5-l6",
-              "start": 104.974,
+              "start": 97.062,
               "end": 115.426,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -20682,45 +21139,52 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l1",
-              "start": 0.283,
-              "end": 1.41,
-              "kind": "title"
+              "start": 0.019,
+              "end": 5.972,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 2.512,
-              "end": 16.888,
-              "kind": "body"
+              "start": 5.972,
+              "end": 16.807,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 16.888,
-              "end": 29.665,
-              "kind": "body"
+              "start": 16.807,
+              "end": 29.918,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 29.665,
-              "end": 41.686,
-              "kind": "body"
+              "start": 29.918,
+              "end": 41.934,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 41.686,
-              "end": 55.452,
-              "kind": "body"
+              "start": 41.934,
+              "end": 55.795,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 55.452,
-              "end": 68.392,
-              "kind": "body"
+              "start": 55.795,
+              "end": 68.58,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 68.392,
+              "start": 68.58,
               "end": 84.306,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -20738,15 +21202,17 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l2",
-              "start": 0.54,
-              "end": 2.118,
-              "kind": "title"
+              "start": 0,
+              "end": 3.716,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s2-l1",
-              "start": 3.652,
+              "start": 3.716,
               "end": 48.295,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         },
@@ -20765,21 +21231,24 @@ const EMBEDDED_SUTTAS = {
           "cues": [
             {
               "lineId": "title-l3",
-              "start": 0.553,
-              "end": 1.311,
-              "kind": "title"
+              "start": 0,
+              "end": 3.743,
+              "kind": "title",
+              "audible": true
             },
             {
               "lineId": "s3-l1",
-              "start": 3.715,
-              "end": 38.619,
-              "kind": "body"
+              "start": 3.743,
+              "end": 50.905,
+              "kind": "body",
+              "audible": true
             },
             {
               "lineId": "s3-l2",
-              "start": 38.619,
+              "start": 50.905,
               "end": 54.011,
-              "kind": "body"
+              "kind": "body",
+              "audible": true
             }
           ]
         }
@@ -22693,11 +23162,13 @@ function setupGuideAudio(root, sutta, reciteState) {
       if (!section) return;
       const lineIds = new Set(section.lines.map((line) => line.id));
       const trackIndex = tracks.findIndex((track) =>
-        track.lineIds?.some((lineId) => lineIds.has(lineId)) ||
         track.cues?.some((cue) => lineIds.has(cue.lineId))
       );
       if (trackIndex < 0) return;
-      const cue = tracks[trackIndex].cues?.find((item) => lineIds.has(item.lineId));
+      const trackCues = tracks[trackIndex].cues || [];
+      const firstSectionCueIndex = trackCues.findIndex((item) => lineIds.has(item.lineId));
+      const cue = trackCues.find((item) => item.audible !== false && lineIds.has(item.lineId))
+        || trackCues.slice(0, Math.max(0, firstSectionCueIndex)).reverse().find((item) => item.audible !== false);
       const seek = cue?.start || 0;
       const autoplay = !audio.paused;
       if (trackIndex !== reciteState.guideAudioTrackIndex || !audio.src) {
@@ -22755,7 +23226,13 @@ function syncGuideToAudio(root, sutta, reciteState) {
   const track = sutta.audio?.tracks?.[reciteState.guideAudioTrackIndex];
   if (!audio || !track?.cues?.length) return;
   const currentTime = audio.currentTime;
-  const cueIndex = track.cues.findIndex((cue) => currentTime >= cue.start && currentTime < cue.end);
+  const cueIndex = track.cues.findIndex((cue) =>
+    cue.audible !== false
+    && Number.isFinite(cue.start)
+    && Number.isFinite(cue.end)
+    && currentTime >= cue.start
+    && currentTime < cue.end
+  );
   if (cueIndex < 0) {
     clearPaceHighlight(root.querySelector("[data-recitation-stage]"));
     reciteState.audioSyncCueKey = "";
@@ -25199,7 +25676,7 @@ async function renderCalibration(app, catalog) {
         <button class="button ghost" type="button" data-action="seek-forward">＋3秒 <kbd>→</kbd></button>
         <button class="button ghost" type="button" data-action="replay">選択行の2秒前から</button>
         <button class="button ghost" type="button" data-action="undo">取り消す <kbd>Ctrl+Z</kbd></button>
-        <button class="button ghost" type="button" data-action="skip-title" hidden>経典名は音声にない</button>
+        <button class="button ghost" type="button" data-action="skip-cue">この行は音声にない</button>
       </div>
       <div class="calibration-nudge-actions" aria-label="選択した行頭の微調整">
         <span>選択行を微調整</span>
@@ -25345,15 +25822,20 @@ async function renderCalibration(app, catalog) {
         void trackAudio.play();
       }
       if (action === "undo") undo();
-      if (action === "skip-title") {
-        if (track.cues[selectedCueIndex].kind !== "title") return;
+      if (action === "skip-cue") {
         remember();
+        const willSkip = !working.skipped[selectedCueIndex];
         working.markers[selectedCueIndex] = null;
-        working.skipped[selectedCueIndex] = true;
+        working.skipped[selectedCueIndex] = willSkip;
+        if (!willSkip) {
+          commit();
+          showNotice("『音声なし』を取り消しました。開始位置を記録してください。", "success");
+          return;
+        }
         const nextIncomplete = working.markers.findIndex((value, index) => index > selectedCueIndex && value === null && !working.skipped[index]);
         selectedCueIndex = nextIncomplete >= 0 ? nextIncomplete : Math.min(selectedCueIndex + 1, track.cues.length - 1);
         commit();
-        showNotice("経典名を『音声に含まれない』として記録しました。", "success");
+        showNotice("この行を『音声に含まれない』として記録しました。", "success");
       }
       if (action === "complete-track") {
         if (!isTrackFullyMarked(working)) {
@@ -25542,7 +26024,7 @@ function updateTrackView(root, track, working, selectedCueIndex, audio, reaction
     <div class="calibration-target-ja">${escapeCalibrationHtml(cue.line.ja || "")}</div>
     <div class="calibration-target-times">
       <span>自動推定 ${formatCalibrationTime(cue.start)}</span>
-      <strong>${Number.isFinite(marker) ? `記録 ${formatCalibrationTime(marker)}` : "未記録"}</strong>
+      <strong>${working.skipped[selectedCueIndex] ? "音声なし" : Number.isFinite(marker) ? `記録 ${formatCalibrationTime(marker)}` : "未記録"}</strong>
       <span>補正 −${reactionOffset.toFixed(2)}秒</span>
     </div>
   `;
@@ -25555,8 +26037,8 @@ function updateTrackView(root, track, working, selectedCueIndex, audio, reaction
   playButton.firstChild.textContent = audio && !audio.paused ? "⏸ 一時停止 " : "▶ 再生 ";
   const markButton = root.querySelector('[data-action="mark"]');
   markButton.firstChild.textContent = Number.isFinite(marker) ? "選択行を記録し直す " : "この行の開始を記録して次へ ";
-  const skipTitleButton = root.querySelector('[data-action="skip-title"]');
-  skipTitleButton.hidden = cue.kind !== "title";
+  const skipCueButton = root.querySelector('[data-action="skip-cue"]');
+  skipCueButton.textContent = working.skipped[selectedCueIndex] ? "『音声なし』を取り消す" : "この行は音声にない";
   root.querySelector("[data-calibration-cues]").innerHTML = track.cues.map((item, index) => {
     const value = working.markers[index];
     const isMarked = Number.isFinite(value) || working.skipped[index];
@@ -25565,7 +26047,7 @@ function updateTrackView(root, track, working, selectedCueIndex, audio, reaction
       <button class="calibration-cue-row" type="button" data-cue-index="${index}" data-selected="${index === selectedCueIndex}" data-marked="${isMarked}">
         <span class="calibration-cue-order">${index + 1}</span>
         <span class="calibration-cue-text"><strong>${escapeCalibrationHtml(item.line.pali || item.lineId)}</strong><small>${escapeCalibrationHtml(item.line.kana || "")}</small></span>
-        <span class="calibration-cue-time">${Number.isFinite(value) ? formatCalibrationTime(value) : "未記録"}${delta === null ? "" : `<small>${delta >= 0 ? "+" : ""}${delta.toFixed(3)}秒</small>`}</span>
+        <span class="calibration-cue-time">${working.skipped[index] ? "音声なし" : Number.isFinite(value) ? formatCalibrationTime(value) : "未記録"}${delta === null ? "" : `<small>${delta >= 0 ? "+" : ""}${delta.toFixed(3)}秒</small>`}</span>
       </button>
     `;
   }).join("");
@@ -25598,6 +26080,7 @@ function drawCalibrationWaveform(canvas, track, working, selectedCueIndex, curre
   context.stroke();
   context.globalAlpha = 1;
   track.cues.forEach((cue, index) => {
+    if (working.skipped[index]) return;
     const marker = working.markers[index];
     const at = Number.isFinite(marker) ? marker : cue.start;
     const x = Math.max(0, Math.min(width, at / track.duration * width));
@@ -25719,7 +26202,7 @@ function importCalibration(payload, tracks, stored) {
       if (cue.lineId !== track.cues[index].lineId) {
         throw new Error(`${track.key} の行順が現在のデータと一致しません。`);
       }
-      if (cue.audible === false && track.cues[index].kind === "title") {
+      if (cue.audible === false) {
         state.skipped[index] = true;
       } else if (Number.isFinite(cue.start) && cue.start >= 0 && cue.start <= track.duration) {
         state.markers[index] = roundCalibrationTime(cue.start);
