@@ -25946,7 +25946,7 @@ function buildCalibrationTracks(catalog, suttas) {
 function makeEmptyTrackState(track) {
   return {
     markers: new Array(track.cues.length).fill(null),
-    skipped: new Array(track.cues.length).fill(false),
+    skipped: track.cues.map((cue) => cue.audible === false),
     completed: false,
     updatedAt: null
   };
@@ -25976,8 +25976,10 @@ function loadCalibrationState(tracks) {
       return;
     }
     state.tracks[track.key] = {
-      markers: empty.markers.map((_, index) => Number.isFinite(raw.markers?.[index]) ? roundCalibrationTime(raw.markers[index]) : null),
-      skipped: empty.skipped.map((_, index) => Boolean(raw.skipped?.[index])),
+      markers: empty.markers.map((_, index) => track.cues[index]?.audible === false
+        ? null
+        : Number.isFinite(raw.markers?.[index]) ? roundCalibrationTime(raw.markers[index]) : null),
+      skipped: empty.skipped.map((value, index) => value || Boolean(raw.skipped?.[index])),
       completed: Boolean(raw.completed),
       updatedAt: typeof raw.updatedAt === "string" ? raw.updatedAt : null
     };
