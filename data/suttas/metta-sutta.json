@@ -411,8 +411,8 @@
       "lines": [
         {
           "id": "s5-l1",
-          "pali": "Diṭṭhā vā ye vā addiṭṭhā ye ca dūre vasanti",
-          "kana": "ディッター ワー イェー ワー アッディッター イェー チャ ドゥーレー ワサンティ",
+          "pali": "Diṭṭhā vā ye vā addiṭṭhā ye ca dūre vasanti avidūre;",
+          "kana": "ディッター ワー イェー ワー アッディッター イェー チャ ドゥーレー ワサンティ アヴィデゥーレー",
           "ja": "見たことがあるものもないものも、遠くに住むものでも、近くに住むものでも、",
           "wordGlosses": [
             {
@@ -459,6 +459,11 @@
               "pali": "vasanti",
               "kana": "ワサンティ",
               "ja": "住む"
+            },
+            {
+              "pali": "avidūre;",
+              "kana": "アヴィデゥーレー",
+              "ja": "近いところに"
             }
           ]
         },

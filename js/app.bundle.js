@@ -64,8 +64,8 @@ const EMBEDDED_CATALOG = {
     {
       "id": "buddhanasasana",
       "order": 8,
-      "title": "諸仏の教え",
-      "titlePali": "Buddhanasasana",
+      "title": "諸仏の教え（法句経 183-185）",
+      "titlePali": "Buddhanasasana (Dh.Nos.183-185)",
       "bodySectionCount": 3,
       "sectionCount": 4
     },
@@ -80,80 +80,80 @@ const EMBEDDED_CATALOG = {
     {
       "id": "pathama-udana",
       "order": 10,
-      "title": "歓喜の言葉",
-      "titlePali": "Pathama udana",
+      "title": "歓喜の言葉（法句経 153,154）",
+      "titlePali": "Pathama udana (Dh.Nos.153,154)",
       "bodySectionCount": 2,
       "sectionCount": 3
     },
     {
       "id": "ratana-sutta-patthana",
       "order": 11,
-      "title": "宝経・祈願文",
-      "titlePali": "Ratana suttaṃ･Patthanā",
+      "title": "宝経・祈願文（ｽｯﾀﾆﾊﾟｰﾀ2.1 222-238）",
+      "titlePali": "Ratana suttaṃ･Patthanā (Snp2.1,PTS:Sn 222-238)",
       "bodySectionCount": 18,
       "sectionCount": 19
     },
     {
       "id": "metta-suttam-patthana-paritta",
       "order": 12,
-      "title": "慈教・祈願文・護経",
-      "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ",
+      "title": "慈教・祈願文・護経（ｽｯﾀﾆﾊﾟｰﾀ1.8 143-152）",
+      "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ (Snp1.8,PTS:Sn143-152)",
       "bodySectionCount": 12,
       "sectionCount": 13
     },
     {
       "id": "vijaya-suttam",
       "order": 13,
-      "title": "勝利の経",
-      "titlePali": "Vijayasuttaṃ",
+      "title": "勝利の経（ｽｯﾀﾆﾊﾟｰﾀ1.11 193-206）",
+      "titlePali": "Vijaya suttaṃ (Snp1.11,PTS:Sn193-206)",
       "bodySectionCount": 14,
       "sectionCount": 15
     },
     {
       "id": "salla-suttam",
       "order": 14,
-      "title": "箭経",
-      "titlePali": "Salla suttaṃ",
+      "title": "箭経（ｽｯﾀﾆﾊﾟｰﾀ3.8 574-593）",
+      "titlePali": "Salla suttaṃ (Snp3.8,PTS:Sn574-593)",
       "bodySectionCount": 20,
       "sectionCount": 21
     },
     {
       "id": "maha-purisa-vitakka",
       "order": 15,
-      "title": "偉大なる人の思考",
-      "titlePali": "Mahā purisa vitakka",
+      "title": "偉大なる人の思考（増支部8.30 228-235より抜粋）",
+      "titlePali": "Mahā purisa vitakka (AN 8.30,PTS:A IV 228-235)",
       "bodySectionCount": 8,
       "sectionCount": 9
     },
     {
       "id": "mangala-suttam",
       "order": 16,
-      "title": "吉祥経",
-      "titlePali": "Mangala suttaṃ",
+      "title": "吉祥経（ｽｯﾀﾆﾊﾟｰﾀ2.4 258-269）",
+      "titlePali": "Mangala suttaṃ (Snp2.4,PTS:Sn 258–269)",
       "bodySectionCount": 13,
       "sectionCount": 14
     },
     {
       "id": "sallekha-sutta",
       "order": 17,
-      "title": "戒め",
-      "titlePali": "Sallekha suttaṃ",
+      "title": "戒め（中部8より抜粋））",
+      "titlePali": "Sallekha suttaṃ (Mn.8)",
       "bodySectionCount": 44,
       "sectionCount": 45
     },
     {
       "id": "bhaddekaratta-gatha",
       "order": 18,
-      "title": "｢日々是好日｣偈",
-      "titlePali": "Bhaddekaratta gāthā",
+      "title": "｢日々是好日｣偈（中部131より抜粋）",
+      "titlePali": "Bhaddekaratta gāthā (Mn.131)",
       "bodySectionCount": 1,
       "sectionCount": 2
     },
     {
       "id": "anicca-gatha-metta-bhavana",
       "order": 19,
-      "title": "無常偈・慈しみの隨念",
-      "titlePali": "Anicca gāthā･Metta bhāvanā",
+      "title": "無常偈 (ﾃｰﾗｰｶﾞｰﾀ 1159)・慈しみの隨念",
+      "titlePali": "Anicca gāthā (Th 1159)･Metta bhāvanā",
       "bodySectionCount": 2,
       "sectionCount": 3
     },
@@ -240,7 +240,78 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 1.46,
+              "end": 3.85,
+              "kind": "title",
+              "audible": true,
+              "text": "Vandanā",
+              "kana": "ワンダナー",
+              "speechEnd": 2.564,
+              "wordStarts": [
+                1.46
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.85,
+              "end": 15.735,
+              "kind": "body",
+              "audible": true,
+              "text": "Namo tassa bhagavato arahato sammāsambuddhassa.",
+              "kana": "ナモー タッサ バガワトー アラハトー サンマーサンブッダッサ",
+              "speechEnd": 15.604,
+              "wordStarts": [
+                3.85,
+                5.21,
+                6.509,
+                8.675,
+                10.84
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 15.735,
+              "end": 28.362,
+              "kind": "body",
+              "audible": true,
+              "text": "Namo tassa bhagavato arahato sammāsambuddhassa.",
+              "kana": "ナモー タッサ バガワトー アラハトー サンマーサンブッダッサ",
+              "speechEnd": 28.362,
+              "wordStarts": [
+                15.735,
+                17.265,
+                18.596,
+                20.814,
+                23.146
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 28.362,
+              "end": 41.622,
+              "kind": "body",
+              "audible": true,
+              "text": "Namo tassa bhagavato arahato sammāsambuddhassa.",
+              "kana": "ナモー タッサ バガワトー アラハトー サンマーサンブッダッサ",
+              "speechEnd": 41.622,
+              "wordStarts": [
+                28.362,
+                29.815,
+                31.267,
+                33.688,
+                36.296
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "08bfd1744c5505766d5155a0b13eb9492e5b7dbd6afafb041b993bb07c281742"
+          }
         },
         {
           "key": "D1T2",
@@ -332,7 +403,175 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.452,
+              "end": 3.973,
+              "kind": "title",
+              "audible": true,
+              "text": "Ti saraṇa",
+              "kana": "ティ サラナ",
+              "speechEnd": 3.973,
+              "wordStarts": [
+                0.452,
+                0.733
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 3.973,
+              "end": 10.684,
+              "kind": "body",
+              "audible": true,
+              "text": "Buddhaṃ saraṇaṃ gacchāmi.",
+              "kana": "ブッダン サラナン ガッチャーミ",
+              "speechEnd": 9.728,
+              "wordStarts": [
+                3.973,
+                5.744,
+                7.514
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 10.684,
+              "end": 18.009,
+              "kind": "body",
+              "audible": true,
+              "text": "Dhammaṃ saraṇaṃ gacchāmi.",
+              "kana": "ダンマン サラナン ガッチャーミ",
+              "speechEnd": 18.009,
+              "wordStarts": [
+                10.684,
+                12.785,
+                14.711
+              ]
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 18.009,
+              "end": 25.697,
+              "kind": "body",
+              "audible": true,
+              "text": "Saṅghaṃ saraṇaṃ gacchāmi.",
+              "kana": "サンガン サラナン ガッチャーミ",
+              "speechEnd": 25.697,
+              "wordStarts": [
+                18.009,
+                19.952,
+                21.807
+              ]
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 25.697,
+              "end": 34.443,
+              "kind": "body",
+              "audible": true,
+              "text": "Dutiyaṃ pi Buddhaṃ saraṇaṃ gacchāmi.",
+              "kana": "ドゥティヤン ピ ブッダン サラナン ガッチャーミ",
+              "speechEnd": 34.443,
+              "wordStarts": [
+                25.697,
+                27.402,
+                27.829,
+                29.534,
+                31.239
+              ]
+            },
+            {
+              "lineId": "s2-l5",
+              "start": 34.443,
+              "end": 43.311,
+              "kind": "body",
+              "audible": true,
+              "text": "Dutiyaṃ pi Dhammaṃ saraṇaṃ gacchāmi.",
+              "kana": "ドゥティヤン ピ ダンマン サラナン ガッチャーミ",
+              "speechEnd": 43.311,
+              "wordStarts": [
+                34.443,
+                36.191,
+                36.628,
+                38.377,
+                40.125
+              ]
+            },
+            {
+              "lineId": "s2-l6",
+              "start": 43.311,
+              "end": 52.409,
+              "kind": "body",
+              "audible": true,
+              "text": "Dutiyaṃ pi Saṅghaṃ saraṇaṃ gacchāmi.",
+              "kana": "ドゥティヤン ピ サンガン サラナン ガッチャーミ",
+              "speechEnd": 52.409,
+              "wordStarts": [
+                43.311,
+                45.099,
+                45.546,
+                47.334,
+                49.123
+              ]
+            },
+            {
+              "lineId": "s2-l7",
+              "start": 52.409,
+              "end": 61.45,
+              "kind": "body",
+              "audible": true,
+              "text": "Tatiyaṃ pi Buddhaṃ saraṇaṃ gacchāmi.",
+              "kana": "タティヤン ピ ブッダン サラナン ガッチャーミ",
+              "speechEnd": 61.45,
+              "wordStarts": [
+                52.409,
+                54.299,
+                54.772,
+                56.662,
+                58.552
+              ]
+            },
+            {
+              "lineId": "s2-l8",
+              "start": 61.45,
+              "end": 70.21,
+              "kind": "body",
+              "audible": true,
+              "text": "Tatiyaṃ pi Dhammaṃ saraṇaṃ gacchāmi.",
+              "kana": "タティヤン ピ ダンマン サラナン ガッチャーミ",
+              "speechEnd": 70.21,
+              "wordStarts": [
+                61.45,
+                63.23,
+                63.674,
+                65.454,
+                67.233
+              ]
+            },
+            {
+              "lineId": "s2-l9",
+              "start": 70.21,
+              "end": 78.685,
+              "kind": "body",
+              "audible": true,
+              "text": "Tatiyaṃ pi Saṅghaṃ saraṇaṃ gacchāmi.",
+              "kana": "タティヤン ピ サンガン サラナン ガッチャーミ",
+              "speechEnd": 78.566,
+              "wordStarts": [
+                70.21,
+                72.067,
+                72.531,
+                74.388,
+                76.245
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "96ead89d573592a9db94c3aa35afde6674fcab2ddf696b358c9e42d4b920eaab"
+          }
         }
       ]
     },
@@ -381,7 +620,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s1-l1",
             "pali": "Namo tassa bhagavato arahato sammāsambuddhassa.",
             "kana": "ナモー タッサ バガワトー アラハトー サンマーサンブッダッサ",
-            "ja": "阿羅漢であり、正自覚者であり、福運に満ちた世尊に、私は敬礼いたします。",
+            "ja": "阿羅漢であり、正自覚者であり、福運に満ちた世尊に、私は敬礼いたします。（三唱）",
             "wordGlosses": [
               {
                 "pali": "Namo",
@@ -489,7 +728,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l4",
             "pali": "Dutiyaṃ pi Buddhaṃ saraṇaṃ gacchāmi.",
             "kana": "ドゥティヤン ピ ブッダン サラナン ガッチャーミ",
-            "ja": "二度目にも、私は仏陀(覚者)に帰依いたします。",
+            "ja": "ふたたび、私は仏陀(覚者)に帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Dutiyaṃ",
@@ -522,7 +761,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l5",
             "pali": "Dutiyaṃ pi Dhammaṃ saraṇaṃ gacchāmi.",
             "kana": "ドゥティヤン ピ ダンマン サラナン ガッチャーミ",
-            "ja": "二度目にも、私は法（真理）に帰依いたします。",
+            "ja": "ふたたび、私は法（真理）に帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Dutiyaṃ",
@@ -555,7 +794,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l6",
             "pali": "Dutiyaṃ pi Saṅghaṃ saraṇaṃ gacchāmi.",
             "kana": "ドゥティヤン ピ サンガン サラナン ガッチャーミ",
-            "ja": "二度目にも、私は僧（聖者の僧団）に帰依いたします。",
+            "ja": "ふたたび、私は僧（聖者の僧団）に帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Dutiyaṃ",
@@ -588,7 +827,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l7",
             "pali": "Tatiyaṃ pi Buddhaṃ saraṇaṃ gacchāmi.",
             "kana": "タティヤン ピ ブッダン サラナン ガッチャーミ",
-            "ja": "三度目にも、私は仏陀(覚者)に帰依いたします。",
+            "ja": "みたび、私は仏陀(覚者)に帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Tatiyaṃ",
@@ -621,7 +860,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l8",
             "pali": "Tatiyaṃ pi Dhammaṃ saraṇaṃ gacchāmi.",
             "kana": "タティヤン ピ ダンマン サラナン ガッチャーミ",
-            "ja": "三度目にも、私は法（真理）に帰依いたします。",
+            "ja": "みたび、私は法（真理）に帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Tatiyaṃ",
@@ -654,7 +893,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l9",
             "pali": "Tatiyaṃ pi Saṅghaṃ saraṇaṃ gacchāmi.",
             "kana": "タティヤン ピ サンガン サラナン ガッチャーミ",
-            "ja": "三度目にも、私は僧（聖者の僧団）に帰依いたします。",
+            "ja": "みたび、私は僧（聖者の僧団）に帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Tatiyaṃ",
@@ -753,7 +992,115 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0,
+              "end": 4.379,
+              "kind": "title",
+              "audible": true,
+              "text": "Pañca Sīla",
+              "kana": "パンチャ スィーラ",
+              "speechEnd": 4.379,
+              "wordStarts": [
+                0,
+                0.894
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.379,
+              "end": 17.015,
+              "kind": "body",
+              "audible": true,
+              "text": "Pāṇātipātā veramaṇī sikkhā padaṃ samādiyāmi.",
+              "kana": "パーナーティパーター ヴェーラマニー スィッカー パダン サマーディヤーミ",
+              "speechEnd": 17.001,
+              "wordStarts": [
+                4.379,
+                8.296,
+                10.907,
+                12.648,
+                13.954
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 17.015,
+              "end": 29.986,
+              "kind": "body",
+              "audible": true,
+              "text": "Adinnādānā veramaṇī sikkhā padaṃ samādiyāmi.",
+              "kana": "アディンナーダーナー ヴェーラマニー スィッカー パダン サマーディヤーミ",
+              "speechEnd": 29.624,
+              "wordStarts": [
+                17.015,
+                21.117,
+                23.619,
+                25.287,
+                26.538
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 29.986,
+              "end": 44.641,
+              "kind": "body",
+              "audible": true,
+              "text": "Kāmesu micchācārā veramaṇī sikkhā padaṃ samādiyāmi.",
+              "kana": "カーメース ミッチャーチャーラー ヴェーラマニー スィッカー パダン サマーディヤーミ",
+              "speechEnd": 44.473,
+              "wordStarts": [
+                29.986,
+                32.292,
+                35.703,
+                38.504,
+                40.21,
+                41.489
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 44.641,
+              "end": 56.895,
+              "kind": "body",
+              "audible": true,
+              "text": "Musāvādā veramaṇī sikkhā padaṃ samādiyāmi.",
+              "kana": "ムサーワーダー ヴェーラマニー スィッカー パダン サマーディヤーミ",
+              "speechEnd": 56.805,
+              "wordStarts": [
+                44.641,
+                47.902,
+                50.687,
+                52.435,
+                53.746
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 56.895,
+              "end": 75.328,
+              "kind": "body",
+              "audible": true,
+              "text": "Surāmeraya Majjapamādaṭṭhānā veramaṇī sikkhā padaṃ samādiyāmi.",
+              "kana": "スラーメーラヤ マッジャパマーダッターナー ヴェーラマニー スィッカー パダン サマーディヤーミ",
+              "speechEnd": 75.328,
+              "wordStarts": [
+                56.895,
+                60.319,
+                65.876,
+                68.845,
+                70.698,
+                72.087
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "387d6f778aa406980cca8f5c0e7a717998ac00db93ccbefb31f84fda84aacf3f"
+          }
         }
       ]
     },
@@ -926,7 +1273,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s1-l5",
             "pali": "Surāmeraya Majjapamādaṭṭhānā veramaṇī sikkhā padaṃ samādiyāmi.",
             "kana": "スラーメーラヤ マッジャパマーダッターナー ヴェーラマニー スィッカー パダン サマーディヤーミ",
-            "ja": "「放逸の原因となり、（人を）酔わせる酒類、麻薬などを使用しない」という戒めを私は受けて守ります。",
+            "ja": "「放逸の原因となり（人を）酔わせる酒類・麻薬などを使用しない」という戒めを私は受けて守ります。",
             "wordGlosses": [
               {
                 "pali": "Surāmeraya",
@@ -1078,7 +1425,325 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.555,
+              "end": 3.971,
+              "kind": "title",
+              "audible": true,
+              "text": "Buddha vandanā",
+              "kana": "ブッダ ワンダナー",
+              "speechEnd": 2.037,
+              "wordStarts": [
+                0.555,
+                1.111
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.971,
+              "end": 7.371,
+              "kind": "body",
+              "audible": true,
+              "text": "Iti pi so bhagavā",
+              "kana": "イティ ピ ソー バガワー",
+              "speechEnd": 7.371,
+              "wordStarts": [
+                3.971,
+                4.727,
+                5.105,
+                5.86
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 7.371,
+              "end": 9.731,
+              "kind": "body",
+              "audible": true,
+              "text": "Arahaṃ①",
+              "kana": "アラハン",
+              "speechEnd": 9.731,
+              "wordStarts": [
+                7.371
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 9.731,
+              "end": 14.251,
+              "kind": "body",
+              "audible": true,
+              "text": "Sammāsambuddho②",
+              "kana": "サンマーサンブッドー",
+              "speechEnd": 14.223,
+              "wordStarts": [
+                9.731
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 14.251,
+              "end": 19.691,
+              "kind": "body",
+              "audible": true,
+              "text": "Vijjā-caraṇa sampanno③",
+              "kana": "ヴィッジャーチャラナ サンパンノー",
+              "speechEnd": 19.691,
+              "wordStarts": [
+                14.251,
+                17.263
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 19.691,
+              "end": 21.011,
+              "kind": "body",
+              "audible": true,
+              "text": "Sugato④",
+              "kana": "スガトー",
+              "speechEnd": 21.011,
+              "wordStarts": [
+                19.691
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 21.011,
+              "end": 25.531,
+              "kind": "body",
+              "audible": true,
+              "text": "Lokavidū⑤",
+              "kana": "ローカヴィドゥー",
+              "speechEnd": 25.531,
+              "wordStarts": [
+                21.011
+              ]
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 25.531,
+              "end": 30.731,
+              "kind": "body",
+              "audible": true,
+              "text": "Anuttaro purisa damma sārathi⑥",
+              "kana": "アヌッタロー プリサ ダンマ サーラティ",
+              "speechEnd": 30.731,
+              "wordStarts": [
+                25.531,
+                27.481,
+                28.456,
+                29.431
+              ]
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 30.731,
+              "end": 34.971,
+              "kind": "body",
+              "audible": true,
+              "text": "Satthā deva manussānaṃ⑦",
+              "kana": "サッター デーワ マヌッサーナン",
+              "speechEnd": 34.971,
+              "wordStarts": [
+                30.731,
+                32.129,
+                32.912
+              ]
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 34.971,
+              "end": 36.131,
+              "kind": "body",
+              "audible": true,
+              "text": "Buddho⑧",
+              "kana": "ブッドー",
+              "speechEnd": 36.131,
+              "wordStarts": [
+                34.971
+              ]
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 36.131,
+              "end": 38.54,
+              "kind": "body",
+              "audible": true,
+              "text": "Bhagavā⑨ ti.",
+              "kana": "バガワー ティ",
+              "speechEnd": 38.54,
+              "wordStarts": [
+                36.131,
+                37.699
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 38.54,
+              "end": 41.979,
+              "kind": "body",
+              "audible": true,
+              "text": "Iti pi so bhagavā",
+              "kana": "イティ ピ ソー バガワー",
+              "speechEnd": 41.979,
+              "wordStarts": [
+                38.54,
+                39.304,
+                39.686,
+                40.451
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 41.979,
+              "end": 43.675,
+              "kind": "body",
+              "audible": true,
+              "text": "Arahaṃ①",
+              "kana": "アラハン",
+              "speechEnd": 43.675,
+              "wordStarts": [
+                41.979
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 43.675,
+              "end": 47.839,
+              "kind": "body",
+              "audible": true,
+              "text": "Sammāsambuddho②",
+              "kana": "サンマーサンブッドー",
+              "speechEnd": 47.839,
+              "wordStarts": [
+                43.675
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 47.839,
+              "end": 53.132,
+              "kind": "body",
+              "audible": true,
+              "text": "Vijjā-caraṇa sampanno③",
+              "kana": "ヴィッジャーチャラナ サンパンノー",
+              "speechEnd": 53.132,
+              "wordStarts": [
+                47.839,
+                50.768
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 53.132,
+              "end": 54.531,
+              "kind": "body",
+              "audible": true,
+              "text": "Sugato④",
+              "kana": "スガトー",
+              "speechEnd": 54.531,
+              "wordStarts": [
+                53.132
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 54.531,
+              "end": 58.064,
+              "kind": "body",
+              "audible": true,
+              "text": "Lokavidū⑤",
+              "kana": "ローカヴィドゥー",
+              "speechEnd": 58.064,
+              "wordStarts": [
+                54.531
+              ]
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 58.064,
+              "end": 65.685,
+              "kind": "body",
+              "audible": true,
+              "text": "Anuttaro purisa damma sārathi⑥",
+              "kana": "アヌッタロー プリサ ダンマ サーラティ",
+              "speechEnd": 65.685,
+              "wordStarts": [
+                58.064,
+                60.863,
+                62.263,
+                63.662
+              ]
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 65.685,
+              "end": 71.863,
+              "kind": "body",
+              "audible": true,
+              "text": "Satthā deva manussānaṃ⑦",
+              "kana": "サッター デーワ マヌッサーナン",
+              "speechEnd": 71.863,
+              "wordStarts": [
+                65.685,
+                67.45,
+                68.774
+              ]
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 71.863,
+              "end": 73.391,
+              "kind": "body",
+              "audible": true,
+              "text": "Buddho⑧",
+              "kana": "ブッドー",
+              "speechEnd": 73.391,
+              "wordStarts": [
+                71.863
+              ]
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 73.391,
+              "end": 77.091,
+              "kind": "body",
+              "audible": true,
+              "text": "Bhagavā⑨ ti.",
+              "kana": "バガワー ティ",
+              "speechEnd": 76.857,
+              "wordStarts": [
+                73.391,
+                76.033
+              ]
+            },
+            {
+              "lineId": "s1-l11",
+              "start": 77.091,
+              "end": 90.443,
+              "kind": "body",
+              "audible": true,
+              "text": "Buddhaṃ jīvita pariyantaṃ saraṇaṃ gacchāmi.",
+              "kana": "ブッダン ジーヴィタ パリヤンタン サラナン ガッチャーミ",
+              "speechEnd": 90.443,
+              "wordStarts": [
+                77.091,
+                79.582,
+                81.868,
+                85.298,
+                87.585
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "c7919c04b9bb281b23447f1e5676fc0f89fd1f575caf439ea997ef9ac2230f80"
+          }
         }
       ]
     },
@@ -1294,7 +1959,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s1-l11",
             "pali": "Buddhaṃ jīvita pariyantaṃ saraṇaṃ gacchāmi.",
             "kana": "ブッダン ジーヴィタ パリヤンタン サラナン ガッチャーミ",
-            "ja": "［以上の徳が具われる］ブッダに、私は生涯帰依いたします。",
+            "ja": "(以上の徳が具われる)ブッダに、私は生涯帰依いたします。",
             "wordGlosses": [
               {
                 "pali": "Buddhaṃ",
@@ -1409,7 +2074,128 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.428,
+              "end": 3.543,
+              "kind": "title",
+              "audible": true,
+              "text": "Dhamma vandanā",
+              "kana": "ダンマ ワンダナー",
+              "speechEnd": 3.543,
+              "wordStarts": [
+                0.428,
+                0.889
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.543,
+              "end": 10.977,
+              "kind": "body",
+              "audible": true,
+              "text": "Svākkhāto① bhagavatā dhammo",
+              "kana": "スワーッカートー バガワター ダンモー",
+              "speechEnd": 10.977,
+              "wordStarts": [
+                3.543,
+                7.041,
+                9.228
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 10.977,
+              "end": 14.143,
+              "kind": "body",
+              "audible": true,
+              "text": "Sandiṭṭhiko②",
+              "kana": "サンディッティコー",
+              "speechEnd": 14.143,
+              "wordStarts": [
+                10.977
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 14.143,
+              "end": 17.813,
+              "kind": "body",
+              "audible": true,
+              "text": "Akāliko③",
+              "kana": "アカーリコー",
+              "speechEnd": 17.813,
+              "wordStarts": [
+                14.143
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 17.813,
+              "end": 21.588,
+              "kind": "body",
+              "audible": true,
+              "text": "Ehipassiko④",
+              "kana": "エーヒパッスィコー",
+              "speechEnd": 21.588,
+              "wordStarts": [
+                17.813
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 21.588,
+              "end": 25.752,
+              "kind": "body",
+              "audible": true,
+              "text": "Opanayiko⑤",
+              "kana": "オーパナイコー",
+              "speechEnd": 25.752,
+              "wordStarts": [
+                21.588
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 25.752,
+              "end": 36.781,
+              "kind": "body",
+              "audible": true,
+              "text": "Paccattaṃ veditabbo viññūhī⑥ ti.",
+              "kana": "パッチャッタン ヴェーディタッボー ヴィンニューヒー ティ",
+              "speechEnd": 36.781,
+              "wordStarts": [
+                25.752,
+                28.876,
+                32.52,
+                35.781
+              ]
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 36.781,
+              "end": 49.868,
+              "kind": "body",
+              "audible": true,
+              "text": "Dhammaṃ jīvita pariyantaṃ saraṇaṃ gacchāmi.",
+              "kana": "ダンマン ジーヴィタ パリヤンタン サラナン ガッチャーミ",
+              "speechEnd": 49.868,
+              "wordStarts": [
+                36.781,
+                39.057,
+                41.333,
+                44.747,
+                47.023
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "48da5e8075c0f60cc9ab245e09eb3fa2d9e3a920da38d51093a6f8022f8719d0"
+          }
         }
       ]
     },
@@ -1703,7 +2489,207 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.555,
+              "end": 4.946,
+              "kind": "title",
+              "audible": true,
+              "text": "Saṅgha vandanā",
+              "kana": "サンガ ワンダナー",
+              "speechEnd": 4.946,
+              "wordStarts": [
+                0.555,
+                1.581
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.946,
+              "end": 13.116,
+              "kind": "body",
+              "audible": true,
+              "text": "Supaṭipanno bhagavato sāvakasaṅgho①",
+              "kana": "スパティパンノー バガワトー サーワカサンゴー",
+              "speechEnd": 13.116,
+              "wordStarts": [
+                4.946,
+                7.75,
+                9.753
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 13.116,
+              "end": 23.213,
+              "kind": "body",
+              "audible": true,
+              "text": "Ujupaṭipanno bhagavato sāvakasaṅgho②",
+              "kana": "ウジュパティパンノー バガワトー サーワカサンゴー",
+              "speechEnd": 22.902,
+              "wordStarts": [
+                13.116,
+                16.844,
+                19.174
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 23.213,
+              "end": 34.11,
+              "kind": "body",
+              "audible": true,
+              "text": "Ñāyapaṭipanno bhagavato sāvakasaṅgho③",
+              "kana": "ニャーヤパティパンノー バガワトー サーワカサンゴー",
+              "speechEnd": 34.11,
+              "wordStarts": [
+                23.213,
+                27.643,
+                30.051
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 34.11,
+              "end": 46.139,
+              "kind": "body",
+              "audible": true,
+              "text": "Sāmīcipaṭipanno bhagavato sāvakasaṅgho④",
+              "kana": "サーミーチパティパンノー バガワトー サーワカサンゴー",
+              "speechEnd": 46.139,
+              "wordStarts": [
+                34.11,
+                39.451,
+                41.879
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 46.139,
+              "end": 59.195,
+              "kind": "body",
+              "audible": true,
+              "text": "Yadidaṃ cattāri purisayugāni aṭṭha purisa puggalā",
+              "kana": "ヤディダン チャッターリ プリサユガーニ アッタ プリサ プッガラー",
+              "speechEnd": 59.195,
+              "wordStarts": [
+                46.139,
+                48.026,
+                50.384,
+                53.932,
+                55.422,
+                56.837
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 59.195,
+              "end": 67.528,
+              "kind": "body",
+              "audible": true,
+              "text": "Esa bhagavato sāvakasaṅgho",
+              "kana": "エーサ バガワトー サーワカサンゴー",
+              "speechEnd": 67.435,
+              "wordStarts": [
+                59.195,
+                60.74,
+                63.315
+              ]
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 67.528,
+              "end": 71.409,
+              "kind": "body",
+              "audible": true,
+              "text": "Āhuneyyo⑤",
+              "kana": "アーフネイヨー",
+              "speechEnd": 71.409,
+              "wordStarts": [
+                67.528
+              ]
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 71.409,
+              "end": 74.909,
+              "kind": "body",
+              "audible": true,
+              "text": "pāhuneyyo⑥",
+              "kana": "パーフネイヨー",
+              "speechEnd": 74.909,
+              "wordStarts": [
+                71.409
+              ]
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 74.909,
+              "end": 78.653,
+              "kind": "body",
+              "audible": true,
+              "text": "dakkhiṇeyyo⑦",
+              "kana": "ダッキネイヨー",
+              "speechEnd": 78.653,
+              "wordStarts": [
+                74.909
+              ]
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 78.653,
+              "end": 84.138,
+              "kind": "body",
+              "audible": true,
+              "text": "añjali karaṇīyo⑧",
+              "kana": "アンジャリ カラニーヨー",
+              "speechEnd": 84.138,
+              "wordStarts": [
+                78.653,
+                80.703
+              ]
+            },
+            {
+              "lineId": "s1-l11",
+              "start": 84.138,
+              "end": 96.556,
+              "kind": "body",
+              "audible": true,
+              "text": "Anuttaraṃ puññakkhettaṃ lokassa⑨ ti.",
+              "kana": "アヌッタラン プンニャッケッタン ローカッサ ティ",
+              "speechEnd": 96.556,
+              "wordStarts": [
+                84.138,
+                87.617,
+                92.255,
+                95.154
+              ]
+            },
+            {
+              "lineId": "s1-l12",
+              "start": 96.556,
+              "end": 111.605,
+              "kind": "body",
+              "audible": true,
+              "text": "Saṅghaṃ jīvita pariyantaṃ saraṇaṃ gacchāmi.",
+              "kana": "サンガン ジーヴィタ パリヤンタン サラナン ガッチャーミ",
+              "speechEnd": 111.605,
+              "wordStarts": [
+                96.556,
+                99.155,
+                101.754,
+                105.757,
+                108.356
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "024b974d5ecce085990f32472eceb658f112e74af1bf51b3c733cd03d976d552"
+          }
         }
       ]
     },
@@ -2060,7 +3046,100 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.458,
+              "end": 3.862,
+              "kind": "title",
+              "audible": true,
+              "text": "Khamā yācanā",
+              "kana": "カマー ヤーチャナー",
+              "speechEnd": 3.862,
+              "wordStarts": [
+                0.458,
+                1.106
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.862,
+              "end": 29.571,
+              "kind": "body",
+              "audible": true,
+              "text": "Kāyena vācā cittena pamādena mayā kataṃ accayaṃ khama me bhante bhūripañña Tathāgata.",
+              "kana": "カーイェーナ ワーチャー チッテーナ パマーデーナ マヤー カタン アッチャヤン カマ メー バンテー ブーリパンニャ タターガタ",
+              "speechEnd": 29.571,
+              "wordStarts": [
+                3.862,
+                6.335,
+                8.313,
+                10.785,
+                13.753,
+                15.236,
+                17.048,
+                19.521,
+                20.51,
+                21.499,
+                23.477,
+                26.444
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 29.571,
+              "end": 56.914,
+              "kind": "body",
+              "audible": true,
+              "text": "Kāyena vācā cittena pamādena mayā kataṃ accayaṃ khama me Dhamma sandiṭṭhika akālika.",
+              "kana": "カーイェーナ ワーチャー チッテーナ パマーデーナ マヤー カタン アッチャヤン カマ メー ダンマ サンディッティカ アカーリカ",
+              "speechEnd": 56.914,
+              "wordStarts": [
+                29.571,
+                32.281,
+                34.45,
+                37.16,
+                40.413,
+                42.039,
+                44.047,
+                46.757,
+                47.842,
+                48.926,
+                50.552,
+                53.805
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 56.914,
+              "end": 88.576,
+              "kind": "body",
+              "audible": true,
+              "text": "Kāyena vācā cittena pamādena mayā kataṃ accayaṃ khama me Saṅgha supaṭipanna anuttara.",
+              "kana": "カーイェーナ ワーチャー チッテーナ パマーデーナ マヤー カタン アッチャヤン カマ メー サンガ スパティパンナ アヌッタラ",
+              "speechEnd": 88.576,
+              "wordStarts": [
+                56.914,
+                60.074,
+                62.602,
+                65.872,
+                69.664,
+                71.878,
+                73.774,
+                76.934,
+                78.464,
+                79.728,
+                81.624,
+                85.416
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "86f241ecd397c085eea7fc5ee75b163af6613f25e2efac22ef605c2a9354df89"
+          }
         }
       ]
     },
@@ -2422,7 +3501,225 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.389,
+              "end": 4.581,
+              "kind": "title",
+              "audible": true,
+              "text": "Tisaraṇa vandanā",
+              "kana": "ティサラナ ワンダナー",
+              "speechEnd": 4.581,
+              "wordStarts": [
+                0.389,
+                1.321
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.581,
+              "end": 13.057,
+              "kind": "body",
+              "audible": true,
+              "text": "Namāmi Buddhaṃ guṇasāgarantaṃ,",
+              "kana": "ナマーミ ブッダン グナサーガランタン",
+              "speechEnd": 13.057,
+              "wordStarts": [
+                4.581,
+                6.544,
+                8.506
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 13.057,
+              "end": 22.17,
+              "kind": "body",
+              "audible": true,
+              "text": "Sattā sadā hontu sukhī averā;",
+              "kana": "サッター サダー ホントゥ スキー アヴェーラー",
+              "speechEnd": 22.17,
+              "wordStarts": [
+                13.057,
+                14.974,
+                16.411,
+                17.848,
+                19.286
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 22.17,
+              "end": 31.322,
+              "kind": "body",
+              "audible": true,
+              "text": "Kāyo jiguccho sakalo dugandho,",
+              "kana": "カーヨー ジグッチョー サカロー ドゥガンドー",
+              "speechEnd": 31.322,
+              "wordStarts": [
+                22.17,
+                24.139,
+                26.6,
+                28.57
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 31.322,
+              "end": 40.49,
+              "kind": "body",
+              "audible": true,
+              "text": "Gacchanti sabbe maraṇaṃ ahañ ca.",
+              "kana": "ガッチャンティ サッベー マラナン アハン チャ",
+              "speechEnd": 40.49,
+              "wordStarts": [
+                31.322,
+                33.892,
+                35.948,
+                38.004,
+                39.546
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 40.49,
+              "end": 50.525,
+              "kind": "body",
+              "audible": true,
+              "text": "Namāmi Dhammaṃ sugatena desitaṃ,",
+              "kana": "ナマーミ ダンマン スガテーナ デースィタン",
+              "speechEnd": 50.525,
+              "wordStarts": [
+                40.49,
+                42.674,
+                44.858,
+                47.588
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 50.525,
+              "end": 60.351,
+              "kind": "body",
+              "audible": true,
+              "text": "Sattā sadā hontu sukhī averā;",
+              "kana": "サッター サダー ホントゥ スキー アヴェーラー",
+              "speechEnd": 60.351,
+              "wordStarts": [
+                50.525,
+                52.594,
+                54.146,
+                55.698,
+                57.25
+              ]
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 60.351,
+              "end": 70.014,
+              "kind": "body",
+              "audible": true,
+              "text": "Kāyo jiguccho sakalo dugandho,",
+              "kana": "カーヨー ジグッチョー サカロー ドゥガンドー",
+              "speechEnd": 69.788,
+              "wordStarts": [
+                60.351,
+                62.448,
+                65.07,
+                67.167
+              ]
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 70.014,
+              "end": 80.478,
+              "kind": "body",
+              "audible": true,
+              "text": "Gacchanti sabbe maraṇaṃ ahañ ca.",
+              "kana": "ガッチャンティ サッベー マラナン アハン チャ",
+              "speechEnd": 80.478,
+              "wordStarts": [
+                70.014,
+                72.93,
+                75.233,
+                77.536,
+                79.263
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 80.478,
+              "end": 90.908,
+              "kind": "body",
+              "audible": true,
+              "text": "Namāmi Saṅghaṃ munirāja sāvakaṃ,",
+              "kana": "ナマーミ サンガン ムニラージャ サーワカン",
+              "speechEnd": 90.908,
+              "wordStarts": [
+                80.478,
+                82.735,
+                84.992,
+                87.813
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 90.908,
+              "end": 101.296,
+              "kind": "body",
+              "audible": true,
+              "text": "Sattā sadā hontu sukhī averā;",
+              "kana": "サッター サダー ホントゥ スキー アヴェーラー",
+              "speechEnd": 101.296,
+              "wordStarts": [
+                90.908,
+                93.107,
+                94.757,
+                96.406,
+                98.056
+              ]
+            },
+            {
+              "lineId": "s3-l3",
+              "start": 101.296,
+              "end": 111.508,
+              "kind": "body",
+              "audible": true,
+              "text": "Kāyo jiguccho sakalo dugandho,",
+              "kana": "カーヨー ジグッチョー サカロー ドゥガンドー",
+              "speechEnd": 111.508,
+              "wordStarts": [
+                101.296,
+                103.501,
+                106.256,
+                108.461
+              ]
+            },
+            {
+              "lineId": "s3-l4",
+              "start": 111.508,
+              "end": 123.327,
+              "kind": "body",
+              "audible": true,
+              "text": "Gacchanti sabbe maraṇaṃ ahañ ca.",
+              "kana": "ガッチャンティ サッベー マラナン アハン チャ",
+              "speechEnd": 123.327,
+              "wordStarts": [
+                111.508,
+                114.984,
+                117.765,
+                120.546,
+                122.631
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "bb49a2b696ab218bd164caf640cd765bd0ee260f7f271c9e45282c84db65344a"
+          }
         }
       ]
     },
@@ -2458,7 +3755,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s1-l1",
             "pali": "Namāmi Buddhaṃ guṇasāgarantaṃ,",
             "kana": "ナマーミ ブッダン グナサーガランタン",
-            "ja": "大海の如き大徳者である、ブッダ（仏）に礼拝いたします。〔尊き仏陀に帰依奉らん　その御徳は海の如くに果てしなし〕",
+            "ja": "大海の如き大徳者である、ブッダ（仏）に礼拝いたします。",
             "wordGlosses": [
               {
                 "pali": "Namāmi",
@@ -2481,7 +3778,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s1-l2",
             "pali": "Sattā sadā hontu sukhī averā;",
             "kana": "サッター サダー ホントゥ スキー アヴェーラー",
-            "ja": "生きとし生けるものが、いつも幸福・安穏に暮らせますように。〔すべての衆生に幸あれと　安穏あれと願（ねご）うなり〕",
+            "ja": "生きとし生けるものが、いつも幸福・安穏に暮らせますように。",
             "wordGlosses": [
               {
                 "pali": "Sattā",
@@ -2514,7 +3811,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s1-l3",
             "pali": "Kāyo jiguccho sakalo dugandho,",
             "kana": "カーヨー ジグッチョー サカロー ドゥガンドー",
-            "ja": "この体は厭わしい、身の毛もよだつ悪臭のする汚物です。〔この肉の身は不浄にて　骨の髄までおぞましき〕",
+            "ja": "この体は厭わしい、身の毛もよだつ悪臭のする汚物です。",
             "wordGlosses": [
               {
                 "pali": "Kāyo",
@@ -2542,7 +3839,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s1-l4",
             "pali": "Gacchanti sabbe maraṇaṃ ahañ ca.",
             "kana": "ガッチャンティ サッベー マラナン アハン チャ",
-            "ja": "すべての生命が死にゆくように、私も必ず死ぬべき存在です。〔生命（しょう）あるものは崩れ果て　われも確かに死に至らん〕",
+            "ja": "すべての生命が死にゆくように、私も必ず死ぬべき存在です。",
             "wordGlosses": [
               {
                 "pali": "Gacchanti",
@@ -2581,7 +3878,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l1",
             "pali": "Namāmi Dhammaṃ sugatena desitaṃ,",
             "kana": "ナマーミ ダンマン スガテーナ デースィタン",
-            "ja": "善逝（世尊）の説かれた、ダンマ（法）に礼拝いたします。〔仏陀の教えに帰依奉らん〕",
+            "ja": "善逝（世尊）の説かれた、ダンマ（法）に礼拝いたします。",
             "wordGlosses": [
               {
                 "pali": "Namāmi",
@@ -2609,7 +3906,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l2",
             "pali": "Sattā sadā hontu sukhī averā;",
             "kana": "サッター サダー ホントゥ スキー アヴェーラー",
-            "ja": "生きとし生けるものが、いつも幸福・安穏に暮らせますように。〔すべての衆生に幸あれと　安穏あれと願（ねご）うなり〕",
+            "ja": "生きとし生けるものが、いつも幸福・安穏に暮らせますように。",
             "wordGlosses": [
               {
                 "pali": "Sattā",
@@ -2642,7 +3939,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l3",
             "pali": "Kāyo jiguccho sakalo dugandho,",
             "kana": "カーヨー ジグッチョー サカロー ドゥガンドー",
-            "ja": "この体は厭わしい、身の毛もよだつ悪臭のする汚物です。〔この肉の身は不浄にて　骨の髄までおぞましき〕",
+            "ja": "この体は厭わしい、身の毛もよだつ悪臭のする汚物です。",
             "wordGlosses": [
               {
                 "pali": "Kāyo",
@@ -2670,7 +3967,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l4",
             "pali": "Gacchanti sabbe maraṇaṃ ahañ ca.",
             "kana": "ガッチャンティ サッベー マラナン アハン チャ",
-            "ja": "すべての生命が死にゆくように、私も必ず死ぬべき存在です。〔生命（しょう）あるものは崩れ果て　われも確かに死に至らん〕",
+            "ja": "すべての生命が死にゆくように、私も必ず死ぬべき存在です。",
             "wordGlosses": [
               {
                 "pali": "Gacchanti",
@@ -2709,7 +4006,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s3-l1",
             "pali": "Namāmi Saṅghaṃ munirāja sāvakaṃ,",
             "kana": "ナマーミ サンガン ムニラージャ サーワカン",
-            "ja": "牟尼王（世尊）の弟子たる、サンガ（僧）に礼拝いたします。〔仏弟子聖者に帰依奉らん〕",
+            "ja": "牟尼王（世尊）の弟子たる、サンガ（僧）に礼拝いたします。",
             "wordGlosses": [
               {
                 "pali": "Namāmi",
@@ -2770,7 +4067,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s3-l3",
             "pali": "Kāyo jiguccho sakalo dugandho,",
             "kana": "カーヨー ジグッチョー サカロー ドゥガンドー",
-            "ja": "この体は厭わしい、身の毛もよだつ悪臭のする汚物です。〔この肉の身は不浄にて　骨の髄までおぞましき〕",
+            "ja": "この体は厭わしい、身の毛もよだつ悪臭のする汚物です。",
             "wordGlosses": [
               {
                 "pali": "Kāyo",
@@ -2798,7 +4095,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s3-l4",
             "pali": "Gacchanti sabbe maraṇaṃ ahañ ca.",
             "kana": "ガッチャンティ サッベー マラナン アハン チャ",
-            "ja": "すべての生命が死にゆくように、私も必ず死ぬべき存在です。〔生命（しょう）あるものは崩れ果て　われも確かに死に至らん〕",
+            "ja": "すべての生命が死にゆくように、私も必ず死ぬべき存在です。",
             "wordGlosses": [
               {
                 "pali": "Gacchanti",
@@ -2834,8 +4131,8 @@ const EMBEDDED_SUTTAS = {
   },
   "buddhanasasana": {
     "id": "buddhanasasana",
-    "title": "諸仏の教え",
-    "titlePali": "Buddhanasasana",
+    "title": "諸仏の教え（法句経 183-185）",
+    "titlePali": "Buddhanasasana (Dh.Nos.183-185)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -2929,7 +4226,179 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.555,
+              "end": 5.367,
+              "kind": "title",
+              "audible": true,
+              "text": "Buddhāna sāsanaṃ",
+              "kana": "ブッダーナ サーサナン",
+              "speechEnd": 5.367,
+              "wordStarts": [
+                0.555,
+                1.867
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 5.367,
+              "end": 16.889,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabba pāpassa akaraṇaṃ, kusalassa upasampadā,",
+              "kana": "サッバ パーパッサ アカラナン クサラッサ ウパサンパダー",
+              "speechEnd": 16.8,
+              "wordStarts": [
+                5.367,
+                6.709,
+                8.946,
+                11.175,
+                13.587
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 16.889,
+              "end": 32.852,
+              "kind": "body",
+              "audible": true,
+              "text": "Sacitta pariyodapanaṃ, etaṃ Buddhāna sāsanaṃ.",
+              "kana": "サチッタ パリヨーダパナン エータン ブッダーナ サーサナン",
+              "speechEnd": 32.852,
+              "wordStarts": [
+                16.889,
+                19.238,
+                23.961,
+                26.109,
+                28.794
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 32.852,
+              "end": 41.261,
+              "kind": "body",
+              "audible": true,
+              "text": "Khantī paramaṃ tapo titikkhā,",
+              "kana": "カンティー パラマン タポー ティティッカー",
+              "speechEnd": 41.261,
+              "wordStarts": [
+                32.852,
+                34.921,
+                36.989,
+                38.541
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 41.261,
+              "end": 50.44,
+              "kind": "body",
+              "audible": true,
+              "text": "Nibbānaṃ paramaṃ vadanti Buddhā;",
+              "kana": "ニッバーナン パラマン ワダンティ ブッダー",
+              "speechEnd": 50.44,
+              "wordStarts": [
+                41.261,
+                44.129,
+                46.041,
+                47.953
+              ]
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 50.44,
+              "end": 59.43,
+              "kind": "body",
+              "audible": true,
+              "text": "Na hi pabbajito parūpaghāti,",
+              "kana": "ナ ヒ パッバジトー パルーパガーティ",
+              "speechEnd": 59.43,
+              "wordStarts": [
+                50.44,
+                51.011,
+                51.582,
+                55.009
+              ]
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 59.43,
+              "end": 69.551,
+              "kind": "body",
+              "audible": true,
+              "text": "Samaṇo hoti paraṃ viheṭhayanto.",
+              "kana": "サマノー ホーティ パラン ヴィヘータヤントー",
+              "speechEnd": 68.743,
+              "wordStarts": [
+                59.43,
+                61.455,
+                62.973,
+                64.491
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 69.551,
+              "end": 85.896,
+              "kind": "body",
+              "audible": true,
+              "text": "Anūpavādo anūpaghāto Pātimokkhe ca saṃvaro,",
+              "kana": "アヌーパワードー アヌーパガートー パーティモッケー チャ サンワロー",
+              "speechEnd": 85.896,
+              "wordStarts": [
+                69.551,
+                74.028,
+                78.198,
+                82.253,
+                82.792
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 85.896,
+              "end": 101.01,
+              "kind": "body",
+              "audible": true,
+              "text": "Mattaññutā ca bhattasmiṃ pantañ ca sayanāsanaṃ,",
+              "kana": "マッタンニュター チャ バッタスミン パンタン チャ サヤナーサナン",
+              "speechEnd": 101.01,
+              "wordStarts": [
+                85.896,
+                89.775,
+                90.329,
+                93.944,
+                96.161,
+                96.715
+              ]
+            },
+            {
+              "lineId": "s3-l3",
+              "start": 101.01,
+              "end": 120.773,
+              "kind": "body",
+              "audible": true,
+              "text": "Adhicitte ca āyogo etaṃ Buddhāna sāsanaṃ.",
+              "kana": "アディチッテー チャ アーヨーゴー エータン ブッダーナ サーサナン",
+              "speechEnd": 120.773,
+              "wordStarts": [
+                101.01,
+                105.363,
+                106.089,
+                110.615,
+                113.517,
+                117.145
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "7daa9cb910a767e0bcd4c626284d988df2298252c1c32787de6b4c4175d290c6"
+          }
         }
       ]
     },
@@ -3037,12 +4506,12 @@ const EMBEDDED_SUTTAS = {
             "id": "s2-l1",
             "pali": "Khantī paramaṃ tapo titikkhā,",
             "kana": "カンティー パラマン タポー ティティッカー",
-            "ja": "忍耐・堪忍は最上の修行である。",
+            "ja": "忍辱(怒りを起こさず、苦痛や不快を受け入れる心)・堪忍(苦痛・困難などをじっと耐えること)は最上の修行である。",
             "wordGlosses": [
               {
                 "pali": "Khantī",
                 "kana": "カンティー",
-                "ja": "忍耐は"
+                "ja": "忍辱・寛容"
               },
               {
                 "pali": "paramaṃ",
@@ -3057,7 +4526,7 @@ const EMBEDDED_SUTTAS = {
               {
                 "pali": "titikkhā,",
                 "kana": "ティティッカー",
-                "ja": "堪忍"
+                "ja": "忍耐・堪忍"
               }
             ]
           },
@@ -3188,7 +4657,7 @@ const EMBEDDED_SUTTAS = {
             "id": "s3-l2",
             "pali": "Mattaññutā ca bhattasmiṃ pantañ ca sayanāsanaṃ,",
             "kana": "マッタンニュター チャ バッタスミン パンタン チャ サヤナーサナン",
-            "ja": "食事に関して［適当な］量を知り、淋しいところでひとり臥し、坐し、",
+            "ja": "食事に関して（適当な）量を知り、淋しいところでひとり臥し、坐し、",
             "wordGlosses": [
               {
                 "pali": "Mattaññutā",
@@ -3394,7 +4863,231 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.538,
+              "end": 6.692,
+              "kind": "title",
+              "audible": true,
+              "text": "Paticca samuppādo Anulomaṃ",
+              "kana": "パティッチャ サムッパードー アヌローマン",
+              "speechEnd": 6.692,
+              "wordStarts": [
+                0.538,
+                1.299,
+                2.631
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 6.692,
+              "end": 13.128,
+              "kind": "body",
+              "audible": true,
+              "text": "Avijjā① paccayā saṅkhārā②,",
+              "kana": "アヴィッジャー パッチャヤー サンカーラー",
+              "speechEnd": 13.128,
+              "wordStarts": [
+                6.692,
+                8.703,
+                10.715
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 13.128,
+              "end": 20.217,
+              "kind": "body",
+              "audible": true,
+              "text": "saṅkhāra paccayā viññāṇaṃ③,",
+              "kana": "サンカーラ パッチャヤー ヴィンニャーナン",
+              "speechEnd": 20.217,
+              "wordStarts": [
+                13.128,
+                15.224,
+                17.32
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 20.217,
+              "end": 27.399,
+              "kind": "body",
+              "audible": true,
+              "text": "viññāṇa paccayā nāmarūpaṃ④,",
+              "kana": "ヴィンニャーナ パッチャヤー ナーマルーパン",
+              "speechEnd": 27.399,
+              "wordStarts": [
+                20.217,
+                22.266,
+                24.314
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 27.399,
+              "end": 35.585,
+              "kind": "body",
+              "audible": true,
+              "text": "nāmarūpa paccayā saḷāyatanaṃ⑤,",
+              "kana": "ナーマルーパ パッチャヤー サラーヤタナン",
+              "speechEnd": 35.401,
+              "wordStarts": [
+                27.399,
+                30.066,
+                32.289
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 35.585,
+              "end": 42.489,
+              "kind": "body",
+              "audible": true,
+              "text": "saḷāyatana paccayā phasso⑥,",
+              "kana": "サラーヤタナ パッチャヤー パッソー",
+              "speechEnd": 42.489,
+              "wordStarts": [
+                35.585,
+                38.403,
+                40.673
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 42.489,
+              "end": 48.805,
+              "kind": "body",
+              "audible": true,
+              "text": "phassa paccayā vedanā⑦,",
+              "kana": "パッサ パッチャヤー ヴェーダナー",
+              "speechEnd": 48.805,
+              "wordStarts": [
+                42.489,
+                43.878,
+                46.194
+              ]
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 48.805,
+              "end": 54.934,
+              "kind": "body",
+              "audible": true,
+              "text": "vedanā paccayā taṇhā⑧,",
+              "kana": "ヴェーダナー パッチャヤー タンハー",
+              "speechEnd": 54.934,
+              "wordStarts": [
+                48.805,
+                50.994,
+                53.183
+              ]
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 54.934,
+              "end": 62.699,
+              "kind": "body",
+              "audible": true,
+              "text": "taṇhā paccayā upādānaṃ⑨,",
+              "kana": "タンハー パッチャヤー ウパーダーナン",
+              "speechEnd": 62.499,
+              "wordStarts": [
+                54.934,
+                56.825,
+                59.189
+              ]
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 62.699,
+              "end": 69.447,
+              "kind": "body",
+              "audible": true,
+              "text": "upādāna paccayā bhavo⑩,",
+              "kana": "ウパーダーナ パッチャヤー バヴォー",
+              "speechEnd": 69.447,
+              "wordStarts": [
+                62.699,
+                65.693,
+                68.039
+              ]
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 69.447,
+              "end": 76.107,
+              "kind": "body",
+              "audible": true,
+              "text": "bhava paccayā jāti⑪,",
+              "kana": "バワ パッチャヤー ジャーティ",
+              "speechEnd": 76.107,
+              "wordStarts": [
+                69.447,
+                70.695,
+                73.816
+              ]
+            },
+            {
+              "lineId": "s1-l11",
+              "start": 76.107,
+              "end": 82.791,
+              "kind": "body",
+              "audible": true,
+              "text": "jāti paccayā jarā maraṇaṃ",
+              "kana": "ジャーティ パッチャヤー ジャラー マラナン",
+              "speechEnd": 82.791,
+              "wordStarts": [
+                76.107,
+                77.414,
+                79.593,
+                80.9
+              ]
+            },
+            {
+              "lineId": "s1-l12",
+              "start": 82.791,
+              "end": 97.477,
+              "kind": "body",
+              "audible": true,
+              "text": "soka parideva dukkha domanassa upāyāsā sambhavanti.",
+              "kana": "ソーカ パリデーワ ドゥッカ ドーマナッサ ウパーヤーサー サンバワンティ",
+              "speechEnd": 97.477,
+              "wordStarts": [
+                82.791,
+                84.189,
+                86.519,
+                87.917,
+                90.712,
+                93.974
+              ]
+            },
+            {
+              "lineId": "s1-l13",
+              "start": 97.477,
+              "end": 114.54,
+              "kind": "body",
+              "audible": true,
+              "text": "Evam etassa kevalassa dukkhakkhandhassa samudayo hoti.",
+              "kana": "エーワ メータッサ ケーワラッサ ドゥッカッカンダッサ サムダヨー ホーティ",
+              "speechEnd": 114.54,
+              "wordStarts": [
+                97.477,
+                99.128,
+                101.88,
+                105.183,
+                110.136,
+                112.888
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "853ff7549a86a59ee4b65c1809d4bf09c04cb88fe8a64f3579ef1ba1b25d50a4"
+          }
         },
         {
           "key": "D1T11",
@@ -3518,7 +5211,246 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.297,
+              "end": 5.638,
+              "kind": "title",
+              "audible": true,
+              "text": "Paticca Samuppādo Paṭilomaṃ",
+              "kana": "パティッチャ サムッパードー パティローマン",
+              "speechEnd": 5.638,
+              "wordStarts": [
+                0.297,
+                1.189,
+                2.902
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 5.638,
+              "end": 19.172,
+              "kind": "body",
+              "audible": true,
+              "text": "Avijjā yatveva asesa virāga nirodhā saṅkhāra nirodho,",
+              "kana": "アヴィッジャー ヤットゥウェーワ アセーサ ヴィラーガ ニローダー サンカーラ ニロードー",
+              "speechEnd": 19.172,
+              "wordStarts": [
+                5.638,
+                7.605,
+                9.965,
+                11.538,
+                13.111,
+                15.078,
+                17.045
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 19.172,
+              "end": 28.156,
+              "kind": "body",
+              "audible": true,
+              "text": "saṅkhāra nirodhā viññāṇa nirodho,",
+              "kana": "サンカーラ ニローダー ヴィンニャーナ ニロードー",
+              "speechEnd": 27.966,
+              "wordStarts": [
+                19.172,
+                21.37,
+                23.569,
+                25.767
+              ]
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 28.156,
+              "end": 37.682,
+              "kind": "body",
+              "audible": true,
+              "text": "viññāṇa nirodhā nāma rūpa nirodho,",
+              "kana": "ヴィンニャーナ ニローダー ナーマ ルーパ ニロードー",
+              "speechEnd": 37.682,
+              "wordStarts": [
+                28.156,
+                30.386,
+                32.606,
+                33.938,
+                35.27
+              ]
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 37.682,
+              "end": 47.337,
+              "kind": "body",
+              "audible": true,
+              "text": "nāma rūpa nirodhā saḷāyatana nirodho,",
+              "kana": "ナーマ ルーパ ニローダー サラーヤタナ ニロードー",
+              "speechEnd": 47.337,
+              "wordStarts": [
+                37.682,
+                38.973,
+                40.264,
+                42.417,
+                44.999
+              ]
+            },
+            {
+              "lineId": "s2-l5",
+              "start": 47.337,
+              "end": 56.472,
+              "kind": "body",
+              "audible": true,
+              "text": "saḷāyatana nirodhā phassa nirodho,",
+              "kana": "サラーヤタナ ニローダー パッサ ニロードー",
+              "speechEnd": 56.472,
+              "wordStarts": [
+                47.337,
+                50.159,
+                52.511,
+                53.922
+              ]
+            },
+            {
+              "lineId": "s2-l6",
+              "start": 56.472,
+              "end": 65.128,
+              "kind": "body",
+              "audible": true,
+              "text": "phassa nirodhā vedanā nirodho,",
+              "kana": "パッサ ニローダー ヴェーダナー ニロードー",
+              "speechEnd": 65.008,
+              "wordStarts": [
+                56.472,
+                57.895,
+                60.266,
+                62.637
+              ]
+            },
+            {
+              "lineId": "s2-l7",
+              "start": 65.128,
+              "end": 74.673,
+              "kind": "body",
+              "audible": true,
+              "text": "vedanā nirodhā taṇhā nirodho,",
+              "kana": "ヴェーダナー ニローダー タンハー ニロードー",
+              "speechEnd": 74.673,
+              "wordStarts": [
+                65.128,
+                67.669,
+                70.104,
+                72.052
+              ]
+            },
+            {
+              "lineId": "s2-l8",
+              "start": 74.673,
+              "end": 84.191,
+              "kind": "body",
+              "audible": true,
+              "text": "taṇhā nirodhā upādāna nirodho,",
+              "kana": "タンハー ニローダー ウパーダーナ ニロードー",
+              "speechEnd": 83.989,
+              "wordStarts": [
+                74.673,
+                76.536,
+                78.865,
+                81.66
+              ]
+            },
+            {
+              "lineId": "s2-l9",
+              "start": 84.191,
+              "end": 92.972,
+              "kind": "body",
+              "audible": true,
+              "text": "upādāna nirodhā bhava nirodho,",
+              "kana": "ウパーダーナ ニローダー バワ ニロードー",
+              "speechEnd": 92.838,
+              "wordStarts": [
+                84.191,
+                87.103,
+                89.493,
+                90.449
+              ]
+            },
+            {
+              "lineId": "s2-l10",
+              "start": 92.972,
+              "end": 100.724,
+              "kind": "body",
+              "audible": true,
+              "text": "bhava nirodhā jāti nirodho,",
+              "kana": "バワ ニローダー ジャーティ ニロードー",
+              "speechEnd": 100.615,
+              "wordStarts": [
+                92.972,
+                94.094,
+                96.602,
+                98.107
+              ]
+            },
+            {
+              "lineId": "s2-l11",
+              "start": 100.724,
+              "end": 108.583,
+              "kind": "body",
+              "audible": true,
+              "text": "jāti nirodhā jarā maraṇaṃ",
+              "kana": "ジャーティ ニローダー ジャラー マラナン",
+              "speechEnd": 108.583,
+              "wordStarts": [
+                100.724,
+                102.646,
+                105.058,
+                106.505
+              ]
+            },
+            {
+              "lineId": "s2-l12",
+              "start": 108.583,
+              "end": 122.725,
+              "kind": "body",
+              "audible": true,
+              "text": "soka parideva dukkha domanassa upāyāsā nirujjhanti.",
+              "kana": "ソーカ パリデーワ ドゥッカ ドーマナッサ ウパーヤーサー ニルッジャンティ",
+              "speechEnd": 122.725,
+              "wordStarts": [
+                108.583,
+                109.952,
+                112.233,
+                113.602,
+                116.34,
+                119.533
+              ]
+            },
+            {
+              "lineId": "s2-l13",
+              "start": 122.725,
+              "end": 140.08,
+              "kind": "body",
+              "audible": true,
+              "text": "Evam etassa kevalassa dukkhakkhandhassa nirodho hoti.",
+              "kana": "エーワ メータッサ ケーワラッサ ドゥッカッカンダッサ ニロードー ホーティ",
+              "speechEnd": 140.08,
+              "wordStarts": [
+                122.725,
+                124.404,
+                127.204,
+                130.563,
+                135.601,
+                138.4
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "284cb77e764a12bd9a0ea147a5054821ee108f9afbd8fcc47ebc3441f13f50f9"
+          }
         }
       ]
     },
@@ -3921,7 +5853,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s2-l1",
             "pali": "Avijjā yatveva asesa virāga nirodhā saṅkhāra nirodho,",
-            "kana": "アヴィッジャー ヤットゥヴェーワ アセーサ ヴィラーガ ニローダー サンカーラ ニロードー",
+            "kana": "アヴィッジャー ヤットゥウェーワ アセーサ ヴィラーガ ニローダー サンカーラ ニロードー",
             "ja": "無明こそが、余すところなく離れて滅することに縁って行が滅する。",
             "wordGlosses": [
               {
@@ -3931,7 +5863,7 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "yatveva",
-                "kana": "ヤットゥヴェーワ",
+                "kana": "ヤットゥウェーワ",
                 "ja": "まさに"
               },
               {
@@ -4334,8 +6266,8 @@ const EMBEDDED_SUTTAS = {
   },
   "pathama-udana": {
     "id": "pathama-udana",
-    "title": "歓喜の言葉",
-    "titlePali": "Pathama udana",
+    "title": "歓喜の言葉（法句経 153,154）",
+    "titlePali": "Pathama udana (Dh.Nos.153,154)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -4397,7 +6329,117 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.324,
+              "end": 4.389,
+              "kind": "title",
+              "audible": true,
+              "text": "Paṭhama udāna",
+              "kana": "パタマ ウダーナ",
+              "speechEnd": 4.389,
+              "wordStarts": [
+                0.324,
+                1.345
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.389,
+              "end": 17.137,
+              "kind": "body",
+              "audible": true,
+              "text": "Aneka jāti saṃsāraṃ sandhāvissaṃ anibbisaṃ",
+              "kana": "アネーカ ジャーティ サンサーラン サンダーヴィッサン アニッビサン",
+              "speechEnd": 16.898,
+              "wordStarts": [
+                4.389,
+                6.242,
+                7.632,
+                10.412,
+                14.119
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 17.137,
+              "end": 32.149,
+              "kind": "body",
+              "audible": true,
+              "text": "Gahakārakaṃ gavesanto dukkhā jāti punappunaṃ.",
+              "kana": "ガハカーラカン ガヴェーサントー ドゥッカー ジャーティ プナップナン",
+              "speechEnd": 32.149,
+              "wordStarts": [
+                17.137,
+                20.819,
+                24.471,
+                26.558,
+                28.123
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 32.149,
+              "end": 44.504,
+              "kind": "body",
+              "audible": true,
+              "text": "Gahakāraka, diṭṭho'si puna gehaṃ na kāhasi,",
+              "kana": "ガハカーラカ ディットースィ プナ ゲーハン ナ カーハスィ",
+              "speechEnd": 44.504,
+              "wordStarts": [
+                32.149,
+                35.432,
+                38.11,
+                39.369,
+                41.558,
+                42.105
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 44.504,
+              "end": 59.513,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabbā te phāsukā bhaggā gahakūṭaṃ visaṅkhitaṃ",
+              "kana": "サッバー テー パースカー バッガー ガハクータン ヴィサンキタン",
+              "speechEnd": 59.513,
+              "wordStarts": [
+                44.504,
+                46.682,
+                47.771,
+                50.493,
+                52.671,
+                55.938
+              ]
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 59.513,
+              "end": 77.697,
+              "kind": "body",
+              "audible": true,
+              "text": "Visaṅkhāra gataṃ cittaṃ taṇhānaṃ khayam ajjhagā ti.",
+              "kana": "ヴィサンカーラ ガタン チッタン タンハーナン カヤン アッジャガー ティ",
+              "speechEnd": 77.697,
+              "wordStarts": [
+                59.513,
+                63.359,
+                65.283,
+                68.081,
+                71.927,
+                73.851,
+                77.056
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "b652440bcbc8bd0cb16a71f28a4bb24ef19c405202aabdbbcc1cdda520e58095"
+          }
         }
       ]
     },
@@ -4627,8 +6669,8 @@ const EMBEDDED_SUTTAS = {
   },
   "ratana-sutta-patthana": {
     "id": "ratana-sutta-patthana",
-    "title": "宝経・祈願文",
-    "titlePali": "Ratana suttaṃ･Patthanā",
+    "title": "宝経・祈願文（ｽｯﾀﾆﾊﾟｰﾀ2.1 222-238）",
+    "titlePali": "Ratana suttaṃ･Patthanā (Snp2.1,PTS:Sn 222-238)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -5018,7 +7060,957 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.546,
+              "end": 3.263,
+              "kind": "title",
+              "audible": true,
+              "text": "Ratana Suttaṃ",
+              "kana": "ラタナ スッタン",
+              "speechEnd": 3.263,
+              "wordStarts": [
+                0.546,
+                1.141
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.263,
+              "end": 16.177,
+              "kind": "body",
+              "audible": true,
+              "text": "Yānīdha bhūtāni samāgatāni bhummāni vā yāni va antalikkhe,",
+              "kana": "ヤーニーダ ブーターニ サマーガターニ ブンマーニ ワー ヤーニ ワ アンタリッケー",
+              "speechEnd": 16.177,
+              "wordStarts": [
+                3.263,
+                5.077,
+                6.891,
+                9.662,
+                11.36,
+                12.086,
+                13.174,
+                13.537
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 16.177,
+              "end": 30.179,
+              "kind": "body",
+              "audible": true,
+              "text": "sabbeva bhūtā sumanā bhavantu; athopi sakkacca suṇantu bhāsitaṃ.",
+              "kana": "サッベーワ ブーター スマナー バワントゥ アトーピ サッカッチャ スナントゥ バースィタン",
+              "speechEnd": 30.179,
+              "wordStarts": [
+                16.177,
+                18.133,
+                19.697,
+                21.262,
+                22.879,
+                24.493,
+                26.449,
+                28.013
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 30.179,
+              "end": 44.827,
+              "kind": "body",
+              "audible": true,
+              "text": "Tasmāhi bhūtā nisāmetha sabbe, mettaṃ karotha mānusiyā pajāya,",
+              "kana": "タスマーヒ ブーター ニサーメータ サッベー メッタン カロータ マーヌスィヤー パジャーヤ",
+              "speechEnd": 44.743,
+              "wordStarts": [
+                30.179,
+                32.147,
+                33.722,
+                36.083,
+                37.658,
+                39.233,
+                40.807,
+                43.169
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 44.827,
+              "end": 60.674,
+              "kind": "body",
+              "audible": true,
+              "text": "divā ca ratto ca haranti ye baliṃ, tasmāhi ne rakkhatha appamattā.",
+              "kana": "ディワー チャ ラットー チャ ハランティ イェー バリン タスマーヒ ネー ラッカタ アッパマッター",
+              "speechEnd": 60.674,
+              "wordStarts": [
+                44.827,
+                46.19,
+                46.601,
+                48.243,
+                48.653,
+                50.295,
+                51.116,
+                52.551,
+                54.604,
+                55.425,
+                57.067
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 60.674,
+              "end": 75.217,
+              "kind": "body",
+              "audible": true,
+              "text": "Yaṃ kiñci vittaṃ idha vā huraṃ vā, saggesu vā yaṃ ratanaṃ paṇītaṃ,",
+              "kana": "ヤン キンチ ヴィッタン イダ ワー フラン ワー サッゲース ワー ヤン ラタナン パニータン",
+              "speechEnd": 75.217,
+              "wordStarts": [
+                60.674,
+                61.47,
+                62.665,
+                64.257,
+                65.054,
+                65.85,
+                67.044,
+                67.841,
+                69.831,
+                70.628,
+                71.424,
+                73.017
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 75.217,
+              "end": 81.849,
+              "kind": "body",
+              "audible": true,
+              "text": "na no samaṃ atthi tathāgatena,",
+              "kana": "ナ ノー サマン アッティ タターガテーナ",
+              "speechEnd": 81.849,
+              "wordStarts": [
+                75.217,
+                75.632,
+                76.461,
+                77.704,
+                78.948
+              ]
+            },
+            {
+              "lineId": "s3-l3",
+              "start": 81.849,
+              "end": 97.297,
+              "kind": "body",
+              "audible": true,
+              "text": "idam pi buddhe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ ブッデー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 97.297,
+              "wordStarts": [
+                81.849,
+                83.063,
+                83.467,
+                85.085,
+                86.703,
+                88.86,
+                90.883,
+                92.905,
+                94.523
+              ]
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 97.297,
+              "end": 111.299,
+              "kind": "body",
+              "audible": true,
+              "text": "Khayaṃ virāgaṃ amataṃ paṇītaṃ, yadajjhagā sakyamunī samāhito,",
+              "kana": "カヤン ヴィラーガン アマタン パニータン ヤダッジャガー サキャムニー サマーヒトー",
+              "speechEnd": 111.244,
+              "wordStarts": [
+                97.297,
+                98.514,
+                100.543,
+                102.166,
+                104.347,
+                106.781,
+                108.81
+              ]
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 111.299,
+              "end": 118.831,
+              "kind": "body",
+              "audible": true,
+              "text": "na tena dhammena samatthi kiñci,",
+              "kana": "ナ テーナ ダンメーナ サマッティ キンチ",
+              "speechEnd": 118.831,
+              "wordStarts": [
+                111.299,
+                111.98,
+                113.313,
+                115.536,
+                117.314
+              ]
+            },
+            {
+              "lineId": "s4-l3",
+              "start": 118.831,
+              "end": 134.211,
+              "kind": "body",
+              "audible": true,
+              "text": "idam pi dhamme ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ ダンメー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 134.211,
+              "wordStarts": [
+                118.831,
+                120.076,
+                120.49,
+                122.15,
+                123.809,
+                126.06,
+                128.134,
+                130.208,
+                131.868
+              ]
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 134.211,
+              "end": 148.992,
+              "kind": "body",
+              "audible": true,
+              "text": "Yam Buddha seṭṭho parivaṇṇayī suciṃ samādhim ānantarikaññam āhu,",
+              "kana": "ヤン ブッダ セットー パリワンナイー スチン サマーディ マーナンタリカンニャ マーフ",
+              "speechEnd": 148.992,
+              "wordStarts": [
+                134.211,
+                135.041,
+                136.285,
+                137.944,
+                140.848,
+                142.222,
+                143.881,
+                147.615
+              ]
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 148.992,
+              "end": 155.694,
+              "kind": "body",
+              "audible": true,
+              "text": "samādhinā tena samo na vijjati,",
+              "kana": "サマーディナー テーナ サモー ナ ヴィッジャティ",
+              "speechEnd": 155.694,
+              "wordStarts": [
+                148.992,
+                151.308,
+                152.465,
+                153.623,
+                154.009
+              ]
+            },
+            {
+              "lineId": "s5-l3",
+              "start": 155.694,
+              "end": 170.703,
+              "kind": "body",
+              "audible": true,
+              "text": "idam pi dhamme ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ ダンメー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 170.703,
+              "wordStarts": [
+                155.694,
+                156.901,
+                157.303,
+                158.912,
+                160.52,
+                162.674,
+                164.685,
+                166.696,
+                168.305
+              ]
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 170.703,
+              "end": 186.048,
+              "kind": "body",
+              "audible": true,
+              "text": "Ye puggalā aṭṭha satam pasatthā, cattāri etāni yugāni honti,",
+              "kana": "イェー プッガラー アッタ サタン パサッター チャッターリ エーターニ ユガーニ ホンティ",
+              "speechEnd": 186.048,
+              "wordStarts": [
+                170.703,
+                171.566,
+                173.722,
+                175.016,
+                176.31,
+                178.467,
+                180.623,
+                182.78,
+                184.505
+              ]
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 186.048,
+              "end": 201.593,
+              "kind": "body",
+              "audible": true,
+              "text": "te dakkhiṇeyyā sugatassa sāvakā, etesu dinnāni mahapphalāni,",
+              "kana": "テー ダッキネッヤー スガタッサ サーワカー エーテース ディンナーニ マハッパラーニ",
+              "speechEnd": 201.367,
+              "wordStarts": [
+                186.048,
+                186.899,
+                189.878,
+                192.005,
+                194.133,
+                196.261,
+                198.388
+              ]
+            },
+            {
+              "lineId": "s6-l3",
+              "start": 201.593,
+              "end": 217.082,
+              "kind": "body",
+              "audible": true,
+              "text": "Idam pi saṅghe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ サンゲー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 217.082,
+              "wordStarts": [
+                201.593,
+                203.009,
+                203.445,
+                205.187,
+                206.93,
+                209.266,
+                211.444,
+                213.622,
+                215.365
+              ]
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 217.082,
+              "end": 233.115,
+              "kind": "body",
+              "audible": true,
+              "text": "Ye suppayuttā manasā daḷhena nikkāmino gotama sāsanamhi,",
+              "kana": "イェー スッパユッター マナサー ダルヘーナ ニッカーミノー ゴータマ サーサナンヒ",
+              "speechEnd": 233.115,
+              "wordStarts": [
+                217.082,
+                217.981,
+                221.126,
+                222.923,
+                225.169,
+                228.314,
+                230.111
+              ]
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 233.115,
+              "end": 249.194,
+              "kind": "body",
+              "audible": true,
+              "text": "te pattipattā amataṃ vigayha laddhā mudhā nibbutiṃ bhuñjamānā,",
+              "kana": "テー パッティパッター アマタン ヴィガイハ ラッダー ムダー ニッブティン ブンジャマーナー",
+              "speechEnd": 248.976,
+              "wordStarts": [
+                233.115,
+                233.996,
+                237.08,
+                238.842,
+                240.605,
+                242.367,
+                243.689,
+                245.892
+              ]
+            },
+            {
+              "lineId": "s7-l3",
+              "start": 249.194,
+              "end": 266.507,
+              "kind": "body",
+              "audible": true,
+              "text": "Idam pi saṅghe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ サンゲー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 266.507,
+              "wordStarts": [
+                249.194,
+                250.619,
+                251.085,
+                252.946,
+                254.808,
+                257.135,
+                259.462,
+                261.788,
+                263.65
+              ]
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 266.507,
+              "end": 282.196,
+              "kind": "body",
+              "audible": true,
+              "text": "Yathindakhīlo paṭhaviṃ sito siyā catubbhi vātebhi asampa kampiyo,",
+              "kana": "ヤティンダキーロー パタヴィン スィトー スィヤー チャトゥッビ ワーテービ アサンパ カンピヨー",
+              "speechEnd": 282.196,
+              "wordStarts": [
+                266.507,
+                269.927,
+                271.637,
+                272.92,
+                274.203,
+                275.913,
+                278.05,
+                279.76
+              ]
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 282.196,
+              "end": 296.732,
+              "kind": "body",
+              "audible": true,
+              "text": "tathūpamaṃ sappurisaṃ vadāmi yo ariya saccāni avecca passati,",
+              "kana": "タトゥーパマン サップリサン ワダーミ ヨー アリヤ サッチャーニ アヴェッチャ パッサティ",
+              "speechEnd": 296.732,
+              "wordStarts": [
+                282.196,
+                284.733,
+                287.27,
+                288.961,
+                289.807,
+                291.075,
+                293.189,
+                294.881
+              ]
+            },
+            {
+              "lineId": "s8-l3",
+              "start": 296.732,
+              "end": 313.613,
+              "kind": "body",
+              "audible": true,
+              "text": "Idam pi saṅghe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ サンゲー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 313.613,
+              "wordStarts": [
+                296.732,
+                298.106,
+                298.564,
+                300.396,
+                302.228,
+                304.518,
+                306.808,
+                309.098,
+                310.93
+              ]
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 313.613,
+              "end": 329.364,
+              "kind": "body",
+              "audible": true,
+              "text": "Ye ariya saccāni vibhāvayanti gambhīra paññena sudesitāni,",
+              "kana": "イェー アリヤ サッチャーニ ヴィバーワヤンティ ガンビーラ パンニェーナ スデースィターニ",
+              "speechEnd": 329.364,
+              "wordStarts": [
+                313.613,
+                314.512,
+                315.861,
+                318.11,
+                321.294,
+                323.701,
+                325.949
+              ]
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 329.364,
+              "end": 344.72,
+              "kind": "body",
+              "audible": true,
+              "text": "kiñcāpi te honti bhusappamattā, na te bhavaṃ aṭṭhamaṃ ādiyanti,",
+              "kana": "キンチャーピ テー ホンティ ブサッパマッター ナ テー バワン アッタマン アーディヤンティ",
+              "speechEnd": 344.576,
+              "wordStarts": [
+                329.364,
+                331.537,
+                332.406,
+                333.71,
+                337.187,
+                337.622,
+                338.491,
+                339.795,
+                341.968
+              ]
+            },
+            {
+              "lineId": "s9-l3",
+              "start": 344.72,
+              "end": 360.27,
+              "kind": "body",
+              "audible": true,
+              "text": "Idam pi saṅghe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ サンゲー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 360.27,
+              "wordStarts": [
+                344.72,
+                346.063,
+                346.49,
+                348.198,
+                349.906,
+                352.148,
+                354.283,
+                356.418,
+                358.126
+              ]
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 360.27,
+              "end": 375.219,
+              "kind": "body",
+              "audible": true,
+              "text": "Sahāvassa dassana sampadāya tayassu dhammā jahitā bhavanti:",
+              "kana": "サハーワッサ ダッサナ サンパダーヤ タヤッス ダンマー ジャヒター バワンティ",
+              "speechEnd": 375.219,
+              "wordStarts": [
+                360.27,
+                363.046,
+                364.897,
+                367.673,
+                369.524,
+                371.375,
+                373.226
+              ]
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 375.219,
+              "end": 390.305,
+              "kind": "body",
+              "audible": true,
+              "text": "sakkāya diṭṭhi vicikicchitañ ca sīlabbataṃ vāpi yadatthi kiñci,",
+              "kana": "サッカーヤ ディッティ ヴィチキッチタン チャ スィーラッバタン ワーピ ヤダッティ キンチ",
+              "speechEnd": 390.305,
+              "wordStarts": [
+                375.219,
+                377.463,
+                378.809,
+                381.95,
+                382.399,
+                385.54,
+                386.886,
+                388.681
+              ]
+            },
+            {
+              "lineId": "s10-l3",
+              "start": 390.305,
+              "end": 405.92,
+              "kind": "body",
+              "audible": true,
+              "text": "catūhapāyehi ca vippamutto cha cābhiṭhānāni abhabbo kātuṃ,",
+              "kana": "チャトゥーハパーイェーヒ チャ ヴィッパムットー チャ チャービターナーニ アバッボー カートゥン",
+              "speechEnd": 405.806,
+              "wordStarts": [
+                390.305,
+                394.291,
+                394.734,
+                397.834,
+                398.277,
+                401.82,
+                404.035
+              ]
+            },
+            {
+              "lineId": "s10-l4",
+              "start": 405.92,
+              "end": 422.628,
+              "kind": "body",
+              "audible": true,
+              "text": "Idam pi saṅghe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ サンゲー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 422.628,
+              "wordStarts": [
+                405.92,
+                407.376,
+                407.826,
+                409.627,
+                411.428,
+                413.77,
+                416.021,
+                418.272,
+                420.073
+              ]
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 422.628,
+              "end": 439.129,
+              "kind": "body",
+              "audible": true,
+              "text": "Kiñcā pi so kammaṃ karoti pāpakaṃ kāyena vācā uda cetasā vā,",
+              "kana": "キンチャー ピ ソー カンマン カローティ パーパカン カーイェーナ ワーチャー ウダ チェータサー ワー",
+              "speechEnd": 439.129,
+              "wordStarts": [
+                422.628,
+                424.346,
+                424.776,
+                425.635,
+                427.353,
+                429.072,
+                431.133,
+                433.545,
+                435.263,
+                436.122,
+                438.27
+              ]
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 439.129,
+              "end": 454.841,
+              "kind": "body",
+              "audible": true,
+              "text": "abhabbo so tassa paṭicchādāya, abhabbatā diṭṭhapadassa vuttā,",
+              "kana": "アバッボー ソー タッサ パティッチャーダーヤ アバッバター ディッタパダッサ ヴッター",
+              "speechEnd": 454.817,
+              "wordStarts": [
+                439.129,
+                441.37,
+                442.267,
+                443.611,
+                447.197,
+                449.887,
+                453.024
+              ]
+            },
+            {
+              "lineId": "s11-l3",
+              "start": 454.841,
+              "end": 472.659,
+              "kind": "body",
+              "audible": true,
+              "text": "Idam pi saṅghe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ サンゲー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 472.659,
+              "wordStarts": [
+                454.841,
+                456.353,
+                456.828,
+                458.727,
+                460.627,
+                463.098,
+                465.472,
+                467.846,
+                469.745
+              ]
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 472.659,
+              "end": 488.684,
+              "kind": "body",
+              "audible": true,
+              "text": "Vanappagumbe yathā phussitagge gimhāna māse paṭhamasmiṃ gimhe,",
+              "kana": "ワナッパグンベー ヤター プッスィタッゲー ギンハーナ マーセー パタマスミン ギンヘー",
+              "speechEnd": 488.684,
+              "wordStarts": [
+                472.659,
+                476.084,
+                477.368,
+                480.364,
+                482.505,
+                484.217,
+                486.785
+              ]
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 488.684,
+              "end": 504.433,
+              "kind": "body",
+              "audible": true,
+              "text": "tathūpamaṃ dhamma varaṃ adesayī nibbāna gāmiṃ paramaṃ hitāya,",
+              "kana": "タトゥーパマン ダンマ ワラン アデーサイー ニッバーナ ガーミン パラマン ヒターヤ",
+              "speechEnd": 504.238,
+              "wordStarts": [
+                488.684,
+                491.323,
+                492.643,
+                493.962,
+                496.761,
+                498.96,
+                500.719,
+                502.478
+              ]
+            },
+            {
+              "lineId": "s12-l3",
+              "start": 504.433,
+              "end": 519.908,
+              "kind": "body",
+              "audible": true,
+              "text": "idam pi buddhe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ ブッデー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 519.908,
+              "wordStarts": [
+                504.433,
+                505.801,
+                506.243,
+                508.01,
+                509.778,
+                512.105,
+                514.315,
+                516.525,
+                518.292
+              ]
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 519.908,
+              "end": 535.046,
+              "kind": "body",
+              "audible": true,
+              "text": "Varo varaññū varado varāharo anuttaro dhamma varaṃ adesayī,",
+              "kana": "ワロー ワランニュー ワラドー ワラーハロー アヌッタロー ダンマ ワラン アデーサイー",
+              "speechEnd": 535.046,
+              "wordStarts": [
+                519.908,
+                521.154,
+                523.23,
+                524.891,
+                527.382,
+                529.873,
+                531.119,
+                532.365
+              ]
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 535.046,
+              "end": 552.257,
+              "kind": "body",
+              "audible": true,
+              "text": "idam pi buddhe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ ブッデー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 552.257,
+              "wordStarts": [
+                535.046,
+                536.406,
+                536.859,
+                538.672,
+                540.485,
+                542.906,
+                545.173,
+                547.439,
+                549.252
+              ]
+            },
+            {
+              "lineId": "s14-l1",
+              "start": 552.257,
+              "end": 570.685,
+              "kind": "body",
+              "audible": true,
+              "text": "Khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ, viratta cittā āyatike bhavasmiṃ,",
+              "kana": "キーナン プラーナン ナワン ナッティ サンバワン ヴィラッタ チッター アーヤティケー バワスミン",
+              "speechEnd": 570.685,
+              "wordStarts": [
+                552.257,
+                554.114,
+                556.436,
+                557.829,
+                559.222,
+                561.544,
+                563.402,
+                565.259,
+                568.045
+              ]
+            },
+            {
+              "lineId": "s14-l2",
+              "start": 570.685,
+              "end": 588.18,
+              "kind": "body",
+              "audible": true,
+              "text": "te khīṇa bījā avirūḷhicchandā nibbanti dhīrā yathā yam padīpo,",
+              "kana": "テー キーナ ビージャー アヴィルールヒッチャンダー ニッバンティ ディーラー ヤター ヤン パディーポー",
+              "speechEnd": 587.979,
+              "wordStarts": [
+                570.685,
+                571.572,
+                572.902,
+                574.676,
+                579.554,
+                581.771,
+                583.545,
+                584.875,
+                585.762
+              ]
+            },
+            {
+              "lineId": "s14-l3",
+              "start": 588.18,
+              "end": 606.688,
+              "kind": "body",
+              "audible": true,
+              "text": "Idam pi saṅghe ratanaṃ paṇītaṃ, etena saccena suvatthi hotu.",
+              "kana": "イダン ピ サンゲー ラタナン パニータン エーテーナ サッチェーナ スワッティ ホートゥ",
+              "speechEnd": 606.688,
+              "wordStarts": [
+                588.18,
+                589.746,
+                590.244,
+                592.24,
+                594.235,
+                596.91,
+                599.404,
+                601.898,
+                603.893
+              ]
+            },
+            {
+              "lineId": "s15-l1",
+              "start": 606.688,
+              "end": 622.83,
+              "kind": "body",
+              "audible": true,
+              "text": "Yānīdha bhūtāni samāgatāni bhummāni vā yāni va antalikkhe,",
+              "kana": "ヤーニーダ ブーターニ サマーガターニ ブンマーニ ワー ヤーニ ワ アンタリッケー",
+              "speechEnd": 622.83,
+              "wordStarts": [
+                606.688,
+                608.934,
+                611.18,
+                614.324,
+                616.699,
+                617.598,
+                618.945,
+                619.395
+              ]
+            },
+            {
+              "lineId": "s15-l2",
+              "start": 622.83,
+              "end": 639.109,
+              "kind": "body",
+              "audible": true,
+              "text": "Tathāgataṃ deva manussa pūjitaṃ Buddhaṃ namassāma suvatthi hotu.",
+              "kana": "タターガタン デーワ マヌッサ プージタン ブッダン ナマッサーマ スワッティ ホートゥ",
+              "speechEnd": 639.109,
+              "wordStarts": [
+                622.83,
+                625.455,
+                626.767,
+                628.517,
+                630.575,
+                632.569,
+                635.194,
+                636.944
+              ]
+            },
+            {
+              "lineId": "s16-l1",
+              "start": 639.109,
+              "end": 655.601,
+              "kind": "body",
+              "audible": true,
+              "text": "Yānīdha bhūtāni samāgatāni bhummāni vā yāni va antalikkhe,",
+              "kana": "ヤーニーダ ブーターニ サマーガターニ ブンマーニ ワー ヤーニ ワ アンタリッケー",
+              "speechEnd": 655.601,
+              "wordStarts": [
+                639.109,
+                641.403,
+                643.696,
+                646.907,
+                649.361,
+                650.278,
+                651.655,
+                652.113
+              ]
+            },
+            {
+              "lineId": "s16-l2",
+              "start": 655.601,
+              "end": 673.285,
+              "kind": "body",
+              "audible": true,
+              "text": "Tathāgataṃ deva manussa pūjitaṃ Dhammaṃ namassāma suvatthi hotu.",
+              "kana": "タターガタン デーワ マヌッサ プージタン ダンマン ナマッサーマ スワッティ ホートゥ",
+              "speechEnd": 673.285,
+              "wordStarts": [
+                655.601,
+                658.512,
+                659.967,
+                661.908,
+                664.502,
+                666.442,
+                669.353,
+                671.294
+              ]
+            },
+            {
+              "lineId": "s17-l1",
+              "start": 673.285,
+              "end": 690.013,
+              "kind": "body",
+              "audible": true,
+              "text": "Yānīdha bhūtāni samāgatāni bhummāni vā yāni va antalikkhe,",
+              "kana": "ヤーニーダ ブーターニ サマーガターニ ブンマーニ ワー ヤーニ ワ アンタリッケー",
+              "speechEnd": 690.013,
+              "wordStarts": [
+                673.285,
+                675.622,
+                677.959,
+                681.418,
+                683.679,
+                684.614,
+                686.016,
+                686.484
+              ]
+            },
+            {
+              "lineId": "s17-l2",
+              "start": 690.013,
+              "end": 710.507,
+              "kind": "body",
+              "audible": true,
+              "text": "Tathāgataṃ deva manussa pūjitaṃ Saṅghaṃ namassāma suvatthi hotu.",
+              "kana": "タターガタン デーワ マヌッサ プージタン サンガン ナマッサーマ スワッティ ホートゥ",
+              "speechEnd": 710.507,
+              "wordStarts": [
+                690.013,
+                693.492,
+                695.231,
+                697.551,
+                700.65,
+                702.969,
+                706.448,
+                708.768
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "fb141b37b8e9418d31425381e1e21638acf4015c20bb36de136231115dec09a0"
+          }
         },
         {
           "key": "D1T14",
@@ -5062,7 +8054,81 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.321,
+              "end": 3.199,
+              "kind": "title",
+              "audible": true,
+              "text": "Patthanā",
+              "kana": "パッタナー",
+              "speechEnd": 3.199,
+              "wordStarts": [
+                0.321
+              ]
+            },
+            {
+              "lineId": "s18-l1",
+              "start": 3.199,
+              "end": 15.576,
+              "kind": "body",
+              "audible": true,
+              "text": "Etena sacca vajjena dukkhā vūpasamentu no.",
+              "kana": "エーテーナ サッチャ ワッジェーナ ドゥッカー ヴーパサメントゥ ノー",
+              "speechEnd": 15.155,
+              "wordStarts": [
+                3.199,
+                5.465,
+                6.825,
+                9.092,
+                11.076,
+                14.249
+              ]
+            },
+            {
+              "lineId": "s18-l2",
+              "start": 15.576,
+              "end": 28.3,
+              "kind": "body",
+              "audible": true,
+              "text": "Etena sacca vajjena bhayā vūpasamentu no.",
+              "kana": "エーテーナ サッチャ ワッジェーナ バヤー ヴーパサメントゥ ノー",
+              "speechEnd": 28.3,
+              "wordStarts": [
+                15.576,
+                18.006,
+                19.462,
+                21.92,
+                23.545,
+                26.942
+              ]
+            },
+            {
+              "lineId": "s18-l3",
+              "start": 28.3,
+              "end": 43.495,
+              "kind": "body",
+              "audible": true,
+              "text": "Etena sacca vajjena rogā vūpasamentu no.",
+              "kana": "エーテーナ サッチャ ワッジェーナ ローガー ヴーパサメントゥ ノー",
+              "speechEnd": 43.495,
+              "wordStarts": [
+                28.3,
+                31.165,
+                32.884,
+                36.046,
+                38.338,
+                42.349
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "7ca77c9ca674b615ad777dc028dc5cbc9e64b40137341e6dff6f9721f7519734"
+          }
         }
       ]
     },
@@ -5624,7 +8690,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s5-l1",
             "pali": "Yam Buddha seṭṭho parivaṇṇayī suciṃ samādhim ānantarikaññam āhu,",
-            "kana": "ヤン ブッダ セットー パリワンナイー スチン サマーディン アーナンタリカンニャン アーフ",
+            "kana": "ヤン ブッダ セットー パリワンナイー スチン サマーディ マーナンタリカンニャ マーフ",
             "ja": "最勝たる仏陀が、清浄なりと賛嘆せし禅定は「無間」と呼ばれる。",
             "wordGlosses": [
               {
@@ -5654,17 +8720,17 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "samādhim",
-                "kana": "サマーディン",
+                "kana": "サマーディ",
                 "ja": "禅定を"
               },
               {
                 "pali": "ānantarikaññam",
-                "kana": "アーナンタリカンニャン",
+                "kana": "マーナンタリカンニャ",
                 "ja": "無間のものを"
               },
               {
                 "pali": "āhu,",
-                "kana": "アーフ",
+                "kana": "マーフ",
                 "ja": "呼ぶ"
               }
             ]
@@ -7583,8 +10649,8 @@ const EMBEDDED_SUTTAS = {
   },
   "metta-suttam-patthana-paritta": {
     "id": "metta-suttam-patthana-paritta",
-    "title": "慈教・祈願文・護経",
-    "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ",
+    "title": "慈教・祈願文・護経（ｽｯﾀﾆﾊﾟｰﾀ1.8 143-152）",
+    "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ (Snp1.8,PTS:Sn143-152)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -7766,7 +10832,419 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.221,
+              "end": 4.398,
+              "kind": "title",
+              "audible": true,
+              "text": "Metta Suttaṃ",
+              "kana": "メッタ スッタン",
+              "speechEnd": 4.398,
+              "wordStarts": [
+                0.221,
+                1.037
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.398,
+              "end": 15.518,
+              "kind": "body",
+              "audible": true,
+              "text": "Karaṇīyam atthakusalena yan taṃ santaṃ padaṃ abhisamecca;",
+              "kana": "カラニーヤ マッタクサレーナ ヤン タン サンタン パダン アビサメッチャ",
+              "speechEnd": 15.518,
+              "wordStarts": [
+                4.398,
+                6.251,
+                9.217,
+                9.958,
+                10.699,
+                12.182,
+                13.294
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 15.518,
+              "end": 28.314,
+              "kind": "body",
+              "audible": true,
+              "text": "Sakko ujū ca sūjū ca suvaco c'assa mudu anatimānī.",
+              "kana": "サッコー ウジュー チャ スージュー チャ スワチョー チャッサ ムドゥ アナティマーニー",
+              "speechEnd": 28.314,
+              "wordStarts": [
+                15.518,
+                17.161,
+                18.393,
+                18.804,
+                20.446,
+                20.857,
+                22.5,
+                23.732,
+                24.553
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 28.314,
+              "end": 40.296,
+              "kind": "body",
+              "audible": true,
+              "text": "Santussako ca subharo ca appakicco ca sallahukavutti;",
+              "kana": "サントゥッサコー チャ スバロー チャ アッパキッチョー チャ サッラフカヴッティ",
+              "speechEnd": 40.296,
+              "wordStarts": [
+                28.314,
+                31.157,
+                31.564,
+                33.188,
+                33.595,
+                36.438,
+                36.844
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 40.296,
+              "end": 53.903,
+              "kind": "body",
+              "audible": true,
+              "text": "santindriyo ca nipako ca appagabbho kulesu ananugiddho.",
+              "kana": "サンティンドゥリヨー チャ ニパコー チャ アッパガッボー クレース アナヌギッドー",
+              "speechEnd": 53.903,
+              "wordStarts": [
+                40.296,
+                43.628,
+                44.044,
+                45.71,
+                46.049,
+                49.125,
+                50.791
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 53.903,
+              "end": 67.049,
+              "kind": "body",
+              "audible": true,
+              "text": "Na ca khuddaṃ samācare kiñci yena viññū pare upavadeyyuṃ;",
+              "kana": "ナ チャ クッダン サマーチャレー キンチ イェーナ ヴィンニュー パレー ウパワデッユン",
+              "speechEnd": 67.004,
+              "wordStarts": [
+                53.903,
+                54.309,
+                54.715,
+                56.338,
+                58.774,
+                60.104,
+                61.321,
+                62.945,
+                64.162
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 67.049,
+              "end": 83.272,
+              "kind": "body",
+              "audible": true,
+              "text": "sukhino vā khemino hontu sabbe sattā bhavantu sukhitattā.",
+              "kana": "スキノー ワー ケーミノー ホントゥ サッベー サッター バワントゥ スキタッター",
+              "speechEnd": 83.272,
+              "wordStarts": [
+                67.049,
+                69.142,
+                70.095,
+                72.479,
+                73.909,
+                75.816,
+                77.723,
+                79.63
+              ]
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 83.272,
+              "end": 97.833,
+              "kind": "body",
+              "audible": true,
+              "text": "Ye keci pāṇabhūt'atthi tasā vā thāvarā vā anavasesā;",
+              "kana": "イェー ケーチ パーナブータッティ タサー ワー ターワラー ワー アナワセーサー",
+              "speechEnd": 97.833,
+              "wordStarts": [
+                83.272,
+                84.165,
+                85.505,
+                89.078,
+                90.418,
+                91.311,
+                93.544,
+                94.437
+              ]
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 97.833,
+              "end": 112.186,
+              "kind": "body",
+              "audible": true,
+              "text": "dīghā vā ye mahantā vā majjhimā rassakā aṇuka-thūlā.",
+              "kana": "ディーガー ワー イェー マハンター ワー マッジマー ラッサカー アヌカトゥーラー",
+              "speechEnd": 112.186,
+              "wordStarts": [
+                97.833,
+                99.567,
+                100.435,
+                101.302,
+                103.47,
+                104.337,
+                106.505,
+                108.673
+              ]
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 112.186,
+              "end": 126.078,
+              "kind": "body",
+              "audible": true,
+              "text": "Diṭṭhā vā ye vā addiṭṭhā ye ca dūre vasanti avidūre;",
+              "kana": "ディッター ワー イェー ワー アッディッター イェー チャ ドゥーレー ワサンティ アヴィデゥーレー",
+              "speechEnd": 126.078,
+              "wordStarts": [
+                112.186,
+                113.844,
+                114.674,
+                115.503,
+                116.332,
+                118.82,
+                119.649,
+                120.063,
+                121.722,
+                123.38
+              ]
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 126.078,
+              "end": 143.148,
+              "kind": "body",
+              "audible": true,
+              "text": "bhūtā vā sambhavesī vā sabbe sattā bhavantu sukhitattā.",
+              "kana": "ブーター ワー サンバウェースィー ワー サッベー サッター バワントゥ スキタッター",
+              "speechEnd": 143.148,
+              "wordStarts": [
+                126.078,
+                127.969,
+                128.914,
+                132.222,
+                133.271,
+                135.162,
+                137.052,
+                138.943
+              ]
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 143.148,
+              "end": 157.526,
+              "kind": "body",
+              "audible": true,
+              "text": "Na paro paraṃ nikubbetha nātimaññetha katthacinaṃ kañci;",
+              "kana": "ナ パロー パラン ニクッベータ ナーティマンニェータ カッタチナン カンチ",
+              "speechEnd": 157.526,
+              "wordStarts": [
+                143.148,
+                143.617,
+                145.025,
+                146.433,
+                149.248,
+                153.002,
+                155.817
+              ]
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 157.526,
+              "end": 172.058,
+              "kind": "body",
+              "audible": true,
+              "text": "vyārosanā paṭighasaññā nāññamaññassa dukkham iccheyya.",
+              "kana": "ヴャーローサナー パティガサンニャー ナーンニャマンニャッサ ドゥッカ ミッチェッヤ",
+              "speechEnd": 172.058,
+              "wordStarts": [
+                157.526,
+                160.721,
+                163.916,
+                168.024,
+                169.393
+              ]
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 172.058,
+              "end": 185.41,
+              "kind": "body",
+              "audible": true,
+              "text": "Mātā yathā niyaṃ puttaṃ āyusā ekaputtam anurakkhe;",
+              "kana": "マーター ヤター ニヤン プッタン アーユサー エーカプッタ マヌラッケー",
+              "speechEnd": 185.319,
+              "wordStarts": [
+                172.058,
+                173.75,
+                175.018,
+                176.287,
+                177.871,
+                180.244,
+                182.782
+              ]
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 185.41,
+              "end": 199.674,
+              "kind": "body",
+              "audible": true,
+              "text": "evam pi sabbabhūtesu mānasam bhāvaye aparimāṇaṃ.",
+              "kana": "エーワン ピ サッバブーテース マーナサン バーワイェー アパリマーナン",
+              "speechEnd": 199.674,
+              "wordStarts": [
+                185.41,
+                187.392,
+                187.849,
+                191.507,
+                193.793,
+                196.079
+              ]
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 199.674,
+              "end": 213.183,
+              "kind": "body",
+              "audible": true,
+              "text": "Mettañ ca sabbalokasmiṃ mānasam bhāvaye aparimāṇaṃ;",
+              "kana": "メッタン チャ サッバローカスミン マーナサン バーワイェー アパリマーナン",
+              "speechEnd": 213.183,
+              "wordStarts": [
+                199.674,
+                201.352,
+                201.772,
+                205.637,
+                207.819,
+                209.917
+              ]
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 213.183,
+              "end": 228.236,
+              "kind": "body",
+              "audible": true,
+              "text": "uddhaṃ adho ca tiriyañ ca asambādhaṃ averaṃ asapattaṃ.",
+              "kana": "ウッダン アドー チャ ティリヤン チャ アサンバーダン アヴェーラン アサパッタン",
+              "speechEnd": 228.236,
+              "wordStarts": [
+                213.183,
+                215.026,
+                216.408,
+                216.869,
+                218.712,
+                219.173,
+                222.398,
+                224.701
+              ]
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 228.236,
+              "end": 243.226,
+              "kind": "body",
+              "audible": true,
+              "text": "Tiṭṭhaṃ caraṃ nisinno vā sayāno vā yāvat'assa vigatamiddho;",
+              "kana": "ティッタン チャラン ニスィンノー ワー サヤーノー ワー ヤーワタッサ ヴィガタミッドー",
+              "speechEnd": 243.226,
+              "wordStarts": [
+                228.236,
+                229.964,
+                231.259,
+                233.419,
+                234.282,
+                236.442,
+                237.306,
+                239.897
+              ]
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 243.226,
+              "end": 258.707,
+              "kind": "body",
+              "audible": true,
+              "text": "etaṃ satiṃ adhiṭṭheyya brahmam etaṃ vihāraṃ idham āhu.",
+              "kana": "エータン サティン アディッテッヤ ブラフマ メータン ヴィハーラン イダン アーフ",
+              "speechEnd": 258.707,
+              "wordStarts": [
+                243.226,
+                245.115,
+                246.532,
+                249.366,
+                251.256,
+                253.145,
+                255.507,
+                256.924
+              ]
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 258.707,
+              "end": 272.875,
+              "kind": "body",
+              "audible": true,
+              "text": "Diṭṭhiñ ca anupagamma sīlavā dassanena sampanno;",
+              "kana": "ディッティン チャ アヌパガンマ スィーラワー ダッサネーナ サンパンノー",
+              "speechEnd": 272.875,
+              "wordStarts": [
+                258.707,
+                260.703,
+                261.202,
+                264.195,
+                266.69,
+                269.684
+              ]
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 272.875,
+              "end": 293.724,
+              "kind": "body",
+              "audible": true,
+              "text": "kāmesu vineyya gedhaṃ na hi jātu gabbhaseyyaṃ punaretī ti.",
+              "kana": "カーメース ヴィネッヤ ゲーダン ナ ヒ ジャートゥ ガッバセッヤン プナレーティ ティ",
+              "speechEnd": 293.724,
+              "wordStarts": [
+                272.875,
+                276.22,
+                278.895,
+                281.683,
+                282.352,
+                283.021,
+                285.028,
+                289.71,
+                293.055
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "c3477453d274f330c1aacb84940222f030675d0fc92a6f70bb3bf972c31e5841"
+          }
         },
         {
           "key": "D1T16",
@@ -7817,7 +11295,88 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": false
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.31,
+              "end": 2.798,
+              "kind": "title",
+              "audible": true,
+              "text": "Patthanā",
+              "kana": "パッタナー",
+              "speechEnd": 2.798,
+              "wordStarts": [
+                0.31
+              ]
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 2.798,
+              "end": 15.813,
+              "kind": "body",
+              "audible": true,
+              "text": "Etena sacca vajjena pātu naṃ ratanattayaṃ",
+              "kana": "エーテーナ サッチャ ワッジェーナ パートゥ ナン ラタナッタヤン",
+              "speechEnd": 15.813,
+              "wordStarts": [
+                2.798,
+                5.255,
+                6.729,
+                9.186,
+                10.874,
+                11.857
+              ]
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 15.813,
+              "end": 29.164,
+              "kind": "body",
+              "audible": true,
+              "text": "Etena sacca vajjena hotu no jaya maṅgalaṃ.",
+              "kana": "エーテーナ サッチャ ワッジェーナ ホートゥ ノー ジャヤ マンガラン",
+              "speechEnd": 29.164,
+              "wordStarts": [
+                15.813,
+                18.274,
+                19.75,
+                22.211,
+                23.992,
+                24.977,
+                25.961
+              ]
+            },
+            {
+              "lineId": "s11-l3",
+              "start": 29.164,
+              "end": 45.515,
+              "kind": "body",
+              "audible": true,
+              "text": "Etena sacca vajjena sadā sotthi bhavantu no.",
+              "kana": "エーテーナ サッチャ ワッジェーナ サダー ソッティ バワントゥ ノー",
+              "speechEnd": 45.515,
+              "wordStarts": [
+                29.164,
+                32.371,
+                34.295,
+                37.692,
+                39.446,
+                41.667,
+                44.232
+              ]
+            },
+            {
+              "lineId": "s12-l1",
+              "kind": "body",
+              "audible": false
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "acf07a9592c9f498d4d6f6954b3dccdf9cc4c172a3c151e45e73d54289c6b18e"
+          }
         }
       ]
     },
@@ -7883,17 +11442,17 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s1-l1",
             "pali": "Karaṇīyam atthakusalena yan taṃ santaṃ padaṃ abhisamecca;",
-            "kana": "カラニーヤン アッタクサレーナ ヤン タン サンタン パダン アビサメッチャ",
+            "kana": "カラニーヤ マッタクサレーナ ヤン タン サンタン パダン アビサメッチャ",
             "ja": "［解脱という］目的をよくわきまえた人が、静かな場所へ行ってなすべきことがあります。",
             "wordGlosses": [
               {
                 "pali": "Karaṇīyam",
-                "kana": "カラニーヤン",
+                "kana": "カラニーヤ",
                 "ja": "なすべきこと"
               },
               {
                 "pali": "atthakusalena",
-                "kana": "アッタクサレーナ",
+                "kana": "マッタクサレーナ",
                 "ja": "目的をよく知る者によって"
               },
               {
@@ -8441,7 +12000,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s6-l2",
             "pali": "vyārosanā paṭighasaññā nāññamaññassa dukkham iccheyya.",
-            "kana": "ヴャーローサナー パティガサンニャー ナーンニャマンニャッサ ドゥッカン イッチェッヤ",
+            "kana": "ヴャーローサナー パティガサンニャー ナーンニャマンニャッサ ドゥッカ ミッチェッヤ",
             "ja": "怒鳴ったり、腹を立てたり、お互いにひとの苦しみを望んではいけません。",
             "wordGlosses": [
               {
@@ -8461,12 +12020,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "dukkham",
-                "kana": "ドゥッカン",
+                "kana": "ドゥッカ",
                 "ja": "苦しみを"
               },
               {
                 "pali": "iccheyya.",
-                "kana": "イッチェッヤ",
+                "kana": "ミッチェッヤ",
                 "ja": "望むべきでない"
               }
             ]
@@ -8480,7 +12039,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s7-l1",
             "pali": "Mātā yathā niyaṃ puttaṃ āyusā ekaputtam anurakkhe;",
-            "kana": "マーター ヤター ニヤン プッタン アーユサー エーカプッタン アヌラッケー",
+            "kana": "マーター ヤター ニヤン プッタン アーユサー エーカプッタ マヌラッケー",
             "ja": "あたかも母が、たった一人の我が子を、命がけで守るように、",
             "wordGlosses": [
               {
@@ -8510,12 +12069,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "ekaputtam",
-                "kana": "エーカプッタン",
+                "kana": "エーカプッタ",
                 "ja": "一人子を"
               },
               {
                 "pali": "anurakkhe;",
-                "kana": "アヌラッケー",
+                "kana": "マヌラッケー",
                 "ja": "守る"
               }
             ]
@@ -8707,7 +12266,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s9-l2",
             "pali": "etaṃ satiṃ adhiṭṭheyya brahmam etaṃ vihāraṃ idham āhu.",
-            "kana": "エータン サティン アディッテッヤ ブラフマン エータン ヴィハーラン イダン アーフ",
+            "kana": "エータン サティン アディッテッヤ ブラフマ メータン ヴィハーラン イダン アーフ",
             "ja": "この［慈悲の］念をしっかり 保っていてください。これが梵天（崇高なもの）の生き方であると言われています。",
             "wordGlosses": [
               {
@@ -8727,12 +12286,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "brahmam",
-                "kana": "ブラフマン",
+                "kana": "ブラフマ",
                 "ja": "崇高な"
               },
               {
                 "pali": "etaṃ",
-                "kana": "エータン",
+                "kana": "メータン",
                 "ja": "この"
               },
               {
@@ -9030,8 +12589,8 @@ const EMBEDDED_SUTTAS = {
   },
   "vijaya-suttam": {
     "id": "vijaya-suttam",
-    "title": "勝利の経",
-    "titlePali": "Vijayasuttaṃ",
+    "title": "勝利の経（ｽｯﾀﾆﾊﾟｰﾀ1.11 193-206）",
+    "titlePali": "Vijaya suttaṃ (Snp1.11,PTS:Sn193-206)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -9070,7 +12629,8 @@ const EMBEDDED_SUTTAS = {
             "s13-l1",
             "s13-l2",
             "s14-l1",
-            "s14-l2"
+            "s14-l2",
+            "s14-l3"
           ],
           "duration": 282.17,
           "cues": [
@@ -9277,7 +12837,536 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.178,
+              "end": 3.181,
+              "kind": "title",
+              "audible": true,
+              "text": "Vijaya suttaṃ",
+              "kana": "ヴィジャヤ スッタン",
+              "speechEnd": 3.181,
+              "wordStarts": [
+                0.178,
+                1.104
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.181,
+              "end": 10.836,
+              "kind": "body",
+              "audible": true,
+              "text": "Caraṃ vā yadi vā tiṭṭhaṃ, nisinno uda vā sayaṃ;",
+              "kana": "チャラン ワー ヤディ ワー ティッタン ニスィンノー ウダ ワー サヤン",
+              "speechEnd": 10.836,
+              "wordStarts": [
+                3.181,
+                4.1,
+                4.712,
+                5.324,
+                5.937,
+                7.162,
+                8.693,
+                9.305,
+                9.917
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 10.836,
+              "end": 19.825,
+              "kind": "body",
+              "audible": true,
+              "text": "Sammiñjeti pasāreti, esā kāyassa iñjanā.",
+              "kana": "サンミンジェーティ パサーレーティ エーサー カーヤッサ インジャナー",
+              "speechEnd": 19.825,
+              "wordStarts": [
+                10.836,
+                13.166,
+                15.164,
+                16.496,
+                18.16
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 19.825,
+              "end": 28.766,
+              "kind": "body",
+              "audible": true,
+              "text": "Aṭṭhīnahārusaṃyutto, tacamaṃsāvalepano;",
+              "kana": "アッティーナハールサンユットー タチャマンサーワレーパノー",
+              "speechEnd": 28.766,
+              "wordStarts": [
+                19.825,
+                24.865
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 28.766,
+              "end": 38.749,
+              "kind": "body",
+              "audible": true,
+              "text": "Chaviyā kāyo paṭicchanno, yathābhūtaṃ na dissati.",
+              "kana": "チャヴィヤー カーヨー パティッチャンノー ヤターブータン ナ ディッサティ",
+              "speechEnd": 38.749,
+              "wordStarts": [
+                28.766,
+                30.155,
+                31.544,
+                33.975,
+                36.406,
+                36.753
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 38.749,
+              "end": 47.257,
+              "kind": "body",
+              "audible": true,
+              "text": "Antapūro udarapūro, yakapeḷassa vatthino;",
+              "kana": "アンタプーロー ウダラプーロー ヤカペーラッサ ワッティノー",
+              "speechEnd": 47.257,
+              "wordStarts": [
+                38.749,
+                41.014,
+                43.278,
+                45.543
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 47.257,
+              "end": 56.282,
+              "kind": "body",
+              "audible": true,
+              "text": "Hadayassa papphāsassa, vakkassa pihakassa ca.",
+              "kana": "ハダヤッサ パッパーサッサ ワッカッサ ピハカッサ チャ",
+              "speechEnd": 56.282,
+              "wordStarts": [
+                47.257,
+                49.173,
+                51.855,
+                53.771,
+                55.687
+              ]
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 56.282,
+              "end": 65.522,
+              "kind": "body",
+              "audible": true,
+              "text": "Siṅghāṇikāya kheḷassa, sedassa medassa ca;",
+              "kana": "スィンガーニカーヤ ケーラッサ セーダッサ メーダッサ チャ",
+              "speechEnd": 65.522,
+              "wordStarts": [
+                56.282,
+                59.297,
+                61.181,
+                63.065,
+                64.95
+              ]
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 65.522,
+              "end": 74.604,
+              "kind": "body",
+              "audible": true,
+              "text": "Lohitassa lasikāya, pittassa ca vasāya ca.",
+              "kana": "ローヒタッサ ラスィカーヤ ピッタッサ チャ ワサーヤ チャ",
+              "speechEnd": 74.604,
+              "wordStarts": [
+                65.522,
+                67.903,
+                69.887,
+                71.872,
+                72.268,
+                73.856
+              ]
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 74.604,
+              "end": 83.256,
+              "kind": "body",
+              "audible": true,
+              "text": "Athassa navahi sotehi, asucī savati sabbadā;",
+              "kana": "アタッサ ナワヒ ソーテーヒ アスチー サワティ サッバダー",
+              "speechEnd": 83.256,
+              "wordStarts": [
+                74.604,
+                76.022,
+                77.085,
+                78.857,
+                80.274,
+                81.338
+              ]
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 83.256,
+              "end": 94.544,
+              "kind": "body",
+              "audible": true,
+              "text": "Akkhimhā akkhigūthako, kaṇṇamhā kaṇṇagūthako.",
+              "kana": "アッキンハー アッキグータコー カンナンハー カンナグータコー",
+              "speechEnd": 94.544,
+              "wordStarts": [
+                83.256,
+                85.359,
+                88.163,
+                90.267
+              ]
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 94.544,
+              "end": 103.132,
+              "kind": "body",
+              "audible": true,
+              "text": "Siṅghāṇikā ca nāsato, mukhena vamatekadā;",
+              "kana": "スィンガーニカー チャ ナーサトー ムケーナ ワマテーカダー",
+              "speechEnd": 103.132,
+              "wordStarts": [
+                94.544,
+                97.049,
+                97.407,
+                99.196,
+                100.627
+              ]
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 103.132,
+              "end": 113.12,
+              "kind": "body",
+              "audible": true,
+              "text": "Pittaṃ semhañca vamati, kāyamhā sedajallikā.",
+              "kana": "ピッタン センハンチャ ワマティ カーヤンハー セーダジャッリカー",
+              "speechEnd": 113.12,
+              "wordStarts": [
+                103.132,
+                104.641,
+                106.526,
+                107.658,
+                109.921
+              ]
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 113.12,
+              "end": 121.512,
+              "kind": "body",
+              "audible": true,
+              "text": "Athassa susiraṃ sīsaṃ, matthaluṅgassa pūritaṃ;",
+              "kana": "アタッサ ススィラン スィーサン マッタルンガッサ プーリタン",
+              "speechEnd": 121.512,
+              "wordStarts": [
+                113.12,
+                114.45,
+                115.779,
+                117.109,
+                119.768
+              ]
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 121.512,
+              "end": 131.554,
+              "kind": "body",
+              "audible": true,
+              "text": "Subhato naṃ maññati, bālo avijjāya purakkhato.",
+              "kana": "スバトー ナン マンニャティ バーロー アヴィッジャーヤ プラッカトー",
+              "speechEnd": 131.554,
+              "wordStarts": [
+                121.512,
+                122.975,
+                123.707,
+                125.171,
+                126.634,
+                128.829
+              ]
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 131.554,
+              "end": 140.296,
+              "kind": "body",
+              "audible": true,
+              "text": "Yadā ca so mato seti, uddhumāto vinīlako;",
+              "kana": "ヤダー チャ ソー マトー セーティ ウッドゥマートー ヴィニーラコー",
+              "speechEnd": 140.296,
+              "wordStarts": [
+                131.554,
+                132.603,
+                132.953,
+                133.652,
+                134.701,
+                135.75,
+                138.198
+              ]
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 140.296,
+              "end": 150.488,
+              "kind": "body",
+              "audible": true,
+              "text": "Apaviddho susānasmiṃ, anapekkhā honti ñātayo.",
+              "kana": "アパヴィッドー スサーナスミン アナペッカー ホンティ ニャータヨー",
+              "speechEnd": 150.488,
+              "wordStarts": [
+                140.296,
+                142.468,
+                145.002,
+                147.174,
+                148.26
+              ]
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 150.488,
+              "end": 159.776,
+              "kind": "body",
+              "audible": true,
+              "text": "Khādanti naṃ supānā ca, sigālā ca vakā kimī;",
+              "kana": "カーダンティ ナン スパーナー チャ スィガーラー チャ ワカー キミー",
+              "speechEnd": 159.776,
+              "wordStarts": [
+                150.488,
+                152.311,
+                153.04,
+                154.863,
+                155.228,
+                157.05,
+                157.415,
+                158.509
+              ]
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 159.776,
+              "end": 171.405,
+              "kind": "body",
+              "audible": true,
+              "text": "Kākā gijjhā ca khādanti, ye caññe santi pāṇayo.",
+              "kana": "カーカー ギッジャー チャ カーダンティ イェー チャンニェー サンティ パーナヨー",
+              "speechEnd": 171.405,
+              "wordStarts": [
+                159.776,
+                161.393,
+                163.009,
+                163.413,
+                165.434,
+                166.243,
+                167.859,
+                169.072
+              ]
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 171.405,
+              "end": 179.894,
+              "kind": "body",
+              "audible": true,
+              "text": "Sutvāna buddhavacanaṃ, bhikkhu paññāṇavā idha;",
+              "kana": "ストゥワーナ ブッダワチャナン ビック パンニャーナワー イダ",
+              "speechEnd": 179.894,
+              "wordStarts": [
+                171.405,
+                173.174,
+                175.65,
+                176.711,
+                179.187
+              ]
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 179.894,
+              "end": 191.654,
+              "kind": "body",
+              "audible": true,
+              "text": "So kho naṃ parijānāti, yathābhūtam hi passati.",
+              "kana": "ソー コー ナン パリジャーナーティ ヤターブータン ヒ パッサティ",
+              "speechEnd": 191.536,
+              "wordStarts": [
+                179.894,
+                180.705,
+                181.517,
+                182.328,
+                185.168,
+                188.008,
+                188.413
+              ]
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 191.654,
+              "end": 200.97,
+              "kind": "body",
+              "audible": true,
+              "text": "Yathā idaṃ tathā etaṃ, yathā etaṃ tathā idaṃ;",
+              "kana": "ヤター イダン タター エータン ヤター エータン タター イダン",
+              "speechEnd": 200.97,
+              "wordStarts": [
+                191.654,
+                192.95,
+                193.996,
+                195.042,
+                196.437,
+                197.483,
+                198.878,
+                199.924
+              ]
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 200.97,
+              "end": 212.426,
+              "kind": "body",
+              "audible": true,
+              "text": "Ajjhattañ ca bahiddhā ca, kāye chandaṃ virājaye.",
+              "kana": "アッジャッタン チャ バヒッダー チャ カーイェー チャンダン ヴィラージャイェー",
+              "speechEnd": 211.346,
+              "wordStarts": [
+                200.97,
+                203.384,
+                203.763,
+                205.659,
+                206.038,
+                207.555,
+                209.071
+              ]
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 212.426,
+              "end": 221.916,
+              "kind": "body",
+              "audible": true,
+              "text": "Chandarāgaviratto so, bhikkhu paññāṇavā idha;",
+              "kana": "チャンダラーガヴィラットー ソー ビック パンニャーナワー イダ",
+              "speechEnd": 221.916,
+              "wordStarts": [
+                212.426,
+                216.744,
+                217.483,
+                218.591,
+                221.177
+              ]
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 221.916,
+              "end": 230.952,
+              "kind": "body",
+              "audible": true,
+              "text": "Ajjhagā amataṃ santiṃ, nibbāna padamaccutaṃ.",
+              "kana": "アッジャガー アマタン サンティン ニッバーナ パダマッチュタン",
+              "speechEnd": 230.909,
+              "wordStarts": [
+                221.916,
+                223.715,
+                225.153,
+                226.592,
+                228.391
+              ]
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 230.952,
+              "end": 240.161,
+              "kind": "body",
+              "audible": true,
+              "text": "Dipādakoyaṃ asuci, duggandho parihīrati;",
+              "kana": "ディパーダコーヤン アスチ ドゥッガンドー パリヒーラティ",
+              "speechEnd": 240.161,
+              "wordStarts": [
+                230.952,
+                234.269,
+                235.447,
+                237.804
+              ]
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 240.161,
+              "end": 250.163,
+              "kind": "body",
+              "audible": true,
+              "text": "Nānākuṇapa paripūro, vissavanto tato tato.",
+              "kana": "ナーナークナパ パリプーロー ヴィッサワントー タトー タトー",
+              "speechEnd": 250,
+              "wordStarts": [
+                240.161,
+                242.927,
+                245.161,
+                247.767,
+                248.883
+              ]
+            },
+            {
+              "lineId": "s14-l1",
+              "start": 250.163,
+              "end": 262.302,
+              "kind": "body",
+              "audible": true,
+              "text": "Etādisena kāyena, yo maññe uṇṇametave;",
+              "kana": "エーターディセーナ カーイェーナ ヨー マンニェー ウンナメータヴェー",
+              "speechEnd": 262.292,
+              "wordStarts": [
+                250.163,
+                253.9,
+                256.109,
+                256.992,
+                258.758
+              ]
+            },
+            {
+              "lineId": "s14-l2",
+              "start": 262.302,
+              "end": 275.567,
+              "kind": "body",
+              "audible": true,
+              "text": "Paraṃ vā avajāneyya, kimaññatra adassanāti.",
+              "kana": "パラン ワー アワジャーネッヤ キマンニャトゥラ アダッサナーティ",
+              "speechEnd": 275.567,
+              "wordStarts": [
+                262.302,
+                264.094,
+                265.137,
+                268.788,
+                271.917
+              ]
+            },
+            {
+              "lineId": "s14-l3",
+              "start": 275.567,
+              "end": 279.204,
+              "kind": "body",
+              "audible": true,
+              "text": "Vijaya suttaṃ niṭṭhitaṃ",
+              "kana": "ヴィジャヤ スッタン ニッティタン",
+              "speechEnd": 279.204,
+              "wordStarts": [
+                275.567,
+                276.476,
+                277.689
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "4f361e1e53cf71ed883c20ceea81f709302927a0a7e5ea2f34f87ccec9254e82"
+          }
         }
       ]
     },
@@ -10395,6 +14484,29 @@ const EMBEDDED_SUTTAS = {
                 "ja": "見る力の無さによって"
               }
             ]
+          },
+          {
+            "id": "s14-l3",
+            "pali": "Vijaya suttaṃ niṭṭhitaṃ",
+            "kana": "ヴィジャヤ スッタン ニッティタン",
+            "ja": "完了",
+            "wordGlosses": [
+              {
+                "pali": "Vijaya",
+                "kana": "ヴィジャヤ",
+                "ja": "勝利"
+              },
+              {
+                "pali": "suttaṃ",
+                "kana": "スッタン",
+                "ja": "の経"
+              },
+              {
+                "pali": "niṭṭhitaṃ",
+                "kana": "ニッティタン",
+                "ja": ""
+              }
+            ]
           }
         ],
         "label": "第206節"
@@ -10403,8 +14515,8 @@ const EMBEDDED_SUTTAS = {
   },
   "salla-suttam": {
     "id": "salla-suttam",
-    "title": "箭経",
-    "titlePali": "Salla suttaṃ",
+    "title": "箭経（ｽｯﾀﾆﾊﾟｰﾀ3.8 574-593）",
+    "titlePali": "Salla suttaṃ (Snp3.8,PTS:Sn574-593)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -10456,7 +14568,8 @@ const EMBEDDED_SUTTAS = {
             "s19-l1",
             "s19-l2",
             "s20-l1",
-            "s20-l2"
+            "s20-l2",
+            "s20-l3"
           ],
           "duration": 448.87,
           "cues": [
@@ -10754,7 +14867,795 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.286,
+              "end": 3.456,
+              "kind": "title",
+              "audible": true,
+              "text": "Salla suttaṃ",
+              "kana": "サッラ スッタン",
+              "speechEnd": 3.456,
+              "wordStarts": [
+                0.286,
+                1.12
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.456,
+              "end": 11.214,
+              "kind": "body",
+              "audible": true,
+              "text": "Animittaṃ anaññātaṃ maccānamidha jīvitaṃ",
+              "kana": "アニミッタン アナンニャータン マッチャーナミダ ジーヴィタン",
+              "speechEnd": 11.214,
+              "wordStarts": [
+                3.456,
+                5.318,
+                7.49,
+                9.662
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 11.214,
+              "end": 20.357,
+              "kind": "body",
+              "audible": true,
+              "text": "Kasirañ ca parittañ ca, tañ ca dukkhena saññutaṃ.",
+              "kana": "カスィラン チャ パリッタン チャ タン チャ ドゥッケーナ サンニュタン",
+              "speechEnd": 20.357,
+              "wordStarts": [
+                11.214,
+                12.578,
+                12.919,
+                14.624,
+                14.965,
+                15.647,
+                15.988,
+                17.692
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 20.357,
+              "end": 29.556,
+              "kind": "body",
+              "audible": true,
+              "text": "Na hi so upakkamo atthi, yena jātā na miyyare,",
+              "kana": "ナ ヒ ソー ウパッカモー アッティ イェーナ ジャーター ナ ミッヤレー",
+              "speechEnd": 29.556,
+              "wordStarts": [
+                20.357,
+                20.703,
+                21.049,
+                21.74,
+                23.816,
+                24.853,
+                25.891,
+                27.274,
+                27.62
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 29.556,
+              "end": 38.818,
+              "kind": "body",
+              "audible": true,
+              "text": "Jaram pi patvā maraṇaṃ, evaṃ dhammā hi pāṇino.",
+              "kana": "ジャラン ピ パトゥワー マラナン エーワン ダンマー ヒ パーニノー",
+              "speechEnd": 38.818,
+              "wordStarts": [
+                29.556,
+                30.577,
+                30.918,
+                32.279,
+                33.641,
+                35.002,
+                36.364,
+                36.704
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 38.818,
+              "end": 47.364,
+              "kind": "body",
+              "audible": true,
+              "text": "Phalānam iva pakkānaṃ pāto patanato bhayaṃ,",
+              "kana": "パラーナ ミワ パッカーナン パートー パタナトー バヤン",
+              "speechEnd": 47.364,
+              "wordStarts": [
+                38.818,
+                40.197,
+                40.886,
+                42.954,
+                44.332,
+                46.055
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 47.364,
+              "end": 57.467,
+              "kind": "body",
+              "audible": true,
+              "text": "Evaṃ jātāna maccānaṃ niccaṃ maraṇato bhayaṃ.",
+              "kana": "エーワン ジャーターナ マッチャーナン ニッチャン マラナトー バヤン",
+              "speechEnd": 57.467,
+              "wordStarts": [
+                47.364,
+                48.724,
+                50.425,
+                52.465,
+                53.923,
+                55.623
+              ]
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 57.467,
+              "end": 66.593,
+              "kind": "body",
+              "audible": true,
+              "text": "Yathā pi kumbhakārassa katā mattika bhājanā",
+              "kana": "ヤター ピ クンバカーラッサ カター マッティカ バージャナー",
+              "speechEnd": 66.593,
+              "wordStarts": [
+                57.467,
+                58.597,
+                58.974,
+                61.988,
+                63.118,
+                64.625
+              ]
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 66.593,
+              "end": 77.795,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabbe bhedanapariyantā, evaṃ maccāna jīvitaṃ.",
+              "kana": "サッベー ベーダナパリヤンター エーワン マッチャーナ ジーヴィタン",
+              "speechEnd": 77.795,
+              "wordStarts": [
+                66.593,
+                68.066,
+                71.747,
+                73.22,
+                75.061
+              ]
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 77.795,
+              "end": 87.294,
+              "kind": "body",
+              "audible": true,
+              "text": "Daharā ca mahantā ca ye bālā ye ca paṇḍitā",
+              "kana": "ダハラー チャ マハンター チャ イェー バーラー イェー チャ パンディター",
+              "speechEnd": 87.294,
+              "wordStarts": [
+                77.795,
+                79.292,
+                79.667,
+                81.539,
+                81.913,
+                82.662,
+                84.159,
+                84.908,
+                85.282
+              ]
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 87.294,
+              "end": 98.41,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabbe maccu vasaṃ yanti, sabbe maccu parāyanā.",
+              "kana": "サッベー マッチュ ワサン ヤンティ サッベー マッチュ パラーヤナー",
+              "speechEnd": 98.41,
+              "wordStarts": [
+                87.294,
+                88.804,
+                89.937,
+                91.069,
+                92.202,
+                93.712,
+                94.844
+              ]
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 98.41,
+              "end": 107.49,
+              "kind": "body",
+              "audible": true,
+              "text": "Tesaṃ maccuparetānaṃ gacchataṃ paralokato",
+              "kana": "テーサン マッチュパレーターナン ガッチャタン パラローカトー",
+              "speechEnd": 107.344,
+              "wordStarts": [
+                98.41,
+                99.785,
+                103.221,
+                104.939
+              ]
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 107.49,
+              "end": 117.73,
+              "kind": "body",
+              "audible": true,
+              "text": "Na pitā tāyate puttaṃ ñātī vā pana ñātake.",
+              "kana": "ナ ピター ターヤテー プッタン ニャーティー ワー パナ ニャータケー",
+              "speechEnd": 117.73,
+              "wordStarts": [
+                107.49,
+                107.901,
+                109.029,
+                110.909,
+                112.413,
+                113.917,
+                114.669,
+                115.421
+              ]
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 117.73,
+              "end": 127.234,
+              "kind": "body",
+              "audible": true,
+              "text": "Pekkhataṃ yeva ñātīnaṃ passa lālapataṃ puthu",
+              "kana": "ペッカタン イェーワ ニャーティーナン パッサ ラーラパタン プトゥ",
+              "speechEnd": 127.234,
+              "wordStarts": [
+                117.73,
+                119.581,
+                120.692,
+                122.913,
+                124.023,
+                126.245
+              ]
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 127.234,
+              "end": 137.491,
+              "kind": "body",
+              "audible": true,
+              "text": "Ekameko va maccānaṃ go vajjho viya niyyati.",
+              "kana": "エーカメーコー ワ マッチャーナン ゴー ワッジョー ヴィヤ ニッヤティ",
+              "speechEnd": 137.491,
+              "wordStarts": [
+                127.234,
+                129.868,
+                130.244,
+                132.502,
+                133.255,
+                134.76,
+                135.513
+              ]
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 137.491,
+              "end": 147.434,
+              "kind": "body",
+              "audible": true,
+              "text": "Evaṃ abbhāhato loko maccunā ca jarāya ca,",
+              "kana": "エーワン アッバーハトー ローコー マッチュナー チャ ジャラーヤ チャ",
+              "speechEnd": 147.434,
+              "wordStarts": [
+                137.491,
+                138.987,
+                141.605,
+                143.101,
+                144.971,
+                145.345,
+                146.84
+              ]
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 147.434,
+              "end": 159.834,
+              "kind": "body",
+              "audible": true,
+              "text": "Tasmā dhīrā na socanti viditvā lokapariyāyaṃ.",
+              "kana": "タスマー ディーラー ナ ソーチャンティ ヴィディトゥワー ローカパリヤーヤン",
+              "speechEnd": 159.834,
+              "wordStarts": [
+                147.434,
+                148.982,
+                150.53,
+                150.917,
+                152.852,
+                154.787
+              ]
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 159.834,
+              "end": 169.448,
+              "kind": "body",
+              "audible": true,
+              "text": "Yassa maggaṃ na jānāsi āgatassa gatassa vā,",
+              "kana": "ヤッサ マッガン ナ ジャーナースィ アーガタッサ ガタッサ ワー",
+              "speechEnd": 169.448,
+              "wordStarts": [
+                159.834,
+                160.988,
+                162.526,
+                162.91,
+                164.833,
+                167.141,
+                168.679
+              ]
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 169.448,
+              "end": 179.574,
+              "kind": "body",
+              "audible": true,
+              "text": "Ubho ante asampassaṃ niratthaṃ paridevasi.",
+              "kana": "ウボー アンテー アサンパッサン ニラッタン パリデーワスィ",
+              "speechEnd": 179.574,
+              "wordStarts": [
+                169.448,
+                170.537,
+                171.99,
+                174.532,
+                176.347
+              ]
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 179.574,
+              "end": 189.15,
+              "kind": "body",
+              "audible": true,
+              "text": "Paridevayamāno ce kañcid atthaṃ udabbahe",
+              "kana": "パリデーワヤマーノー チェー カンチダ アッタン ウダッバヘー",
+              "speechEnd": 189.15,
+              "wordStarts": [
+                179.574,
+                183.202,
+                183.927,
+                185.378,
+                186.83
+              ]
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 189.15,
+              "end": 201.752,
+              "kind": "body",
+              "audible": true,
+              "text": "Sammūḷho hiṃsam attānaṃ kayirā c'enaṃ vicakkhaṇo.",
+              "kana": "サンムールホー ヒンサン アッターナン カイラー チェーナン ヴィチャッカノー",
+              "speechEnd": 201.752,
+              "wordStarts": [
+                189.15,
+                191.657,
+                193.09,
+                195.239,
+                196.672,
+                198.105
+              ]
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 201.752,
+              "end": 212.086,
+              "kind": "body",
+              "audible": true,
+              "text": "Na hi ruṇṇena sokena santiṃ pappoti cetaso,",
+              "kana": "ナ ヒ ルンネーナ ソーケーナ サンティン パッポーティ チェータソー",
+              "speechEnd": 212.086,
+              "wordStarts": [
+                201.752,
+                202.145,
+                202.538,
+                204.502,
+                206.466,
+                208.037,
+                210.001
+              ]
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 212.086,
+              "end": 224.626,
+              "kind": "body",
+              "audible": true,
+              "text": "Bhiyy' ass' uppajjate dukkhaṃ, sarīraṃ cupahaññati,",
+              "kana": "ビッヤ アッス ウッパッジャテー ドゥッカン サリーラン チュパハンニャティ",
+              "speechEnd": 224.626,
+              "wordStarts": [
+                212.086,
+                213.21,
+                214.335,
+                216.959,
+                218.588,
+                220.462
+              ]
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 224.626,
+              "end": 233.409,
+              "kind": "body",
+              "audible": true,
+              "text": "Kiso vivaṇṇo bhavati hiṃsam attānam attanā:",
+              "kana": "キソー ヴィワンノー バワティ ヒンサ マッターナ マッタナー",
+              "speechEnd": 233.409,
+              "wordStarts": [
+                224.626,
+                225.724,
+                227.554,
+                228.652,
+                229.749,
+                231.579
+              ]
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 233.409,
+              "end": 243.791,
+              "kind": "body",
+              "audible": true,
+              "text": "Na tena petā pālenti, niratthā paridevanā.",
+              "kana": "ナ テーナ ペーター パーレンティ ニラッター パリデーワナー",
+              "speechEnd": 243.791,
+              "wordStarts": [
+                233.409,
+                233.813,
+                235.027,
+                236.644,
+                238.667,
+                240.689
+              ]
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 243.791,
+              "end": 253.74,
+              "kind": "body",
+              "audible": true,
+              "text": "Sokam appajahaṃ jantu bhiyyo dukkhaṃ nigacchati,",
+              "kana": "ソーカ マッパジャハン ジャントゥ ビッヨー ドゥッカン ニガッチャティ",
+              "speechEnd": 253.713,
+              "wordStarts": [
+                243.791,
+                244.982,
+                247.363,
+                248.554,
+                250.141,
+                251.729
+              ]
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 253.74,
+              "end": 264.576,
+              "kind": "body",
+              "audible": true,
+              "text": "Anutthunanto kālakataṃ sokassa vasam anvagū.",
+              "kana": "アヌットゥナントー カーラカタン ソーカッサ ワサン アンワグー",
+              "speechEnd": 264.576,
+              "wordStarts": [
+                253.74,
+                256.983,
+                259.261,
+                261.159,
+                262.298
+              ]
+            },
+            {
+              "lineId": "s14-l1",
+              "start": 264.576,
+              "end": 273.922,
+              "kind": "body",
+              "audible": true,
+              "text": "Aññe pi passa gamine yathā kammūpage nare,",
+              "kana": "アンニェー ピ パッサ ガミネー ヤター カンムーパゲー ナレー",
+              "speechEnd": 273.922,
+              "wordStarts": [
+                264.576,
+                266.048,
+                266.416,
+                267.52,
+                268.993,
+                270.097,
+                272.673
+              ]
+            },
+            {
+              "lineId": "s14-l2",
+              "start": 273.922,
+              "end": 284.253,
+              "kind": "body",
+              "audible": true,
+              "text": "Maccuno vasam āgamma phandante v'idha pāṇine.",
+              "kana": "マッチュノー ワサ マーガンマ パンダンテー ヴィダ パーニネー",
+              "speechEnd": 284.253,
+              "wordStarts": [
+                273.922,
+                275.889,
+                276.675,
+                278.642,
+                281.002,
+                281.789
+              ]
+            },
+            {
+              "lineId": "s15-l1",
+              "start": 284.253,
+              "end": 294.467,
+              "kind": "body",
+              "audible": true,
+              "text": "Yena yena hi maññanti tato taṃ hoti aññathā,",
+              "kana": "イェーナ イェーナ ヒ マンニャンティ タトー タン ホーティ アンニャター",
+              "speechEnd": 294.467,
+              "wordStarts": [
+                284.253,
+                285.479,
+                286.704,
+                287.113,
+                289.156,
+                290.381,
+                291.199,
+                292.424
+              ]
+            },
+            {
+              "lineId": "s15-l2",
+              "start": 294.467,
+              "end": 306.403,
+              "kind": "body",
+              "audible": true,
+              "text": "Etādiso vinābhāvo, passa lokassa pariyāyaṃ:",
+              "kana": "エーターディソー ヴィナーバーヴォー パッサ ローカッサ パリヤーヤン",
+              "speechEnd": 305.323,
+              "wordStarts": [
+                294.467,
+                297.181,
+                299.895,
+                301.058,
+                302.997
+              ]
+            },
+            {
+              "lineId": "s16-l1",
+              "start": 306.403,
+              "end": 316.421,
+              "kind": "body",
+              "audible": true,
+              "text": "Api ce vassasataṃ jīve bhiyyo vā pana mānavo,",
+              "kana": "アピ チェー ワッササタン ジーヴェー ビッヨー ワー パナ マーナヴォー",
+              "speechEnd": 316.421,
+              "wordStarts": [
+                306.403,
+                307.382,
+                308.105,
+                310.275,
+                311.721,
+                313.167,
+                313.89,
+                314.613
+              ]
+            },
+            {
+              "lineId": "s16-l2",
+              "start": 316.421,
+              "end": 326.758,
+              "kind": "body",
+              "audible": true,
+              "text": "Ñātisaṃghā vinā hoti, jahāti idha jīvitaṃ.",
+              "kana": "ニャーティサンガー ヴィナー ホーティ ジャハーティ イダ ジーヴィタン",
+              "speechEnd": 326.758,
+              "wordStarts": [
+                316.421,
+                319.586,
+                320.852,
+                322.117,
+                323.805,
+                324.649
+              ]
+            },
+            {
+              "lineId": "s17-l1",
+              "start": 326.758,
+              "end": 337.293,
+              "kind": "body",
+              "audible": true,
+              "text": "Tasmā arahato sutvā vineyya paridevitaṃ",
+              "kana": "タスマー アラハトー ストゥワー ヴィネッヤ パリデーヴィタン",
+              "speechEnd": 337.293,
+              "wordStarts": [
+                326.758,
+                328.77,
+                330.901,
+                332.605,
+                334.31
+              ]
+            },
+            {
+              "lineId": "s17-l2",
+              "start": 337.293,
+              "end": 351.521,
+              "kind": "body",
+              "audible": true,
+              "text": "Petaṃ kālakataṃ disvā 'na so labbhā mayā 'iti.",
+              "kana": "ペータン カーラカタン ディスワー ナ ソー ラッバー マヤー イティ",
+              "speechEnd": 349.967,
+              "wordStarts": [
+                337.293,
+                339.366,
+                342.231,
+                344.141,
+                344.618,
+                345.574,
+                347.484,
+                348.916
+              ]
+            },
+            {
+              "lineId": "s18-l1",
+              "start": 351.521,
+              "end": 361.254,
+              "kind": "body",
+              "audible": true,
+              "text": "Yathā saraṇam ādittaṃ vārinā parinibbaye,",
+              "kana": "ヤター サラナ マーディッタン ワーリナー パリニッバイェー",
+              "speechEnd": 361.254,
+              "wordStarts": [
+                351.521,
+                352.929,
+                354.119,
+                356.497,
+                358.479
+              ]
+            },
+            {
+              "lineId": "s18-l2",
+              "start": 361.254,
+              "end": 373.221,
+              "kind": "body",
+              "audible": true,
+              "text": "Evampi dhīro sappañño paṇḍito kusalo naro",
+              "kana": "エーワンピ ディーロー サッパンニョー パンディトー クサロー ナロー",
+              "speechEnd": 373.221,
+              "wordStarts": [
+                361.254,
+                363.65,
+                365.39,
+                368,
+                370.176,
+                371.916
+              ]
+            },
+            {
+              "lineId": "s18-l3",
+              "start": 373.221,
+              "end": 386.837,
+              "kind": "body",
+              "audible": true,
+              "text": "Khippam uppatitaṃ sokaṃ vāto tūlaṃ va dhaṃsaye",
+              "kana": "キッパ ムッパティタン ソーカン ワートー トゥーラン ワ ダンサイェー",
+              "speechEnd": 386.837,
+              "wordStarts": [
+                373.221,
+                374.945,
+                377.841,
+                379.771,
+                381.702,
+                383.632,
+                384.115
+              ]
+            },
+            {
+              "lineId": "s19-l1",
+              "start": 386.837,
+              "end": 397.545,
+              "kind": "body",
+              "audible": true,
+              "text": "Paridevaṃ pajappañ ca domanassañ ca attano:",
+              "kana": "パリデーワン パジャッパン チャ ドーマナッサン チャ アッタノー",
+              "speechEnd": 397.545,
+              "wordStarts": [
+                386.837,
+                389.376,
+                391.491,
+                391.914,
+                394.876,
+                395.299
+              ]
+            },
+            {
+              "lineId": "s19-l2",
+              "start": 397.545,
+              "end": 408.861,
+              "kind": "body",
+              "audible": true,
+              "text": "Attano sukham esāno abbahe sallam attano.",
+              "kana": "アッタノー スカン エーサーノー アッバヘー サッラ マッタノー",
+              "speechEnd": 408.837,
+              "wordStarts": [
+                397.545,
+                399.636,
+                400.891,
+                403.4,
+                405.491,
+                406.746
+              ]
+            },
+            {
+              "lineId": "s20-l1",
+              "start": 408.861,
+              "end": 421.09,
+              "kind": "body",
+              "audible": true,
+              "text": "Abbūḷha sallo asito santiṃ pappuyya cetaso,",
+              "kana": "アッブールハ サッロー アスィトー サンティン パップッヤ チェータソー",
+              "speechEnd": 421.09,
+              "wordStarts": [
+                408.861,
+                411.78,
+                413.473,
+                415.165,
+                416.858,
+                418.974
+              ]
+            },
+            {
+              "lineId": "s20-l2",
+              "start": 421.09,
+              "end": 442.749,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabbasokaṃ atikkanto asoko hoti nibbuto ti.",
+              "kana": "サッバソーカン アティッカントー アソーコー ホーティ ニッブトー ティ",
+              "speechEnd": 440.978,
+              "wordStarts": [
+                421.09,
+                426.172,
+                431.107,
+                434.633,
+                436.748,
+                440.273
+              ]
+            },
+            {
+              "lineId": "s20-l3",
+              "start": 442.749,
+              "end": 445.063,
+              "kind": "body",
+              "audible": true,
+              "text": "Salla suttaṃ niṭṭhitaṃ",
+              "kana": "サッラ スッタン ニッティタン",
+              "speechEnd": 445.063,
+              "wordStarts": [
+                442.749,
+                443.281,
+                443.989
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "29288339f36d44e91f6b292a0afceeed19a2bb7db51a13968fe0737e15a0ecf8"
+          }
         }
       ]
     },
@@ -10978,17 +15879,17 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s3-l1",
             "pali": "Phalānam iva pakkānaṃ pāto patanato bhayaṃ,",
-            "kana": "パラーナン イワ パッカーナン パートー パタナトー バヤン",
+            "kana": "パラーナ ミワ パッカーナン パートー パタナトー バヤン",
             "ja": "たわわに実った果実なら、夜明けとともに落ちるやも。",
             "wordGlosses": [
               {
                 "pali": "Phalānam",
-                "kana": "パラーナン",
+                "kana": "パラーナ",
                 "ja": "果実の"
               },
               {
                 "pali": "iva",
-                "kana": "イワ",
+                "kana": "ミワ",
                 "ja": "ように"
               },
               {
@@ -11741,7 +16642,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s12-l1",
             "pali": "Kiso vivaṇṇo bhavati hiṃsam attānam attanā:",
-            "kana": "キソー ヴィワンノー バワティ ヒンサン アッターナン アッタナー",
+            "kana": "キソー ヴィワンノー バワティ ヒンサ マッターナ マッタナー",
             "ja": "身はやつれ、顔色は悪くなる。自分で自分を傷つける。",
             "wordGlosses": [
               {
@@ -11761,17 +16662,17 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "hiṃsam",
-                "kana": "ヒンサン",
+                "kana": "ヒンサ",
                 "ja": "害しながら"
               },
               {
                 "pali": "attānam",
-                "kana": "アッターナン",
+                "kana": "マッターナ",
                 "ja": "自分を"
               },
               {
                 "pali": "attanā:",
-                "kana": "アッタナー",
+                "kana": "マッタナー",
                 "ja": "自分によって"
               }
             ]
@@ -11823,17 +16724,17 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s13-l1",
             "pali": "Sokam appajahaṃ jantu bhiyyo dukkhaṃ nigacchati,",
-            "kana": "ソーカン アッパジャハン ジャントゥ ビッヨー ドゥッカン ニガッチャティ",
+            "kana": "ソーカ マッパジャハン ジャントゥ ビッヨー ドゥッカン ニガッチャティ",
             "ja": "悲しみを断ち切らない者が、なおさら苦悩に陥る。",
             "wordGlosses": [
               {
                 "pali": "Sokam",
-                "kana": "ソーカン",
+                "kana": "ソーカ",
                 "ja": "悲しみを"
               },
               {
                 "pali": "appajahaṃ",
-                "kana": "アッパジャハン",
+                "kana": "マッパジャハン",
                 "ja": "捨てない"
               },
               {
@@ -11943,7 +16844,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s14-l2",
             "pali": "Maccuno vasam āgamma phandante v'idha pāṇine.",
-            "kana": "マッチュノー ワサン アーガンマ パンダンテー ヴィダ パーニネー",
+            "kana": "マッチュノー ワサ マーガンマ パンダンテー ヴィダ パーニネー",
             "ja": "死期が近づくと、生命は震えるもの。",
             "wordGlosses": [
               {
@@ -11953,12 +16854,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "vasam",
-                "kana": "ワサン",
+                "kana": "ワサ",
                 "ja": "支配に"
               },
               {
                 "pali": "āgamma",
-                "kana": "アーガンマ",
+                "kana": "マーガンマ",
                 "ja": "近づいて"
               },
               {
@@ -12253,7 +17154,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s18-l1",
             "pali": "Yathā saraṇam ādittaṃ vārinā parinibbaye,",
-            "kana": "ヤター サラナン アーディッタン ワーリナー パリニッバイェー",
+            "kana": "ヤター サラナ マーディッタン ワーリナー パリニッバイェー",
             "ja": "家についた火を水で消し去るように、",
             "wordGlosses": [
               {
@@ -12263,12 +17164,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "saraṇam",
-                "kana": "サラナン",
+                "kana": "サラナ",
                 "ja": "家を"
               },
               {
                 "pali": "ādittaṃ",
-                "kana": "アーディッタン",
+                "kana": "マーディッタン",
                 "ja": "燃えた"
               },
               {
@@ -12324,17 +17225,17 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s18-l3",
             "pali": "Khippam uppatitaṃ sokaṃ vāto tūlaṃ va dhaṃsaye",
-            "kana": "キッパン ウッパティタン ソーカン ワートー トゥーラン ワ ダンサイェー",
+            "kana": "キッパ ムッパティタン ソーカン ワートー トゥーラン ワ ダンサイェー",
             "ja": "風が綿花を吹き払うように、即座に消す。",
             "wordGlosses": [
               {
                 "pali": "Khippam",
-                "kana": "キッパン",
+                "kana": "キッパ",
                 "ja": "速やかに"
               },
               {
                 "pali": "uppatitaṃ",
-                "kana": "ウッパティタン",
+                "kana": "ムッパティタン",
                 "ja": "生じた"
               },
               {
@@ -12411,7 +17312,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s19-l2",
             "pali": "Attano sukham esāno abbahe sallam attano.",
-            "kana": "アッタノー スカン エーサーノー アッバヘー サッラン アッタノー",
+            "kana": "アッタノー スカン エーサーノー アッバヘー サッラ マッタノー",
             "ja": "自分の幸福を求める者は、刺さった〔悲しみの〕箭を引き抜くのである。",
             "wordGlosses": [
               {
@@ -12436,12 +17337,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "sallam",
-                "kana": "サッラン",
+                "kana": "サッラ",
                 "ja": "箭を"
               },
               {
                 "pali": "attano.",
-                "kana": "アッタノー",
+                "kana": "マッタノー",
                 "ja": "自分の"
               }
             ]
@@ -12527,6 +17428,29 @@ const EMBEDDED_SUTTAS = {
                 "ja": "と"
               }
             ]
+          },
+          {
+            "id": "s20-l3",
+            "pali": "Salla suttaṃ niṭṭhitaṃ",
+            "kana": "サッラ スッタン ニッティタン",
+            "ja": "完了",
+            "wordGlosses": [
+              {
+                "pali": "Salla",
+                "kana": "サッラ",
+                "ja": "箭(矢)"
+              },
+              {
+                "pali": "suttaṃ",
+                "kana": "スッタン",
+                "ja": "経"
+              },
+              {
+                "pali": "niṭṭhitaṃ",
+                "kana": "ニッティタン",
+                "ja": ""
+              }
+            ]
           }
         ],
         "label": "第593節"
@@ -12535,8 +17459,8 @@ const EMBEDDED_SUTTAS = {
   },
   "maha-purisa-vitakka": {
     "id": "maha-purisa-vitakka",
-    "title": "偉大なる人の思考",
-    "titlePali": "Mahā purisa vitakka",
+    "title": "偉大なる人の思考（増支部8.30 228-235より抜粋）",
+    "titlePali": "Mahā purisa vitakka (AN 8.30,PTS:A IV 228-235)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -12630,7 +17554,181 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.078,
+              "end": 3.107,
+              "kind": "title",
+              "audible": true,
+              "text": "Mahā purisa vitakka",
+              "kana": "マハー プリサ ヴィタッカ",
+              "speechEnd": 2.066,
+              "wordStarts": [
+                0.078,
+                0.775,
+                1.328
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.107,
+              "end": 12.455,
+              "kind": "body",
+              "audible": true,
+              "text": "Appicchassāyaṃ dhammo, nāyaṃ dhammo mahicchassa;",
+              "kana": "アッピッチャッサーヤン ダンモー ナーヤン ダンモー マヒッチャッサ",
+              "speechEnd": 12.455,
+              "wordStarts": [
+                3.107,
+                6.332,
+                7.578,
+                8.824,
+                10.07
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 12.455,
+              "end": 23.286,
+              "kind": "body",
+              "audible": true,
+              "text": "Santuṭṭhassāyaṃ dhammo, nāyaṃ dhammo asantuṭṭhassa;",
+              "kana": "サントゥッタッサーヤン ダンモー ナーヤン ダンモー アサントゥッタッサ",
+              "speechEnd": 23.286,
+              "wordStarts": [
+                12.455,
+                15.824,
+                17.302,
+                18.65,
+                19.998
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 23.286,
+              "end": 35.951,
+              "kind": "body",
+              "audible": true,
+              "text": "Pavivittassāyaṃ dhammo, nāyaṃ dhammo saṅgaṇikārāmassa;",
+              "kana": "パヴィヴィッタッサーヤン ダンモー ナーヤン ダンモー サンガニカーラーマッサ",
+              "speechEnd": 35.951,
+              "wordStarts": [
+                23.286,
+                26.896,
+                28.518,
+                29.962,
+                31.406
+              ]
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 35.951,
+              "end": 48.155,
+              "kind": "body",
+              "audible": true,
+              "text": "Āraddhaviriyassāyaṃ dhammo, nāyaṃ dhammo kusītassa;",
+              "kana": "アーラッダヴィリヤッサーヤン ダンモー ナーヤン ダンモー クスィータッサ",
+              "speechEnd": 48.155,
+              "wordStarts": [
+                35.951,
+                40.763,
+                42.511,
+                43.991,
+                45.472
+              ]
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 48.155,
+              "end": 60.735,
+              "kind": "body",
+              "audible": true,
+              "text": "Upaṭṭhitasatissāyaṃ dhammo, nāyaṃ dhammo muṭṭhassatissa;",
+              "kana": "ウパッティタサティッサーヤン ダンモー ナーヤン ダンモー ムッタッサティッサ",
+              "speechEnd": 60.735,
+              "wordStarts": [
+                48.155,
+                52.667,
+                54.42,
+                55.924,
+                57.428
+              ]
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 60.735,
+              "end": 72.668,
+              "kind": "body",
+              "audible": true,
+              "text": "Samāhitassāyaṃ dhammo, nāyaṃ dhammo asamāhitassa;",
+              "kana": "サマーヒタッサーヤン ダンモー ナーヤン ダンモー アサマーヒタッサ",
+              "speechEnd": 72.668,
+              "wordStarts": [
+                60.735,
+                64.477,
+                65.942,
+                67.681,
+                69.178
+              ]
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 72.668,
+              "end": 84.575,
+              "kind": "body",
+              "audible": true,
+              "text": "Paññāvato ayaṃ dhammo, nāyaṃ dhammo duppaññassa;",
+              "kana": "パンニャーワトー アヤン ダンモー ナーヤン ダンモー ドゥッパンニャッサ",
+              "speechEnd": 84.575,
+              "wordStarts": [
+                72.668,
+                75.402,
+                76.573,
+                78.382,
+                79.944,
+                81.506
+              ]
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 84.575,
+              "end": 95.926,
+              "kind": "body",
+              "audible": true,
+              "text": "Nippapañcārāmassāyaṃ dhammo nippapañcaratino;",
+              "kana": "ニッパパンチャーラーマッサーヤン ダンモー ニッパパンチャラティノー",
+              "speechEnd": 95.926,
+              "wordStarts": [
+                84.575,
+                90.267,
+                91.785
+              ]
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 95.926,
+              "end": 109.72,
+              "kind": "body",
+              "audible": true,
+              "text": "Nāyaṃ dhammo papañcārāmassa papañcaratino' ti.",
+              "kana": "ナーヤン ダンモー パパンチャーラーマッサ パパンチャラティノー ティ",
+              "speechEnd": 109.72,
+              "wordStarts": [
+                95.926,
+                97.946,
+                99.966,
+                105.175,
+                109.215
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "ff1a968598ee24f9ed12c0ce9109818dd25e50076881944b3cc390a61611c6c1"
+          }
         }
       ]
     },
@@ -13008,8 +18106,8 @@ const EMBEDDED_SUTTAS = {
   },
   "mangala-suttam": {
     "id": "mangala-suttam",
-    "title": "吉祥経",
-    "titlePali": "Mangala suttaṃ",
+    "title": "吉祥経（ｽｯﾀﾆﾊﾟｰﾀ2.4 258-269）",
+    "titlePali": "Mangala suttaṃ (Snp2.4,PTS:Sn 258–269)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -13050,7 +18148,8 @@ const EMBEDDED_SUTTAS = {
             "s12-l1",
             "s12-l2",
             "s13-l1",
-            "s13-l2"
+            "s13-l2",
+            "s13-l3"
           ],
           "duration": 310.81,
           "cues": [
@@ -13271,7 +18370,577 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.432,
+              "end": 3.764,
+              "kind": "title",
+              "audible": true,
+              "text": "Mangala suttaṃ",
+              "kana": "マンガラ スッタン",
+              "speechEnd": 3.764,
+              "wordStarts": [
+                0.432,
+                1.098
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.764,
+              "end": 6.433,
+              "kind": "body",
+              "audible": true,
+              "text": "Evaṃ me sutaṃ:",
+              "kana": "エーワン メー スタン",
+              "speechEnd": 6.433,
+              "wordStarts": [
+                3.764,
+                4.95,
+                5.543
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 6.433,
+              "end": 19.876,
+              "kind": "body",
+              "audible": true,
+              "text": "Ekaṃ samayaṃ Bhagavā Sāvatthiyaṃ viharati Jetavane Anāthapiṇḍikassa ārāme.",
+              "kana": "エーカン サマヤン バガワー サーワッティヤン ヴィハラティ ジェータワネー アナータピンディカッサ アーラーメー",
+              "speechEnd": 19.876,
+              "wordStarts": [
+                6.433,
+                7.579,
+                8.724,
+                9.87,
+                11.874,
+                13.02,
+                14.687,
+                17.705
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 19.876,
+              "end": 31.569,
+              "kind": "body",
+              "audible": true,
+              "text": "Atha kho aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā",
+              "kana": "アタ コー アンニャタラー デーワター アビッカンターヤ ラッティヤー アビッカンタワンナー",
+              "speechEnd": 31.569,
+              "wordStarts": [
+                19.876,
+                20.475,
+                21.073,
+                22.869,
+                24.365,
+                26.759,
+                28.255
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 31.569,
+              "end": 43.965,
+              "kind": "body",
+              "audible": true,
+              "text": "kevalakappaṃ Jetavanaṃ obhāsetvā yena Bhagavā ten' upasaṃkami,",
+              "kana": "ケーワラカッパン ジェータワナン オーバーセトゥワー イェーナ バガワー テー ヌパサンカミ",
+              "speechEnd": 43.965,
+              "wordStarts": [
+                31.569,
+                33.985,
+                35.797,
+                39.204,
+                40.146,
+                41.354,
+                41.958
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 43.965,
+              "end": 56.661,
+              "kind": "body",
+              "audible": true,
+              "text": "upasaṃkamitvā Bhagavantaṃ abhivādetvā ekamantaṃ aṭṭhāsi.",
+              "kana": "ウパサンカミトゥワー バガワンタン アビワーデトゥワー エーカマンタン アッタースィ",
+              "speechEnd": 56.661,
+              "wordStarts": [
+                43.965,
+                47.068,
+                49.136,
+                52.054,
+                54.581
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 56.661,
+              "end": 71.697,
+              "kind": "body",
+              "audible": true,
+              "text": "Ekamantaṃ ṭhitā kho sā devatā Bhagavantam gāthāya ajjhabhāsi:",
+              "kana": "エーカマンタン ティター コー サー デーワター バガワンタン ガーターヤ アッジャバースィ",
+              "speechEnd": 71.697,
+              "wordStarts": [
+                56.661,
+                59.22,
+                60.317,
+                61.048,
+                61.78,
+                63.608,
+                65.802,
+                67.63
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 71.697,
+              "end": 79.259,
+              "kind": "body",
+              "audible": true,
+              "text": "Bahū devā manussā ca maṅgalāni acintayuṃ",
+              "kana": "バフー デーワー マヌッサー チャ マンガラーニ アチンタユン",
+              "speechEnd": 79.259,
+              "wordStarts": [
+                71.697,
+                72.576,
+                73.748,
+                75.214,
+                75.507,
+                77.265
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 79.259,
+              "end": 90.405,
+              "kind": "body",
+              "audible": true,
+              "text": "ākaṅkhamānā sotthānaṃ, brūhi maṅgalam uttamaṃ.",
+              "kana": "アーカンカマーナー ソッターナン ブルーヒ マンガラ ムッタマン",
+              "speechEnd": 90.405,
+              "wordStarts": [
+                79.259,
+                82.379,
+                84.294,
+                85.571,
+                86.849
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 90.405,
+              "end": 98.373,
+              "kind": "body",
+              "audible": true,
+              "text": "Asevanā ca bālānaṃ paṇḍitānañ ca sevanā",
+              "kana": "アセーワナー チャ バーラーナン パンディターナン チャ セーワナー",
+              "speechEnd": 98.373,
+              "wordStarts": [
+                90.405,
+                92.204,
+                92.504,
+                94.302,
+                96.401,
+                96.701
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 98.373,
+              "end": 107.553,
+              "kind": "body",
+              "audible": true,
+              "text": "Pūjā ca pūjaneyyānaṃ, etaṃ maṅgalam uttamaṃ.",
+              "kana": "プージャー チャ プージャネイヤーナン エータン マンガラ ムッタマン",
+              "speechEnd": 107.553,
+              "wordStarts": [
+                98.373,
+                99.659,
+                99.981,
+                102.975,
+                104.262,
+                105.548
+              ]
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 107.553,
+              "end": 116.588,
+              "kind": "body",
+              "audible": true,
+              "text": "Paṭirūpa-desa-vāso ca pubbe ca katapuññatā",
+              "kana": "パティルーパデーサワーソー チャ プッベー チャ カタプンニャター",
+              "speechEnd": 116.588,
+              "wordStarts": [
+                107.553,
+                111.797,
+                112.15,
+                113.565,
+                113.919
+              ]
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 116.588,
+              "end": 125.275,
+              "kind": "body",
+              "audible": true,
+              "text": "Attasammāpaṇidhi ca, etaṃ maṅgalam uttamaṃ.",
+              "kana": "アッタサンマーパニディ チャ エータン マンガラ ムッタマン",
+              "speechEnd": 125.1,
+              "wordStarts": [
+                116.588,
+                120.072,
+                120.42,
+                121.814,
+                123.207
+              ]
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 125.275,
+              "end": 133.677,
+              "kind": "body",
+              "audible": true,
+              "text": "Bāhusaccañ ca sippañ ca vinayo ca susikkhito",
+              "kana": "バーフサッチャン チャ スィッパン チャ ヴィナヨー チャ ススィッキトー",
+              "speechEnd": 133.677,
+              "wordStarts": [
+                125.275,
+                127.8,
+                128.14,
+                129.5,
+                129.84,
+                131.199,
+                131.539
+              ]
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 133.677,
+              "end": 143.452,
+              "kind": "body",
+              "audible": true,
+              "text": "Subhāsitā ca yā vācā, etaṃ maṅgalam uttamaṃ.",
+              "kana": "スバースィター チャ ヤー ワーチャー エータン マンガラ ムッタマン",
+              "speechEnd": 143.452,
+              "wordStarts": [
+                133.677,
+                135.708,
+                136.046,
+                136.723,
+                138.077,
+                139.431,
+                140.785
+              ]
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 143.452,
+              "end": 152.549,
+              "kind": "body",
+              "audible": true,
+              "text": "Mātāpitu-upaṭṭānaṃ puttadārassa saṅgaho",
+              "kana": "マーターピトゥウパッターナン プッタダーラッサ サンガホー",
+              "speechEnd": 152.549,
+              "wordStarts": [
+                143.452,
+                147.884,
+                150.612
+              ]
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 152.549,
+              "end": 161.743,
+              "kind": "body",
+              "audible": true,
+              "text": "Anākulā ca kammantā, etaṃ maṅgalam uttamaṃ.",
+              "kana": "アナークラー チャ カンマンター エータン マンガラ ムッタマン",
+              "speechEnd": 161.743,
+              "wordStarts": [
+                152.549,
+                154.556,
+                154.891,
+                156.898,
+                158.236,
+                159.574
+              ]
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 161.743,
+              "end": 170.873,
+              "kind": "body",
+              "audible": true,
+              "text": "Dānañ ca dhammacariyā ca ñātakānañ ca saṅgaho",
+              "kana": "ダーナン チャ ダンマチャリヤー チャ ニャータカーナン チャ サンガホー",
+              "speechEnd": 170.709,
+              "wordStarts": [
+                161.743,
+                163.122,
+                163.467,
+                165.881,
+                166.226,
+                168.64,
+                168.985
+              ]
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 170.873,
+              "end": 181.639,
+              "kind": "body",
+              "audible": true,
+              "text": "Anavajjāni kammāni, etaṃ maṅgalam uttamaṃ.",
+              "kana": "アナワッジャーニ カンマーニ エータン マンガラ ムッタマン",
+              "speechEnd": 181.639,
+              "wordStarts": [
+                170.873,
+                173.362,
+                175.125,
+                176.537,
+                177.948
+              ]
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 181.639,
+              "end": 189.645,
+              "kind": "body",
+              "audible": true,
+              "text": "Ārati virati pāpā majjapānā ca saññamo",
+              "kana": "アーラティ ヴィラティ パーパー マッジャパーナー チャ サンニャモー",
+              "speechEnd": 189.645,
+              "wordStarts": [
+                181.639,
+                182.935,
+                183.906,
+                185.202,
+                187.47,
+                187.794
+              ]
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 189.645,
+              "end": 200.772,
+              "kind": "body",
+              "audible": true,
+              "text": "Appamādo ca dhammesu, etaṃ maṅgalam uttamaṃ.",
+              "kana": "アッパマードー チャ ダンメース エータン マンガラ ムッタマン",
+              "speechEnd": 200.772,
+              "wordStarts": [
+                189.645,
+                192.17,
+                192.53,
+                194.334,
+                195.776,
+                197.219
+              ]
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 200.772,
+              "end": 209.522,
+              "kind": "body",
+              "audible": true,
+              "text": "Gāravo ca nivāto ca santuṭṭhī ca kataññutā",
+              "kana": "ガーラヴォー チャ ニワートー チャ サントゥッティー チャ カタンニュター",
+              "speechEnd": 209.522,
+              "wordStarts": [
+                200.772,
+                202.488,
+                202.831,
+                204.547,
+                204.891,
+                206.95,
+                207.293
+              ]
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 209.522,
+              "end": 218.061,
+              "kind": "body",
+              "audible": true,
+              "text": "Kālena dhammasavanaṃ etaṃ maṅgalam uttamaṃ.",
+              "kana": "カーレーナ ダンマサワナン エータン マンガラ ムッタマン",
+              "speechEnd": 218.061,
+              "wordStarts": [
+                209.522,
+                211.178,
+                213.497,
+                214.822,
+                216.147
+              ]
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 218.061,
+              "end": 226.713,
+              "kind": "body",
+              "audible": true,
+              "text": "Khantī ca sovacassatā samaṇānañ ca dassanaṃ",
+              "kana": "カンティー チャ ソーワチャッサター サマナーナン チャ ダッサナン",
+              "speechEnd": 226.713,
+              "wordStarts": [
+                218.061,
+                219.416,
+                219.755,
+                222.465,
+                224.497,
+                224.836
+              ]
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 226.713,
+              "end": 236.543,
+              "kind": "body",
+              "audible": true,
+              "text": "Kālena dhammasākacchā, etaṃ maṅgalam uttamaṃ.",
+              "kana": "カーレーナ ダンマサーカッチャー エータン マンガラ ムッタマン",
+              "speechEnd": 236.543,
+              "wordStarts": [
+                226.713,
+                228.44,
+                231.549,
+                232.931,
+                234.313
+              ]
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 236.543,
+              "end": 245.761,
+              "kind": "body",
+              "audible": true,
+              "text": "Tapo ca brahmacariyañ ca ariyasaccāna dassanaṃ",
+              "kana": "タポー チャ ブラフマチャリヤン チャ アリヤサッチャーナ ダッサナン",
+              "speechEnd": 245.761,
+              "wordStarts": [
+                236.543,
+                237.583,
+                237.93,
+                240.705,
+                241.051,
+                243.826
+              ]
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 245.761,
+              "end": 256.337,
+              "kind": "body",
+              "audible": true,
+              "text": "Nibbānasacchikiriyā ca, etaṃ maṅgalam uttamaṃ.",
+              "kana": "ニッバーナサッチキリヤー チャ エータン マンガラ ムッタマン",
+              "speechEnd": 256.337,
+              "wordStarts": [
+                245.761,
+                249.883,
+                250.227,
+                251.601,
+                252.975
+              ]
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 256.337,
+              "end": 265.734,
+              "kind": "body",
+              "audible": true,
+              "text": "Phuṭṭhassa lokadhammehi cittaṃ yassa na kampati",
+              "kana": "プッタッサ ローカダンメーヒ チッタン ヤッサ ナ カンパティ",
+              "speechEnd": 265.734,
+              "wordStarts": [
+                256.337,
+                258.18,
+                261.13,
+                262.605,
+                263.711,
+                264.079
+              ]
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 265.734,
+              "end": 275.481,
+              "kind": "body",
+              "audible": true,
+              "text": "Asokaṃ virajaṃ khemaṃ, etaṃ maṅgalam uttamaṃ.",
+              "kana": "アソーカン ヴィラジャン ケーマン エータン マンガラ ムッタマン",
+              "speechEnd": 275.481,
+              "wordStarts": [
+                265.734,
+                267.571,
+                269.04,
+                270.51,
+                271.979,
+                273.449
+              ]
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 275.481,
+              "end": 285.167,
+              "kind": "body",
+              "audible": true,
+              "text": "Etādisāni katvāna sabbattha-m-aparājitā",
+              "kana": "エーターディサーニ カトゥワーナ サッバッタマパラージター",
+              "speechEnd": 285.167,
+              "wordStarts": [
+                275.481,
+                278.581,
+                280.518
+              ]
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 285.167,
+              "end": 301.897,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabbattha sotthiṃ gacchanti, taṃ tesaṃ maṅgalam uttamaṃ.",
+              "kana": "サッバッタ ソッティン ガッチャンティ タン テーサン マンガラ ムッタマン",
+              "speechEnd": 300.434,
+              "wordStarts": [
+                285.167,
+                287.682,
+                289.694,
+                292.377,
+                293.383,
+                295.395,
+                297.407
+              ]
+            },
+            {
+              "lineId": "s13-l3",
+              "start": 301.897,
+              "end": 303.977,
+              "kind": "body",
+              "audible": true,
+              "text": "Maṅgala suttaṃ niṭṭhitaṃ.",
+              "kana": "マンガラ スッタン ニッティタン",
+              "speechEnd": 303.977,
+              "wordStarts": [
+                301.897,
+                302.445,
+                302.993
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "4ad7848f7f17521193eb2f742e9627f569da9f2e0e23d97b570d3745d47751e3"
+          }
         }
       ]
     },
@@ -13420,7 +19089,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s1-l4",
             "pali": "kevalakappaṃ Jetavanaṃ obhāsetvā yena Bhagavā ten' upasaṃkami,",
-            "kana": "ケーワラカッパン ジェータワナン オーバーセトゥワー イェーナ バガワー テーン ウパサンカミ",
+            "kana": "ケーワラカッパン ジェータワナン オーバーセトゥワー イェーナ バガワー テー ヌパサンカミ",
             "ja": "祇園を隈無くまな く照らして世尊のおられる処に近付きました。",
             "wordGlosses": [
               {
@@ -13450,12 +19119,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "ten'",
-                "kana": "テーン",
+                "kana": "テー",
                 "ja": "そこへ"
               },
               {
                 "pali": "upasaṃkami,",
-                "kana": "ウパサンカミ",
+                "kana": "ヌパサンカミ",
                 "ja": "近づいた"
               }
             ]
@@ -13588,7 +19257,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s2-l2",
             "pali": "ākaṅkhamānā sotthānaṃ, brūhi maṅgalam uttamaṃ.",
-            "kana": "アーカンカマーナー ソッターナン ブルーヒ マンガラン ウッタマン",
+            "kana": "アーカンカマーナー ソッターナン ブルーヒ マンガラ ムッタマン",
             "ja": "最上の吉祥をお説きください。",
             "wordGlosses": [
               {
@@ -13608,12 +19277,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -13665,7 +19334,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s3-l2",
             "pali": "Pūjā ca pūjaneyyānaṃ, etaṃ maṅgalam uttamaṃ.",
-            "kana": "プージャー チャ プージャネイヤーナン エータン マンガラン ウッタマン",
+            "kana": "プージャー チャ プージャネイヤーナン エータン マンガラ ムッタマン",
             "ja": "供養するに 相応 ふさわ しい人々を供養すること、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -13690,12 +19359,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -13742,7 +19411,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s4-l2",
             "pali": "Attasammāpaṇidhi ca, etaṃ maṅgalam uttamaṃ.",
-            "kana": "アッタサンマーパニディ チャ エータン マンガラン ウッタマン",
+            "kana": "アッタサンマーパニディ チャ エータン マンガラ ムッタマン",
             "ja": "自己について正しく志向すること、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -13762,12 +19431,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -13824,7 +19493,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s5-l2",
             "pali": "Subhāsitā ca yā vācā, etaṃ maṅgalam uttamaṃ.",
-            "kana": "スバースィター チャ ヤー ワーチャー エータン マンガラン ウッタマン",
+            "kana": "スバースィター チャ ヤー ワーチャー エータン マンガラ ムッタマン",
             "ja": "言葉が善く語られること、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -13854,12 +19523,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -13896,7 +19565,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s6-l2",
             "pali": "Anākulā ca kammantā, etaṃ maṅgalam uttamaṃ.",
-            "kana": "アナークラー チャ カンマンター エータン マンガラン ウッタマン",
+            "kana": "アナークラー チャ カンマンター エータン マンガラ ムッタマン",
             "ja": "混乱のない仕事をすること、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -13921,12 +19590,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -13983,7 +19652,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s7-l2",
             "pali": "Anavajjāni kammāni, etaṃ maṅgalam uttamaṃ.",
-            "kana": "アナワッジャーニ カンマーニ エータン マンガラン ウッタマン",
+            "kana": "アナワッジャーニ カンマーニ エータン マンガラ ムッタマン",
             "ja": "咎のない行為、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -14003,12 +19672,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -14060,7 +19729,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s8-l2",
             "pali": "Appamādo ca dhammesu, etaṃ maṅgalam uttamaṃ.",
-            "kana": "アッパマードー チャ ダンメース エータン マンガラン ウッタマン",
+            "kana": "アッパマードー チャ ダンメース エータン マンガラ ムッタマン",
             "ja": "教法において怠けないこと、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -14085,12 +19754,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -14147,7 +19816,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s9-l2",
             "pali": "Kālena dhammasavanaṃ etaṃ maṅgalam uttamaṃ.",
-            "kana": "カーレーナ ダンマサワナン エータン マンガラン ウッタマン",
+            "kana": "カーレーナ ダンマサワナン エータン マンガラ ムッタマン",
             "ja": "適時に教法を聞くこと、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -14167,12 +19836,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -14224,7 +19893,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s10-l2",
             "pali": "Kālena dhammasākacchā, etaṃ maṅgalam uttamaṃ.",
-            "kana": "カーレーナ ダンマサーカッチャー エータン マンガラン ウッタマン",
+            "kana": "カーレーナ ダンマサーカッチャー エータン マンガラ ムッタマン",
             "ja": "適時に教法について話し合うこと、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -14244,12 +19913,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -14301,7 +19970,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s11-l2",
             "pali": "Nibbānasacchikiriyā ca, etaṃ maṅgalam uttamaṃ.",
-            "kana": "ニッバーナサッチキリヤー チャ エータン マンガラン ウッタマン",
+            "kana": "ニッバーナサッチキリヤー チャ エータン マンガラ ムッタマン",
             "ja": "涅槃をありありと覚ること、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -14321,12 +19990,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -14378,7 +20047,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s12-l2",
             "pali": "Asokaṃ virajaṃ khemaṃ, etaṃ maṅgalam uttamaṃ.",
-            "kana": "アソーカン ヴィラジャン ケーマン エータン マンガラン ウッタマン",
+            "kana": "アソーカン ヴィラジャン ケーマン エータン マンガラ ムッタマン",
             "ja": "憂いがなく、汚れがなく、安らかであること、これが最上の吉祥です。",
             "wordGlosses": [
               {
@@ -14403,12 +20072,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
               }
             ]
@@ -14445,7 +20114,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s13-l2",
             "pali": "Sabbattha sotthiṃ gacchanti, taṃ tesaṃ maṅgalam uttamaṃ.",
-            "kana": "サッバッタ ソッティン ガッチャンティ タン テーサン マンガラン ウッタマン",
+            "kana": "サッバッタ ソッティン ガッチャンティ タン テーサン マンガラ ムッタマン",
             "ja": "あらゆる処で平安を得る、それが彼ら［人・天］にとっての最上の吉祥です。",
             "wordGlosses": [
               {
@@ -14475,13 +20144,36 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "maṅgalam",
-                "kana": "マンガラン",
+                "kana": "マンガラ",
                 "ja": "吉祥を"
               },
               {
                 "pali": "uttamaṃ.",
-                "kana": "ウッタマン",
+                "kana": "ムッタマン",
                 "ja": "最上の"
+              }
+            ]
+          },
+          {
+            "id": "s13-l3",
+            "pali": "Maṅgala suttaṃ niṭṭhitaṃ.",
+            "kana": "マンガラ スッタン ニッティタン",
+            "ja": "完了",
+            "wordGlosses": [
+              {
+                "pali": "Maṅgala",
+                "kana": "マンガラ",
+                "ja": "吉祥"
+              },
+              {
+                "pali": "suttaṃ",
+                "kana": "スッタン",
+                "ja": "経"
+              },
+              {
+                "pali": "niṭṭhitaṃ.",
+                "kana": "ニッティタン",
+                "ja": ""
               }
             ]
           }
@@ -14492,8 +20184,8 @@ const EMBEDDED_SUTTAS = {
   },
   "sallekha-sutta": {
     "id": "sallekha-sutta",
-    "title": "戒め",
-    "titlePali": "Sallekha suttaṃ",
+    "title": "戒め（中部8より抜粋））",
+    "titlePali": "Sallekha suttaṃ (Mn.8)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -15235,7 +20927,1478 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.121,
+              "end": 4.728,
+              "kind": "title",
+              "audible": true,
+              "text": "Sallekha Suttaṃ",
+              "kana": "サッレーカ スッタン",
+              "speechEnd": 4.728,
+              "wordStarts": [
+                0.121,
+                1.391
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.728,
+              "end": 10.522,
+              "kind": "body",
+              "audible": true,
+              "text": "Idha kho pana vo Cunda sallekho karaṇīyo:",
+              "kana": "イダ コー パナ ウォー チュンダ サッレーコー カラニーヨー",
+              "speechEnd": 10.522,
+              "wordStarts": [
+                4.728,
+                5.232,
+                5.736,
+                6.239,
+                6.743,
+                7.499,
+                9.011
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 10.522,
+              "end": 17.165,
+              "kind": "body",
+              "audible": true,
+              "text": "pare vihiṃsakā bhavissanti, mayamettha avihiṃsakā",
+              "kana": "パレー ヴィヒンサカー バヴィッサンティ マヤメッタ アヴィヒンサカー",
+              "speechEnd": 17.165,
+              "wordStarts": [
+                10.522,
+                11.26,
+                12.736,
+                14.213,
+                15.443
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 17.165,
+              "end": 22.246,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 22.206,
+              "wordStarts": [
+                17.165,
+                19.181,
+                20.694
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 22.246,
+              "end": 31.716,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare pāṇātipātī bhavissanti, mayamettha pāṇātipātā paṭiviratā",
+              "kana": "パレー パーナーティパーティー バヴィッサンティ マヤメッタ パーナーティパーター パティヴィラター",
+              "speechEnd": 31.716,
+              "wordStarts": [
+                22.246,
+                23.116,
+                25.294,
+                26.872,
+                28.086,
+                30.264
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 31.716,
+              "end": 37.852,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 37.852,
+              "wordStarts": [
+                31.716,
+                34.096,
+                35.881
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 37.852,
+              "end": 47.611,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare adinnādāyī bhavissanti, mayamettha adinnādānā paṭiviratā",
+              "kana": "パレー アディンナーダーイー バヴィッサンティ マヤメッタ アディンナーダーナー パティヴィラター",
+              "speechEnd": 47.611,
+              "wordStarts": [
+                37.852,
+                38.608,
+                40.875,
+                42.549,
+                43.832,
+                46.099
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 47.611,
+              "end": 53.18,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 53.176,
+              "wordStarts": [
+                47.611,
+                49.778,
+                51.404
+              ]
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 53.18,
+              "end": 61.26,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare abrahmacārī bhavissanti, mayamettha brahmacārī",
+              "kana": "パレー アブラフマチャーリー バヴィッサンティ マヤメッタ ブラフマチャーリー",
+              "speechEnd": 61.26,
+              "wordStarts": [
+                53.18,
+                54.081,
+                56.333,
+                57.834,
+                59.258
+              ]
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 61.26,
+              "end": 69.297,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 69.297,
+              "wordStarts": [
+                61.26,
+                63.927,
+                65.927
+              ]
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 69.297,
+              "end": 77.733,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare musāvādī bhavissanti, mayamettha musāvādā paṭiviratā",
+              "kana": "パレー ムサーワーディー バヴィッサンティ マヤメッタ ムサーワーダー パティヴィラター",
+              "speechEnd": 77.733,
+              "wordStarts": [
+                69.297,
+                70.041,
+                71.778,
+                73.267,
+                74.507,
+                76.244
+              ]
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 77.733,
+              "end": 83.559,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 83.44,
+              "wordStarts": [
+                77.733,
+                80.016,
+                81.728
+              ]
+            },
+            {
+              "lineId": "s6-l1",
+              "start": 83.559,
+              "end": 93.167,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare pisuṇāvācā bhavissanti, mayamettha pisuṇāya vācāya paṭiviratā",
+              "kana": "パレー ピスナーワーチャー バヴィッサンティ マヤメッタ ピスナーヤ ワーチャーヤ パティヴィラター",
+              "speechEnd": 93.167,
+              "wordStarts": [
+                83.559,
+                84.35,
+                86.343,
+                87.98,
+                89.181,
+                90.426,
+                91.672
+              ]
+            },
+            {
+              "lineId": "s6-l2",
+              "start": 93.167,
+              "end": 99.614,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 99.614,
+              "wordStarts": [
+                93.167,
+                95.609,
+                97.44
+              ]
+            },
+            {
+              "lineId": "s7-l1",
+              "start": 99.614,
+              "end": 108.746,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare pharusāvācā bhavissanti, mayamettha pharusāvācā paṭiviratā",
+              "kana": "パレー パルサーワーチャー バヴィッサンティ マヤメッタ パルサーワーチャー パティヴィラター",
+              "speechEnd": 108.746,
+              "wordStarts": [
+                99.614,
+                100.365,
+                102.367,
+                104.09,
+                105.243,
+                107.245
+              ]
+            },
+            {
+              "lineId": "s7-l2",
+              "start": 108.746,
+              "end": 115.548,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 115.548,
+              "wordStarts": [
+                108.746,
+                111.05,
+                112.778
+              ]
+            },
+            {
+              "lineId": "s8-l1",
+              "start": 115.548,
+              "end": 124.229,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare samphappalāpī bhavissanti, mayamettha samphappalāpā",
+              "kana": "パレー サンパッパラーピー バヴィッサンティ マヤメッタ サンパッパラーパー",
+              "speechEnd": 124.229,
+              "wordStarts": [
+                115.548,
+                116.353,
+                118.766,
+                120.375,
+                121.815
+              ]
+            },
+            {
+              "lineId": "s8-l2",
+              "start": 124.229,
+              "end": 132.097,
+              "kind": "body",
+              "audible": true,
+              "text": "paṭiviratā bhavissāmāti sallekho karaṇīyo.",
+              "kana": "パティヴィラター バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 132.097,
+              "wordStarts": [
+                124.229,
+                125.88,
+                128.081,
+                129.732
+              ]
+            },
+            {
+              "lineId": "s9-l1",
+              "start": 132.097,
+              "end": 139.495,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare abhijjhālū bhavissanti, mayamettha anabhijjhālū",
+              "kana": "パレー アビッジャールー バヴィッサンティ マヤメッタ アナビッジャールー",
+              "speechEnd": 139.495,
+              "wordStarts": [
+                132.097,
+                132.848,
+                134.602,
+                136.271,
+                137.491
+              ]
+            },
+            {
+              "lineId": "s9-l2",
+              "start": 139.495,
+              "end": 146.004,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 146.004,
+              "wordStarts": [
+                139.495,
+                141.886,
+                143.679
+              ]
+            },
+            {
+              "lineId": "s10-l1",
+              "start": 146.004,
+              "end": 154.855,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare byāpannacittā bhavissanti, mayamettha abyāpannacittā",
+              "kana": "パレー ビャーパンナチッター バヴィッサンティ マヤメッタ アビャーパンナチッター",
+              "speechEnd": 154.855,
+              "wordStarts": [
+                146.004,
+                146.789,
+                149.142,
+                150.875,
+                152.24
+              ]
+            },
+            {
+              "lineId": "s10-l2",
+              "start": 154.855,
+              "end": 162.924,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 162.924,
+              "wordStarts": [
+                154.855,
+                157.478,
+                159.446
+              ]
+            },
+            {
+              "lineId": "s11-l1",
+              "start": 162.924,
+              "end": 170.448,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchādiṭṭhī bhavissanti, mayamettha sammādiṭṭhī",
+              "kana": "パレー ミッチャーディッティー バヴィッサンティ マヤメッタ サンマーディッティー",
+              "speechEnd": 170.448,
+              "wordStarts": [
+                162.924,
+                163.662,
+                165.63,
+                167.106,
+                168.48
+              ]
+            },
+            {
+              "lineId": "s11-l2",
+              "start": 170.448,
+              "end": 176.329,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 176.244,
+              "wordStarts": [
+                170.448,
+                172.766,
+                174.505
+              ]
+            },
+            {
+              "lineId": "s12-l1",
+              "start": 176.329,
+              "end": 185.025,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchāsaṅkappā bhavissanti, mayamettha sammāsaṅkappā",
+              "kana": "パレー ミッチャーサンカッパー バヴィッサンティ マヤメッタ サンマーサンカッパー",
+              "speechEnd": 185.025,
+              "wordStarts": [
+                176.329,
+                177.249,
+                179.721,
+                181.494,
+                182.554
+              ]
+            },
+            {
+              "lineId": "s12-l2",
+              "start": 185.025,
+              "end": 191.465,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 191.264,
+              "wordStarts": [
+                185.025,
+                187.521,
+                189.393
+              ]
+            },
+            {
+              "lineId": "s13-l1",
+              "start": 191.465,
+              "end": 199.46,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchāvācā bhavissanti, mayamettha sammāvācā",
+              "kana": "パレー ミッチャーワーチャー バヴィッサンティ マヤメッタ サンマーワーチャー",
+              "speechEnd": 199.46,
+              "wordStarts": [
+                191.465,
+                192.407,
+                194.438,
+                195.961,
+                197.429
+              ]
+            },
+            {
+              "lineId": "s13-l2",
+              "start": 199.46,
+              "end": 205.83,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 205.794,
+              "wordStarts": [
+                199.46,
+                201.994,
+                203.894
+              ]
+            },
+            {
+              "lineId": "s14-l1",
+              "start": 205.83,
+              "end": 212.773,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchākammantā bhavissanti, mayamettha",
+              "kana": "パレー ミッチャーカンマンター バヴィッサンティ マヤメッタ",
+              "speechEnd": 212.773,
+              "wordStarts": [
+                205.83,
+                206.852,
+                209.671,
+                211.363
+              ]
+            },
+            {
+              "lineId": "s14-l2",
+              "start": 212.773,
+              "end": 221.19,
+              "kind": "body",
+              "audible": true,
+              "text": "sammākammantā bhavissāmāti sallekho karaṇīyo.",
+              "kana": "サンマーカンマンター バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 221.085,
+              "wordStarts": [
+                212.773,
+                215.544,
+                217.76,
+                219.423
+              ]
+            },
+            {
+              "lineId": "s15-l1",
+              "start": 221.19,
+              "end": 229.458,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchā-ājīvā bhavissanti, mayamettha sammā-ājīvā",
+              "kana": "パレー ミッチャーアージーワー バヴィッサンティ マヤメッタ サンマーアージーワー",
+              "speechEnd": 229.458,
+              "wordStarts": [
+                221.19,
+                222.063,
+                224.448,
+                225.88,
+                227.072
+              ]
+            },
+            {
+              "lineId": "s15-l2",
+              "start": 229.458,
+              "end": 237.794,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 236.658,
+              "wordStarts": [
+                229.458,
+                232.287,
+                234.536
+              ]
+            },
+            {
+              "lineId": "s16-l1",
+              "start": 237.794,
+              "end": 246.698,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchāvāyāmā bhavissanti, mayamettha sammāvāyāmā",
+              "kana": "パレー ミッチャーワーヤーマー バヴィッサンティ マヤメッタ サンマーワーヤーマー",
+              "speechEnd": 246.698,
+              "wordStarts": [
+                237.794,
+                238.703,
+                241.244,
+                243.043,
+                244.157
+              ]
+            },
+            {
+              "lineId": "s16-l2",
+              "start": 246.698,
+              "end": 256.658,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 255.323,
+              "wordStarts": [
+                246.698,
+                250.256,
+                252.79
+              ]
+            },
+            {
+              "lineId": "s17-l1",
+              "start": 256.658,
+              "end": 263.615,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchāsatī bhavissanti, mayamettha sammāsatī",
+              "kana": "パレー ミッチャーサティー バヴィッサンティ マヤメッタ サンマーサティー",
+              "speechEnd": 263.615,
+              "wordStarts": [
+                256.658,
+                257.484,
+                259.2,
+                260.672,
+                261.898
+              ]
+            },
+            {
+              "lineId": "s17-l2",
+              "start": 263.615,
+              "end": 270.792,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 270.792,
+              "wordStarts": [
+                263.615,
+                266.338,
+                268.381
+              ]
+            },
+            {
+              "lineId": "s18-l1",
+              "start": 270.792,
+              "end": 279.528,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchāsamādhī bhavissanti, mayamettha sammāsamādhī",
+              "kana": "パレー ミッチャーサマーディー バヴィッサンティ マヤメッタ サンマーサマーディー",
+              "speechEnd": 279.528,
+              "wordStarts": [
+                270.792,
+                271.601,
+                274.028,
+                275.646,
+                277.101
+              ]
+            },
+            {
+              "lineId": "s18-l2",
+              "start": 279.528,
+              "end": 286.884,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 286.884,
+              "wordStarts": [
+                279.528,
+                282.355,
+                284.414
+              ]
+            },
+            {
+              "lineId": "s19-l1",
+              "start": 286.884,
+              "end": 295.051,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchāñāṇī bhavissanti, mayamettha sammāñāṇī",
+              "kana": "パレー ミッチャーニャーニー バヴィッサンティ マヤメッタ サンマーニャーニー",
+              "speechEnd": 295.051,
+              "wordStarts": [
+                286.884,
+                287.701,
+                289.879,
+                291.512,
+                292.873
+              ]
+            },
+            {
+              "lineId": "s19-l2",
+              "start": 295.051,
+              "end": 302.335,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 302.335,
+              "wordStarts": [
+                295.051,
+                297.789,
+                299.843
+              ]
+            },
+            {
+              "lineId": "s20-l1",
+              "start": 302.335,
+              "end": 310.789,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare micchāvimuttī bhavissanti, mayamettha sammāvimuttī",
+              "kana": "パレー ミッチャーヴィムッティー バヴィッサンティ マヤメッタ サンマーヴィムッティー",
+              "speechEnd": 310.789,
+              "wordStarts": [
+                302.335,
+                303.118,
+                305.465,
+                307.259,
+                308.441
+              ]
+            },
+            {
+              "lineId": "s20-l2",
+              "start": 310.789,
+              "end": 319.155,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 319.155,
+              "wordStarts": [
+                310.789,
+                313.574,
+                315.663
+              ]
+            },
+            {
+              "lineId": "s21-l1",
+              "start": 319.155,
+              "end": 329.558,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare thīnamiddhapariyuṭṭhitā bhavissanti, mayamettha vigatathīnamiddhā",
+              "kana": "パレー ティーナミッダパリユッティター バヴィッサンティ マヤメッタ ヴィガタティーナミッダー",
+              "speechEnd": 329.558,
+              "wordStarts": [
+                319.155,
+                319.989,
+                323.605,
+                325.486,
+                326.777
+              ]
+            },
+            {
+              "lineId": "s21-l2",
+              "start": 329.558,
+              "end": 336.12,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 335.991,
+              "wordStarts": [
+                329.558,
+                332.131,
+                334.061
+              ]
+            },
+            {
+              "lineId": "s22-l1",
+              "start": 336.12,
+              "end": 342.957,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare uddhatā bhavissanti, mayamettha anuddhatā",
+              "kana": "パレー ウッダター バヴィッサンティ マヤメッタ アヌッダター",
+              "speechEnd": 342.957,
+              "wordStarts": [
+                336.12,
+                337.182,
+                338.475,
+                340.215,
+                341.406
+              ]
+            },
+            {
+              "lineId": "s22-l2",
+              "start": 342.957,
+              "end": 352.884,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 352.884,
+              "wordStarts": [
+                342.957,
+                346.248,
+                348.716
+              ]
+            },
+            {
+              "lineId": "s23-l1",
+              "start": 352.884,
+              "end": 360.791,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare vecikicchī bhavissanti, mayamettha tiṇṇavicikicchā",
+              "kana": "パレー ヴェーチキッチー バヴィッサンティ マヤメッタ ティンナヴィチキッチャー",
+              "speechEnd": 360.791,
+              "wordStarts": [
+                352.884,
+                353.667,
+                355.493,
+                357.224,
+                358.443
+              ]
+            },
+            {
+              "lineId": "s23-l2",
+              "start": 360.791,
+              "end": 367.207,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 367.046,
+              "wordStarts": [
+                360.791,
+                363.293,
+                365.169
+              ]
+            },
+            {
+              "lineId": "s24-l1",
+              "start": 367.207,
+              "end": 374.927,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare kodhanā bhavissanti, mayamettha akkodhanā",
+              "kana": "パレー コーダナー バヴィッサンティ マヤメッタ アッコーダナー",
+              "speechEnd": 374.927,
+              "wordStarts": [
+                367.207,
+                368.384,
+                369.778,
+                371.687,
+                372.976
+              ]
+            },
+            {
+              "lineId": "s24-l2",
+              "start": 374.927,
+              "end": 381.691,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 381.691,
+              "wordStarts": [
+                374.927,
+                377.477,
+                379.389
+              ]
+            },
+            {
+              "lineId": "s25-l1",
+              "start": 381.691,
+              "end": 389.556,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare upanāhī bhavissanti, mayamettha anupanāhī",
+              "kana": "パレー ウパナーヒー バヴィッサンティ マヤメッタ アヌパナーヒー",
+              "speechEnd": 389.556,
+              "wordStarts": [
+                381.691,
+                382.554,
+                384.281,
+                386.008,
+                387.541
+              ]
+            },
+            {
+              "lineId": "s25-l2",
+              "start": 389.556,
+              "end": 396.512,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 396.512,
+              "wordStarts": [
+                389.556,
+                392.25,
+                394.271
+              ]
+            },
+            {
+              "lineId": "s26-l1",
+              "start": 396.512,
+              "end": 402.621,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare makkhī bhavissanti, mayamettha amakkhī",
+              "kana": "パレー マッキー バヴィッサンティ マヤメッタ アマッキー",
+              "speechEnd": 402.621,
+              "wordStarts": [
+                396.512,
+                397.298,
+                398.346,
+                400.043,
+                401.311
+              ]
+            },
+            {
+              "lineId": "s26-l2",
+              "start": 402.621,
+              "end": 410.534,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 410.534,
+              "wordStarts": [
+                402.621,
+                405.031,
+                406.839
+              ]
+            },
+            {
+              "lineId": "s27-l1",
+              "start": 410.534,
+              "end": 417.061,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare paḷāsī bhavissanti, mayamettha apaḷāsī",
+              "kana": "パレー パラースィー バヴィッサンティ マヤメッタ アパラースィー",
+              "speechEnd": 417.061,
+              "wordStarts": [
+                410.534,
+                411.317,
+                412.623,
+                414.189,
+                415.495
+              ]
+            },
+            {
+              "lineId": "s27-l2",
+              "start": 417.061,
+              "end": 424.099,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 424.099,
+              "wordStarts": [
+                417.061,
+                419.694,
+                421.669
+              ]
+            },
+            {
+              "lineId": "s28-l1",
+              "start": 424.099,
+              "end": 430.176,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare issukī bhavissanti, mayamettha anissukī",
+              "kana": "パレー イッスキー バヴィッサンティ マヤメッタ アニッスキー",
+              "speechEnd": 430.176,
+              "wordStarts": [
+                424.099,
+                424.828,
+                426.044,
+                427.502,
+                428.718
+              ]
+            },
+            {
+              "lineId": "s28-l2",
+              "start": 430.176,
+              "end": 439.371,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 439.371,
+              "wordStarts": [
+                430.176,
+                433.373,
+                435.77
+              ]
+            },
+            {
+              "lineId": "s29-l1",
+              "start": 439.371,
+              "end": 445.356,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare maccharī bhavissanti, mayamettha amaccharī",
+              "kana": "パレー マッチャーリー バヴィッサンティ マヤメッタ アマッチャリー",
+              "speechEnd": 445.356,
+              "wordStarts": [
+                439.371,
+                440.062,
+                441.443,
+                442.824,
+                443.975
+              ]
+            },
+            {
+              "lineId": "s29-l2",
+              "start": 445.356,
+              "end": 451.8,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 451.8,
+              "wordStarts": [
+                445.356,
+                447.873,
+                449.761
+              ]
+            },
+            {
+              "lineId": "s30-l1",
+              "start": 451.8,
+              "end": 456.919,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare saṭhā bhavissanti, mayamettha asaṭhā",
+              "kana": "パレー サター バヴィッサンティ マヤメッタ アサター",
+              "speechEnd": 456.919,
+              "wordStarts": [
+                451.8,
+                452.531,
+                453.263,
+                454.725,
+                455.944
+              ]
+            },
+            {
+              "lineId": "s30-l2",
+              "start": 456.919,
+              "end": 463.38,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 463.38,
+              "wordStarts": [
+                456.919,
+                459.433,
+                461.318
+              ]
+            },
+            {
+              "lineId": "s31-l1",
+              "start": 463.38,
+              "end": 470.196,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare māyāvī bhavissanti, mayamettha amāyāvī",
+              "kana": "パレー マーヤーヴィー バヴィッサンティ マヤメッタ アマーヤーヴィー",
+              "speechEnd": 470.196,
+              "wordStarts": [
+                463.38,
+                464.137,
+                465.652,
+                467.167,
+                468.429
+              ]
+            },
+            {
+              "lineId": "s31-l2",
+              "start": 470.196,
+              "end": 477.729,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 477.729,
+              "wordStarts": [
+                470.196,
+                473,
+                475.102
+              ]
+            },
+            {
+              "lineId": "s32-l1",
+              "start": 477.729,
+              "end": 484.352,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare thaddhā bhavissanti, mayamettha atthaddhā",
+              "kana": "パレー タッダー バヴィッサンティ マヤメッタ アッタッダー",
+              "speechEnd": 484.352,
+              "wordStarts": [
+                477.729,
+                478.557,
+                479.661,
+                481.316,
+                482.696
+              ]
+            },
+            {
+              "lineId": "s32-l2",
+              "start": 484.352,
+              "end": 491.647,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 491.647,
+              "wordStarts": [
+                484.352,
+                486.832,
+                488.692
+              ]
+            },
+            {
+              "lineId": "s33-l1",
+              "start": 491.647,
+              "end": 498.681,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare atimānī bhavissanti, mayamettha anatimānī",
+              "kana": "パレー アティマーニー バヴィッサンティ マヤメッタ アナティマーニー",
+              "speechEnd": 498.681,
+              "wordStarts": [
+                491.647,
+                492.418,
+                493.96,
+                495.768,
+                496.882
+              ]
+            },
+            {
+              "lineId": "s33-l2",
+              "start": 498.681,
+              "end": 505.199,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 505.199,
+              "wordStarts": [
+                498.681,
+                501.19,
+                503.072
+              ]
+            },
+            {
+              "lineId": "s34-l1",
+              "start": 505.199,
+              "end": 511.451,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare dubbacā bhavissanti, mayamettha subbacā",
+              "kana": "パレー ドゥッバチャー バヴィッサンティ マヤメッタ スッバチャー",
+              "speechEnd": 511.451,
+              "wordStarts": [
+                505.199,
+                505.969,
+                507.251,
+                508.906,
+                510.168
+              ]
+            },
+            {
+              "lineId": "s34-l2",
+              "start": 511.451,
+              "end": 519.625,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 519.625,
+              "wordStarts": [
+                511.451,
+                514.341,
+                516.509
+              ]
+            },
+            {
+              "lineId": "s35-l1",
+              "start": 519.625,
+              "end": 526.98,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare pāpamittā bhavissanti, mayamettha kalyāṇamittā",
+              "kana": "パレー パーパミッター バヴィッサンティ マヤメッタ カルヤーナミッター",
+              "speechEnd": 526.98,
+              "wordStarts": [
+                519.625,
+                520.361,
+                522.077,
+                523.548,
+                524.774
+              ]
+            },
+            {
+              "lineId": "s35-l2",
+              "start": 526.98,
+              "end": 534.059,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 533.763,
+              "wordStarts": [
+                526.98,
+                529.693,
+                531.728
+              ]
+            },
+            {
+              "lineId": "s36-l1",
+              "start": 534.059,
+              "end": 541.082,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare pamattā bhavissanti, mayamettha appamattā",
+              "kana": "パレー パマッター バヴィッサンティ マヤメッタ アッパマッター",
+              "speechEnd": 541.082,
+              "wordStarts": [
+                534.059,
+                534.866,
+                536.19,
+                537.779,
+                539.228
+              ]
+            },
+            {
+              "lineId": "s36-l2",
+              "start": 541.082,
+              "end": 547.99,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 547.99,
+              "wordStarts": [
+                541.082,
+                543.724,
+                545.706
+              ]
+            },
+            {
+              "lineId": "s37-l1",
+              "start": 547.99,
+              "end": 554.572,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare assaddhā bhavissanti, mayamettha saddhā",
+              "kana": "パレー アッサッダー バヴィッサンティ マヤメッタ サッダー",
+              "speechEnd": 554.572,
+              "wordStarts": [
+                547.99,
+                548.813,
+                550.458,
+                552.104,
+                553.475
+              ]
+            },
+            {
+              "lineId": "s37-l2",
+              "start": 554.572,
+              "end": 561.371,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 561.371,
+              "wordStarts": [
+                554.572,
+                557.166,
+                559.111
+              ]
+            },
+            {
+              "lineId": "s38-l1",
+              "start": 561.371,
+              "end": 567.913,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare ahirikā bhavissanti, mayamettha hirimanā",
+              "kana": "パレー アヒリカー バヴィッサンティ マヤメッタ ヒリマナー",
+              "speechEnd": 567.913,
+              "wordStarts": [
+                561.371,
+                562.189,
+                563.552,
+                565.187,
+                566.55
+              ]
+            },
+            {
+              "lineId": "s38-l2",
+              "start": 567.913,
+              "end": 575.895,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 575.895,
+              "wordStarts": [
+                567.913,
+                570.454,
+                572.359
+              ]
+            },
+            {
+              "lineId": "s39-l1",
+              "start": 575.895,
+              "end": 583.566,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare anottāpī bhavissanti, mayamettha ottāpī",
+              "kana": "パレー アノッターピー バヴィッサンティ マヤメッタ オッターピー",
+              "speechEnd": 583.566,
+              "wordStarts": [
+                575.895,
+                576.729,
+                578.676,
+                580.623,
+                581.898
+              ]
+            },
+            {
+              "lineId": "s39-l2",
+              "start": 583.566,
+              "end": 590.715,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 590.715,
+              "wordStarts": [
+                583.566,
+                586.058,
+                587.928
+              ]
+            },
+            {
+              "lineId": "s40-l1",
+              "start": 590.715,
+              "end": 597.66,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare appassutā bhavissanti, mayamettha bahussutā",
+              "kana": "パレー アッパッスター バヴィッサンティ マヤメッタ バフッスター",
+              "speechEnd": 597.66,
+              "wordStarts": [
+                590.715,
+                591.477,
+                593.255,
+                594.937,
+                596.136
+              ]
+            },
+            {
+              "lineId": "s40-l2",
+              "start": 597.66,
+              "end": 606.403,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 606.403,
+              "wordStarts": [
+                597.66,
+                600.754,
+                603.074
+              ]
+            },
+            {
+              "lineId": "s41-l1",
+              "start": 606.403,
+              "end": 614.083,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare kusītā bhavissanti, mayamettha āraddhaviriyā",
+              "kana": "パレー クスィーター バヴィッサンティ マヤメッタ アーラッダヴィリヤー",
+              "speechEnd": 614.083,
+              "wordStarts": [
+                606.403,
+                607.226,
+                608.597,
+                610.243,
+                611.614
+              ]
+            },
+            {
+              "lineId": "s41-l2",
+              "start": 614.083,
+              "end": 621.055,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 621.055,
+              "wordStarts": [
+                614.083,
+                616.781,
+                618.804
+              ]
+            },
+            {
+              "lineId": "s42-l1",
+              "start": 621.055,
+              "end": 629.011,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare muṭṭhassatī bhavissanti, mayamettha upaṭṭhitasatī",
+              "kana": "パレー ムッタッサティー バヴィッサンティ マヤメッタ ウパッティタサティー",
+              "speechEnd": 629.011,
+              "wordStarts": [
+                621.055,
+                621.865,
+                623.756,
+                625.453,
+                626.851
+              ]
+            },
+            {
+              "lineId": "s42-l2",
+              "start": 629.011,
+              "end": 636.352,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 636.352,
+              "wordStarts": [
+                629.011,
+                631.774,
+                633.846
+              ]
+            },
+            {
+              "lineId": "s43-l1",
+              "start": 636.352,
+              "end": 644.617,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare duppaññā bhavissanti, mayamettha paññāsampannā",
+              "kana": "パレー ドゥッパンニャー バヴィッサンティ マヤメッタ パンニャーサンパンナー",
+              "speechEnd": 644.617,
+              "wordStarts": [
+                636.352,
+                637.169,
+                638.803,
+                640.55,
+                641.894
+              ]
+            },
+            {
+              "lineId": "s43-l2",
+              "start": 644.617,
+              "end": 654.483,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 654.483,
+              "wordStarts": [
+                644.617,
+                647.92,
+                650.316
+              ]
+            },
+            {
+              "lineId": "s44-l1",
+              "start": 654.483,
+              "end": 667.255,
+              "kind": "body",
+              "audible": true,
+              "text": "Pare sandiṭṭhiparāmāsī ādhānagāhī duppaṭinissaggī bhavissanti,",
+              "kana": "パレー サンディッティパラーマースィー アーダーナガーヒー ドゥッパティニッサッギー バヴィッサンティ",
+              "speechEnd": 667.255,
+              "wordStarts": [
+                654.483,
+                655.423,
+                659.183,
+                662.003,
+                665.136
+              ]
+            },
+            {
+              "lineId": "s44-l2",
+              "start": 667.255,
+              "end": 678.264,
+              "kind": "body",
+              "audible": true,
+              "text": "mayamettha asandiṭṭhiparāmāsī anādhānagāhī suppaṭinissaggī",
+              "kana": "マヤメッタ アサンディッティパラーマースィー アナーダーナガーヒー スッパティニッサッギー",
+              "speechEnd": 678.264,
+              "wordStarts": [
+                667.255,
+                668.691,
+                672.573,
+                675.393
+              ]
+            },
+            {
+              "lineId": "s44-l3",
+              "start": 678.264,
+              "end": 695.074,
+              "kind": "body",
+              "audible": true,
+              "text": "bhavissāmāti sallekho karaṇīyo.",
+              "kana": "バヴィッサーマーティ サッレーコー カラニーヨー",
+              "speechEnd": 695.073,
+              "wordStarts": [
+                678.264,
+                685.105,
+                690.089
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "f09f4f9f52cb4dd187d1e41a3316cede40a943e251fcbf06059f2f434683db2d"
+          }
         }
       ]
     },
@@ -18102,8 +25265,8 @@ const EMBEDDED_SUTTAS = {
   },
   "bhaddekaratta-gatha": {
     "id": "bhaddekaratta-gatha",
-    "title": "｢日々是好日｣偈",
-    "titlePali": "Bhaddekaratta gāthā",
+    "title": "｢日々是好日｣偈（中部131より抜粋）",
+    "titlePali": "Bhaddekaratta gāthā (Mn.131)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -18189,7 +25352,172 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.284,
+              "end": 4.455,
+              "kind": "title",
+              "audible": true,
+              "text": "Bhaddekaratta gāthā",
+              "kana": "バッデーカラッタ ガーター",
+              "speechEnd": 4.455,
+              "wordStarts": [
+                0.284,
+                1.73
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 4.455,
+              "end": 14.612,
+              "kind": "body",
+              "audible": true,
+              "text": "Atītaṃ nānvāgameyya, nappaṭikaṅkhe anāgataṃ,",
+              "kana": "アティータン ナーンワーガメイヤ ナッパティカンケー アナーガタン",
+              "speechEnd": 14.612,
+              "wordStarts": [
+                4.455,
+                6.221,
+                9.399,
+                12.224
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 14.612,
+              "end": 25.144,
+              "kind": "body",
+              "audible": true,
+              "text": "Yad atītaṃ pahīnaṃ taṃ, appattañ ca anāgataṃ.",
+              "kana": "ヤダ ティータン パヒーナン タン アッパッタン チャ アナーガタン",
+              "speechEnd": 25.144,
+              "wordStarts": [
+                14.612,
+                15.379,
+                16.914,
+                18.832,
+                19.717,
+                22.047,
+                22.43
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 25.144,
+              "end": 35.365,
+              "kind": "body",
+              "audible": true,
+              "text": "Paccuppannañ ca yo dhammaṃ, tattha tattha vipassati",
+              "kana": "パッチュッパンナン チャ ヨー ダンマン タッタ タッタ ヴィパッサティ",
+              "speechEnd": 35.365,
+              "wordStarts": [
+                25.144,
+                28.125,
+                28.497,
+                29.243,
+                30.786,
+                32.094,
+                33.212
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 35.365,
+              "end": 46.67,
+              "kind": "body",
+              "audible": true,
+              "text": "Asaṃhīraṃ asaṅkuppaṃ, taṃ vidvā manubrūhaye.",
+              "kana": "アサンヒーラン アサンクッパン タン ヴィドゥワー マヌブルーハイェー",
+              "speechEnd": 46.67,
+              "wordStarts": [
+                35.365,
+                37.885,
+                40.661,
+                41.383,
+                42.823
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 46.67,
+              "end": 57.195,
+              "kind": "body",
+              "audible": true,
+              "text": "Ajjeva kiccaṃ ātappaṃ, ko jaññā maraṇaṃ suve",
+              "kana": "アッジェーワ キッチャン アータッパン コー ジャンニャー マラナン スウェー",
+              "speechEnd": 57.195,
+              "wordStarts": [
+                46.67,
+                48.51,
+                49.982,
+                52.19,
+                52.926,
+                54.398,
+                55.869
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 57.195,
+              "end": 67.543,
+              "kind": "body",
+              "audible": true,
+              "text": "Na hi no saṅgaraṃ tena, mahāsenena maccunā.",
+              "kana": "ナ ヒ ノー サンガラン テーナ マハーセーネーナ マッチュナー",
+              "speechEnd": 67.436,
+              "wordStarts": [
+                57.195,
+                57.601,
+                58.006,
+                58.818,
+                60.846,
+                62.348,
+                65.407
+              ]
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 67.543,
+              "end": 79.223,
+              "kind": "body",
+              "audible": true,
+              "text": "Evaṃ vihāriṃ ātāpiṃ, ahorattam atanditaṃ",
+              "kana": "エーワン ヴィハーリン アーターピン アホーラッタマ タンディタン",
+              "speechEnd": 79.223,
+              "wordStarts": [
+                67.543,
+                69.355,
+                71.374,
+                73.954,
+                76.825
+              ]
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 79.223,
+              "end": 95.043,
+              "kind": "body",
+              "audible": true,
+              "text": "Taṃ ve bhaddekarattoti, santo ācikkhate munīti.",
+              "kana": "タン ウェー バッデーカラットーティ サントー アーチッカテー ムニーティ",
+              "speechEnd": 95.043,
+              "wordStarts": [
+                79.223,
+                80.302,
+                81.382,
+                86.947,
+                89.106,
+                92.884
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "31aafaf42c3acb0612f33b3de1e05bf1e1a113e84e28d2c9cb9bbe68ee5de989"
+          }
         }
       ]
     },
@@ -18532,8 +25860,8 @@ const EMBEDDED_SUTTAS = {
   },
   "anicca-gatha-metta-bhavana": {
     "id": "anicca-gatha-metta-bhavana",
-    "title": "無常偈・慈しみの隨念",
-    "titlePali": "Anicca gāthā･Metta bhāvanā",
+    "title": "無常偈 (ﾃｰﾗｰｶﾞｰﾀ 1159)・慈しみの隨念",
+    "titlePali": "Anicca gāthā (Th 1159)･Metta bhāvanā",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -18571,7 +25899,62 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.169,
+              "end": 5.313,
+              "kind": "title",
+              "audible": true,
+              "text": "Anicca gāthā",
+              "kana": "アニッチャ ガーター",
+              "speechEnd": 5.313,
+              "wordStarts": [
+                0.169,
+                1.221
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 5.313,
+              "end": 25.487,
+              "kind": "body",
+              "audible": true,
+              "text": "Aniccā vata saṅkhārā uppādavaya dhammino,",
+              "kana": "アニッチャー ワタ サンカーラー ウッパーダワヤ ダンミノー",
+              "speechEnd": 25.487,
+              "wordStarts": [
+                5.313,
+                9.156,
+                10.693,
+                15.305,
+                20.803
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 25.487,
+              "end": 51.502,
+              "kind": "body",
+              "audible": true,
+              "text": "Uppajjitvā nirujjhanti tesaṃ vūpasamo sukho.",
+              "kana": "ウッパッジトゥワー ニルッジャンティ テーサン ヴーパサモー スコー",
+              "speechEnd": 51.501,
+              "wordStarts": [
+                25.487,
+                33.018,
+                39.057,
+                42.915,
+                48.563
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "84acea7e81be5033610e93a59fccaab79bcefcffff12705e891d88fc9076c806"
+          }
         },
         {
           "key": "D2T5",
@@ -18623,7 +26006,223 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.398,
+              "end": 3.017,
+              "kind": "title",
+              "audible": true,
+              "text": "Metta bhāvanā",
+              "kana": "メッター バーワナー",
+              "speechEnd": 3.017,
+              "wordStarts": [
+                0.398,
+                0.914
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 3.017,
+              "kind": "body",
+              "audible": true,
+              "end": 13.668,
+              "text": "Ahaṃ avero homi, abyāpajjho homi,",
+              "kana": "アハン アヴェーロー ホーミ アビャーパッジョー ホーミ",
+              "speechEnd": 13.668,
+              "wordStarts": [
+                3.017,
+                4.36,
+                6.597,
+                8.528,
+                11.66
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 13.668,
+              "kind": "body",
+              "audible": true,
+              "end": 21.211,
+              "text": "sukhī attānaṃ pariharāmi.",
+              "kana": "スキー アッターナン パリハラーミ",
+              "speechEnd": 21.211,
+              "wordStarts": [
+                13.668,
+                14.993,
+                17.642
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 21.211,
+              "kind": "body",
+              "audible": true,
+              "end": 31.502,
+              "text": "Ahaṃ avero homi, abyāpajjho homi,",
+              "kana": "アハン アヴェーロー ホーミ アビャーパッジョー ホーミ",
+              "speechEnd": 31.502,
+              "wordStarts": [
+                21.211,
+                22.553,
+                24.789,
+                26.567,
+                29.697
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 31.502,
+              "kind": "body",
+              "audible": true,
+              "end": 38.364,
+              "text": "sukhī attānaṃ pariharāmi.",
+              "kana": "スキー アッターナン パリハラーミ",
+              "speechEnd": 38.364,
+              "wordStarts": [
+                31.502,
+                32.748,
+                35.239
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 38.364,
+              "kind": "body",
+              "audible": true,
+              "end": 49.175,
+              "text": "Ahaṃ avero homi, abyāpajjho homi,",
+              "kana": "アハン アヴェーロー ホーミ アビャーパッジョー ホーミ",
+              "speechEnd": 49.175,
+              "wordStarts": [
+                38.364,
+                39.735,
+                42.019,
+                43.885,
+                47.083
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 49.175,
+              "kind": "body",
+              "audible": true,
+              "end": 58.078,
+              "text": "sukhī attānaṃ pariharāmi.",
+              "kana": "スキー アッターナン パリハラーミ",
+              "speechEnd": 58.078,
+              "wordStarts": [
+                49.175,
+                50.42,
+                52.909
+              ]
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 58.078,
+              "kind": "body",
+              "audible": true,
+              "end": 70.951,
+              "text": "Sabbe sattā averā hontu, abyāpajjhā hontu,",
+              "kana": "サッベー サッター アヴェーラー ホントゥ アビャーパッジャー ホントゥ",
+              "speechEnd": 70.951,
+              "wordStarts": [
+                58.078,
+                59.984,
+                61.891,
+                64.274,
+                65.934,
+                69.27
+              ]
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 70.951,
+              "kind": "body",
+              "audible": true,
+              "end": 78.335,
+              "text": "sukhī attānaṃ pariharantu.",
+              "kana": "スキー アッターナン パリハラントゥ",
+              "speechEnd": 78.335,
+              "wordStarts": [
+                70.951,
+                72.277,
+                74.929
+              ]
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 78.335,
+              "kind": "body",
+              "audible": true,
+              "end": 91.448,
+              "text": "Sabbe sattā averā hontu, abyāpajjhā hontu,",
+              "kana": "サッベー サッター アヴェーラー ホントゥ アビャーパッジャー ホントゥ",
+              "speechEnd": 91.448,
+              "wordStarts": [
+                78.335,
+                80.286,
+                82.237,
+                84.676,
+                86.331,
+                89.745
+              ]
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 91.448,
+              "kind": "body",
+              "audible": true,
+              "end": 99.193,
+              "text": "sukhī attānaṃ pariharantu.",
+              "kana": "スキー アッターナン パリハラントゥ",
+              "speechEnd": 99.193,
+              "wordStarts": [
+                91.448,
+                92.82,
+                95.563
+              ]
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 99.193,
+              "kind": "body",
+              "audible": true,
+              "end": 112.866,
+              "text": "Sabbe sattā averā hontu, abyāpajjhā hontu,",
+              "kana": "サッベー サッター アヴェーラー ホントゥ アビャーパッジャー ホントゥ",
+              "speechEnd": 112.866,
+              "wordStarts": [
+                99.193,
+                101.213,
+                103.232,
+                105.756,
+                107.54,
+                111.074
+              ]
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 112.866,
+              "kind": "body",
+              "audible": true,
+              "end": 121.13,
+              "text": "sukhī attānaṃ pariharantu.",
+              "kana": "スキー アッターナン パリハラントゥ",
+              "speechEnd": 121.13,
+              "wordStarts": [
+                112.866,
+                114.519,
+                117.824
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "20050e0ac5c3826f66ab158196e8c319d7ecd69eeded9e4326f2d159cc0ed091"
+          }
         }
       ]
     },
@@ -19026,7 +26625,312 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": false
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.271,
+              "end": 5.536,
+              "kind": "title",
+              "audible": true,
+              "text": "Aṭṭha vīsati Buddha paritta",
+              "kana": "アッタ ヴィーサティ ブッダ パリッタ",
+              "speechEnd": 5.536,
+              "wordStarts": [
+                0.271,
+                0.818,
+                1.548,
+                2.096
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 5.536,
+              "end": 12.733,
+              "kind": "body",
+              "audible": true,
+              "text": "Taṇhaṃkaro mahāvīro, Medhaṃkaro mahāyaso,",
+              "kana": "タンハンカロー マハーヴィーロー メーダンカロー マハーヤソー",
+              "speechEnd": 12.733,
+              "wordStarts": [
+                5.536,
+                7.402,
+                9.268,
+                11.134
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 12.733,
+              "end": 20.115,
+              "kind": "body",
+              "audible": true,
+              "text": "Saraṇaṃkaro lokahito, Dīpaṃkaro jutindharo,",
+              "kana": "サラナンカロー ローカヒトー ディーパンカロー ジュティンダロー",
+              "speechEnd": 20.059,
+              "wordStarts": [
+                12.733,
+                14.705,
+                16.396,
+                18.368
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 20.115,
+              "end": 27.949,
+              "kind": "body",
+              "audible": true,
+              "text": "Koṇḍañño janapāmokkho, Maṅgalo purisāsabho,",
+              "kana": "コンダンニョー ジャナパーモッコー マンガロー プリサーサボー",
+              "speechEnd": 27.949,
+              "wordStarts": [
+                20.115,
+                21.965,
+                24.301,
+                25.761
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 27.949,
+              "end": 35.597,
+              "kind": "body",
+              "audible": true,
+              "text": "Sumano sumano dhīro, Revato rati vaddhano,",
+              "kana": "スマノー スマノー ディーロー レーワトー ラティ ワッダノー",
+              "speechEnd": 35.597,
+              "wordStarts": [
+                27.949,
+                29.199,
+                30.449,
+                31.7,
+                33.263,
+                33.888
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 35.597,
+              "end": 43.654,
+              "kind": "body",
+              "audible": true,
+              "text": "Sobhito guṇa sampanno, Anomadassī januttamo,",
+              "kana": "ソービトー グナ サンパンノー アノーマダッスィー ジャヌッタモー",
+              "speechEnd": 43.654,
+              "wordStarts": [
+                35.597,
+                37.068,
+                37.656,
+                39.422,
+                41.775
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 43.654,
+              "end": 51.927,
+              "kind": "body",
+              "audible": true,
+              "text": "Padumo lokapajjoto, Nārado vara sārathī,",
+              "kana": "パドゥモー ローカパッジョートー ナーラドー ワラ サーラティー",
+              "speechEnd": 51.82,
+              "wordStarts": [
+                43.654,
+                44.961,
+                47.9,
+                49.533,
+                50.187
+              ]
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 51.927,
+              "end": 60.599,
+              "kind": "body",
+              "audible": true,
+              "text": "Padumuttaro satta sāro, Sumedho agga puggalo,",
+              "kana": "パドゥムッタロー サッタ サーロー スメードー アッガ プッガロー",
+              "speechEnd": 60.599,
+              "wordStarts": [
+                51.927,
+                54.222,
+                55.163,
+                56.419,
+                57.988,
+                58.93
+              ]
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 60.599,
+              "end": 69.623,
+              "kind": "body",
+              "audible": true,
+              "text": "Sujāto sabba lokaggo, Piyadassī narāsabho,",
+              "kana": "スジャートー サッバ ローカッゴー ピヤダッスィー ナラーサボー",
+              "speechEnd": 69.623,
+              "wordStarts": [
+                60.599,
+                62.277,
+                63.284,
+                65.298,
+                67.312
+              ]
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 69.623,
+              "end": 78.063,
+              "kind": "body",
+              "audible": true,
+              "text": "Atthadassī kāruṇiko, Dhammadassī tamonudo,",
+              "kana": "アッタダッスィー カールニコー ダンマダッスィー タモーヌドー",
+              "speechEnd": 78.063,
+              "wordStarts": [
+                69.623,
+                71.871,
+                73.797,
+                76.045
+              ]
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 78.063,
+              "end": 88.005,
+              "kind": "body",
+              "audible": true,
+              "text": "Siddhattho asamo loke, Tisso varada saṃvaro,",
+              "kana": "スィッダットー アサモー ローケー ティッソー ワラダ サンワロー",
+              "speechEnd": 88.005,
+              "wordStarts": [
+                78.063,
+                80.207,
+                81.636,
+                83.066,
+                84.495,
+                85.567
+              ]
+            },
+            {
+              "lineId": "s1-l11",
+              "start": 88.005,
+              "end": 96.166,
+              "kind": "body",
+              "audible": true,
+              "text": "Phusso varada sambuddho, Vipassī ca anūpamo,",
+              "kana": "プッソー ワラダ サンブッドー ヴィパッスィー チャ アヌーパモー",
+              "speechEnd": 96.166,
+              "wordStarts": [
+                88.005,
+                89.285,
+                90.245,
+                92.164,
+                93.764,
+                94.084
+              ]
+            },
+            {
+              "lineId": "s1-l12",
+              "start": 96.166,
+              "end": 104.769,
+              "kind": "body",
+              "audible": true,
+              "text": "Sikhī sabba hito satthā, Vessabhū sukha dāyako,",
+              "kana": "スィキー サッバ ヒトー サッター ヴェッサブー スカ ダーヤコー",
+              "speechEnd": 104.685,
+              "wordStarts": [
+                96.166,
+                97.188,
+                98.21,
+                99.233,
+                100.596,
+                102.299,
+                102.981
+              ]
+            },
+            {
+              "lineId": "s1-l13",
+              "start": 104.769,
+              "end": 114.331,
+              "kind": "body",
+              "audible": true,
+              "text": "Kakusandho sattavāho, Koṇāgamano raṇañjaho,",
+              "kana": "カクサンドー サッタワーホー コーナーガマノー ラナンジャホー",
+              "speechEnd": 114.331,
+              "wordStarts": [
+                104.769,
+                106.926,
+                109.326,
+                112.07
+              ]
+            },
+            {
+              "lineId": "s1-l14",
+              "start": 114.331,
+              "end": 123.974,
+              "kind": "body",
+              "audible": true,
+              "text": "Kassapo siri sampanno, Gotamo sakya puṅgavo.",
+              "kana": "カッサポー スィリ サンパンノー ゴータモー サキャ プンガヴォー",
+              "speechEnd": 123.974,
+              "wordStarts": [
+                114.331,
+                116.204,
+                116.953,
+                119.2,
+                121.072,
+                121.821
+              ]
+            },
+            {
+              "lineId": "s1-l15",
+              "start": 123.974,
+              "end": 133.203,
+              "kind": "body",
+              "audible": true,
+              "text": "Tesam saccena sīlena khanti metta balena ca,",
+              "kana": "テーサン サッチェーナ スィーレーナ カンティ メッタ バレーナ チャ",
+              "speechEnd": 133.203,
+              "wordStarts": [
+                123.974,
+                125.416,
+                127.218,
+                129.021,
+                130.102,
+                131.184,
+                132.626
+              ]
+            },
+            {
+              "lineId": "s1-l16",
+              "start": 133.203,
+              "end": 146.052,
+              "kind": "body",
+              "audible": true,
+              "text": "Te'pi naṃ anurakkhantu ārogyena sukhena cāti.",
+              "kana": "テーピ ナン アヌラッカントゥ アーローギェーナ スケーナ チャーティ",
+              "speechEnd": 146.052,
+              "wordStarts": [
+                133.203,
+                134.673,
+                135.653,
+                139.191,
+                142.622,
+                144.582
+              ]
+            },
+            {
+              "lineId": "s1-l17",
+              "kind": "body",
+              "audible": false
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "482e87ff563b76360b70741f75b3c86e23c433118c8849ed548ce308798d4021"
+          }
         }
       ]
     },
@@ -19775,7 +27679,208 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": false
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.073,
+              "end": 3.704,
+              "kind": "title",
+              "audible": true,
+              "text": "Āsiṃsanā",
+              "kana": "アーシンサナー",
+              "speechEnd": 3.704,
+              "wordStarts": [
+                0.073
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.704,
+              "end": 15.343,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabbītiyo vivajjantu sabba rogo vinassatu",
+              "kana": "サッビーティヨー ヴィワッジャントゥ サッバ ローゴー ヴィナッサトゥ",
+              "speechEnd": 15.343,
+              "wordStarts": [
+                3.704,
+                6.889,
+                9.618,
+                10.983,
+                12.803
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 15.343,
+              "end": 28.309,
+              "kind": "body",
+              "audible": true,
+              "text": "Mā no bhavatvantarāyo sukhī dīghāyuko bhava.",
+              "kana": "マー ノー バワトゥワンタラーヨー スキー ディーガーユコー バワ",
+              "speechEnd": 28.309,
+              "wordStarts": [
+                15.343,
+                16.313,
+                17.283,
+                22.133,
+                23.588,
+                26.983
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 28.309,
+              "end": 38.581,
+              "kind": "body",
+              "audible": true,
+              "text": "Bhavatu sabba maṅgalaṃ rakkhantu sabba devatā",
+              "kana": "バワトゥ サッバ マンガラン ラッカントゥ サッバ デーワター",
+              "speechEnd": 38.581,
+              "wordStarts": [
+                28.309,
+                29.553,
+                30.797,
+                32.844,
+                35.166,
+                36.41
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 38.581,
+              "end": 51.559,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabba buddhānubhāvena sadā sotthī bhavantu no.",
+              "kana": "サッバ ブッダーヌバーヴェーナ サダー ソッティー バワントゥ ノー",
+              "speechEnd": 51.559,
+              "wordStarts": [
+                38.581,
+                40.029,
+                44.76,
+                46.413,
+                48.343,
+                50.274
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 51.559,
+              "end": 62.708,
+              "kind": "body",
+              "audible": true,
+              "text": "Bhavatu sabba maṅgalaṃ rakkhantu sabba devatā",
+              "kana": "バワトゥ サッバ マンガラン ラッカントゥ サッバ デーワター",
+              "speechEnd": 62.708,
+              "wordStarts": [
+                51.559,
+                52.904,
+                54.249,
+                56.479,
+                58.967,
+                60.312
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 62.708,
+              "end": 77.045,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabba dhammānubhāvena sadā sotthī bhavantu no.",
+              "kana": "サッバ ダンマーヌバーヴェーナ サダー ソッティー バワントゥ ノー",
+              "speechEnd": 77.045,
+              "wordStarts": [
+                62.708,
+                64.172,
+                68.881,
+                70.634,
+                72.587,
+                74.539
+              ]
+            },
+            {
+              "lineId": "s1-l7",
+              "start": 77.045,
+              "end": 88.657,
+              "kind": "body",
+              "audible": true,
+              "text": "Bhavatu sabba maṅgalaṃ rakkhantu sabba devatā",
+              "kana": "バワトゥ サッバ マンガラン ラッカントゥ サッバ デーワター",
+              "speechEnd": 88.657,
+              "wordStarts": [
+                77.045,
+                78.432,
+                79.819,
+                82.419,
+                84.765,
+                86.152
+              ]
+            },
+            {
+              "lineId": "s1-l8",
+              "start": 88.657,
+              "end": 102.889,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabba saṅghānubhāvena sadā sotthī bhavantu no.",
+              "kana": "サッバ サンガーヌバーヴェーナ サダー ソッティー バワントゥ ノー",
+              "speechEnd": 102.889,
+              "wordStarts": [
+                88.657,
+                90.245,
+                95.643,
+                97.23,
+                99.347,
+                101.464
+              ]
+            },
+            {
+              "lineId": "s1-l9",
+              "start": 102.889,
+              "end": 116.838,
+              "kind": "body",
+              "audible": true,
+              "text": "Nakkhatta yakkha bhūtānaṃ pāpaggaha nivāraṇaṃ",
+              "kana": "ナッカッタ ヤッカ ブーターナン パーパッガハ ニワーラナン",
+              "speechEnd": 116.838,
+              "wordStarts": [
+                102.889,
+                105.484,
+                107.041,
+                110.305,
+                113.419
+              ]
+            },
+            {
+              "lineId": "s1-l10",
+              "start": 116.838,
+              "end": 140.869,
+              "kind": "body",
+              "audible": true,
+              "text": "Parittassānubhāvena hantu tesaṃ upaddave.",
+              "kana": "パリッタッサーヌバーヴェーナ ハントゥ テーサン ウパッダヴェー",
+              "speechEnd": 140.869,
+              "wordStarts": [
+                116.838,
+                128.909,
+                131.889,
+                135.481
+              ]
+            },
+            {
+              "lineId": "s1-l11",
+              "kind": "body",
+              "audible": false
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "71a7ba456cc1162ffd3eb975ae5b86ee1fb194134b850ef0f20de52bcd427972"
+          }
         }
       ]
     },
@@ -20231,7 +28336,62 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0,
+              "end": 3.111,
+              "kind": "title",
+              "audible": true,
+              "text": "Āloka pūjā",
+              "kana": "アーローカ プージャー",
+              "speechEnd": 3.111,
+              "wordStarts": [
+                0,
+                1.258
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 3.111,
+              "end": 13.757,
+              "kind": "body",
+              "audible": true,
+              "text": "Ghanasārappa dittena dīpena tama dhaṃsinā,",
+              "kana": "ガナサーラッパ ディッテーナ ディーペーナ タマ ダンスィナー",
+              "speechEnd": 13.578,
+              "wordStarts": [
+                3.111,
+                6.164,
+                8.344,
+                10.525,
+                11.397
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 13.757,
+              "end": 26.873,
+              "kind": "body",
+              "audible": true,
+              "text": "Tiloka dīpaṃ sambuddhaṃ pūjayāmi tamonudaṃ.",
+              "kana": "ティローカ ディーパン サンブッダン プージャヤーミ タモーヌダン",
+              "speechEnd": 26.873,
+              "wordStarts": [
+                13.757,
+                15.756,
+                17.736,
+                20.933,
+                23.903
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "6fa9d848a42eff60a2e049a3baa6861594b19dda90e99abd6096c69e48a299b4"
+          }
         },
         {
           "key": "D2T11",
@@ -20299,7 +28459,127 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l2",
+              "start": 0.207,
+              "end": 3.588,
+              "kind": "title",
+              "audible": true,
+              "text": "Puppha pūjā",
+              "kana": "プッパ プージャー",
+              "speechEnd": 3.588,
+              "wordStarts": [
+                0.207,
+                0.992
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 3.588,
+              "end": 15.916,
+              "kind": "body",
+              "audible": true,
+              "text": "Vaṇṇa gandha guṇopetaṃ etaṃ kusuma santatiṃ,",
+              "kana": "ワンナ ガンダ グノーペータン エータン クスマ サンタティン",
+              "speechEnd": 15.916,
+              "wordStarts": [
+                3.588,
+                5.02,
+                6.452,
+                9.813,
+                11.866,
+                13.298
+              ]
+            },
+            {
+              "lineId": "s2-l2",
+              "start": 15.916,
+              "end": 29.004,
+              "kind": "body",
+              "audible": true,
+              "text": "Pūjayāmi munindassa sirīpāda saroruhe.",
+              "kana": "プージャヤーミ ムニンダッサ スィリーパーダ サロールヘー",
+              "speechEnd": 29.004,
+              "wordStarts": [
+                15.916,
+                19.054,
+                22.193,
+                25.331
+              ]
+            },
+            {
+              "lineId": "s2-l3",
+              "start": 29.004,
+              "end": 37.528,
+              "kind": "body",
+              "audible": true,
+              "text": "Pūjemi buddhaṃ kusumena nena",
+              "kana": "プージェーミ ブッダン クスメーナ ネーナ",
+              "speechEnd": 37.528,
+              "wordStarts": [
+                29.004,
+                31.434,
+                33.378,
+                35.808
+              ]
+            },
+            {
+              "lineId": "s2-l4",
+              "start": 37.528,
+              "end": 47.357,
+              "kind": "body",
+              "audible": true,
+              "text": "puññena metena labhāmi mokkhaṃ,",
+              "kana": "プンニェーナ メーテーナ ラバーミ モッカン",
+              "speechEnd": 47.357,
+              "wordStarts": [
+                37.528,
+                40.041,
+                42.555,
+                44.566
+              ]
+            },
+            {
+              "lineId": "s2-l5",
+              "start": 47.357,
+              "end": 55.959,
+              "kind": "body",
+              "audible": true,
+              "text": "Pupphaṃ milāyāti yathā idam me",
+              "kana": "プッパン ミラーヤーティ ヤター イダン メー",
+              "speechEnd": 55.959,
+              "wordStarts": [
+                47.357,
+                49.213,
+                51.998,
+                53.391,
+                54.783
+              ]
+            },
+            {
+              "lineId": "s2-l6",
+              "start": 55.959,
+              "end": 66.167,
+              "kind": "body",
+              "audible": true,
+              "text": "kāyo tathā yāti vināsabhāvaṃ.",
+              "kana": "カーヨー タター ヤーティ ヴィナーサバーワン",
+              "speechEnd": 66.167,
+              "wordStarts": [
+                55.959,
+                58.227,
+                59.929,
+                61.63
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "fa3af2fc0433c473613fa5152777818626cefba2b1bce30090fac587d1caa654"
+          }
         },
         {
           "key": "D2T12",
@@ -20335,7 +28615,62 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l3",
+              "start": 0.026,
+              "end": 3.745,
+              "kind": "title",
+              "audible": true,
+              "text": "Sugandha pūjā",
+              "kana": "スガンダ プージャー",
+              "speechEnd": 3.745,
+              "wordStarts": [
+                0.026,
+                1.416
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 3.745,
+              "end": 13.863,
+              "kind": "body",
+              "audible": true,
+              "text": "Sugandhikāya vadanaṃ ananta guṇa gandhinā",
+              "kana": "スガンディカーヤ ワダナン アナンタ グナ ガンディナー",
+              "speechEnd": 13.863,
+              "wordStarts": [
+                3.745,
+                6.921,
+                8.736,
+                10.551,
+                11.459
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 13.863,
+              "end": 27.044,
+              "kind": "body",
+              "audible": true,
+              "text": "Sugandhinā haṃ gandhena pūjayāmi Tathāgataṃ.",
+              "kana": "スガンディナー ハン ガンデーナ プージャヤーミ タターガタン",
+              "speechEnd": 27.044,
+              "wordStarts": [
+                13.863,
+                16.991,
+                18.034,
+                20.787,
+                23.916
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "a452c687b8bc5a198035510f0a56329979afcd97fc9b0410d374a397fca56255"
+          }
         },
         {
           "key": "D2T13",
@@ -20419,7 +28754,163 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l4",
+              "start": 0.179,
+              "end": 3.038,
+              "kind": "title",
+              "audible": true,
+              "text": "Āhāra pūjā",
+              "kana": "アーハーラ プージャー",
+              "speechEnd": 3.038,
+              "wordStarts": [
+                0.179,
+                1.156
+              ]
+            },
+            {
+              "lineId": "s4-l1",
+              "start": 3.038,
+              "end": 15.433,
+              "kind": "body",
+              "audible": true,
+              "text": "Sugandhaṃ sītalaṃ kappaṃ pasanna madhuraṃ subhaṃ",
+              "kana": "スガンダン スィータラン カッパン パサンナ マドゥラン スバン",
+              "speechEnd": 15.433,
+              "wordStarts": [
+                3.038,
+                5.369,
+                7.699,
+                9.693,
+                11.652,
+                13.516
+              ]
+            },
+            {
+              "lineId": "s4-l2",
+              "start": 15.433,
+              "end": 29.449,
+              "kind": "body",
+              "audible": true,
+              "text": "Pānīyam etaṃ bhagavā paṭigaṇhātu nāyako.",
+              "kana": "パーニーヤ メータン バガワー パティガンハートゥ ナーヤコー",
+              "speechEnd": 29.449,
+              "wordStarts": [
+                15.433,
+                17.95,
+                19.964,
+                21.978,
+                25.503
+              ]
+            },
+            {
+              "lineId": "s5-l1",
+              "start": 29.449,
+              "end": 41.064,
+              "kind": "body",
+              "audible": true,
+              "text": "Adhivāsetu no bhante bhojanaṃ parikappitaṃ",
+              "kana": "アディワーセートゥ ノー バンテー ボージャナン パリカッピタン",
+              "speechEnd": 41.064,
+              "wordStarts": [
+                29.449,
+                32.596,
+                33.495,
+                35.293,
+                37.54
+              ]
+            },
+            {
+              "lineId": "s5-l2",
+              "start": 41.064,
+              "end": 54.487,
+              "kind": "body",
+              "audible": true,
+              "text": "Anukampaṃ upādāya paṭigaṇhātu muttamaṃ.",
+              "kana": "アヌカンパン ウパーダーヤ パティガンハートゥ ムッタマン",
+              "speechEnd": 54.487,
+              "wordStarts": [
+                41.064,
+                44.202,
+                47.42,
+                51.127
+              ]
+            },
+            {
+              "lineId": "s5-l3",
+              "start": 54.487,
+              "end": 67.972,
+              "kind": "body",
+              "audible": true,
+              "text": "Adhivāsetu no bhante sabbaṃ saddhāya pūjitaṃ",
+              "kana": "アディワーセートゥ ノー バンテー サッバン サッダーヤ プージタン",
+              "speechEnd": 67.972,
+              "wordStarts": [
+                54.487,
+                57.905,
+                58.882,
+                60.835,
+                62.789,
+                65.23
+              ]
+            },
+            {
+              "lineId": "s5-l4",
+              "start": 67.972,
+              "end": 82.132,
+              "kind": "body",
+              "audible": true,
+              "text": "Anukampaṃ upādāya paṭigaṇhātu muttamaṃ.",
+              "kana": "アヌカンパン ウパーダーヤ パティガンハートゥ ムッタマン",
+              "speechEnd": 82.132,
+              "wordStarts": [
+                67.972,
+                71.316,
+                74.659,
+                78.56
+              ]
+            },
+            {
+              "lineId": "s5-l5",
+              "start": 82.132,
+              "end": 97.062,
+              "kind": "body",
+              "audible": true,
+              "text": "Nivedayāmi sambuddhaṃ vītarāgaṃ mahā muniṃ",
+              "kana": "ニヴェーダヤーミ サンブッダン ヴィータラーガン マハー ムニン",
+              "speechEnd": 97.062,
+              "wordStarts": [
+                82.132,
+                86.04,
+                89.575,
+                93.483,
+                95.158
+              ]
+            },
+            {
+              "lineId": "s5-l6",
+              "start": 97.062,
+              "end": 115.426,
+              "kind": "body",
+              "audible": true,
+              "text": "Nimantayāmi sugataṃ lokajeṭṭhaṃ narāsabhaṃ.",
+              "kana": "ニマンタヤーミ スガタン ローカジェッタン ナラーサバン",
+              "speechEnd": 115.426,
+              "wordStarts": [
+                97.062,
+                102.345,
+                105.615,
+                110.898
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "8dbb3c4e6bd3312ce84a7403d2303511ef30928554fe64bb047bcc73c53a1bf0"
+          }
         }
       ]
     },
@@ -21186,7 +29677,135 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l1",
+              "start": 0.019,
+              "end": 5.972,
+              "kind": "title",
+              "audible": true,
+              "text": "Anumodanā",
+              "kana": "アヌモーダナー",
+              "speechEnd": 5.972,
+              "wordStarts": [
+                0.019
+              ]
+            },
+            {
+              "lineId": "s1-l1",
+              "start": 5.972,
+              "end": 16.807,
+              "kind": "body",
+              "audible": true,
+              "text": "Ettāvatā ca amhehi sambhataṃ puñña sampadaṃ",
+              "kana": "エッターワター チャ アンヘーヒ サンバタン プンニャ サンパダン",
+              "speechEnd": 16.764,
+              "wordStarts": [
+                5.972,
+                8.877,
+                9.293,
+                11.368,
+                13.443,
+                14.688
+              ]
+            },
+            {
+              "lineId": "s1-l2",
+              "start": 16.807,
+              "end": 29.918,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabbe devā anumodantu sabba sampatti siddhiyā.",
+              "kana": "サッベー デーワー アヌモーダントゥ サッバ サンパッティ スィッディヤー",
+              "speechEnd": 29.918,
+              "wordStarts": [
+                16.807,
+                18.784,
+                20.556,
+                23.657,
+                24.986,
+                27.201
+              ]
+            },
+            {
+              "lineId": "s1-l3",
+              "start": 29.918,
+              "end": 41.934,
+              "kind": "body",
+              "audible": true,
+              "text": "Ettāvatā ca amhehi sambhataṃ puñña sampadaṃ",
+              "kana": "エッターワター チャ アンヘーヒ サンバタン プンニャ サンパダン",
+              "speechEnd": 41.934,
+              "wordStarts": [
+                29.918,
+                33.023,
+                33.467,
+                35.685,
+                37.903,
+                39.234
+              ]
+            },
+            {
+              "lineId": "s1-l4",
+              "start": 41.934,
+              "end": 55.795,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabbe bhūtā anumodantu sabba sampatti siddhiyā.",
+              "kana": "サッベー ブーター アヌモーダントゥ サッバ サンパッティ スィッディヤー",
+              "speechEnd": 55.795,
+              "wordStarts": [
+                41.934,
+                43.828,
+                45.723,
+                49.038,
+                50.459,
+                52.827
+              ]
+            },
+            {
+              "lineId": "s1-l5",
+              "start": 55.795,
+              "end": 68.58,
+              "kind": "body",
+              "audible": true,
+              "text": "Ettāvatā ca amhehi sambhataṃ puñña sampadaṃ",
+              "kana": "エッターワター チャ アンヘーヒ サンバタン プンニャ サンパダン",
+              "speechEnd": 68.58,
+              "wordStarts": [
+                55.795,
+                59.098,
+                59.57,
+                61.93,
+                64.29,
+                65.705
+              ]
+            },
+            {
+              "lineId": "s1-l6",
+              "start": 68.58,
+              "end": 84.306,
+              "kind": "body",
+              "audible": true,
+              "text": "Sabbe sattā anumodantu sabba sampatti siddhiyā.",
+              "kana": "サッベー サッター アヌモーダントゥ サッバ サンパッティ スィッディヤー",
+              "speechEnd": 84.306,
+              "wordStarts": [
+                68.58,
+                70.827,
+                73.073,
+                77.005,
+                78.69,
+                81.498
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "58276aef6f118008f7b50f5c633bc45c6f0fb654a4921e926a634a0eb53489fc"
+          }
         },
         {
           "key": "D2T16",
@@ -21214,7 +29833,85 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l2",
+              "start": 0,
+              "end": 3.716,
+              "kind": "title",
+              "audible": true,
+              "text": "Ñāti pūjā",
+              "kana": "ニャーティ プージャー",
+              "speechEnd": 3.716,
+              "wordStarts": [
+                0,
+                1.244
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 3.716,
+              "kind": "body",
+              "audible": true,
+              "end": 16.696,
+              "text": "Idaṃ me ñātīnaṃ hotu sukhitā hontu ñātayo.",
+              "kana": "イダン メー ニャーティーナン ホートゥ スキター ホントゥ ニャータヨー",
+              "speechEnd": 16.696,
+              "wordStarts": [
+                3.716,
+                5.175,
+                6.148,
+                9.065,
+                10.655,
+                12.6,
+                14.059
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 16.696,
+              "kind": "body",
+              "audible": true,
+              "end": 30.795,
+              "text": "Idaṃ me ñātīnaṃ hotu sukhitā hontu ñātayo.",
+              "kana": "イダン メー ニャーティーナン ホートゥ スキター ホントゥ ニャータヨー",
+              "speechEnd": 30.795,
+              "wordStarts": [
+                16.696,
+                18.274,
+                19.326,
+                22.483,
+                24.19,
+                26.294,
+                27.872
+              ]
+            },
+            {
+              "lineId": "s2-l1",
+              "start": 30.795,
+              "kind": "body",
+              "audible": true,
+              "end": 48.295,
+              "text": "Idaṃ me ñātīnaṃ hotu sukhitā hontu ñātayo.",
+              "kana": "イダン メー ニャーティーナン ホートゥ スキター ホントゥ ニャータヨー",
+              "speechEnd": 48.295,
+              "wordStarts": [
+                30.795,
+                32.774,
+                34.093,
+                38.05,
+                40.38,
+                43.018,
+                44.997
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "395f07d312195fffd4dd77930b8b643f1a64b2d388b27d86da34aacdaa494425"
+          }
         },
         {
           "key": "D2T17",
@@ -21250,7 +29947,96 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true
             }
-          ]
+          ],
+          "guideCues": [
+            {
+              "lineId": "title-l3",
+              "start": 0,
+              "end": 3.743,
+              "kind": "title",
+              "audible": true,
+              "text": "Paṇidhāna",
+              "kana": "パニダーナ",
+              "speechEnd": 3.743,
+              "wordStarts": [
+                0
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 3.743,
+              "kind": "body",
+              "audible": true,
+              "end": 17.851,
+              "text": "Idaṃ me puññaṃ āsavakkhayā vahaṃ hotu.",
+              "kana": "イダン メー プンニャン アーサワッカヤー ワハン ホートゥ",
+              "speechEnd": 17.851,
+              "wordStarts": [
+                3.743,
+                5.482,
+                6.642,
+                8.961,
+                13.938,
+                15.678
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 17.851,
+              "kind": "body",
+              "audible": true,
+              "end": 32.398,
+              "text": "Idaṃ me puññaṃ āsavakkhayā vahaṃ hotu.",
+              "kana": "イダン メー プンニャン アーサワッカヤー ワハン ホートゥ",
+              "speechEnd": 32.398,
+              "wordStarts": [
+                17.851,
+                19.662,
+                20.87,
+                23.285,
+                28.447,
+                30.258
+              ]
+            },
+            {
+              "lineId": "s3-l1",
+              "start": 32.398,
+              "kind": "body",
+              "audible": true,
+              "end": 50.905,
+              "text": "Idaṃ me puññaṃ āsavakkhayā vahaṃ hotu.",
+              "kana": "イダン メー プンニャン アーサワッカヤー ワハン ホートゥ",
+              "speechEnd": 50.905,
+              "wordStarts": [
+                32.398,
+                34.548,
+                35.982,
+                39.099,
+                44.833,
+                46.983
+              ]
+            },
+            {
+              "lineId": "s3-l2",
+              "start": 50.905,
+              "end": 54.011,
+              "kind": "body",
+              "audible": true,
+              "text": "Sādhu! Sādhu! Sādhu!",
+              "kana": "サードゥ サードゥ サードゥ",
+              "speechEnd": 54.011,
+              "wordStarts": [
+                50.905,
+                51.94,
+                52.976
+              ]
+            }
+          ],
+          "guideAnalysis": {
+            "method": "canonical line starts + acoustic repeat alignment + silence-aware mora interpolation",
+            "wordTiming": "estimated; not human word calibration",
+            "audioSha256": "3d3e71cecd1f1a9cc053df48e743f91da00a8884681d8754e255fcb1e6359ed9"
+          }
         }
       ]
     },
@@ -22517,6 +31303,8 @@ function showStatus(section, message, tone = "") {
 }
 
 let activeGuideAudio = null;
+// 視線を先へ送るための実時間。速度変更後も音声の時計だけを基準にする。
+const AUDIO_GUIDE_LEAD_SECONDS = 0.14;
 
 async function renderSutta(app, catalog, suttaId, setTitle) {
   const summary = catalog.suttas.find((item) => item.id === suttaId);
@@ -22600,7 +31388,7 @@ function renderReading(app, sutta) {
           <label><input type="checkbox" name="showJa"><span>和訳</span></label>
           <button class="recite-note recite-note-toggle" type="button" data-recitation-info-toggle aria-expanded="false">使い方を表示</button>
         </div>
-        <p class="recite-note recite-note-detail" data-recitation-info hidden>最初に経典名を唱え、「次へ」で本文へ進みます。「音声同期」は録音音声に合わせて節・行・単語を自動で進めます。「録音開始」で自動判定します（音声とは別の文字ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
+        <p class="recite-note recite-note-detail" data-recitation-info hidden>経典名から「次へ」で進むか、音読・暗記する範囲を自由に選べます。「音声ファイル」は再生位置と速度を変更でき、音声に合わせて節・行・単語を少し先行して案内します。「録音開始」で自動判定します（音声とは別の文字ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
         <p class="recite-note" data-recitation-status hidden></p>
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
@@ -22656,7 +31444,18 @@ function renderReading(app, sutta) {
       </div>
 
       <div class="recite-dock" role="toolbar" aria-label="読誦操作">
-        <button class="button primary audio-guide-button" type="button" data-guide-audio-toggle>🔊 音声同期</button>
+        <div class="guide-audio-player" data-guide-audio-player>
+          <label class="guide-audio-track" data-guide-audio-track-label hidden>音声トラック <select data-guide-audio-track aria-label="音声トラック"></select></label>
+          <div class="guide-audio-progress">
+            <output data-guide-audio-current aria-label="現在の再生位置">0:00</output>
+            <input type="range" data-guide-audio-seek aria-label="音声の再生位置" min="0" max="1" step="0.01" value="0">
+            <output data-guide-audio-duration aria-label="音声の長さ">--:--</output>
+          </div>
+          <label class="guide-audio-speed">再生速度 <select data-guide-audio-speed aria-label="音声の再生速度">
+            <option value="0.5">0.5倍</option><option value="0.75">0.75倍</option><option value="1" selected>1.0倍</option><option value="1.25">1.25倍</option><option value="1.5">1.5倍</option>
+          </select></label>
+        </div>
+        <button class="button primary audio-guide-button" type="button" data-guide-audio-toggle>🔊 音声ファイル</button>
         <button class="button primary record-button" type="button" data-recitation-record>録音開始</button>
         <button class="button primary guide-button" type="button" data-pace-toggle>▶ 文字ガイド</button>
         <button class="button ghost tempo-button" type="button" data-pace-cycle aria-label="読誦ガイドの速さを切替">⏱ ふつう</button>
@@ -22780,7 +31579,8 @@ function setupReciteControls(root, sutta, reciteState) {
   };
 
   chipGroups.forEach((chips) => {
-    sutta.sections.filter((section) => section.id !== "title").forEach((section) => {
+    chips.append(createChip("全文", "all"));
+    sutta.sections.forEach((section) => {
       chips.append(createChip(section.label, section.id));
     });
   });
@@ -22946,7 +31746,7 @@ function setupReciteControls(root, sutta, reciteState) {
 
   renderReciteStage(root, sutta, reciteState);
   if (SpeechRecognition) {
-    showRecitationStatus(root, "まず経典名を唱えましょう。唱えたら「次へ」で本文に進みます。", "recording");
+    showRecitationStatus(root, "経典名から「次へ」で進むか、好きな音読範囲を選んで練習できます。", "recording");
   }
 }
 
@@ -23000,10 +31800,6 @@ function startBuildPractice(root, sutta, reciteState, sectionId = sutta.sections
 }
 
 function selectRecitationRange(root, sutta, reciteState, sectionId, options = {}) {
-  if (!reciteState.titleCompleted && sectionId !== "title") {
-    showRecitationStatus(root, "本文の前に、経典名を唱えて「次へ」を押してください。", "warning");
-    return;
-  }
   if (!options.skipRecordingCheck && !canChangeReciteRange(root, reciteState)) {
     return;
   }
@@ -23051,8 +31847,15 @@ function stopActiveGuideAudio() {
 function setupGuideAudio(root, sutta, reciteState) {
   const button = root.querySelector("[data-guide-audio-toggle]");
   const status = root.querySelector("[data-guide-audio-status]");
+  const player = root.querySelector("[data-guide-audio-player]");
+  const seekBar = root.querySelector("[data-guide-audio-seek]");
+  const speed = root.querySelector("[data-guide-audio-speed]");
+  const trackSelect = root.querySelector("[data-guide-audio-track]");
+  const currentOutput = root.querySelector("[data-guide-audio-current]");
+  const durationOutput = root.querySelector("[data-guide-audio-duration]");
   const tracks = sutta.audio?.tracks || [];
   if (tracks.length === 0) {
+    player.hidden = true;
     button.disabled = true;
     button.textContent = "音声なし";
     status.textContent = "この経典のガイド音声はありません。";
@@ -23061,10 +31864,19 @@ function setupGuideAudio(root, sutta, reciteState) {
 
   const audio = new Audio();
   audio.preload = "metadata";
+  audio.setAttribute("data-guide-audio-media", "");
+  player.append(audio);
   reciteState.guideAudio = audio;
   activeGuideAudio = audio;
   let pendingSeek = null;
   let pendingAutoplay = false;
+  let playbackRate = 1;
+  let guideEnabled = false;
+  let finished = false;
+  trackSelect.innerHTML = tracks.map((track, index) =>
+    `<option value="${index}">${index + 1}. ${escapeHtml(track.title)}</option>`
+  ).join("");
+  root.querySelector("[data-guide-audio-track-label]").hidden = tracks.length < 2;
 
   const currentTrack = () => tracks[reciteState.guideAudioTrackIndex] || tracks[0];
   const trackLabel = () => {
@@ -23080,11 +31892,18 @@ function setupGuideAudio(root, sutta, reciteState) {
     const playing = !audio.paused && !audio.ended;
     button.dataset.playing = String(playing);
     button.textContent = playing
-      ? "⏸ 同期停止"
-      : reciteState.guideAudioStarted ? "▶ 同期を再開" : "🔊 音声同期";
-    const progress = reciteState.guideAudioStarted
-      ? ` ${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`
-      : "";
+      ? "⏸ 音声を停止"
+      : reciteState.guideAudioStarted ? "▶ 音声を再開" : "🔊 音声ファイル";
+    button.setAttribute("aria-pressed", String(playing));
+    const duration = Number.isFinite(audio.duration) ? audio.duration : currentTrack().duration;
+    const position = pendingSeek ?? audio.currentTime;
+    seekBar.max = String(duration || 1);
+    seekBar.value = String(Math.min(position, duration || 0));
+    seekBar.setAttribute("aria-valuetext", `${formatTime(position)} / ${formatTime(duration)}`);
+    currentOutput.textContent = formatTime(position);
+    durationOutput.textContent = formatTime(duration);
+    trackSelect.value = String(reciteState.guideAudioTrackIndex);
+    const progress = ` ${formatTime(position)} / ${formatTime(duration)}`;
     const syncLabel = playing ? "・文字同期中" : "";
     status.textContent = message || `${trackLabel()}${progress}${syncLabel}（全${tracks.length}トラック）`;
   };
@@ -23093,12 +31912,20 @@ function setupGuideAudio(root, sutta, reciteState) {
     pendingSeek = Number.isFinite(options.seek) ? Math.max(0, options.seek) : null;
     pendingAutoplay = Boolean(options.autoplay);
     audio.src = new URL(currentTrack().src, document.baseURI).href;
+    audio.defaultPlaybackRate = playbackRate;
+    audio.playbackRate = playbackRate;
     audio.load();
     updateUi();
   };
   const play = async () => {
+    if (!canChangeReciteRange(root, reciteState)) return;
     try {
+      if (finished) {
+        finished = false;
+        loadTrack(0);
+      }
       if (!audio.src) loadTrack(reciteState.guideAudioTrackIndex);
+      guideEnabled = true;
       await audio.play();
       reciteState.guideAudioStarted = true;
       updateUi();
@@ -23115,6 +31942,37 @@ function setupGuideAudio(root, sutta, reciteState) {
       return;
     }
     void play();
+  });
+  seekBar.addEventListener("input", () => {
+    if (!canChangeReciteRange(root, reciteState)) { updateUi(); return; }
+    stopPacer(root, reciteState);
+    guideEnabled = true;
+    finished = false;
+    const seek = Math.max(0, Math.min(Number(seekBar.value), Number(seekBar.max)));
+    if (audio.readyState >= 1) {
+      audio.currentTime = seek;
+      syncGuideToAudio(root, sutta, reciteState);
+    } else {
+      pendingSeek = seek;
+    }
+    updateUi();
+  });
+  speed.addEventListener("change", () => {
+    const requestedRate = Number(speed.value);
+    if (![0.5, 0.75, 1, 1.25, 1.5].includes(requestedRate)) return;
+    playbackRate = requestedRate;
+    audio.defaultPlaybackRate = playbackRate;
+    audio.playbackRate = playbackRate;
+  });
+  audio.addEventListener("ratechange", () => {
+    if (guideEnabled) syncGuideToAudio(root, sutta, reciteState);
+    updateUi();
+  });
+  trackSelect.addEventListener("change", () => {
+    if (!canChangeReciteRange(root, reciteState)) { updateUi(); return; }
+    guideEnabled = true;
+    finished = false;
+    loadTrack(Number(trackSelect.value), { seek: 0, autoplay: !audio.paused });
   });
   audio.addEventListener("play", () => {
     stopPacer(root, reciteState);
@@ -23133,24 +31991,26 @@ function setupGuideAudio(root, sutta, reciteState) {
     const shouldPlay = pendingAutoplay;
     pendingAutoplay = false;
     updateUi();
-    syncGuideToAudio(root, sutta, reciteState);
+    if (guideEnabled) syncGuideToAudio(root, sutta, reciteState);
     if (shouldPlay) void play();
   });
   audio.addEventListener("timeupdate", () => {
     updateUi();
-    syncGuideToAudio(root, sutta, reciteState);
+    if (guideEnabled && !audio.paused) syncGuideToAudio(root, sutta, reciteState);
   });
-  audio.addEventListener("seeked", () => syncGuideToAudio(root, sutta, reciteState));
+  audio.addEventListener("seeked", () => {
+    if (guideEnabled) syncGuideToAudio(root, sutta, reciteState);
+    updateUi();
+  });
   audio.addEventListener("ended", () => {
     stopAudioSyncedGuide(root, reciteState);
     if (reciteState.guideAudioTrackIndex < tracks.length - 1) {
       loadTrack(reciteState.guideAudioTrackIndex + 1, { autoplay: true });
       return;
     }
-    reciteState.guideAudioTrackIndex = 0;
+    finished = true;
     reciteState.guideAudioStarted = false;
-    audio.removeAttribute("src");
-    updateUi("ガイド音声と文字同期を最後まで再生しました。もう一度聞く場合は「音声同期」を押してください。");
+    updateUi("音声ファイルを最後まで再生しました。もう一度聞く場合は「音声ファイル」を押してください。");
   });
   audio.addEventListener("error", () => {
     if (audio.src) updateUi(`${trackLabel()} の読み込みに失敗しました。`);
@@ -23158,24 +32018,27 @@ function setupGuideAudio(root, sutta, reciteState) {
 
   reciteState.guideAudioController = {
     selectSection(sectionId) {
-      const section = sutta.sections.find((item) => item.id === sectionId);
+      const section = sutta.sections.find((item) => item.id === (sectionId === "all" ? "title" : sectionId));
       if (!section) return;
       const lineIds = new Set(section.lines.map((line) => line.id));
       const trackIndex = tracks.findIndex((track) =>
-        track.cues?.some((cue) => lineIds.has(cue.lineId))
+        (track.guideCues || track.cues)?.some((cue) => lineIds.has(cue.lineId))
       );
       if (trackIndex < 0) return;
-      const trackCues = tracks[trackIndex].cues || [];
+      const trackCues = tracks[trackIndex].guideCues || tracks[trackIndex].cues || [];
       const firstSectionCueIndex = trackCues.findIndex((item) => lineIds.has(item.lineId));
       const cue = trackCues.find((item) => item.audible !== false && lineIds.has(item.lineId))
         || trackCues.slice(0, Math.max(0, firstSectionCueIndex)).reverse().find((item) => item.audible !== false);
       const seek = cue?.start || 0;
       const autoplay = !audio.paused;
+      guideEnabled = autoplay;
+      finished = false;
       if (trackIndex !== reciteState.guideAudioTrackIndex || !audio.src) {
         loadTrack(trackIndex, { seek, autoplay });
       } else if (audio.readyState >= 1) {
         audio.currentTime = seek;
-        syncGuideToAudio(root, sutta, reciteState);
+        if (guideEnabled) syncGuideToAudio(root, sutta, reciteState);
+        updateUi();
       } else {
         pendingSeek = seek;
       }
@@ -23224,9 +32087,10 @@ function stopAudioSyncedGuide(root, reciteState, options = {}) {
 function syncGuideToAudio(root, sutta, reciteState) {
   const audio = reciteState.guideAudio;
   const track = sutta.audio?.tracks?.[reciteState.guideAudioTrackIndex];
-  if (!audio || !track?.cues?.length) return;
-  const currentTime = audio.currentTime;
-  const cueIndex = track.cues.findIndex((cue) =>
+  const cues = track?.guideCues || track?.cues;
+  if (!audio || !cues?.length || reciteState.isRecording || reciteState.isRequestingMicrophone || reciteState.paceRunning) return;
+  const currentTime = audio.currentTime + AUDIO_GUIDE_LEAD_SECONDS * (audio.playbackRate || 1);
+  const cueIndex = cues.findIndex((cue) =>
     cue.audible !== false
     && Number.isFinite(cue.start)
     && Number.isFinite(cue.end)
@@ -23239,10 +32103,10 @@ function syncGuideToAudio(root, sutta, reciteState) {
     return;
   }
 
-  const cue = track.cues[cueIndex];
+  const cue = cues[cueIndex];
   const section = sutta.sections.find((item) => item.lines.some((line) => line.id === cue.lineId));
   if (!section) return;
-  if (section.id !== reciteState.activeSectionId) {
+  if (section.id !== reciteState.activeSectionId && reciteState.activeSectionId !== "all") {
     reciteState.activeSectionId = section.id;
     if (section.id !== "title") reciteState.titleCompleted = true;
     reciteState.sequenceMode = true;
@@ -23273,7 +32137,8 @@ function syncGuideToAudio(root, sutta, reciteState) {
   if (lineElement && cue.lineId !== reciteState.audioSyncLineId) {
     reciteState.audioSyncLineId = cue.lineId;
     const rect = lineElement.getBoundingClientRect();
-    if (rect.top < 96 || rect.bottom > window.innerHeight - 150) {
+    const dockTop = root.querySelector(".recite-dock")?.getBoundingClientRect().top || window.innerHeight - 150;
+    if (rect.top < 96 || rect.bottom > dockTop - 16) {
       lineElement.scrollIntoView({ block: "center", behavior: "auto" });
     }
   }
@@ -23282,6 +32147,12 @@ function syncGuideToAudio(root, sutta, reciteState) {
 function getAudioSyncedWordIndex(line, cue, currentTime) {
   const pairs = line ? getAlignedWordPairs(line) : null;
   if (!pairs?.length) return null;
+  if (cue.wordStarts?.length === pairs.length && cue.text === line.pali && cue.kana === line.kana) {
+    for (let index = cue.wordStarts.length - 1; index >= 0; index -= 1) {
+      if (currentTime >= cue.wordStarts[index]) return index;
+    }
+    return 0;
+  }
   const duration = Math.max(0.05, cue.end - cue.start);
   const ratio = Math.min(0.999999, Math.max(0, (currentTime - cue.start) / duration));
   const weights = pairs.map((pair) => countMorae(pair.kana));
@@ -23578,6 +32449,9 @@ function updateRecordingUi(root, reciteState) {
   recordButton.dataset.recording = String(reciteState.isRecording && !reciteState.stopRequested);
   recordButton.dataset.judging = String(reciteState.isRecording && reciteState.stopRequested);
   recordButton.dataset.preparing = String(reciteState.isRequestingMicrophone || (reciteState.isRecording && !reciteState.recognitionStarted));
+  root.querySelectorAll("[data-guide-audio-toggle], [data-guide-audio-seek], [data-guide-audio-track]").forEach((control) => {
+    control.disabled = Boolean(reciteState.isRecording || reciteState.isRequestingMicrophone || !reciteState.guideAudio);
+  });
 }
 
 // 停止要求。認識サービスが end を返さない場合に備えて、
@@ -24246,8 +33120,8 @@ function updateReciteChips(root, reciteState) {
   });
   root.querySelectorAll("[data-recitation-section]").forEach((chip) => {
     chip.setAttribute("aria-pressed", String(chip.dataset.recitationSection === reciteState.activeSectionId));
-    chip.disabled = !reciteState.titleCompleted;
-    chip.title = reciteState.titleCompleted ? "" : "経典名を唱えて「次へ」を押すと選べます";
+    chip.disabled = false;
+    chip.title = "音声を再生せずに、この範囲から練習できます";
   });
 }
 

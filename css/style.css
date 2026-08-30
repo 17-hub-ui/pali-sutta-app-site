@@ -3191,6 +3191,7 @@ body {
   bottom: calc(84px + env(safe-area-inset-bottom));
   z-index: 11;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.45rem;
   width: min(980px, calc(100% - 28px));
   margin: 0 auto;
@@ -3200,6 +3201,50 @@ body {
   border-radius: 14px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
+}
+
+.guide-audio-player {
+  flex: 1 0 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.guide-audio-player[hidden], .guide-audio-track[hidden] { display: none; }
+
+.guide-audio-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.guide-audio-progress input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  min-height: 32px;
+  accent-color: var(--accent-strong);
+}
+
+.guide-audio-speed, .guide-audio-track {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.guide-audio-track { grid-column: 1 / -1; }
+.guide-audio-track select { flex: 1; min-width: 0; }
+.guide-audio-player select {
+  max-width: 100%;
+  min-height: 32px;
+  padding: 0.2rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
 }
 
 .recite-dock .record-button {
@@ -3231,7 +3276,7 @@ body {
 
 /* ドックの分だけ本文下部に余白を確保し、意味カードはドックの上に出す */
 .reading-view {
-  padding-bottom: 126px;
+  padding-bottom: 210px;
 }
 
 @media (max-width: 720px) {
@@ -3251,7 +3296,7 @@ body {
   }
 
   .reading-view {
-    padding-bottom: 178px;
+    padding-bottom: 270px;
   }
 }
 
