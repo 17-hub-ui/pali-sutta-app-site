@@ -1327,6 +1327,9 @@ const EMBEDDED_SUTTAS = {
           "src": "./audio/disc1/track-04.mp3",
           "lineIds": [
             "title-l1",
+            "s1-h1",
+            "s1-h2",
+            "s1-h3",
             "s1-l1",
             "s1-l2",
             "s1-l3",
@@ -1430,15 +1433,69 @@ const EMBEDDED_SUTTAS = {
             {
               "lineId": "title-l1",
               "start": 0.555,
-              "end": 38,
+              "end": 3.971,
               "kind": "title",
               "audible": true,
               "text": "Buddha vandanā",
               "kana": "ブッダ ワンダナー",
-              "speechEnd": 38,
+              "speechEnd": 2.037,
               "wordStarts": [
                 0.555,
-                15.774
+                1.111
+              ]
+            },
+            {
+              "lineId": "s1-h1",
+              "start": 3.971,
+              "end": 14.43,
+              "kind": "body",
+              "audible": true,
+              "text": "Namo Tassa Bhagavato Arahato Sammā Sambuddhassa.",
+              "kana": "ナモー タッサ バガワトー アラハトー サンマー サンブッダッサ",
+              "speechEnd": 14.43,
+              "wordStarts": [
+                3.971,
+                5.111,
+                6.25,
+                8.148,
+                10.047,
+                11.566
+              ]
+            },
+            {
+              "lineId": "s1-h2",
+              "start": 14.43,
+              "end": 25.432,
+              "kind": "body",
+              "audible": true,
+              "text": "Namo Tassa Bhagavato Arahato Sammā Sambuddhassa.",
+              "kana": "ナモー タッサ バガワトー アラハトー サンマー サンブッダッサ",
+              "speechEnd": 25.127,
+              "wordStarts": [
+                14.43,
+                15.619,
+                16.807,
+                18.788,
+                20.769,
+                22.354
+              ]
+            },
+            {
+              "lineId": "s1-h3",
+              "start": 25.432,
+              "end": 38,
+              "kind": "body",
+              "audible": true,
+              "text": "Namo Tassa Bhagavato Arahato Sammā Sambuddhassa.",
+              "kana": "ナモー タッサ バガワトー アラハトー サンマー サンブッダッサ",
+              "speechEnd": 38,
+              "wordStarts": [
+                25.432,
+                26.815,
+                28.198,
+                30.502,
+                32.93,
+                34.774
               ]
             },
             {
@@ -1635,6 +1692,120 @@ const EMBEDDED_SUTTAS = {
       {
         "id": "s1",
         "lines": [
+          {
+            "id": "s1-h1",
+            "pali": "Namo Tassa Bhagavato Arahato Sammā Sambuddhassa.",
+            "kana": "ナモー タッサ バガワトー アラハトー サンマー サンブッダッサ",
+            "ja": "阿羅漢であり、正自覚者であり、福運に満ちた世尊に、私は敬礼いたします。",
+            "wordGlosses": [
+              {
+                "pali": "Namo",
+                "kana": "ナモー",
+                "ja": "敬礼"
+              },
+              {
+                "pali": "Tassa",
+                "kana": "タッサ",
+                "ja": "その方に"
+              },
+              {
+                "pali": "Bhagavato",
+                "kana": "バガワトー",
+                "ja": "世尊に"
+              },
+              {
+                "pali": "Arahato",
+                "kana": "アラハトー",
+                "ja": "阿羅漢に"
+              },
+              {
+                "pali": "Sammā",
+                "kana": "サンマー",
+                "ja": "正しく"
+              },
+              {
+                "pali": "Sambuddhassa.",
+                "kana": "サンブッダッサ",
+                "ja": "正自覚者に"
+              }
+            ]
+          },
+          {
+            "id": "s1-h2",
+            "pali": "Namo Tassa Bhagavato Arahato Sammā Sambuddhassa.",
+            "kana": "ナモー タッサ バガワトー アラハトー サンマー サンブッダッサ",
+            "ja": "阿羅漢であり、正自覚者であり、福運に満ちた世尊に、私は敬礼いたします。",
+            "wordGlosses": [
+              {
+                "pali": "Namo",
+                "kana": "ナモー",
+                "ja": "敬礼"
+              },
+              {
+                "pali": "Tassa",
+                "kana": "タッサ",
+                "ja": "その方に"
+              },
+              {
+                "pali": "Bhagavato",
+                "kana": "バガワトー",
+                "ja": "世尊に"
+              },
+              {
+                "pali": "Arahato",
+                "kana": "アラハトー",
+                "ja": "阿羅漢に"
+              },
+              {
+                "pali": "Sammā",
+                "kana": "サンマー",
+                "ja": "正しく"
+              },
+              {
+                "pali": "Sambuddhassa.",
+                "kana": "サンブッダッサ",
+                "ja": "正自覚者に"
+              }
+            ]
+          },
+          {
+            "id": "s1-h3",
+            "pali": "Namo Tassa Bhagavato Arahato Sammā Sambuddhassa.",
+            "kana": "ナモー タッサ バガワトー アラハトー サンマー サンブッダッサ",
+            "ja": "阿羅漢であり、正自覚者であり、福運に満ちた世尊に、私は敬礼いたします。",
+            "wordGlosses": [
+              {
+                "pali": "Namo",
+                "kana": "ナモー",
+                "ja": "敬礼"
+              },
+              {
+                "pali": "Tassa",
+                "kana": "タッサ",
+                "ja": "その方に"
+              },
+              {
+                "pali": "Bhagavato",
+                "kana": "バガワトー",
+                "ja": "世尊に"
+              },
+              {
+                "pali": "Arahato",
+                "kana": "アラハトー",
+                "ja": "阿羅漢に"
+              },
+              {
+                "pali": "Sammā",
+                "kana": "サンマー",
+                "ja": "正しく"
+              },
+              {
+                "pali": "Sambuddhassa.",
+                "kana": "サンブッダッサ",
+                "ja": "正自覚者に"
+              }
+            ]
+          },
           {
             "id": "s1-l1",
             "pali": "Iti pi so bhagavā",
@@ -6282,16 +6453,16 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true,
               "text": "Visaṅkhāra gataṃ cittaṃ taṇhānaṃ khayam ajjhagā ti.",
-              "kana": "ヴィサンカーラ ガタン チッタン タンハーナン カヤン アッジャガー ティ",
+              "kana": "ヴィサンカーラ ガタン チッタン タンハーナン カヤ マッジャガー ティ",
               "speechEnd": 77.697,
               "wordStarts": [
                 59.513,
-                63.359,
-                65.283,
-                68.081,
-                71.927,
-                73.851,
-                77.056
+                63.502,
+                65.496,
+                68.39,
+                72.379,
+                73.708,
+                77.032
               ]
             }
           ],
@@ -6482,7 +6653,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s2-l3",
             "pali": "Visaṅkhāra gataṃ cittaṃ taṇhānaṃ khayam ajjhagā ti.",
-            "kana": "ヴィサンカーラ ガタン チッタン タンハーナン カヤン アッジャガー ティ",
+            "kana": "ヴィサンカーラ ガタン チッタン タンハーナン カヤ マッジャガー ティ",
             "ja": "形成するはたらき（行）から心は離れ、渇愛を滅ぼし尽くした。",
             "wordGlosses": [
               {
@@ -6507,12 +6678,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "khayam",
-                "kana": "カヤン",
+                "kana": "カヤ",
                 "ja": "滅尽に"
               },
               {
                 "pali": "ajjhagā",
-                "kana": "アッジャガー",
+                "kana": "マッジャガー",
                 "ja": "到達した"
               },
               {
