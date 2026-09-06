@@ -92,10 +92,10 @@
     {
       "id": "metta-suttam-patthana-paritta",
       "order": 12,
-      "title": "慈教・祈願文・護経（ｽｯﾀﾆﾊﾟｰﾀ1.8 143-152）",
-      "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ (Snp1.8,PTS:Sn143-152)",
-      "bodySectionCount": 12,
-      "sectionCount": 13
+      "title": "慈教・祈願文（ｽｯﾀﾆﾊﾟｰﾀ1.8 143-152）",
+      "titlePali": "Metta Suttaṃ･Patthanā (Snp1.8,PTS:Sn143-152)",
+      "bodySectionCount": 11,
+      "sectionCount": 12
     },
     {
       "id": "vijaya-suttam",

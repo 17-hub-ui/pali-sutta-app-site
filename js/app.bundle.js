@@ -96,10 +96,10 @@ const EMBEDDED_CATALOG = {
     {
       "id": "metta-suttam-patthana-paritta",
       "order": 12,
-      "title": "慈教・祈願文・護経（ｽｯﾀﾆﾊﾟｰﾀ1.8 143-152）",
-      "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ (Snp1.8,PTS:Sn143-152)",
-      "bodySectionCount": 12,
-      "sectionCount": 13
+      "title": "慈教・祈願文（ｽｯﾀﾆﾊﾟｰﾀ1.8 143-152）",
+      "titlePali": "Metta Suttaṃ･Patthanā (Snp1.8,PTS:Sn143-152)",
+      "bodySectionCount": 11,
+      "sectionCount": 12
     },
     {
       "id": "vijaya-suttam",
@@ -1344,83 +1344,83 @@ const EMBEDDED_SUTTAS = {
             {
               "lineId": "title-l1",
               "start": 0.555,
-              "end": 38.54,
+              "end": 38,
               "kind": "title",
               "audible": true
             },
             {
               "lineId": "s1-l1",
-              "start": 38.54,
-              "end": 41.979,
+              "start": 38,
+              "end": 42,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l2",
-              "start": 41.979,
-              "end": 43.675,
+              "start": 42,
+              "end": 43,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l3",
-              "start": 43.675,
-              "end": 47.839,
+              "start": 43,
+              "end": 48,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l4",
-              "start": 47.839,
-              "end": 53.132,
+              "start": 48,
+              "end": 53,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l5",
-              "start": 53.132,
-              "end": 54.531,
+              "start": 53,
+              "end": 54,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l6",
-              "start": 54.531,
-              "end": 58.064,
+              "start": 54,
+              "end": 58,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l7",
-              "start": 58.064,
-              "end": 65.685,
+              "start": 58,
+              "end": 66,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l8",
-              "start": 65.685,
-              "end": 71.863,
+              "start": 66,
+              "end": 72,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l9",
-              "start": 71.863,
-              "end": 73.391,
+              "start": 72,
+              "end": 73,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l10",
-              "start": 73.391,
-              "end": 77.091,
+              "start": 73,
+              "end": 78,
               "kind": "body",
               "audible": true
             },
             {
               "lineId": "s1-l11",
-              "start": 77.091,
+              "start": 78,
               "end": 90.443,
               "kind": "body",
               "audible": true
@@ -1430,300 +1430,160 @@ const EMBEDDED_SUTTAS = {
             {
               "lineId": "title-l1",
               "start": 0.555,
-              "end": 3.971,
+              "end": 38,
               "kind": "title",
               "audible": true,
               "text": "Buddha vandanā",
               "kana": "ブッダ ワンダナー",
-              "speechEnd": 2.037,
+              "speechEnd": 38,
               "wordStarts": [
                 0.555,
-                1.111
+                15.774
               ]
             },
             {
               "lineId": "s1-l1",
-              "start": 3.971,
-              "end": 7.371,
+              "start": 38,
+              "end": 42,
               "kind": "body",
               "audible": true,
               "text": "Iti pi so bhagavā",
               "kana": "イティ ピ ソー バガワー",
-              "speechEnd": 7.371,
+              "speechEnd": 42,
               "wordStarts": [
-                3.971,
-                4.727,
-                5.105,
-                5.86
+                38,
+                39.238,
+                39.633,
+                40.422
               ]
             },
             {
               "lineId": "s1-l2",
-              "start": 7.371,
-              "end": 9.731,
+              "start": 42,
+              "end": 43,
               "kind": "body",
               "audible": true,
               "text": "Arahaṃ①",
               "kana": "アラハン",
-              "speechEnd": 9.731,
+              "speechEnd": 43,
               "wordStarts": [
-                7.371
+                42
               ]
             },
             {
               "lineId": "s1-l3",
-              "start": 9.731,
-              "end": 14.251,
+              "start": 43,
+              "end": 48,
               "kind": "body",
               "audible": true,
               "text": "Sammāsambuddho②",
               "kana": "サンマーサンブッドー",
-              "speechEnd": 14.223,
+              "speechEnd": 47.87,
               "wordStarts": [
-                9.731
+                43
               ]
             },
             {
               "lineId": "s1-l4",
-              "start": 14.251,
-              "end": 19.691,
+              "start": 48,
+              "end": 53,
               "kind": "body",
               "audible": true,
               "text": "Vijjā-caraṇa sampanno③",
               "kana": "ヴィッジャーチャラナ サンパンノー",
-              "speechEnd": 19.691,
+              "speechEnd": 53,
               "wordStarts": [
-                14.251,
-                17.263
+                48,
+                50.711
               ]
             },
             {
               "lineId": "s1-l5",
-              "start": 19.691,
-              "end": 21.011,
+              "start": 53,
+              "end": 54,
               "kind": "body",
               "audible": true,
               "text": "Sugato④",
               "kana": "スガトー",
-              "speechEnd": 21.011,
+              "speechEnd": 54,
               "wordStarts": [
-                19.691
+                53
               ]
             },
             {
               "lineId": "s1-l6",
-              "start": 21.011,
-              "end": 25.531,
+              "start": 54,
+              "end": 58,
               "kind": "body",
               "audible": true,
               "text": "Lokavidū⑤",
               "kana": "ローカヴィドゥー",
-              "speechEnd": 25.531,
+              "speechEnd": 58,
               "wordStarts": [
-                21.011
+                54
               ]
             },
             {
               "lineId": "s1-l7",
-              "start": 25.531,
-              "end": 30.731,
+              "start": 58,
+              "end": 66,
               "kind": "body",
               "audible": true,
               "text": "Anuttaro purisa damma sārathi⑥",
               "kana": "アヌッタロー プリサ ダンマ サーラティ",
-              "speechEnd": 30.731,
+              "speechEnd": 66,
               "wordStarts": [
-                25.531,
-                27.481,
-                28.456,
-                29.431
+                58,
+                60.941,
+                62.412,
+                63.882
               ]
             },
             {
               "lineId": "s1-l8",
-              "start": 30.731,
-              "end": 34.971,
+              "start": 66,
+              "end": 72,
               "kind": "body",
               "audible": true,
               "text": "Satthā deva manussānaṃ⑦",
               "kana": "サッター デーワ マヌッサーナン",
-              "speechEnd": 34.971,
+              "speechEnd": 72,
               "wordStarts": [
-                30.731,
-                32.129,
-                32.912
+                66,
+                67.714,
+                69
               ]
             },
             {
               "lineId": "s1-l9",
-              "start": 34.971,
-              "end": 36.131,
+              "start": 72,
+              "end": 73,
               "kind": "body",
               "audible": true,
               "text": "Buddho⑧",
               "kana": "ブッドー",
-              "speechEnd": 36.131,
+              "speechEnd": 73,
               "wordStarts": [
-                34.971
+                72
               ]
             },
             {
               "lineId": "s1-l10",
-              "start": 36.131,
-              "end": 38.54,
+              "start": 73,
+              "end": 78,
               "kind": "body",
               "audible": true,
               "text": "Bhagavā⑨ ti.",
               "kana": "バガワー ティ",
-              "speechEnd": 38.54,
+              "speechEnd": 78,
               "wordStarts": [
-                36.131,
-                37.699
-              ]
-            },
-            {
-              "lineId": "s1-l1",
-              "start": 38.54,
-              "end": 41.979,
-              "kind": "body",
-              "audible": true,
-              "text": "Iti pi so bhagavā",
-              "kana": "イティ ピ ソー バガワー",
-              "speechEnd": 41.979,
-              "wordStarts": [
-                38.54,
-                39.304,
-                39.686,
-                40.451
-              ]
-            },
-            {
-              "lineId": "s1-l2",
-              "start": 41.979,
-              "end": 43.675,
-              "kind": "body",
-              "audible": true,
-              "text": "Arahaṃ①",
-              "kana": "アラハン",
-              "speechEnd": 43.675,
-              "wordStarts": [
-                41.979
-              ]
-            },
-            {
-              "lineId": "s1-l3",
-              "start": 43.675,
-              "end": 47.839,
-              "kind": "body",
-              "audible": true,
-              "text": "Sammāsambuddho②",
-              "kana": "サンマーサンブッドー",
-              "speechEnd": 47.839,
-              "wordStarts": [
-                43.675
-              ]
-            },
-            {
-              "lineId": "s1-l4",
-              "start": 47.839,
-              "end": 53.132,
-              "kind": "body",
-              "audible": true,
-              "text": "Vijjā-caraṇa sampanno③",
-              "kana": "ヴィッジャーチャラナ サンパンノー",
-              "speechEnd": 53.132,
-              "wordStarts": [
-                47.839,
-                50.768
-              ]
-            },
-            {
-              "lineId": "s1-l5",
-              "start": 53.132,
-              "end": 54.531,
-              "kind": "body",
-              "audible": true,
-              "text": "Sugato④",
-              "kana": "スガトー",
-              "speechEnd": 54.531,
-              "wordStarts": [
-                53.132
-              ]
-            },
-            {
-              "lineId": "s1-l6",
-              "start": 54.531,
-              "end": 58.064,
-              "kind": "body",
-              "audible": true,
-              "text": "Lokavidū⑤",
-              "kana": "ローカヴィドゥー",
-              "speechEnd": 58.064,
-              "wordStarts": [
-                54.531
-              ]
-            },
-            {
-              "lineId": "s1-l7",
-              "start": 58.064,
-              "end": 65.685,
-              "kind": "body",
-              "audible": true,
-              "text": "Anuttaro purisa damma sārathi⑥",
-              "kana": "アヌッタロー プリサ ダンマ サーラティ",
-              "speechEnd": 65.685,
-              "wordStarts": [
-                58.064,
-                60.863,
-                62.263,
-                63.662
-              ]
-            },
-            {
-              "lineId": "s1-l8",
-              "start": 65.685,
-              "end": 71.863,
-              "kind": "body",
-              "audible": true,
-              "text": "Satthā deva manussānaṃ⑦",
-              "kana": "サッター デーワ マヌッサーナン",
-              "speechEnd": 71.863,
-              "wordStarts": [
-                65.685,
-                67.45,
-                68.774
-              ]
-            },
-            {
-              "lineId": "s1-l9",
-              "start": 71.863,
-              "end": 73.391,
-              "kind": "body",
-              "audible": true,
-              "text": "Buddho⑧",
-              "kana": "ブッドー",
-              "speechEnd": 73.391,
-              "wordStarts": [
-                71.863
-              ]
-            },
-            {
-              "lineId": "s1-l10",
-              "start": 73.391,
-              "end": 77.091,
-              "kind": "body",
-              "audible": true,
-              "text": "Bhagavā⑨ ti.",
-              "kana": "バガワー ティ",
-              "speechEnd": 76.857,
-              "wordStarts": [
-                73.391,
-                76.033
+                73,
+                76.52
               ]
             },
             {
               "lineId": "s1-l11",
-              "start": 77.091,
+              "start": 78,
               "end": 90.443,
               "kind": "body",
               "audible": true,
@@ -1731,11 +1591,11 @@ const EMBEDDED_SUTTAS = {
               "kana": "ブッダン ジーヴィタ パリヤンタン サラナン ガッチャーミ",
               "speechEnd": 90.443,
               "wordStarts": [
-                77.091,
-                79.582,
-                81.868,
-                85.298,
-                87.585
+                78,
+                80.164,
+                82.328,
+                85.574,
+                87.738
               ]
             }
           ],
@@ -10649,8 +10509,8 @@ const EMBEDDED_SUTTAS = {
   },
   "metta-suttam-patthana-paritta": {
     "id": "metta-suttam-patthana-paritta",
-    "title": "慈教・祈願文・護経（ｽｯﾀﾆﾊﾟｰﾀ1.8 143-152）",
-    "titlePali": "Metta Suttaṃ･Patthanā･Paritta suttaṃ (Snp1.8,PTS:Sn143-152)",
+    "title": "慈教・祈願文（ｽｯﾀﾆﾊﾟｰﾀ1.8 143-152）",
+    "titlePali": "Metta Suttaṃ･Patthanā (Snp1.8,PTS:Sn143-152)",
     "audio": {
       "collection": "ブッダの日常読誦経典",
       "tracks": [
@@ -11254,11 +11114,9 @@ const EMBEDDED_SUTTAS = {
           "src": "./audio/disc1/track-16.mp3",
           "lineIds": [
             "title-l2",
-            "title-l3",
             "s11-l1",
             "s11-l2",
-            "s11-l3",
-            "s12-l1"
+            "s11-l3"
           ],
           "duration": 48.62,
           "cues": [
@@ -11289,11 +11147,6 @@ const EMBEDDED_SUTTAS = {
               "end": 45.515,
               "kind": "body",
               "audible": true
-            },
-            {
-              "lineId": "s12-l1",
-              "kind": "body",
-              "audible": false
             }
           ],
           "guideCues": [
@@ -11365,11 +11218,6 @@ const EMBEDDED_SUTTAS = {
                 41.667,
                 44.232
               ]
-            },
-            {
-              "lineId": "s12-l1",
-              "kind": "body",
-              "audible": false
             }
           ],
           "guideAnalysis": {
@@ -11413,24 +11261,6 @@ const EMBEDDED_SUTTAS = {
                 "pali": "Patthanā",
                 "kana": "パッタナー",
                 "ja": "祈願文"
-              }
-            ]
-          },
-          {
-            "id": "title-l3",
-            "pali": "Paritta Suttaṃ",
-            "kana": "パリッタ 経",
-            "ja": "護経",
-            "wordGlosses": [
-              {
-                "pali": "Paritta",
-                "kana": "パリッタ",
-                "ja": "護経"
-              },
-              {
-                "pali": "Suttaṃ",
-                "kana": "経",
-                "ja": ""
               }
             ]
           }
@@ -12540,50 +12370,6 @@ const EMBEDDED_SUTTAS = {
           }
         ],
         "label": "祈願文"
-      },
-      {
-        "id": "s12",
-        "lines": [
-          {
-            "id": "s12-l1",
-            "pali": "Etena sacca vajjena pātu tvaṃ ratanattayaṃ",
-            "kana": "エーテーナ サッチャ ワッジェーナ パートゥ トゥワン ラタナッタヤン",
-            "ja": "この真理の言葉の力によってあなた（がた）に三宝のご加護がありますように。",
-            "wordGlosses": [
-              {
-                "pali": "Etena",
-                "kana": "エーテーナ",
-                "ja": "これによって"
-              },
-              {
-                "pali": "sacca",
-                "kana": "サッチャ",
-                "ja": "真実の"
-              },
-              {
-                "pali": "vajjena",
-                "kana": "ワッジェーナ",
-                "ja": "言葉によって"
-              },
-              {
-                "pali": "pātu",
-                "kana": "パートゥ",
-                "ja": "守る"
-              },
-              {
-                "pali": "tvaṃ",
-                "kana": "トゥワン",
-                "ja": "あなたを"
-              },
-              {
-                "pali": "ratanattayaṃ",
-                "kana": "ラタナッタヤン",
-                "ja": "三宝が"
-              }
-            ]
-          }
-        ],
-        "label": "護経"
       }
     ]
   },
@@ -12629,8 +12415,7 @@ const EMBEDDED_SUTTAS = {
             "s13-l1",
             "s13-l2",
             "s14-l1",
-            "s14-l2",
-            "s14-l3"
+            "s14-l2"
           ],
           "duration": 282.17,
           "cues": [
@@ -13332,33 +13117,18 @@ const EMBEDDED_SUTTAS = {
             {
               "lineId": "s14-l2",
               "start": 262.302,
-              "end": 275.567,
+              "end": 279.204,
               "kind": "body",
               "audible": true,
               "text": "Paraṃ vā avajāneyya, kimaññatra adassanāti.",
               "kana": "パラン ワー アワジャーネッヤ キマンニャトゥラ アダッサナーティ",
-              "speechEnd": 275.567,
-              "wordStarts": [
-                262.302,
-                264.094,
-                265.137,
-                268.788,
-                271.917
-              ]
-            },
-            {
-              "lineId": "s14-l3",
-              "start": 275.567,
-              "end": 279.204,
-              "kind": "body",
-              "audible": true,
-              "text": "Vijaya suttaṃ niṭṭhitaṃ",
-              "kana": "ヴィジャヤ スッタン ニッティタン",
               "speechEnd": 279.204,
               "wordStarts": [
-                275.567,
-                276.476,
-                277.689
+                262.302,
+                264.531,
+                265.865,
+                270.534,
+                274.535
               ]
             }
           ],
@@ -14484,29 +14254,6 @@ const EMBEDDED_SUTTAS = {
                 "ja": "見る力の無さによって"
               }
             ]
-          },
-          {
-            "id": "s14-l3",
-            "pali": "Vijaya suttaṃ niṭṭhitaṃ",
-            "kana": "ヴィジャヤ スッタン ニッティタン",
-            "ja": "完了",
-            "wordGlosses": [
-              {
-                "pali": "Vijaya",
-                "kana": "ヴィジャヤ",
-                "ja": "勝利"
-              },
-              {
-                "pali": "suttaṃ",
-                "kana": "スッタン",
-                "ja": "の経"
-              },
-              {
-                "pali": "niṭṭhitaṃ",
-                "kana": "ニッティタン",
-                "ja": ""
-              }
-            ]
           }
         ],
         "label": "第206節"
@@ -15350,14 +15097,14 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true,
               "text": "Anutthunanto kālakataṃ sokassa vasam anvagū.",
-              "kana": "アヌットゥナントー カーラカタン ソーカッサ ワサン アンワグー",
+              "kana": "アヌットゥナントー カーラカタン ソーカッサ ワサ マンワグー",
               "speechEnd": 264.576,
               "wordStarts": [
                 253.74,
-                256.983,
-                259.261,
-                261.159,
-                262.298
+                257.1,
+                259.465,
+                261.436,
+                262.225
               ]
             },
             {
@@ -15588,15 +15335,15 @@ const EMBEDDED_SUTTAS = {
               "kind": "body",
               "audible": true,
               "text": "Attano sukham esāno abbahe sallam attano.",
-              "kana": "アッタノー スカン エーサーノー アッバヘー サッラ マッタノー",
+              "kana": "アッタノー スカ メーサーノー アッバヘー サッラ マッタノー",
               "speechEnd": 408.837,
               "wordStarts": [
                 397.545,
-                399.636,
-                400.891,
-                403.4,
-                405.491,
-                406.746
+                399.716,
+                400.585,
+                403.191,
+                405.362,
+                406.665
               ]
             },
             {
@@ -16762,7 +16509,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s13-l2",
             "pali": "Anutthunanto kālakataṃ sokassa vasam anvagū.",
-            "kana": "アヌットゥナントー カーラカタン ソーカッサ ワサン アンワグー",
+            "kana": "アヌットゥナントー カーラカタン ソーカッサ ワサ マンワグー",
             "ja": "亡き人を嘆く人は、悲しみに呑み込まれる。",
             "wordGlosses": [
               {
@@ -16782,12 +16529,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "vasam",
-                "kana": "ワサン",
+                "kana": "ワサ",
                 "ja": "支配に"
               },
               {
                 "pali": "anvagū.",
-                "kana": "アンワグー",
+                "kana": "マンワグー",
                 "ja": "従った"
               }
             ]
@@ -17312,7 +17059,7 @@ const EMBEDDED_SUTTAS = {
           {
             "id": "s19-l2",
             "pali": "Attano sukham esāno abbahe sallam attano.",
-            "kana": "アッタノー スカン エーサーノー アッバヘー サッラ マッタノー",
+            "kana": "アッタノー スカ メーサーノー アッバヘー サッラ マッタノー",
             "ja": "自分の幸福を求める者は、刺さった〔悲しみの〕箭を引き抜くのである。",
             "wordGlosses": [
               {
@@ -17322,12 +17069,12 @@ const EMBEDDED_SUTTAS = {
               },
               {
                 "pali": "sukham",
-                "kana": "スカン",
+                "kana": "スカ",
                 "ja": "幸福を"
               },
               {
                 "pali": "esāno",
-                "kana": "エーサーノー",
+                "kana": "メーサーノー",
                 "ja": "求める者は"
               },
               {
@@ -26496,8 +26243,7 @@ const EMBEDDED_SUTTAS = {
             "s1-l13",
             "s1-l14",
             "s1-l15",
-            "s1-l16",
-            "s1-l17"
+            "s1-l16"
           ],
           "duration": 150.04,
           "cues": [
@@ -26619,11 +26365,6 @@ const EMBEDDED_SUTTAS = {
               "end": 146.052,
               "kind": "body",
               "audible": true
-            },
-            {
-              "lineId": "s1-l17",
-              "kind": "body",
-              "audible": false
             }
           ],
           "guideCues": [
@@ -26919,11 +26660,6 @@ const EMBEDDED_SUTTAS = {
                 142.622,
                 144.582
               ]
-            },
-            {
-              "lineId": "s1-l17",
-              "kind": "body",
-              "audible": false
             }
           ],
           "guideAnalysis": {
@@ -27502,44 +27238,6 @@ const EMBEDDED_SUTTAS = {
                 "pali": "naṃ",
                 "kana": "ナン",
                 "ja": "あなた方を"
-              },
-              {
-                "pali": "anurakkhantu",
-                "kana": "アヌラッカントゥ",
-                "ja": "護りますように"
-              },
-              {
-                "pali": "ārogyena",
-                "kana": "アーローギェーナ",
-                "ja": "健康によって"
-              },
-              {
-                "pali": "sukhena",
-                "kana": "スケーナ",
-                "ja": "幸福によって"
-              },
-              {
-                "pali": "cāti.",
-                "kana": "チャーティ",
-                "ja": "また、と"
-              }
-            ]
-          },
-          {
-            "id": "s1-l17",
-            "pali": "Te'pi maṃ anurakkhantu ārogyena sukhena cāti.",
-            "kana": "テーピ マン アヌラッカントゥ アーローギェーナ スケーナ チャーティ",
-            "ja": "＊自分のために唱える時：健康で幸福に過ごせるよう、私が護られますように。",
-            "wordGlosses": [
-              {
-                "pali": "Te'pi",
-                "kana": "テーピ",
-                "ja": "彼らもまた"
-              },
-              {
-                "pali": "maṃ",
-                "kana": "マン",
-                "ja": "私を"
               },
               {
                 "pali": "anurakkhantu",
@@ -31352,7 +31050,7 @@ function renderReading(app, sutta) {
     tsumiageActive: false,
     tsumiageStep: 1,
     paceRunning: false,
-    paceTempo: "normal",
+    guidePlaybackRate: 1,
     paceTimer: null,
     sequenceMode: true,
     recordingSectionIds: new Set(),
@@ -31388,7 +31086,7 @@ function renderReading(app, sutta) {
           <label><input type="checkbox" name="showJa"><span>和訳</span></label>
           <button class="recite-note recite-note-toggle" type="button" data-recitation-info-toggle aria-expanded="false">使い方を表示</button>
         </div>
-        <p class="recite-note recite-note-detail" data-recitation-info hidden>経典名から「次へ」で進むか、音読・暗記する範囲を自由に選べます。「音声ファイル」は再生位置と速度を変更でき、音声に合わせて節・行・単語を少し先行して案内します。「録音開始」で自動判定します（音声とは別の文字ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
+        <p class="recite-note recite-note-detail" data-recitation-info hidden>経典名から「次へ」で進むか、音読・暗記する範囲を自由に選べます。「音声ファイル」は再生位置と速度を変更でき、音声に合わせて節・行・単語を少し先行して案内します。再生速度は文字ガイドにも共通で反映されます。「録音開始」で自動判定します（音声とは別の文字ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
         <p class="recite-note" data-recitation-status hidden></p>
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
@@ -31458,7 +31156,6 @@ function renderReading(app, sutta) {
         <button class="button primary audio-guide-button" type="button" data-guide-audio-toggle>🔊 音声ファイル</button>
         <button class="button primary record-button" type="button" data-recitation-record>録音開始</button>
         <button class="button primary guide-button" type="button" data-pace-toggle>▶ 文字ガイド</button>
-        <button class="button ghost tempo-button" type="button" data-pace-cycle aria-label="読誦ガイドの速さを切替">⏱ ふつう</button>
         <button class="button ghost next-button" type="button" data-recitation-next>次へ</button>
       </div>
     </div>
@@ -31630,15 +31327,6 @@ function setupReciteControls(root, sutta, reciteState) {
       stopPacer(root, reciteState);
     } else {
       pauseGuideAudio(root, reciteState, "manual-guide");
-      startPacer(root, sutta, reciteState);
-    }
-  });
-
-  root.querySelector("[data-pace-cycle]").addEventListener("click", () => {
-    const order = ["slow", "normal", "fast"];
-    reciteState.paceTempo = order[(order.indexOf(reciteState.paceTempo) + 1) % order.length];
-    updatePaceUi(root, reciteState);
-    if (reciteState.paceRunning) {
       startPacer(root, sutta, reciteState);
     }
   });
@@ -31870,7 +31558,7 @@ function setupGuideAudio(root, sutta, reciteState) {
   activeGuideAudio = audio;
   let pendingSeek = null;
   let pendingAutoplay = false;
-  let playbackRate = 1;
+  let playbackRate = reciteState.guidePlaybackRate || 1;
   let guideEnabled = false;
   let finished = false;
   trackSelect.innerHTML = tracks.map((track, index) =>
@@ -31961,8 +31649,12 @@ function setupGuideAudio(root, sutta, reciteState) {
     const requestedRate = Number(speed.value);
     if (![0.5, 0.75, 1, 1.25, 1.5].includes(requestedRate)) return;
     playbackRate = requestedRate;
+    reciteState.guidePlaybackRate = playbackRate;
     audio.defaultPlaybackRate = playbackRate;
     audio.playbackRate = playbackRate;
+    if (reciteState.paceRunning) {
+      startPacer(root, sutta, reciteState);
+    }
   });
   audio.addEventListener("ratechange", () => {
     if (guideEnabled) syncGuideToAudio(root, sutta, reciteState);
@@ -33393,12 +33085,22 @@ function focusRecitationStage(root) {
   root.querySelector("[data-recitation-stage]")?.scrollIntoView({ block: "start", behavior: "auto" });
 }
 
-// ---- 読誦ペースメーカー (2026-07-19) ----
+// ---- 読誦ペースメーカー (2026-07-19 / 2026-09-06速度統合) ----
 // 音声ファイル不要のカラオケ式ハイライト。カナのモーラ数から各単語の所要時間を
-// 推定し、設定テンポで単語を順に照らす。マスキング中でもリズムに乗って唱えられる。
+// 推定し、音声再生速度と共通の倍率で単語を順に照らす。マスキング中でもリズムに乗って唱えられる。
 
-// 2026-07-19 ユーザー実機調整: 一段遅い方へ再calibration (旧260/200/150)
-const PACE_TEMPO_MS = { slow: 330, normal: 260, fast: 200 };
+const PACE_MS_PER_MORA = 260;
+const PACE_WORD_GAP_MS = 60;
+const PACE_LINE_GAP_MS = 260;
+const GUIDE_PLAYBACK_RATES = [0.5, 0.75, 1, 1.25, 1.5];
+
+function getPaceStepDuration(step, playbackRate) {
+  const rate = GUIDE_PLAYBACK_RATES.includes(Number(playbackRate)) ? Number(playbackRate) : 1;
+  const baseDuration = step.morae * PACE_MS_PER_MORA
+    + PACE_WORD_GAP_MS
+    + (step.lineEnd ? PACE_LINE_GAP_MS : 0);
+  return baseDuration / rate;
+}
 
 function countMorae(kana) {
   let count = 0;
@@ -33446,14 +33148,13 @@ function startPacer(root, sutta, reciteState) {
     return;
   }
 
-  const msPerMora = PACE_TEMPO_MS[reciteState.paceTempo] || PACE_TEMPO_MS.normal;
   // 絶対時刻スケジュール (2026-07-19): 各語の開始時刻を先に確定する。
   // 逐次setTimeoutの積み上げだと、端末負荷(録音との併用等)で遅延した後に
   // 「早送り再生」のような不安定な動きになるため。遅延時は現在時刻の語へ跳ぶ。
   let cursor = 0;
   for (const step of steps) {
     step.at = cursor;
-    cursor += step.morae * msPerMora + 60 + (step.lineEnd ? 260 : 0);
+    cursor += getPaceStepDuration(step, reciteState.guidePlaybackRate);
   }
   const totalDuration = cursor;
 
@@ -33523,11 +33224,6 @@ function updatePaceUi(root, reciteState) {
   if (toggle) {
     toggle.textContent = reciteState.paceRunning ? "⏸ 文字ガイド" : "▶ 文字ガイド";
     toggle.dataset.pacing = String(reciteState.paceRunning);
-  }
-  const cycle = root.querySelector("[data-pace-cycle]");
-  if (cycle) {
-    const labels = { slow: "ゆっくり", normal: "ふつう", fast: "はやい" };
-    cycle.textContent = `⏱ ${labels[reciteState.paceTempo] || "ふつう"}`;
   }
 }
 

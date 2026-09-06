@@ -3264,11 +3264,6 @@ body {
   flex: 1.25;
 }
 
-.recite-dock .tempo-button {
-  flex: 1;
-  font-size: 0.82rem;
-}
-
 .recite-dock .next-button {
   flex: 0.85;
   font-size: 0.85rem;
@@ -3290,9 +3285,8 @@ body {
   }
 
   .recite-dock .guide-button,
-  .recite-dock .tempo-button,
   .recite-dock .next-button {
-    flex: 1 1 calc(33.333% - 0.35rem);
+    flex: 1 1 calc(50% - 0.25rem);
   }
 
   .reading-view {
