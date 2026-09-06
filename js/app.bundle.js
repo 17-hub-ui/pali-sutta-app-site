@@ -1328,8 +1328,6 @@ const EMBEDDED_SUTTAS = {
           "lineIds": [
             "title-l1",
             "s1-h1",
-            "s1-h2",
-            "s1-h3",
             "s1-l1",
             "s1-l2",
             "s1-l3",
@@ -1463,7 +1461,7 @@ const EMBEDDED_SUTTAS = {
               ]
             },
             {
-              "lineId": "s1-h2",
+              "lineId": "s1-h1",
               "start": 14.43,
               "end": 25.432,
               "kind": "body",
@@ -1481,7 +1479,7 @@ const EMBEDDED_SUTTAS = {
               ]
             },
             {
-              "lineId": "s1-h3",
+              "lineId": "s1-h1",
               "start": 25.432,
               "end": 38,
               "kind": "body",
@@ -1694,82 +1692,6 @@ const EMBEDDED_SUTTAS = {
         "lines": [
           {
             "id": "s1-h1",
-            "pali": "Namo Tassa Bhagavato Arahato Sammā Sambuddhassa.",
-            "kana": "ナモー タッサ バガワトー アラハトー サンマー サンブッダッサ",
-            "ja": "阿羅漢であり、正自覚者であり、福運に満ちた世尊に、私は敬礼いたします。",
-            "wordGlosses": [
-              {
-                "pali": "Namo",
-                "kana": "ナモー",
-                "ja": "敬礼"
-              },
-              {
-                "pali": "Tassa",
-                "kana": "タッサ",
-                "ja": "その方に"
-              },
-              {
-                "pali": "Bhagavato",
-                "kana": "バガワトー",
-                "ja": "世尊に"
-              },
-              {
-                "pali": "Arahato",
-                "kana": "アラハトー",
-                "ja": "阿羅漢に"
-              },
-              {
-                "pali": "Sammā",
-                "kana": "サンマー",
-                "ja": "正しく"
-              },
-              {
-                "pali": "Sambuddhassa.",
-                "kana": "サンブッダッサ",
-                "ja": "正自覚者に"
-              }
-            ]
-          },
-          {
-            "id": "s1-h2",
-            "pali": "Namo Tassa Bhagavato Arahato Sammā Sambuddhassa.",
-            "kana": "ナモー タッサ バガワトー アラハトー サンマー サンブッダッサ",
-            "ja": "阿羅漢であり、正自覚者であり、福運に満ちた世尊に、私は敬礼いたします。",
-            "wordGlosses": [
-              {
-                "pali": "Namo",
-                "kana": "ナモー",
-                "ja": "敬礼"
-              },
-              {
-                "pali": "Tassa",
-                "kana": "タッサ",
-                "ja": "その方に"
-              },
-              {
-                "pali": "Bhagavato",
-                "kana": "バガワトー",
-                "ja": "世尊に"
-              },
-              {
-                "pali": "Arahato",
-                "kana": "アラハトー",
-                "ja": "阿羅漢に"
-              },
-              {
-                "pali": "Sammā",
-                "kana": "サンマー",
-                "ja": "正しく"
-              },
-              {
-                "pali": "Sambuddhassa.",
-                "kana": "サンブッダッサ",
-                "ja": "正自覚者に"
-              }
-            ]
-          },
-          {
-            "id": "s1-h3",
             "pali": "Namo Tassa Bhagavato Arahato Sammā Sambuddhassa.",
             "kana": "ナモー タッサ バガワトー アラハトー サンマー サンブッダッサ",
             "ja": "阿羅漢であり、正自覚者であり、福運に満ちた世尊に、私は敬礼いたします。",
