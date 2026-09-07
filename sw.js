@@ -1,9 +1,9 @@
-const CACHE_NAME = "pali-sutta-app-v163";
+const CACHE_NAME = "pali-sutta-app-v164";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./css/style.css?v=118",
-  "./js/app.bundle.js?v=152",
+  "./css/style.css?v=119",
+  "./js/app.bundle.js?v=153",
   "./manifest.webmanifest?v=80",
   "./icons/favicon-16.png?v=80",
   "./icons/favicon-32.png?v=80",
@@ -11,6 +11,7 @@ const APP_SHELL = [
   "./icons/icon-512.png?v=80",
   "./icons/apple-touch-icon.png?v=80",
   "./icons/hero-bodhi.png?v=83",
+  "./audio/satori-light.wav",
   "./data/index.json",
   "./data/suttas/gokai.json",
   "./data/suttas/metta-sutta.json"
@@ -36,7 +37,8 @@ self.addEventListener("fetch", (event) => {
   // MP3はRangeリクエストを含むストリーミングを優先し、大容量音声を
   // Service Workerのアプリキャッシュへ保存しない。
   const requestUrl = new URL(event.request.url);
-  if (requestUrl.origin === self.location.origin && requestUrl.pathname.includes("/audio/")) return;
+  const isSatoriLightSound = requestUrl.pathname.endsWith("/audio/satori-light.wav");
+  if (requestUrl.origin === self.location.origin && requestUrl.pathname.includes("/audio/") && !isSatoriLightSound) return;
 
   const isCacheable = (request, response) => {
     if (!response || !response.ok) return false;

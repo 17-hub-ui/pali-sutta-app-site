@@ -30748,6 +30748,194 @@ function classifyMicrophoneAccessError(error) {
   return "unknown";
 }
 
+const SATORI_LIGHT_DURATION_MS = 4000;
+const SATORI_LIGHT_SOUND_URL = "./audio/satori-light.wav";
+const MEMORIZED_BOX = 3;
+
+let activeEffect = null;
+let queuedEffects = 0;
+
+function didReachMemorizedStatus(previousProgress, nextProgress) {
+  const previousBox = Number(previousProgress?.box || 0);
+  const nextBox = Number(nextProgress?.box || 0);
+  return previousBox < MEMORIZED_BOX && nextBox >= MEMORIZED_BOX;
+}
+
+function playSatoriLight() {
+  if (activeEffect) {
+    queuedEffects += 1;
+    return false;
+  }
+
+  const layer = document.createElement("div");
+  layer.className = "satori-light-layer";
+  layer.setAttribute("aria-hidden", "true");
+  layer.innerHTML = '<div class="satori-light-glow"></div><canvas class="satori-light-canvas"></canvas>';
+  document.body.append(layer);
+
+  const canvas = layer.querySelector("canvas");
+  const context = canvas.getContext("2d");
+  const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+  const particles = createParticles(reducedMotion ? 7 : 46, reducedMotion);
+  layer.dataset.reducedMotion = String(reducedMotion);
+  layer.dataset.particleCount = String(particles.length);
+  const soundCleanup = playSatoriSound();
+  let animationFrame = 0;
+  let fallbackTimer = 0;
+  let startedAt = 0;
+
+  const resize = () => {
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    const width = Math.max(1, window.innerWidth);
+    const height = Math.max(1, window.innerHeight);
+    canvas.width = Math.round(width * pixelRatio);
+    canvas.height = Math.round(height * pixelRatio);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    context?.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  };
+
+  const cleanup = () => {
+    if (!activeEffect || activeEffect.layer !== layer) return;
+    cancelAnimationFrame(animationFrame);
+    clearTimeout(fallbackTimer);
+    window.removeEventListener("resize", resize);
+    soundCleanup();
+    layer.remove();
+    activeEffect = null;
+
+    if (queuedEffects > 0) {
+      queuedEffects -= 1;
+      requestAnimationFrame(() => playSatoriLight());
+    }
+  };
+
+  activeEffect = { layer, cleanup };
+  resize();
+  window.addEventListener("resize", resize, { passive: true });
+
+  if (!context) {
+    fallbackTimer = window.setTimeout(cleanup, SATORI_LIGHT_DURATION_MS);
+    return true;
+  }
+
+  const render = (timestamp) => {
+    if (!startedAt) startedAt = timestamp;
+    const elapsed = timestamp - startedAt;
+    context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    drawParticles(context, particles, elapsed, window.innerWidth, window.innerHeight, reducedMotion);
+
+    if (elapsed >= SATORI_LIGHT_DURATION_MS) {
+      cleanup();
+      return;
+    }
+    animationFrame = requestAnimationFrame(render);
+  };
+
+  animationFrame = requestAnimationFrame(render);
+  return true;
+}
+
+function createParticles(count, reducedMotion) {
+  return Array.from({ length: count }, (_, index) => {
+    const sparkle = !reducedMotion && index < Math.max(4, Math.round(count * 0.11));
+    return {
+      x: 0.03 + Math.random() * 0.94,
+      startY: reducedMotion ? 0.12 + Math.random() * 0.7 : -0.08 - Math.random() * 0.18,
+      travel: reducedMotion ? 0.015 + Math.random() * 0.035 : 0.72 + Math.random() * 0.42,
+      delay: reducedMotion ? 180 + Math.random() * 520 : 160 + Math.random() * 680,
+      duration: reducedMotion ? 2900 + Math.random() * 500 : 2700 + Math.random() * 950,
+      size: reducedMotion ? 1.8 + Math.random() * 2.2 : 1.5 + Math.random() * 3.5,
+      opacity: reducedMotion ? 0.22 + Math.random() * 0.3 : 0.25 + Math.random() * 0.55,
+      sway: reducedMotion ? Math.random() * 2.5 : 10 + Math.random() * 20,
+      phase: Math.random() * Math.PI * 2,
+      frequency: 0.8 + Math.random() * 0.8,
+      sparkle,
+      sparkleAt: 0.34 + Math.random() * 0.36,
+      point: !sparkle && index % 4 === 0
+    };
+  }).sort(() => Math.random() - 0.5);
+}
+
+function drawParticles(context, particles, elapsed, width, height, reducedMotion) {
+  const endingFade = 1 - smoothStep(2500, SATORI_LIGHT_DURATION_MS, elapsed);
+
+  particles.forEach((particle) => {
+    const progress = (elapsed - particle.delay) / particle.duration;
+    if (progress <= 0 || progress >= 1) return;
+
+    const entrance = smoothStep(0, 0.14, progress);
+    const exit = 1 - smoothStep(0.72, 1, progress);
+    const alpha = particle.opacity * entrance * exit * endingFade;
+    if (alpha <= 0.004) return;
+
+    const x = particle.x * width + Math.sin(progress * Math.PI * 2 * particle.frequency + particle.phase) * particle.sway;
+    const y = (particle.startY + particle.travel * progress) * height;
+    drawSoftPoint(context, x, y, particle.size, alpha, particle.point);
+
+    if (particle.sparkle && !reducedMotion) {
+      const distance = Math.abs(progress - particle.sparkleAt);
+      const sparkleAlpha = alpha * Math.max(0, 1 - distance / 0.045);
+      if (sparkleAlpha > 0.01) drawSparkle(context, x, y, particle.size, sparkleAlpha);
+    }
+  });
+}
+
+function drawSoftPoint(context, x, y, size, alpha, point) {
+  const radius = point ? Math.max(0.8, size * 0.46) : size;
+  const glow = context.createRadialGradient(x, y, 0, x, y, radius * 2.8);
+  glow.addColorStop(0, `rgba(255, 255, 255, ${Math.min(0.92, alpha * 1.2)})`);
+  glow.addColorStop(0.34, `rgba(238, 243, 248, ${alpha})`);
+  glow.addColorStop(1, "rgba(220, 230, 240, 0)");
+  context.fillStyle = glow;
+  context.beginPath();
+  context.arc(x, y, radius * 2.8, 0, Math.PI * 2);
+  context.fill();
+}
+
+function drawSparkle(context, x, y, size, alpha) {
+  const length = 3.8 + size * 1.15;
+  const gradient = context.createLinearGradient(x - length, y, x + length, y);
+  gradient.addColorStop(0, "rgba(255, 255, 255, 0)");
+  gradient.addColorStop(0.5, `rgba(255, 255, 255, ${Math.min(0.76, alpha)})`);
+  gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+  context.strokeStyle = gradient;
+  context.lineWidth = 0.7;
+  context.beginPath();
+  context.moveTo(x - length, y);
+  context.lineTo(x + length, y);
+  context.moveTo(x, y - length);
+  context.lineTo(x, y + length);
+  context.stroke();
+}
+
+function playSatoriSound() {
+  let audio;
+  try {
+    audio = new Audio(new URL(SATORI_LIGHT_SOUND_URL, document.baseURI).href);
+    audio.preload = "auto";
+    audio.volume = 0.24;
+    const promise = audio.play();
+    promise?.catch(() => disposeAudio(audio));
+  } catch {
+    return () => {};
+  }
+
+  return () => disposeAudio(audio);
+}
+
+function disposeAudio(audio) {
+  if (!audio) return;
+  audio.pause();
+  audio.removeAttribute("src");
+  audio.load();
+}
+
+function smoothStep(start, end, value) {
+  const t = Math.min(1, Math.max(0, (value - start) / (end - start)));
+  return t * t * (3 - 2 * t);
+}
+
 function renderHome(app, catalog) {
   const titleItems = catalog.suttas.length;
   const bodySections = catalog.suttas.reduce((sum, sutta) => sum + (sutta.bodySectionCount ?? Math.max(0, (sutta.sectionCount || 0) - 1)), 0);
@@ -33044,8 +33232,11 @@ function saveRecitationReview(root, sutta, reciteState, result) {
     return;
   }
 
+  const previousSections = loadState().progress?.[sutta.id]?.sections || {};
+  let reachedMemorizedStatus = false;
   targetSections.forEach((section) => {
-    updateSectionReview(sutta.id, section.id, result);
+    const nextProgress = updateSectionReview(sutta.id, section.id, result);
+    reachedMemorizedStatus ||= didReachMemorizedStatus(previousSections[section.id], nextProgress);
   });
   reciteState.savedReviewResult = result;
   const panel = root.querySelector("[data-recitation-review]");
@@ -33056,6 +33247,9 @@ function saveRecitationReview(root, sutta, reciteState, result) {
   markRecitationReviewButtons(root, result);
   setRecitationReviewButtonsDisabled(root, true);
   showRecitationStatus(root, `「${getResultLabel(result)}」で記録しました。`, "success");
+  if (reachedMemorizedStatus) {
+    playSatoriLight();
+  }
 }
 
 function markRecitationReviewSuggestion(root, result) {
@@ -33958,7 +34152,11 @@ async function renderReview(app, catalog) {
     if (resultButton) {
       const ref = queueState.queue[0];
       const result = resultButton.dataset.rqResult;
-      updateSectionReview(ref.suttaId, ref.sectionId, result);
+      const previousProgress = loadState().progress?.[ref.suttaId]?.sections?.[ref.sectionId];
+      const nextProgress = updateSectionReview(ref.suttaId, ref.sectionId, result);
+      if (didReachMemorizedStatus(previousProgress, nextProgress)) {
+        playSatoriLight();
+      }
       queueState.results[result] += 1;
       queueState.done += 1;
       queueState.queue.shift();

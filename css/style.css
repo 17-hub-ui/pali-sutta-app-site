@@ -4002,3 +4002,58 @@ kbd {
 .memory-word-pair > .pali {
   cursor: help;
 }
+
+/* 暗記済みへの到達時に、操作を遮らず静かな余韻だけを重ねる。 */
+.satori-light-layer {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+  isolation: isolate;
+}
+
+.satori-light-glow,
+.satori-light-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.satori-light-glow {
+  background:
+    radial-gradient(ellipse at 50% 12%, rgba(255, 255, 255, 0.16), rgba(240, 246, 252, 0.06) 38%, transparent 73%),
+    linear-gradient(rgba(255, 255, 255, 0.07), rgba(238, 244, 250, 0.025));
+  opacity: 0;
+  animation: satoriLightGlow 4s ease-in-out forwards;
+}
+
+.satori-light-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes satoriLightGlow {
+  0% {
+    opacity: 0;
+  }
+
+  14% {
+    opacity: 1;
+  }
+
+  54% {
+    opacity: 0.88;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .satori-light-glow {
+    animation-timing-function: ease;
+  }
+}
