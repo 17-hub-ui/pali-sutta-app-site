@@ -30779,6 +30779,8 @@ function playSatoriLight() {
   const particles = createParticles(reducedMotion ? 7 : 46, reducedMotion);
   layer.dataset.reducedMotion = String(reducedMotion);
   layer.dataset.particleCount = String(particles.length);
+  layer.dataset.flowDirection = "upper-right-to-lower-left";
+  layer.dataset.soundSparkleCount = String(particles.filter((particle) => particle.soundSynchronized).length);
   const soundCleanup = playSatoriSound();
   let animationFrame = 0;
   let fallbackTimer = 0;
@@ -30837,13 +30839,21 @@ function playSatoriLight() {
 }
 
 function createParticles(count, reducedMotion) {
+  const colors = [
+    [255, 255, 255],
+    [239, 246, 252],
+    [222, 240, 252],
+    [247, 250, 255]
+  ];
   return Array.from({ length: count }, (_, index) => {
-    const sparkle = !reducedMotion && index < Math.max(4, Math.round(count * 0.11));
+    const soundSynchronized = index < (reducedMotion ? 1 : 3);
+    const sparkle = index < (reducedMotion ? 1 : Math.max(8, Math.round(count * 0.22)));
     return {
-      x: 0.03 + Math.random() * 0.94,
-      startY: reducedMotion ? 0.12 + Math.random() * 0.7 : -0.08 - Math.random() * 0.18,
-      travel: reducedMotion ? 0.015 + Math.random() * 0.035 : 0.72 + Math.random() * 0.42,
-      delay: reducedMotion ? 180 + Math.random() * 520 : 160 + Math.random() * 680,
+      startX: reducedMotion ? 0.7 + Math.random() * 0.25 : 0.7 + Math.random() * 0.42,
+      travelX: reducedMotion ? -(0.025 + Math.random() * 0.035) : -(0.58 + Math.random() * 0.48),
+      startY: reducedMotion ? 0.08 + Math.random() * 0.55 : -0.15 + Math.random() * 0.38,
+      travelY: reducedMotion ? 0.015 + Math.random() * 0.035 : 0.62 + Math.random() * 0.38,
+      delay: soundSynchronized ? Math.random() * 55 : reducedMotion ? 180 + Math.random() * 520 : 130 + Math.random() * 650,
       duration: reducedMotion ? 2900 + Math.random() * 500 : 2700 + Math.random() * 950,
       size: reducedMotion ? 1.8 + Math.random() * 2.2 : 1.5 + Math.random() * 3.5,
       opacity: reducedMotion ? 0.22 + Math.random() * 0.3 : 0.25 + Math.random() * 0.55,
@@ -30851,8 +30861,12 @@ function createParticles(count, reducedMotion) {
       phase: Math.random() * Math.PI * 2,
       frequency: 0.8 + Math.random() * 0.8,
       sparkle,
-      sparkleAt: 0.34 + Math.random() * 0.36,
-      point: !sparkle && index % 4 === 0
+      sparkleAt: soundSynchronized ? 0.035 + Math.random() * 0.025 : 0.2 + Math.random() * 0.58,
+      soundSynchronized,
+      trail: !reducedMotion && index % 3 === 0,
+      shape: index % 4,
+      color: colors[index % colors.length],
+      shimmerPhase: Math.random() * Math.PI * 2
     };
   }).sort(() => Math.random() - 0.5);
 }
@@ -30866,47 +30880,90 @@ function drawParticles(context, particles, elapsed, width, height, reducedMotion
 
     const entrance = smoothStep(0, 0.14, progress);
     const exit = 1 - smoothStep(0.72, 1, progress);
-    const alpha = particle.opacity * entrance * exit * endingFade;
+    const shimmer = 0.84 + 0.16 * Math.sin(elapsed * 0.004 + particle.shimmerPhase);
+    const alpha = particle.opacity * entrance * exit * endingFade * shimmer;
     if (alpha <= 0.004) return;
 
-    const x = particle.x * width + Math.sin(progress * Math.PI * 2 * particle.frequency + particle.phase) * particle.sway;
-    const y = (particle.startY + particle.travel * progress) * height;
-    drawSoftPoint(context, x, y, particle.size, alpha, particle.point);
+    const wind =
+      Math.sin(progress * Math.PI * 2 * particle.frequency + particle.phase) * particle.sway
+      + Math.sin(progress * Math.PI * 4.2 + particle.phase * 0.7) * particle.sway * 0.28;
+    const lift = Math.sin(progress * Math.PI * 2.4 + particle.phase) * particle.sway * 0.16;
+    const x = (particle.startX + particle.travelX * progress) * width + wind;
+    const y = (particle.startY + particle.travelY * progress) * height + lift;
+    if (particle.trail) drawLightTrail(context, x, y, particle.size, alpha, particle.color);
+    drawLightParticle(context, x, y, particle.size, alpha, particle.shape, particle.color);
 
-    if (particle.sparkle && !reducedMotion) {
+    if (particle.sparkle) {
       const distance = Math.abs(progress - particle.sparkleAt);
-      const sparkleAlpha = alpha * Math.max(0, 1 - distance / 0.045);
-      if (sparkleAlpha > 0.01) drawSparkle(context, x, y, particle.size, sparkleAlpha);
+      const sparkleLimit = reducedMotion ? 0.48 : 0.92;
+      const sparkleAlpha = Math.min(sparkleLimit, alpha * 1.5) * Math.max(0, 1 - distance / 0.045);
+      if (sparkleAlpha > 0.01) drawSparkle(context, x, y, particle.size, sparkleAlpha, particle.color);
     }
   });
 }
 
-function drawSoftPoint(context, x, y, size, alpha, point) {
-  const radius = point ? Math.max(0.8, size * 0.46) : size;
+function drawLightParticle(context, x, y, size, alpha, shape, color) {
+  const radius = shape === 0 ? Math.max(0.8, size * 0.46) : size;
   const glow = context.createRadialGradient(x, y, 0, x, y, radius * 2.8);
-  glow.addColorStop(0, `rgba(255, 255, 255, ${Math.min(0.92, alpha * 1.2)})`);
-  glow.addColorStop(0.34, `rgba(238, 243, 248, ${alpha})`);
-  glow.addColorStop(1, "rgba(220, 230, 240, 0)");
+  glow.addColorStop(0, rgba(color, Math.min(0.96, alpha * 1.28)));
+  glow.addColorStop(0.28, rgba(color, alpha));
+  glow.addColorStop(1, rgba(color, 0));
   context.fillStyle = glow;
   context.beginPath();
   context.arc(x, y, radius * 2.8, 0, Math.PI * 2);
   context.fill();
+
+  context.save();
+  context.translate(x, y);
+  context.rotate(-Math.PI / 4);
+  context.fillStyle = rgba(color, Math.min(0.9, alpha * 1.15));
+  if (shape === 1 || shape === 3) {
+    context.fillRect(-radius * 0.34, -radius * 0.85, radius * 0.68, radius * 1.7);
+  } else if (shape === 2) {
+    context.beginPath();
+    context.moveTo(0, -radius);
+    context.lineTo(radius * 0.45, 0);
+    context.lineTo(0, radius);
+    context.lineTo(-radius * 0.45, 0);
+    context.closePath();
+    context.fill();
+  }
+  context.restore();
 }
 
-function drawSparkle(context, x, y, size, alpha) {
-  const length = 3.8 + size * 1.15;
-  const gradient = context.createLinearGradient(x - length, y, x + length, y);
-  gradient.addColorStop(0, "rgba(255, 255, 255, 0)");
-  gradient.addColorStop(0.5, `rgba(255, 255, 255, ${Math.min(0.76, alpha)})`);
-  gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+function drawLightTrail(context, x, y, size, alpha, color) {
+  const length = 4 + size * 1.7;
+  const tailX = x + length * 0.78;
+  const tailY = y - length * 0.62;
+  const gradient = context.createLinearGradient(tailX, tailY, x, y);
+  gradient.addColorStop(0, rgba(color, 0));
+  gradient.addColorStop(0.72, rgba(color, alpha * 0.16));
+  gradient.addColorStop(1, rgba(color, alpha * 0.48));
   context.strokeStyle = gradient;
-  context.lineWidth = 0.7;
+  context.lineWidth = Math.max(0.45, size * 0.23);
   context.beginPath();
-  context.moveTo(x - length, y);
-  context.lineTo(x + length, y);
-  context.moveTo(x, y - length);
-  context.lineTo(x, y + length);
+  context.moveTo(tailX, tailY);
+  context.lineTo(x, y);
   context.stroke();
+}
+
+function drawSparkle(context, x, y, size, alpha, color) {
+  const length = 3.8 + size * 1.15;
+  context.save();
+  context.translate(x, y);
+  context.strokeStyle = rgba(color, alpha);
+  context.lineWidth = 0.72;
+  context.beginPath();
+  context.moveTo(-length, 0);
+  context.lineTo(length, 0);
+  context.moveTo(0, -length);
+  context.lineTo(0, length);
+  context.moveTo(-length * 0.42, -length * 0.42);
+  context.lineTo(length * 0.42, length * 0.42);
+  context.moveTo(length * 0.42, -length * 0.42);
+  context.lineTo(-length * 0.42, length * 0.42);
+  context.stroke();
+  context.restore();
 }
 
 function playSatoriSound() {
@@ -30934,6 +30991,10 @@ function disposeAudio(audio) {
 function smoothStep(start, end, value) {
   const t = Math.min(1, Math.max(0, (value - start) / (end - start)));
   return t * t * (3 - 2 * t);
+}
+
+function rgba(color, alpha) {
+  return `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})`;
 }
 
 function renderHome(app, catalog) {
@@ -32107,6 +32168,7 @@ function syncGuideToAudio(root, sutta, reciteState) {
     ? lineElement
     : lineElement?.querySelector(`[data-word-index="${wordIndex}"]`);
   target?.classList.add("pace-current");
+  if (target && stage) stage.dataset.guideActive = "true";
   if (lineElement && cue.lineId !== reciteState.audioSyncLineId) {
     reciteState.audioSyncLineId = cue.lineId;
     const rect = lineElement.getBoundingClientRect();
@@ -33475,13 +33537,15 @@ function startPacer(root, sutta, reciteState) {
       : lineElement?.querySelector(`[data-word-index="${step.wordIndex}"]`);
     if (target) {
       target.classList.add("pace-current");
+      stage.dataset.guideActive = "true";
       if (step.lineId !== currentLineId) {
         currentLineId = step.lineId;
         if (lineElement) {
           // スクロールは行が画面外に出そうなときだけ・即時スクロールで行う
           // (録音併用時のsmoothスクロールはAndroidでカクつきの原因になる)
           const rect = lineElement.getBoundingClientRect();
-          if (rect.top < 96 || rect.bottom > window.innerHeight - 150) {
+          const dockTop = root.querySelector(".recite-dock")?.getBoundingClientRect().top || window.innerHeight - 150;
+          if (rect.top < 96 || rect.bottom > dockTop - 16) {
             lineElement.scrollIntoView({ block: "center", behavior: "auto" });
           }
         }
@@ -33504,6 +33568,7 @@ function stopPacer(root, reciteState) {
 
 function clearPaceHighlight(stage) {
   stage?.querySelectorAll(".pace-current").forEach((element) => element.classList.remove("pace-current"));
+  stage?.removeAttribute("data-guide-active");
 }
 
 function updatePaceUi(root, reciteState) {

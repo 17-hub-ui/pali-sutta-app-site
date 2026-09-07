@@ -3107,6 +3107,67 @@ body {
   outline-offset: 2px;
 }
 
+/* 暗い背景では、静止語を抑え、現在語の青白い光と進行側の縁を明確にする。 */
+:root[data-theme="dark"] .recite-stage[data-guide-active="true"] .memory-word-pair:not(.pace-current),
+:root[data-theme="dark"] .recite-stage[data-guide-active="true"] .memory-line:not(.pace-current) > .pali {
+  opacity: 0.58;
+}
+
+:root[data-theme="dark"] .memory-word-pair.pace-current {
+  color: #f4fdff;
+  background: rgba(137, 218, 239, 0.2);
+  box-shadow:
+    0 0 0 3px rgba(180, 235, 249, 0.42),
+    0 0 16px rgba(117, 211, 237, 0.3),
+    inset -3px 0 rgba(224, 249, 255, 0.88);
+}
+
+:root[data-theme="dark"] .memory-word-pair.pace-current .pali {
+  color: #f7fdff;
+  text-shadow: 0 0 8px rgba(201, 242, 252, 0.42);
+}
+
+:root[data-theme="dark"] .memory-word-pair.pace-current .kana {
+  color: #c8f2ff;
+}
+
+:root[data-theme="dark"] .memory-line.pace-current {
+  background: rgba(124, 210, 234, 0.12);
+  outline-color: rgba(190, 239, 251, 0.82);
+  box-shadow: 0 0 18px rgba(108, 202, 229, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] .recite-stage[data-guide-active="true"] .memory-word-pair:not(.pace-current),
+  :root[data-theme="auto"] .recite-stage[data-guide-active="true"] .memory-line:not(.pace-current) > .pali {
+    opacity: 0.58;
+  }
+
+  :root[data-theme="auto"] .memory-word-pair.pace-current {
+    color: #f4fdff;
+    background: rgba(137, 218, 239, 0.2);
+    box-shadow:
+      0 0 0 3px rgba(180, 235, 249, 0.42),
+      0 0 16px rgba(117, 211, 237, 0.3),
+      inset -3px 0 rgba(224, 249, 255, 0.88);
+  }
+
+  :root[data-theme="auto"] .memory-word-pair.pace-current .pali {
+    color: #f7fdff;
+    text-shadow: 0 0 8px rgba(201, 242, 252, 0.42);
+  }
+
+  :root[data-theme="auto"] .memory-word-pair.pace-current .kana {
+    color: #c8f2ff;
+  }
+
+  :root[data-theme="auto"] .memory-line.pace-current {
+    background: rgba(124, 210, 234, 0.12);
+    outline-color: rgba(190, 239, 251, 0.82);
+    box-shadow: 0 0 18px rgba(108, 202, 229, 0.2);
+  }
+}
+
 /* ---------------- 設定: プライバシー表記 ---------------- */
 
 .settings-privacy {
@@ -4022,8 +4083,8 @@ kbd {
 
 .satori-light-glow {
   background:
-    radial-gradient(ellipse at 50% 12%, rgba(255, 255, 255, 0.16), rgba(240, 246, 252, 0.06) 38%, transparent 73%),
-    linear-gradient(rgba(255, 255, 255, 0.07), rgba(238, 244, 250, 0.025));
+    radial-gradient(ellipse at 96% 2%, rgba(255, 255, 255, 0.18), rgba(224, 242, 253, 0.07) 40%, transparent 73%),
+    linear-gradient(225deg, rgba(246, 251, 255, 0.09), rgba(224, 241, 252, 0.025) 54%, transparent 78%);
   opacity: 0;
   animation: satoriLightGlow 4s ease-in-out forwards;
 }
