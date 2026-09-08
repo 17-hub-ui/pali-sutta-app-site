@@ -4089,6 +4089,13 @@ kbd {
   animation: satoriLightGlow 4.2s ease-in-out forwards;
 }
 
+/* 明るい背景では白に溶け込ませず、淡い青白〜銀白の輪郭だけを浮かせる。 */
+.satori-light-layer[data-light-mode="true"] .satori-light-glow {
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(173, 218, 230, 0.13), rgba(204, 235, 241, 0.045) 32%, transparent 62%),
+    linear-gradient(135deg, rgba(179, 219, 229, 0.06), transparent 43%);
+}
+
 .satori-light-canvas {
   display: block;
   width: 100%;

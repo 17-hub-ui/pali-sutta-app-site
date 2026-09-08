@@ -30776,8 +30776,10 @@ function playSatoriLight() {
   const canvas = layer.querySelector("canvas");
   const context = canvas.getContext("2d");
   const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
-  const lights = createParticles(reducedMotion ? 7 : 28, reducedMotion);
+  const lightMode = isLightMode();
+  const lights = createParticles(reducedMotion ? 7 : 28, reducedMotion, lightMode);
   layer.dataset.reducedMotion = String(reducedMotion);
+  layer.dataset.lightMode = String(lightMode);
   layer.dataset.particleCount = String(lights.length);
   layer.dataset.flowDirection = "upper-right-to-lower-left";
   layer.dataset.soundSparkleCount = String(lights.filter((light) => light.soundSynchronized).length);
@@ -30825,8 +30827,8 @@ function playSatoriLight() {
     if (!startedAt) startedAt = timestamp;
     const elapsed = timestamp - startedAt;
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-    drawLightShafts(context, elapsed, window.innerWidth, window.innerHeight, reducedMotion);
-    drawParticles(context, lights, elapsed, window.innerWidth, window.innerHeight, reducedMotion);
+    drawLightShafts(context, elapsed, window.innerWidth, window.innerHeight, reducedMotion, lightMode);
+    drawParticles(context, lights, elapsed, window.innerWidth, window.innerHeight, reducedMotion, lightMode);
 
     if (elapsed >= SATORI_LIGHT_DURATION_MS) {
       cleanup();
@@ -30839,11 +30841,16 @@ function playSatoriLight() {
   return true;
 }
 
-function createParticles(count, reducedMotion) {
-  const colors = [[245, 253, 255], [215, 242, 255], [231, 239, 247]];
-  const shapes = ["star", "streak", "diamond", "star", "point"];
+function createParticles(count, reducedMotion, lightMode = true) {
+  const colors = lightMode
+    ? [[113, 169, 185], [135, 187, 200], [167, 207, 215], [207, 230, 234]]
+    : [[245, 253, 255], [215, 242, 255], [231, 239, 247]];
+  const smallCount = Math.round(count * 0.75);
+  const mediumCount = Math.round(count * 0.18);
   return Array.from({ length: count }, (_, index) => {
     const soundSynchronized = index < (reducedMotion ? 1 : 5);
+    const tier = index < smallCount ? "small" : index < smallCount + mediumCount ? "medium" : "strong";
+    const sparkle = !reducedMotion && ([0, 5, 10, 15, 20].includes(index) || tier === "strong");
     return {
       startX: reducedMotion ? 0.72 + Math.random() * 0.2 : 0.76 + Math.random() * 0.4,
       travelX: reducedMotion ? -(0.025 + Math.random() * 0.035) : -(0.68 + Math.random() * 0.42),
@@ -30851,19 +30858,22 @@ function createParticles(count, reducedMotion) {
       travelY: reducedMotion ? 0.015 + Math.random() * 0.035 : 0.52 + Math.random() * 0.44,
       delay: soundSynchronized ? Math.random() * 60 : reducedMotion ? 160 + Math.random() * 480 : Math.random() * 1050,
       duration: reducedMotion ? 3000 + Math.random() * 500 : 2850 + Math.random() * 600,
-      size: reducedMotion ? 1.3 + Math.random() * 1.5 : 1.1 + Math.random() * 2.1,
+      size: reducedMotion ? 1.3 + Math.random() * 1.5 : tier === "small" ? 0.9 + Math.random() * 1.05 : tier === "medium" ? 1.8 + Math.random() * 1.1 : 2.8 + Math.random() * 1.1,
       opacity: reducedMotion ? 0.22 + Math.random() * 0.18 : 0.46 + Math.random() * 0.24,
       sway: reducedMotion ? Math.random() * 2.5 : 8 + Math.random() * 12,
       phase: Math.random() * Math.PI * 2,
       frequency: 3.5 + Math.random() * 3.6,
-      shape: shapes[index % shapes.length],
+      tier,
+      shape: tier === "small" ? "point" : tier === "medium" ? (index % 2 ? "diamond" : "streak") : "star",
       color: colors[index % colors.length],
+      sparkle,
+      hasTrail: !reducedMotion && index % 4 === 0,
       soundSynchronized
     };
   }).sort(() => Math.random() - 0.5);
 }
 
-function drawLightShafts(context, elapsed, width, height, reducedMotion) {
+function drawLightShafts(context, elapsed, width, height, reducedMotion, lightMode) {
   if (reducedMotion) return;
   const seconds = elapsed / 1000;
   const fade = Math.min(1, seconds / 0.2) * Math.min(1, (4.2 - seconds) / 0.65);
@@ -30874,7 +30884,7 @@ function drawLightShafts(context, elapsed, width, height, reducedMotion) {
   context.translate(width * 0.98, height * -0.04);
   context.rotate(Math.PI * 0.76);
   for (let index = 0; index < 3; index += 1) {
-    const alpha = 0.14 * fade * (0.8 - index * 0.12);
+    const alpha = (lightMode ? 0.09 : 0.14) * fade * (0.8 - index * 0.12);
     const gradient = context.createLinearGradient(0, 0, width * 1.15, 0);
     gradient.addColorStop(0, `rgba(224,248,255,${alpha})`);
     gradient.addColorStop(0.55, `rgba(177,224,244,${alpha * 0.38})`);
@@ -30889,7 +30899,7 @@ function drawLightShafts(context, elapsed, width, height, reducedMotion) {
   context.restore();
 }
 
-function drawParticles(context, particles, elapsed, width, height, reducedMotion) {
+function drawParticles(context, particles, elapsed, width, height, reducedMotion, lightMode) {
   const endingFade = 1 - smoothStep(3500, SATORI_LIGHT_DURATION_MS, elapsed);
   particles.forEach((particle) => {
     const progress = (elapsed - particle.delay) / particle.duration;
@@ -30906,7 +30916,9 @@ function drawParticles(context, particles, elapsed, width, height, reducedMotion
     const x = (particle.startX + particle.travelX * progress) * width + wind;
     const y = (particle.startY + particle.travelY * progress) * height + lift;
     const seconds = elapsed / 1000;
-    const randomTwinkle = Math.pow(Math.max(0, Math.sin(seconds * particle.frequency + particle.phase)), 14);
+    const randomTwinkle = particle.sparkle
+      ? Math.pow(Math.max(0, Math.sin(seconds * particle.frequency + particle.phase)), 14)
+      : 0;
     const bellTwinkle = particle.soundSynchronized
       ? Math.exp(-Math.pow((seconds - 0.11) / 0.075, 2))
       : 0;
@@ -30915,11 +30927,11 @@ function drawParticles(context, particles, elapsed, width, height, reducedMotion
 
     context.save();
     context.globalCompositeOperation = "source-over";
-    drawLightTrail(context, x, y, 14 + size * 7, alpha * 0.48, particle.color);
+    if (particle.hasTrail) drawLightTrail(context, x, y, Math.min(24, 10 + size * 4), alpha * 0.32, particle.color);
     if (particle.shape === "star") drawSparkle(context, x, y, size, alpha, particle.color, twinkle);
     else if (particle.shape === "streak") drawStreak(context, x, y, size, alpha, particle.color, twinkle);
     else if (particle.shape === "diamond") drawDiamond(context, x, y, size, alpha, particle.color, twinkle);
-    else drawPoint(context, x, y, alpha, particle.color);
+    else drawPoint(context, x, y, alpha, particle.color, lightMode);
     context.restore();
   });
 }
@@ -30982,11 +30994,20 @@ function drawDiamond(context, x, y, size, alpha, color, twinkle) {
   context.restore();
 }
 
-function drawPoint(context, x, y, alpha, color) {
-  context.fillStyle = `rgba(255,255,255,${alpha})`;
+function drawPoint(context, x, y, alpha, color, lightMode) {
+  context.fillStyle = rgba(color, alpha);
   context.shadowColor = rgba(color, 0.7);
-  context.shadowBlur = 2.5;
+  context.shadowBlur = lightMode ? 2 : 2.5;
   context.fillRect(x - 0.7, y - 0.7, 1.4, 1.4);
+  context.fillStyle = `rgba(255,255,255,${alpha * 0.72})`;
+  context.fillRect(x - 0.32, y - 0.32, 0.64, 0.64);
+}
+
+function isLightMode() {
+  const theme = document.documentElement?.dataset?.theme;
+  if (theme === "light") return true;
+  if (theme === "dark") return false;
+  return !(window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false);
 }
 
 function playSatoriSound() {
