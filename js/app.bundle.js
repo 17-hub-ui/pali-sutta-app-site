@@ -31386,6 +31386,7 @@ function showStatus(section, message, tone = "") {
 }
 
 let activeGuideAudio = null;
+let guideAudioLoopEnabled = false;
 // 視線を先へ送るための実時間。速度変更後も音声の時計だけを基準にする。
 const AUDIO_GUIDE_LEAD_SECONDS = 0.14;
 
@@ -31471,7 +31472,7 @@ function renderReading(app, sutta) {
           <label><input type="checkbox" name="showJa"><span>和訳</span></label>
           <button class="recite-note recite-note-toggle" type="button" data-recitation-info-toggle aria-expanded="false">使い方を表示</button>
         </div>
-        <p class="recite-note recite-note-detail" data-recitation-info hidden>経典名から「次へ」で進むか、音読・暗記する範囲を自由に選べます。「音声ファイル」は再生位置と速度を変更でき、音声に合わせて節・行・単語を少し先行して案内します。再生速度は文字ガイドにも共通で反映されます。「録音開始」で自動判定します（音声とは別の文字ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
+        <p class="recite-note recite-note-detail" data-recitation-info hidden>経典名から「次へ」で進むか、音読・暗記する範囲を自由に選べます。「音声ファイル」は再生位置と速度を変更でき、音声に合わせて節・行・単語を少し先行して案内します。「ループ」を青色にすると、最後の音声トラックが終わった後に同じ経典を最初から再生します。再生速度は文字ガイドにも共通で反映されます。「録音開始」で自動判定します（音声とは別の文字ガイドも連動して始まります）。パーリ語の単語にマウスを重ねるか、タップすると意味が出ます。</p>
         <p class="recite-note" data-recitation-status hidden></p>
         <div class="recite-help" data-recitation-help hidden>
           <p data-recitation-help-text></p>
@@ -31541,7 +31542,10 @@ function renderReading(app, sutta) {
         <button class="button primary audio-guide-button" type="button" data-guide-audio-toggle>🔊 音声ファイル</button>
         <button class="button primary record-button" type="button" data-recitation-record>録音開始</button>
         <button class="button primary guide-button" type="button" data-pace-toggle>▶ 文字ガイド</button>
-        <button class="button ghost next-button" type="button" data-recitation-next>次へ</button>
+        <div class="recite-next-controls">
+          <button class="button ghost next-button" type="button" data-recitation-next>次へ</button>
+          <button class="button loop-button" type="button" data-guide-audio-loop aria-pressed="false" aria-label="音声のループ オフ" title="音声のループ オフ"><span aria-hidden="true">↻</span> ループ</button>
+        </div>
       </div>
     </div>
   `;
@@ -31919,6 +31923,7 @@ function stopActiveGuideAudio() {
 
 function setupGuideAudio(root, sutta, reciteState) {
   const button = root.querySelector("[data-guide-audio-toggle]");
+  const loopButton = root.querySelector("[data-guide-audio-loop]");
   const status = root.querySelector("[data-guide-audio-status]");
   const player = root.querySelector("[data-guide-audio-player]");
   const seekBar = root.querySelector("[data-guide-audio-seek]");
@@ -31927,9 +31932,21 @@ function setupGuideAudio(root, sutta, reciteState) {
   const currentOutput = root.querySelector("[data-guide-audio-current]");
   const durationOutput = root.querySelector("[data-guide-audio-duration]");
   const tracks = sutta.audio?.tracks || [];
+  const updateLoopUi = () => {
+    const state = guideAudioLoopEnabled ? "オン" : "オフ";
+    loopButton.setAttribute("aria-pressed", String(guideAudioLoopEnabled));
+    loopButton.setAttribute("aria-label", `音声のループ ${state}`);
+    loopButton.title = `音声のループ ${state}`;
+  };
+  updateLoopUi();
+  loopButton.addEventListener("click", () => {
+    guideAudioLoopEnabled = !guideAudioLoopEnabled;
+    updateLoopUi();
+  });
   if (tracks.length === 0) {
     player.hidden = true;
     button.disabled = true;
+    loopButton.disabled = true;
     button.textContent = "音声なし";
     status.textContent = "この経典のガイド音声はありません。";
     return;
@@ -32083,6 +32100,11 @@ function setupGuideAudio(root, sutta, reciteState) {
     stopAudioSyncedGuide(root, reciteState);
     if (reciteState.guideAudioTrackIndex < tracks.length - 1) {
       loadTrack(reciteState.guideAudioTrackIndex + 1, { autoplay: true });
+      return;
+    }
+    if (guideAudioLoopEnabled) {
+      finished = false;
+      loadTrack(0, { autoplay: true });
       return;
     }
     finished = true;

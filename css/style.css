@@ -3325,9 +3325,37 @@ body {
   flex: 1.25;
 }
 
+.recite-dock .recite-next-controls {
+  display: flex;
+  flex: 1.5;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
 .recite-dock .next-button {
-  flex: 0.85;
+  flex: 1;
+  min-width: 0;
   font-size: 0.85rem;
+}
+
+.recite-dock .loop-button {
+  flex: 0 0 auto;
+  padding: 0 0.65rem;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: #283593;
+  font-size: 0.85rem;
+}
+
+.recite-dock .loop-button[aria-pressed="true"] {
+  border-color: #283593;
+  background: #283593;
+  color: #ffffff;
+}
+
+.recite-dock .loop-button span {
+  font-size: 1.15rem;
+  line-height: 1;
 }
 
 /* ドックの分だけ本文下部に余白を確保し、意味カードはドックの上に出す */
@@ -3346,7 +3374,7 @@ body {
   }
 
   .recite-dock .guide-button,
-  .recite-dock .next-button {
+  .recite-dock .recite-next-controls {
     flex: 1 1 calc(50% - 0.25rem);
   }
 
